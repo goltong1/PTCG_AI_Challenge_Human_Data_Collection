@@ -56,6 +56,21 @@ def worker_main(connection: Connection, engine_temp_path: str) -> None:
                     )
                 elif command == "human_action":
                     result = manager.act_human(list(args.get("indices") or []))
+                elif command == "pvp_start":
+                    result = manager.start_pvp(
+                        list(args.get("player0_deck") or []),
+                        list(args.get("player1_deck") or []),
+                        list(args.get("deck_labels") or []),
+                        list(args.get("player_names") or []),
+                        str(args.get("engine_agent_id") or ""),
+                    )
+                elif command == "pvp_state":
+                    result = manager.public_state_for(int(args.get("viewer_seat", 0)))
+                elif command == "pvp_action":
+                    result = manager.act_player(
+                        int(args.get("seat", 0)),
+                        list(args.get("indices") or []),
+                    )
                 elif command == "ai_step":
                     result = manager.act_ai_once()
                 elif command == "close_game":

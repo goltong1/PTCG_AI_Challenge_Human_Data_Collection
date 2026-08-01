@@ -24,10 +24,11 @@ from game_service import DATA_ROOT, GameError, GameManager, ROOT, parse_uploaded
 from image_service import CardImageIndex
 from replay_service import REPLAY_UPLOAD_LIMIT, ReplayManager
 from result_service import ResultCollector, admin_token
+from pvp_service import PvpHub
 from worker_service import SessionHub, WorkerError
 
 
-APP_VERSION = "4.0.0-web-arena"
+APP_VERSION = "5.0.0-online-matchmaking"
 JSON_BODY_LIMIT = 2 * 1024 * 1024
 PUBLIC_MODE = os.environ.get("CABT_PUBLIC_MODE", "0").strip().lower() in {"1", "true", "yes", "on"}
 RESULT_SUBMISSION_ENABLED = os.environ.get(
@@ -35,6 +36,13 @@ RESULT_SUBMISSION_ENABLED = os.environ.get(
 ).strip().lower() in {"1", "true", "yes", "on"}
 MAX_SESSIONS = max(1, int(os.environ.get("CABT_MAX_SESSIONS", "8")))
 SESSION_IDLE_SECONDS = max(300, int(os.environ.get("CABT_SESSION_IDLE_SECONDS", "3600")))
+ONLINE_MATCHING_ENABLED = os.environ.get(
+    "CABT_ENABLE_ONLINE_MATCHING", "1" if PUBLIC_MODE else "0"
+).strip().lower() in {"1", "true", "yes", "on"}
+MAX_PVP_MATCHES = max(1, int(os.environ.get("CABT_MAX_PVP_MATCHES", "8")))
+MAX_PVP_WAITERS = max(2, int(os.environ.get("CABT_MAX_PVP_WAITERS", "64")))
+PVP_QUEUE_TIMEOUT = max(60, int(os.environ.get("CABT_PVP_QUEUE_TIMEOUT", "600")))
+PVP_MATCH_IDLE_SECONDS = max(600, int(os.environ.get("CABT_PVP_MATCH_IDLE_SECONDS", "7200")))
 SESSION_COOKIE = "CABT_SESSION"
 
 agents = AgentRepository(ROOT / "agents")
@@ -44,6 +52,16 @@ deck_store = DeckStore(DATA_ROOT / "user_data" / "decks.json")
 image_index = CardImageIndex(ROOT, manager.card_ids())
 result_collector = ResultCollector()
 session_hub = SessionHub(MAX_SESSIONS, SESSION_IDLE_SECONDS) if PUBLIC_MODE else None
+pvp_hub = (
+    PvpHub(
+        max_matches=MAX_PVP_MATCHES,
+        max_waiting=MAX_PVP_WAITERS,
+        queue_timeout=PVP_QUEUE_TIMEOUT,
+        match_idle_seconds=PVP_MATCH_IDLE_SECONDS,
+    )
+    if ONLINE_MATCHING_ENABLED
+    else None
+)
 
 
 class CABTServer(ThreadingHTTPServer):
@@ -171,17 +189,29 @@ class CABTHandler(BaseHTTPRequestHandler):
             return token
         return None
 
+    def _session_id(self, create: bool = True) -> str | None:
+        session_id = self._cookie_session_id()
+        if session_id is None and create:
+            session_id = secrets.token_urlsafe(32)
+            self._pending_session_cookie = session_id
+        return session_id
+
     def _worker(self, create: bool = True):
         if not PUBLIC_MODE or session_hub is None:
             return None
-        session_id = self._cookie_session_id()
+        session_id = self._session_id(create=create)
         if session_id is None:
-            if not create:
-                return None
-            session_id = secrets.token_urlsafe(32)
-            self._pending_session_cookie = session_id
+            return None
         worker = session_hub.get(session_id) if create else session_hub.peek(session_id)
         return worker
+
+    def _pvp_session_id(self, create: bool = True) -> str:
+        if not ONLINE_MATCHING_ENABLED or pvp_hub is None:
+            raise GameError("이 서버에서는 온라인 플레이어 매칭이 비활성화되어 있습니다.")
+        session_id = self._session_id(create=create)
+        if session_id is None:
+            raise GameError("온라인 세션이 없습니다. 다시 매칭을 시작하세요.")
+        return session_id
 
     def _game_call(self, command: str, create: bool = True, **kwargs):
         if PUBLIC_MODE:
@@ -268,6 +298,8 @@ class CABTHandler(BaseHTTPRequestHandler):
                         "version": APP_VERSION,
                         "public_mode": PUBLIC_MODE,
                         "data_root": str(DATA_ROOT),
+                        "online_matching": ONLINE_MATCHING_ENABLED,
+                        "pvp": pvp_hub.stats() if pvp_hub is not None else None,
                     }
                 )
                 return
@@ -288,7 +320,10 @@ class CABTHandler(BaseHTTPRequestHandler):
                         "allow_agent_upload": not PUBLIC_MODE,
                         "allow_deck_save": not PUBLIC_MODE,
                         "result_submission_enabled": RESULT_SUBMISSION_ENABLED,
+                        "online_matching_enabled": ONLINE_MATCHING_ENABLED,
                         "max_sessions": MAX_SESSIONS if PUBLIC_MODE else 1,
+                        "max_pvp_matches": MAX_PVP_MATCHES if ONLINE_MATCHING_ENABLED else 0,
+                        "max_pvp_waiters": MAX_PVP_WAITERS if ONLINE_MATCHING_ENABLED else 0,
                     }
                 )
                 return
@@ -332,6 +367,14 @@ class CABTHandler(BaseHTTPRequestHandler):
             if path == "/api/state":
                 self._send_json(self._game_call("state", create=False))
                 return
+            if path == "/api/matchmaking/status":
+                session_id = self._pvp_session_id(create=True)
+                self._send_json(pvp_hub.status(session_id))
+                return
+            if path == "/api/pvp/state":
+                session_id = self._pvp_session_id(create=False)
+                self._send_json(pvp_hub.state(session_id))
+                return
             if path == "/api/replay/state":
                 query = parse_qs(parsed.query)
                 index = int((query.get("index") or ["0"])[0])
@@ -344,6 +387,27 @@ class CABTHandler(BaseHTTPRequestHandler):
             if path == "/api/game/record.zip":
                 record_path = Path(self._game_call("record_zip", create=False))
                 self._send_file(record_path, "application/zip", download_name=record_path.name, cache="no-store")
+                return
+            if path == "/api/pvp/record.zip":
+                session_id = self._pvp_session_id(create=False)
+                record_path = Path(pvp_hub.game_file(session_id, "record_zip"))
+                self._send_file(record_path, "application/zip", download_name=record_path.name, cache="no-store")
+                return
+            if path == "/api/pvp/official.json":
+                session_id = self._pvp_session_id(create=False)
+                official_path = Path(pvp_hub.game_file(session_id, "official_replay"))
+                self._send_file(
+                    official_path,
+                    "application/json; charset=utf-8",
+                    download_name=official_path.name,
+                    cache="no-store",
+                )
+                return
+            if path.startswith("/api/pvp/viewer/"):
+                session_id = self._pvp_session_id(create=False)
+                player = int(path.rsplit("/", 1)[-1])
+                viewer = Path(pvp_hub.game_file(session_id, "viewer", player=player))
+                self._send_file(viewer, "text/html; charset=utf-8")
                 return
             if path == "/api/game/official.json":
                 official_path = Path(self._game_call("official_replay", create=False))
@@ -436,6 +500,68 @@ class CABTHandler(BaseHTTPRequestHandler):
                         agent_id=agent_id,
                     )
                 )
+                return
+            if path == "/api/matchmaking/quick":
+                request = self._read_json()
+                session_id = self._pvp_session_id(create=True)
+                player_deck, deck_label = self._resolve_human_deck(request)
+                self._send_json(
+                    pvp_hub.join_quick(
+                        session_id,
+                        str(request.get("player_name") or ""),
+                        player_deck,
+                        deck_label,
+                    )
+                )
+                return
+            if path == "/api/matchmaking/create-room":
+                request = self._read_json()
+                session_id = self._pvp_session_id(create=True)
+                player_deck, deck_label = self._resolve_human_deck(request)
+                self._send_json(
+                    pvp_hub.create_private(
+                        session_id,
+                        str(request.get("player_name") or ""),
+                        player_deck,
+                        deck_label,
+                    )
+                )
+                return
+            if path == "/api/matchmaking/join-room":
+                request = self._read_json()
+                session_id = self._pvp_session_id(create=True)
+                player_deck, deck_label = self._resolve_human_deck(request)
+                self._send_json(
+                    pvp_hub.join_private(
+                        session_id,
+                        str(request.get("room_code") or ""),
+                        str(request.get("player_name") or ""),
+                        player_deck,
+                        deck_label,
+                    )
+                )
+                return
+            if path == "/api/matchmaking/cancel":
+                content_length = int(self.headers.get("Content-Length", "0") or "0")
+                if content_length:
+                    self._read_body(JSON_BODY_LIMIT)
+                session_id = self._pvp_session_id(create=False)
+                self._send_json(pvp_hub.cancel(session_id))
+                return
+            if path == "/api/pvp/action":
+                request = self._read_json()
+                indices = request.get("indices")
+                if not isinstance(indices, list):
+                    raise GameError("indices 배열이 필요합니다.")
+                session_id = self._pvp_session_id(create=False)
+                self._send_json(pvp_hub.action(session_id, indices))
+                return
+            if path == "/api/pvp/leave":
+                content_length = int(self.headers.get("Content-Length", "0") or "0")
+                if content_length:
+                    self._read_body(JSON_BODY_LIMIT)
+                session_id = self._pvp_session_id(create=False)
+                self._send_json(pvp_hub.leave(session_id))
                 return
             if path == "/api/decks/save":
                 if PUBLIC_MODE:
@@ -560,6 +686,8 @@ def main() -> None:
     finally:
         if session_hub is not None:
             session_hub.shutdown()
+        if pvp_hub is not None:
+            pvp_hub.shutdown()
         replay_manager.close()
         manager.close()
         server.server_close()

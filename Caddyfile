@@ -1,0 +1,4 @@
+{$CABT_DOMAIN} {
+  encode zstd gzip
+  reverse_proxy cabt-web:8765
+}

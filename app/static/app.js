@@ -27,6 +27,11 @@ let replayBusy = false;
 let replayRequestGeneration = 0;
 let resultSubmitting = false;
 const submittedGameIds = new Set();
+let matchmakingTimer = null;
+let matchmakingBusy = false;
+let matchmakingState = { status: 'idle' };
+let pvpPollTimer = null;
+let pvpPollBusy = false;
 
 function esc(value) {
   return String(value ?? '').replace(/[&<>'"]/g, (char) => ({
@@ -60,6 +65,10 @@ function isReplayMode() {
   return state?.mode === 'replay';
 }
 
+function isPvpMode() {
+  return state?.mode === 'pvp';
+}
+
 function stopReplayPlayback() {
   replayPlaying = false;
   replayBusy = false;
@@ -70,6 +79,18 @@ function stopReplayPlayback() {
 
 function openReplayPicker() {
   $('#replay-file').click();
+}
+
+async function cancelPendingMatchmakingQuietly() {
+  if (!['searching', 'waiting_room'].includes(matchmakingState.status)) return;
+  stopMatchmakingPoll();
+  try {
+    await api('/api/matchmaking/cancel', { method: 'POST' });
+  } catch (_error) {
+    // Continue with the explicitly requested local action even if the queue
+    // already expired on the server.
+  }
+  renderMatchmakingStatus({ status: 'idle' });
 }
 
 async function loadReplay(file) {
@@ -85,6 +106,7 @@ async function loadReplay(file) {
     return;
   }
   showLobbyLoading(true, '리플레이를 불러오는 중입니다', `${file.name}의 장면과 액션을 분석하고 있습니다.`);
+  await cancelPendingMatchmakingQuietly();
   abortAiLoop();
   stopReplayPlayback();
   setAiThinking(false);
@@ -299,6 +321,10 @@ async function loadConfig() {
       : '제출 ZIP을 그대로 추가하고, AI의 선택을 한 단계씩 확인할 수 있습니다. 별도 개발 환경 없이 로컬 브라우저에서 실행됩니다.';
   }
   $('#result-consent-panel').classList.toggle('hidden', !config.result_submission_enabled);
+  $('#online-match-panel').classList.toggle('hidden', !config.online_matching_enabled);
+  $('#online-capacity-text').textContent = config.online_matching_enabled
+    ? `동시 온라인 대전 최대 ${config.max_pvp_matches}개 · 빠른 매칭과 친구 방 지원`
+    : '온라인 매칭 비활성화';
   $('#rescan-images-btn').classList.toggle('hidden', Boolean(config.public_mode));
   const savedName = localStorage.getItem('cabtParticipantName') || '';
   $('#participant-name').value = savedName;
@@ -875,13 +901,19 @@ function renderOptions(selection) {
       ? (state?.result !== -1 ? '게임이 종료되었습니다' : '이 장면 뒤의 선택 기록이 없습니다')
       : state?.result !== -1
         ? '게임이 종료되었습니다'
-        : state?.ai_pending
-          ? 'AI 행동을 재생 중입니다'
+        : isPvpMode() && state?.opponent_left
+          ? '상대 플레이어가 나갔습니다'
+          : isPvpMode() && state?.opponent_pending
+            ? '상대 플레이어의 선택을 기다리는 중'
+            : state?.ai_pending
+              ? 'AI 행동을 재생 중입니다'
           : '선택을 기다리는 중';
     $('#selection-counter').textContent = '';
     container.innerHTML = replayMode
       ? '<div class="waiting-card"><strong>장면 상태</strong><small>슬라이더나 이전·다음 버튼으로 다른 장면을 확인하세요.</small></div>'
-      : state?.ai_pending
+      : isPvpMode() && state?.opponent_pending
+        ? '<div class="waiting-card"><span class="mini-pulse"></span><strong>상대 차례</strong><small>상대의 선택이 서버에 적용되면 보드가 자동으로 갱신됩니다.</small></div>'
+        : state?.ai_pending
         ? '<div class="waiting-card"><span class="mini-pulse"></span><strong>AI 차례</strong><small>오른쪽 위에서 일시정지하거나 한 단계씩 진행할 수 있습니다.</small></div>'
         : '<div class="empty-state">현재 선택지가 없습니다.</div>';
     confirm.disabled = true;
@@ -956,6 +988,13 @@ function renderActionStage(lastAction) {
       stage.className = 'action-stage panel human';
       return;
     }
+    if (isPvpMode()) {
+      $('#action-actor').textContent = state?.opponent_pending ? 'OPPONENT TURN' : 'YOUR TURN';
+      $('#action-title').textContent = state?.opponent_pending ? '상대 플레이어의 선택을 기다립니다' : '당신의 선택 차례입니다';
+      $('#action-detail').textContent = '양쪽 브라우저는 같은 서버 게임 상태를 공유합니다.';
+      stage.className = `action-stage panel ${state?.opponent_pending ? 'ai' : 'human'}`;
+      return;
+    }
     $('#action-actor').textContent = state?.ai_pending ? 'AI TURN' : 'READY';
     $('#action-title').textContent = state?.ai_pending ? 'AI의 첫 행동을 기다립니다' : '당신의 선택 차례입니다';
     $('#action-detail').textContent = '각 액션이 적용될 때마다 보드와 타임라인이 갱신됩니다.';
@@ -964,7 +1003,9 @@ function renderActionStage(lastAction) {
   }
   $('#action-actor').textContent = isReplayMode()
     ? `P${lastAction.actor} ACTION`
-    : lastAction.source === 'ai' ? 'AI ACTION' : 'YOUR ACTION';
+    : isPvpMode()
+      ? lastAction.source === 'ai' ? 'OPPONENT ACTION' : 'YOUR ACTION'
+      : lastAction.source === 'ai' ? 'AI ACTION' : 'YOUR ACTION';
   $('#action-title').textContent = lastAction.text;
   const detail = [
     isReplayMode() ? lastAction.actor_name : lastAction.details?.[0],
@@ -1025,26 +1066,44 @@ function render(data) {
   }
 
   const replayMode = data.mode === 'replay';
+  const pvpMode = data.mode === 'pvp';
   $('#lobby').classList.add('hidden');
   $('#game').classList.remove('hidden');
   $('#game').classList.toggle('replay-mode', replayMode);
+  $('#game').classList.toggle('pvp-mode', pvpMode);
   $('#replay-controls').classList.toggle('hidden', !replayMode);
   $('#prev-step-btn').classList.toggle('hidden', !replayMode);
-  $('#playback-label').textContent = replayMode ? 'REPLAY' : 'AI ACTION';
+  $('#playback-label').textContent = replayMode ? 'REPLAY' : pvpMode ? 'ONLINE SYNC' : 'AI ACTION';
   $('#viewer-btn').classList.toggle('disabled', replayMode);
   $('#official-json-btn').classList.toggle('disabled', replayMode);
   $('#download-btn').classList.toggle('disabled', replayMode);
 
-  const bottomName = replayMode
+  const bottomName = (replayMode || pvpMode)
     ? data.player_names?.[data.human_seat] || `Player ${data.human_seat}`
     : 'Human';
-  const topName = replayMode
+  const topName = (replayMode || pvpMode)
     ? data.player_names?.[data.ai_seat] || `Player ${data.ai_seat}`
     : data.agent?.name || 'AI';
 
-  if (!replayMode) {
+  if (pvpMode) {
+    $('#viewer-btn').href = `/api/pvp/viewer/${data.human_seat}`;
+    $('#official-json-btn').href = '/api/pvp/official.json';
+    $('#download-btn').href = '/api/pvp/record.zip';
+    $('#turn-badge').textContent = `TURN ${data.turn}`;
+    $('#seat-text').innerHTML = `${esc(bottomName)} P${data.human_seat} · ${esc(topName)} P${data.ai_seat} · <span class="opponent-connectivity ${data.opponent_online ? '' : 'offline'}">${data.opponent_left ? '상대 퇴장' : data.opponent_online ? '접속 중' : '재연결 대기'}</span>`;
+    $('#decision-text').textContent = `${data.decision_count} actions`;
+    $('#agent-chip').textContent = data.room_code ? `ROOM ${data.room_code}` : 'QUICK MATCH';
+    $('#status-text').textContent = data.result !== -1
+      ? data.result_text
+      : data.opponent_left
+        ? '상대 플레이어가 대전에서 나갔습니다'
+        : data.human_turn
+          ? '당신의 선택 차례'
+          : '상대 플레이어의 선택을 기다리는 중';
+  } else if (!replayMode) {
     $('#viewer-btn').href = `/api/game/viewer/${data.human_seat}`;
     $('#official-json-btn').href = '/api/game/official.json';
+    $('#download-btn').href = '/api/game/record.zip';
     $('#turn-badge').textContent = `TURN ${data.turn}`;
     $('#seat-text').textContent = `Human P${data.human_seat} · AI P${data.ai_seat}`;
     $('#decision-text').textContent = `${data.decision_count} actions`;
@@ -1083,14 +1142,14 @@ function render(data) {
     data.ai,
     replayMode ? data.ai.hand !== null : false,
     topName,
-    replayMode ? `P${data.ai_seat}` : 'AI',
+    (replayMode || pvpMode) ? `P${data.ai_seat}` : 'AI',
   );
   renderPlayerSide(
     $('#human-side'),
     data.human,
     replayMode ? data.human.hand !== null : true,
     bottomName,
-    replayMode ? `P${data.human_seat}` : 'YOU',
+    (replayMode || pvpMode) ? `P${data.human_seat}` : 'YOU',
   );
   $('#stadium-zone').innerHTML = data.stadium?.length
     ? `STADIUM · <b>${esc(data.stadium[0].name)}</b>`
@@ -1108,6 +1167,8 @@ function render(data) {
   updateResultSubmitPanel(data);
   if (replayMode) {
     if (replayPlaying) scheduleReplay();
+  } else if (pvpMode) {
+    schedulePvpPoll();
   } else {
     scheduleAi();
     maybeAutoSubmit(data);
@@ -1147,6 +1208,11 @@ function updatePlaybackButtons() {
     $('#prev-step-btn').title = '이전 장면';
     return;
   }
+  if (isPvpMode()) {
+    $('#pause-btn').disabled = true;
+    $('#step-btn').disabled = true;
+    return;
+  }
   const pending = Boolean(state?.ai_pending);
   $('#pause-btn').textContent = aiPaused ? '▶' : 'Ⅱ';
   $('#pause-btn').title = aiPaused ? 'AI 자동 진행 재개' : 'AI 자동 진행 일시정지';
@@ -1157,7 +1223,7 @@ function updatePlaybackButtons() {
 
 function scheduleAi() {
   clearTimeout(aiTimer);
-  if (isReplayMode() || !state?.ai_pending || aiPaused || aiBusy || state.result !== -1) return;
+  if (isReplayMode() || isPvpMode() || !state?.ai_pending || aiPaused || aiBusy || state.result !== -1) return;
   const generation = aiLoopGeneration;
   const delay = Number($('#speed-select').value || 750);
   aiTimer = setTimeout(() => {
@@ -1166,7 +1232,7 @@ function scheduleAi() {
 }
 
 async function advanceAiOnce(manual) {
-  if (isReplayMode() || !state?.ai_pending || aiBusy) return;
+  if (isReplayMode() || isPvpMode() || !state?.ai_pending || aiBusy) return;
   if (aiPaused && !manual) return;
   clearTimeout(aiTimer);
   const generation = aiLoopGeneration;
@@ -1196,7 +1262,7 @@ async function submitHumanAction() {
   }
   $('#confirm-btn').disabled = true;
   try {
-    const next = await api('/api/game/action', {
+    const next = await api(isPvpMode() ? '/api/pvp/action' : '/api/game/action', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ indices }),
@@ -1224,6 +1290,7 @@ async function startGame(event) {
   const agent = config.agents.find((item) => item.id === selectedAgentId);
   localStorage.setItem('cabtParticipantName', $('#participant-name').value.trim());
   showLobbyLoading(true, '배틀을 시작하는 중입니다', `${agent?.name || 'AI'}를 불러오고 있습니다.`);
+  await cancelPendingMatchmakingQuietly();
   abortAiLoop();
   stopReplayPlayback();
   setAiThinking(false);
@@ -1252,6 +1319,7 @@ function updateResultSubmitPanel(data) {
   const panel = $('#result-submit-panel');
   const eligible = Boolean(config?.result_submission_enabled)
     && !isReplayMode()
+    && !isPvpMode()
     && data?.result !== -1
     && Boolean(data?.game_id);
   panel.classList.toggle('hidden', !eligible);
@@ -1271,7 +1339,7 @@ function updateResultSubmitPanel(data) {
 }
 
 async function submitCurrentResult({ automatic = false } = {}) {
-  if (!config?.result_submission_enabled || isReplayMode() || !state?.game_id || state.result === -1) return;
+  if (!config?.result_submission_enabled || isReplayMode() || isPvpMode() || !state?.game_id || state.result === -1) return;
   if (submittedGameIds.has(state.game_id) || resultSubmitting) return;
   if (!$('#result-consent').checked) {
     if (!automatic) toast('결과 전송 동의를 켜야 합니다.');
@@ -1302,19 +1370,199 @@ async function submitCurrentResult({ automatic = false } = {}) {
 }
 
 function maybeAutoSubmit(data) {
-  if (!config?.result_submission_enabled || data?.result === -1 || isReplayMode()) return;
+  if (!config?.result_submission_enabled || data?.result === -1 || isReplayMode() || isPvpMode()) return;
   if (!$('#result-consent').checked || submittedGameIds.has(data.game_id)) return;
   queueMicrotask(() => submitCurrentResult({ automatic: true }));
 }
 
-function returnToLobby() {
+function stopMatchmakingPoll() {
+  clearTimeout(matchmakingTimer);
+  matchmakingTimer = null;
+}
+
+function stopPvpPoll() {
+  clearTimeout(pvpPollTimer);
+  pvpPollTimer = null;
+  pvpPollBusy = false;
+}
+
+function matchmakingPayload() {
+  const deckReference = $('#deck-select').value;
+  const deck = deckReferenceInfo(deckReference);
+  if (!deck || deck.card_count !== 60) {
+    throw new Error('온라인 대전에 사용할 60장 덱을 선택하세요.');
+  }
+  const playerName = $('#participant-name').value.trim() || 'Anonymous';
+  localStorage.setItem('cabtParticipantName', playerName === 'Anonymous' ? '' : playerName);
+  return { deck_ref: deckReference, player_name: playerName };
+}
+
+function renderMatchmakingStatus(next) {
+  matchmakingState = next || { status: 'idle' };
+  const panel = $('#matchmaking-status');
+  const status = matchmakingState.status || 'idle';
+  panel.classList.toggle('hidden', status === 'idle' || status === 'matched');
+  $('#copy-room-code-btn').classList.add('hidden');
+  if (status === 'searching') {
+    $('#matchmaking-kicker').textContent = 'QUICK MATCH';
+    $('#matchmaking-title').textContent = '상대 플레이어를 찾는 중';
+    $('#matchmaking-detail').textContent = `${matchmakingState.player_name || 'Anonymous'} · 대기 ${matchmakingState.queue_seconds || 0}초`;
+  } else if (status === 'waiting_room') {
+    $('#matchmaking-kicker').textContent = 'PRIVATE ROOM';
+    $('#matchmaking-title').textContent = '친구의 참가를 기다리는 중';
+    $('#matchmaking-detail').textContent = '아래 코드를 상대에게 전달하세요. 누르면 복사됩니다.';
+    const codeButton = $('#copy-room-code-btn');
+    codeButton.textContent = matchmakingState.room_code || '';
+    codeButton.classList.remove('hidden');
+  }
+}
+
+function scheduleMatchmakingPoll() {
+  stopMatchmakingPoll();
+  if (!['searching', 'waiting_room'].includes(matchmakingState.status)) return;
+  matchmakingTimer = setTimeout(pollMatchmakingStatus, 1000);
+}
+
+async function pollMatchmakingStatus() {
+  if (matchmakingBusy) return;
+  matchmakingBusy = true;
+  try {
+    const next = await api('/api/matchmaking/status');
+    renderMatchmakingStatus(next);
+    if (next.status === 'matched') {
+      stopMatchmakingPoll();
+      const gameState = await api('/api/pvp/state');
+      lastRenderedSequence = -1;
+      render(gameState);
+      toast(`${next.opponent_name || '상대'} 플레이어와 매칭되었습니다.`, 'success');
+      return;
+    }
+  } catch (error) {
+    stopMatchmakingPoll();
+    renderMatchmakingStatus({ status: 'idle' });
+    toast(error.message);
+  } finally {
+    matchmakingBusy = false;
+  }
+  scheduleMatchmakingPoll();
+}
+
+async function beginMatchmaking(kind) {
+  if (!config?.online_matching_enabled || matchmakingBusy) return;
+  let payload;
+  try {
+    payload = matchmakingPayload();
+  } catch (error) {
+    toast(error.message);
+    return;
+  }
+  let endpoint = '/api/matchmaking/quick';
+  if (kind === 'create-room') endpoint = '/api/matchmaking/create-room';
+  if (kind === 'join-room') {
+    endpoint = '/api/matchmaking/join-room';
+    const roomCode = $('#room-code-input').value.trim().toUpperCase();
+    if (!/^[A-Z2-9]{6}$/.test(roomCode)) {
+      toast('방 코드 6자리를 확인하세요.');
+      return;
+    }
+    payload.room_code = roomCode;
+  }
+  matchmakingBusy = true;
+  stopMatchmakingPoll();
   abortAiLoop();
   stopReplayPlayback();
+  try {
+    const next = await api(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    renderMatchmakingStatus(next);
+    if (next.status === 'matched') {
+      const gameState = await api('/api/pvp/state');
+      lastRenderedSequence = -1;
+      render(gameState);
+      toast(`${next.opponent_name || '상대'} 플레이어와 매칭되었습니다.`, 'success');
+    } else {
+      scheduleMatchmakingPoll();
+    }
+  } catch (error) {
+    renderMatchmakingStatus({ status: 'idle' });
+    toast(error.message);
+  } finally {
+    matchmakingBusy = false;
+  }
+}
+
+async function cancelMatchmaking() {
+  if (matchmakingBusy) return;
+  matchmakingBusy = true;
+  stopMatchmakingPoll();
+  try {
+    await api('/api/matchmaking/cancel', { method: 'POST' });
+    renderMatchmakingStatus({ status: 'idle' });
+    toast('온라인 매칭 대기를 취소했습니다.', 'success');
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    matchmakingBusy = false;
+  }
+}
+
+function schedulePvpPoll() {
+  stopPvpPoll();
+  if (!isPvpMode() || state?.result !== -1 || state?.human_turn) return;
+  pvpPollTimer = setTimeout(refreshPvpState, state?.opponent_left ? 3000 : 850);
+}
+
+async function refreshPvpState() {
+  if (!isPvpMode() || pvpPollBusy) return;
+  pvpPollBusy = true;
+  try {
+    const next = await api('/api/pvp/state');
+    render(next);
+  } catch (error) {
+    stopPvpPoll();
+    toast(error.message);
+  } finally {
+    pvpPollBusy = false;
+  }
+}
+
+async function initialGameState() {
+  if (config?.online_matching_enabled) {
+    try {
+      const online = await api('/api/matchmaking/status');
+      renderMatchmakingStatus(online);
+      if (online.status === 'matched') return await api('/api/pvp/state');
+      if (['searching', 'waiting_room'].includes(online.status)) scheduleMatchmakingPoll();
+    } catch (_error) {
+      renderMatchmakingStatus({ status: 'idle' });
+    }
+  }
+  return api('/api/state');
+}
+
+async function returnToLobby() {
+  const leavingPvp = isPvpMode();
+  abortAiLoop();
+  stopReplayPlayback();
+  stopPvpPoll();
   setAiThinking(false);
   aiPaused = true;
+  if (leavingPvp) {
+    try {
+      await api('/api/pvp/leave', { method: 'POST' });
+    } catch (_error) {
+      // The local UI can still return to the lobby if the server already
+      // expired the match.
+    }
+  }
+  state = null;
   $('#lobby').classList.remove('hidden');
   $('#game').classList.add('hidden');
   $('#game').classList.remove('replay-mode');
+  $('#game').classList.remove('pvp-mode');
 }
 
 function openCardModal(card) {
@@ -1359,6 +1607,26 @@ $('#replay-view-seat').addEventListener('change', (event) => {
 });
 
 $('#start-form').addEventListener('submit', startGame);
+$('#quick-match-btn').addEventListener('click', () => beginMatchmaking('quick'));
+$('#create-room-btn').addEventListener('click', () => beginMatchmaking('create-room'));
+$('#join-room-btn').addEventListener('click', () => beginMatchmaking('join-room'));
+$('#cancel-matchmaking-btn').addEventListener('click', cancelMatchmaking);
+$('#copy-room-code-btn').addEventListener('click', async () => {
+  const code = matchmakingState.room_code || '';
+  if (!code) return;
+  try {
+    await navigator.clipboard.writeText(code);
+    toast(`방 코드 ${code}를 복사했습니다.`, 'success');
+  } catch (_error) {
+    toast(`방 코드: ${code}`, 'success');
+  }
+});
+$('#room-code-input').addEventListener('input', (event) => {
+  event.target.value = event.target.value.toUpperCase().replace(/[^A-Z2-9]/g, '').slice(0, 6);
+});
+$('#room-code-input').addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') beginMatchmaking('join-room');
+});
 $('#confirm-btn').addEventListener('click', submitHumanAction);
 $('#submit-result-btn').addEventListener('click', () => submitCurrentResult({ automatic: false }));
 $('#participant-name').addEventListener('input', (event) => localStorage.setItem('cabtParticipantName', event.target.value));
@@ -1394,6 +1662,7 @@ $('#deck-builder').addEventListener('cancel', (event) => {
   if (!canDiscardBuilderChanges()) event.preventDefault();
 });
 $('#pause-btn').addEventListener('click', () => {
+  if (isPvpMode()) return;
   if (isReplayMode()) {
     toggleReplayPlayback();
     return;
@@ -1410,6 +1679,7 @@ $('#prev-step-btn').addEventListener('click', () => {
   goToReplayFrame(Number(state.replay?.index || 0) - 1);
 });
 $('#step-btn').addEventListener('click', () => {
+  if (isPvpMode()) return;
   if (isReplayMode()) {
     stopReplayPlayback();
     goToReplayFrame(Number(state.replay?.index || 0) + 1);
@@ -1523,6 +1793,6 @@ document.addEventListener('keydown', (event) => {
 });
 
 loadConfig()
-  .then(() => api('/api/state'))
+  .then(initialGameState)
   .then(render)
   .catch((error) => toast(error.message));

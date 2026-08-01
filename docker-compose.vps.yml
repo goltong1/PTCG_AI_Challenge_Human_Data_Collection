@@ -1,0 +1,38 @@
+services:
+  cabt-web:
+    build: .
+    env_file:
+      - .env
+    environment:
+      PORT: "8765"
+      CABT_PUBLIC_MODE: "1"
+      CABT_ENABLE_ONLINE_MATCHING: "1"
+      CABT_ENABLE_RESULT_SUBMISSION: "1"
+      CABT_DATA_DIR: /data
+    volumes:
+      - cabt-data:/data
+    expose:
+      - "8765"
+    restart: unless-stopped
+    stop_grace_period: 25s
+
+  caddy:
+    image: caddy:2-alpine
+    env_file:
+      - .env
+    depends_on:
+      - cabt-web
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    restart: unless-stopped
+
+volumes:
+  cabt-data:
+  caddy-data:
+  caddy-config:

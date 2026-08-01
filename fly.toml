@@ -1,0 +1,52 @@
+# Change this to a globally unique Fly.io app name before deployment.
+app = "cabt-online-arena-change-me"
+primary_region = "nrt"
+kill_signal = "SIGTERM"
+kill_timeout = "20s"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8765"
+  CABT_PUBLIC_MODE = "1"
+  CABT_ENABLE_ONLINE_MATCHING = "1"
+  CABT_ENABLE_RESULT_SUBMISSION = "1"
+  CABT_DATA_DIR = "/data"
+  CABT_COOKIE_SECURE = "1"
+  CABT_MAX_SESSIONS = "4"
+  CABT_MAX_PVP_MATCHES = "4"
+  CABT_MAX_PVP_WAITERS = "32"
+  CABT_SESSION_IDLE_SECONDS = "3600"
+  CABT_PVP_QUEUE_TIMEOUT = "600"
+  CABT_PVP_MATCH_IDLE_SECONDS = "7200"
+
+[[mounts]]
+  source = "cabt_data"
+  destination = "/data"
+  initial_size = "10gb"
+
+[http_service]
+  internal_port = 8765
+  force_https = true
+  auto_stop_machines = "off"
+  auto_start_machines = true
+  min_machines_running = 1
+  processes = ["app"]
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 80
+    hard_limit = 120
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "45s"
+    method = "GET"
+    path = "/api/health"
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory = "2gb"

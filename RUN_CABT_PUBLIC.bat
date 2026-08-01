@@ -20,13 +20,18 @@ if errorlevel 1 goto setup_failed
 :run_server
 set "CABT_PUBLIC_MODE=1"
 set "CABT_ENABLE_RESULT_SUBMISSION=1"
+set "CABT_ENABLE_ONLINE_MATCHING=1"
 set "CABT_ADMIN_TOKEN=change-this-admin-token"
 set "CABT_MAX_SESSIONS=4"
+set "CABT_MAX_PVP_MATCHES=4"
+set "CABT_MAX_PVP_WAITERS=32"
 set "CABT_SESSION_IDLE_SECONDS=3600"
+set "CABT_PVP_QUEUE_TIMEOUT=600"
+set "CABT_PVP_MATCH_IDLE_SECONDS=7200"
 set "CABT_DATA_DIR=%~dp0server_data"
 
 echo.
-echo [CABT] Starting public Web Arena on port 8765...
+echo [CABT] Starting public Online Battle Arena on port 8765...
 echo [CABT] Arena: http://127.0.0.1:8765
 echo [CABT] Admin: http://127.0.0.1:8765/admin
 echo [CABT] Change CABT_ADMIN_TOKEN before exposing this server to the internet.

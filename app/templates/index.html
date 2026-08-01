@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>CABT · Human vs AI Arena</title>
+  <title>CABT · Online Battle Arena</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -15,7 +15,7 @@
         <span class="brand-mark">C</span>
         <span>
           <small id="brand-mode-label">CABT LOCAL ARENA</small>
-          <strong>Human vs AI</strong>
+          <strong>Battle Arena</strong>
         </span>
       </button>
       <nav class="header-actions" aria-label="게임 도구">
@@ -32,11 +32,11 @@
         <div class="lobby-intro">
           <div>
             <span class="kicker">PORTABLE BATTLE CLIENT</span>
-            <h1>원하는 Kaggle AI와<br><em>액션을 보며</em> 대전하세요.</h1>
+            <h1>AI 또는 다른 플레이어와<br><em>액션을 보며</em> 대전하세요.</h1>
           </div>
           <p id="lobby-description">
-            제출 ZIP을 그대로 추가하고, AI의 선택을 한 단계씩 확인할 수 있습니다.
-            별도 개발 환경 없이 로컬 브라우저에서 실행됩니다.
+            Kaggle AI와 대전하거나 빠른 매칭·친구 방으로 온라인 1대1 게임을 시작할 수 있습니다.
+            모든 선택은 서버가 검증하고 대전 기록은 다시 내려받을 수 있습니다.
           </p>
         </div>
 
@@ -122,6 +122,39 @@
           </section>
         </div>
 
+        <section id="online-match-panel" class="panel online-match-panel hidden">
+          <div class="online-match-copy">
+            <span class="kicker">PLAYER VS PLAYER</span>
+            <h2>온라인 1대1 매칭</h2>
+            <p>위에서 선택한 60장 덱과 플레이어 이름을 사용합니다. 모든 행동은 서버에서 턴과 선택지를 검증합니다.</p>
+          </div>
+          <div class="online-match-actions">
+            <button id="quick-match-btn" class="button primary" type="button">
+              <span>빠른 매칭</span><span aria-hidden="true">⚡</span>
+            </button>
+            <button id="create-room-btn" class="button quiet" type="button">친구 방 만들기</button>
+            <div class="room-code-join">
+              <input id="room-code-input" type="text" maxlength="6" autocomplete="off" placeholder="방 코드 6자리" aria-label="친구 방 코드">
+              <button id="join-room-btn" class="button quiet" type="button">코드로 참가</button>
+            </div>
+          </div>
+          <div class="online-capacity">
+            <span class="status-dot"></span>
+            <span id="online-capacity-text">온라인 서버 확인 중…</span>
+          </div>
+        </section>
+
+        <section id="matchmaking-status" class="panel matchmaking-status hidden" aria-live="polite">
+          <div class="matchmaking-pulse"><span></span><span></span><span></span></div>
+          <div class="matchmaking-copy">
+            <span id="matchmaking-kicker" class="kicker">MATCHMAKING</span>
+            <h2 id="matchmaking-title">상대 플레이어를 찾는 중</h2>
+            <p id="matchmaking-detail">브라우저를 닫지 말고 기다려주세요.</p>
+            <button id="copy-room-code-btn" class="room-code-display hidden" type="button"></button>
+          </div>
+          <button id="cancel-matchmaking-btn" class="button quiet" type="button">대기 취소</button>
+        </section>
+
         <section id="replay-dropzone" class="panel replay-import-panel">
           <div class="replay-import-copy">
             <span class="kicker">REPLAY VIEWER</span>
@@ -145,7 +178,7 @@
             </div>
           </div>
           <div class="playback" aria-label="재생 제어">
-            <span id="playback-label" class="playback-label">AI ACTION</span>
+            <span id="playback-label" class="playback-label">BATTLE SYNC</span>
             <button id="prev-step-btn" class="icon-button hidden" type="button" title="이전 장면">◀</button>
             <button id="pause-btn" class="icon-button" type="button" title="자동 진행 일시정지">Ⅱ</button>
             <button id="step-btn" class="icon-button" type="button" title="한 단계 진행">▶</button>

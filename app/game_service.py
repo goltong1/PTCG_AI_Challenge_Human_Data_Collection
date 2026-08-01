@@ -280,6 +280,9 @@ class GameManager:
         self.official_observations: list[dict[str, Any]] = []
         self.official_actions: list[list[int]] = []
         self.official_think_ms: list[int] = []
+        self.game_mode = "ai"
+        self.player_names = ["Human", "AI"]
+        self.player_deck_labels = ["", ""]
 
     def presets(self) -> list[dict[str, str]]:
         labels = {
@@ -478,6 +481,7 @@ class GameManager:
 
             self.runtime = runtime
             self.catalog = CardCatalog(runtime)
+            self.game_mode = "ai"
             self.human_seat = human_seat
             self.ai_seat = 1 - human_seat
             self.ai_deck = ai_deck
@@ -514,6 +518,10 @@ class GameManager:
             names = ["", ""]
             names[self.human_seat] = "Human"
             names[self.ai_seat] = runtime.info.name
+            self.player_names = names
+            self.player_deck_labels = ["", ""]
+            self.player_deck_labels[self.human_seat] = deck_label
+            self.player_deck_labels[self.ai_seat] = runtime.info.name
             metadata = {
                 "game_id": self.game_id,
                 "created_at": datetime.now(timezone.utc).isoformat(),
@@ -531,6 +539,96 @@ class GameManager:
             self._save_replay()
             return self.public_state()
 
+    def start_pvp(
+        self,
+        player0_deck: list[int],
+        player1_deck: list[int],
+        deck_labels: list[str],
+        player_names: list[str],
+        engine_agent_id: str = "",
+    ) -> dict[str, Any]:
+        """Start one authoritative human-vs-human match.
+
+        A bundled agent runtime is used only as a CABT native-engine provider;
+        neither player's decisions are delegated to its ``agent()`` function.
+        """
+        with self.lock:
+            self._finalize_record()
+            self._finish_native()
+            if len(player0_deck) != 60 or len(player1_deck) != 60:
+                raise GameError("온라인 대전 덱은 양쪽 모두 정확히 60장이어야 합니다.")
+            if not isinstance(player_names, list) or len(player_names) != 2:
+                raise GameError("온라인 플레이어 이름 두 개가 필요합니다.")
+            available = self.agents.list()
+            if not available:
+                raise GameError("CABT 게임 엔진을 제공할 기본 AI가 없습니다.")
+            runtime_id = engine_agent_id or available[0].id
+            try:
+                runtime = self.agents.load(runtime_id)
+            except AgentLoadError as exc:
+                raise GameError(str(exc)) from exc
+
+            clean_names = []
+            for seat, raw_name in enumerate(player_names):
+                name = " ".join(str(raw_name or "").strip().split())[:32]
+                clean_names.append(name or f"Player {seat}")
+            labels = [str(value or "온라인 덱")[:80] for value in (deck_labels or [])[:2]]
+            while len(labels) < 2:
+                labels.append("온라인 덱")
+
+            self.runtime = runtime
+            self.catalog = CardCatalog(runtime)
+            self.game_mode = "pvp"
+            # Keep the legacy fields populated so replay export remains fully
+            # compatible: human_deck maps to P0, ai_deck maps to P1.
+            self.human_seat = 0
+            self.ai_seat = 1
+            self.human_deck = list(player0_deck)
+            self.ai_deck = list(player1_deck)
+            self.human_deck_label = labels[0]
+            self.player_deck_labels = labels
+            self.player_names = clean_names
+
+            try:
+                observation, start_data = runtime.battle_start(self.human_deck, self.ai_deck)
+            except Exception as exc:
+                raise GameError(f"BattleStart 실행 실패 · {type(exc).__name__}: {exc}") from exc
+            if observation is None or int(start_data.errorType) != 0:
+                raise GameError(
+                    f"BattleStart 실패: errorType={start_data.errorType}, errorPlayer={start_data.errorPlayer}"
+                )
+
+            self.observation = observation
+            self.decision_count = 0
+            self.started_at = time.time()
+            self.finished = False
+            self.last_error = None
+            self.last_action = None
+            self.action_history = []
+            self.official_observations = [copy.deepcopy(observation)]
+            self.official_actions = []
+            self.official_think_ms = []
+            self.game_id = datetime.now().strftime("%Y%m%d_%H%M%S_") + uuid.uuid4().hex[:8]
+            self.record_dir = DATA_ROOT / "records" / self.game_id
+            self.record_dir.mkdir(parents=True, exist_ok=True)
+            self._write_deck(self.record_dir / "deck_player0.csv", self.human_deck)
+            self._write_deck(self.record_dir / "deck_player1.csv", self.ai_deck)
+            metadata = {
+                "game_id": self.game_id,
+                "created_at": datetime.now(timezone.utc).isoformat(),
+                "mode": "pvp",
+                "player_names": clean_names,
+                "players": [{"name": clean_names[0]}, {"name": clean_names[1]}],
+                "deck_labels": labels,
+                "engine_agent_id": runtime.info.id,
+                "engine_agent_name": runtime.info.name,
+                "status": "active",
+                "result": -1,
+            }
+            self._write_json(self.record_dir / "metadata.json", metadata)
+            self._save_replay()
+            return self.public_state_for(0)
+
     def act_human(self, indices: list[int]) -> dict[str, Any]:
         with self.lock:
             self._ensure_active()
@@ -540,6 +638,21 @@ class GameManager:
             if int(current.get("yourIndex", -1)) != self.human_seat:
                 raise GameError("현재는 AI의 선택 차례입니다.")
             return self._apply_action(indices, "human", think_ms=0)
+
+    def act_player(self, seat: int, indices: list[int]) -> dict[str, Any]:
+        with self.lock:
+            self._ensure_active()
+            if self.game_mode != "pvp":
+                raise GameError("현재 게임은 온라인 플레이어 대전이 아닙니다.")
+            if seat not in (0, 1):
+                raise GameError("플레이어 좌석은 0 또는 1이어야 합니다.")
+            current = self.observation.get("current") or {}
+            if int(current.get("result", -1)) != -1:
+                return self.public_state_for(seat)
+            if int(current.get("yourIndex", -1)) != seat:
+                raise GameError("현재는 상대 플레이어의 선택 차례입니다.")
+            self._apply_action(indices, f"player{seat}", think_ms=0)
+            return self.public_state_for(seat)
 
     def act_ai_once(self) -> dict[str, Any]:
         with self.lock:
@@ -689,6 +802,106 @@ class GameManager:
                 "logs": [self._enrich_log(log) for log in (obs.get("logs") or [])][-24:],
                 "last_action": self.last_action,
                 "action_history": self.action_history[-80:],
+                "last_error": self.last_error,
+                "record_available": self.record_dir is not None,
+            }
+
+    def public_state_for(self, viewer_seat: int) -> dict[str, Any]:
+        """Serialize a PVP game from exactly one player's private viewpoint."""
+        with self.lock:
+            if viewer_seat not in (0, 1):
+                raise GameError("관전 좌석은 0 또는 1이어야 합니다.")
+            if self.observation is None:
+                return {"active": False, "mode": "pvp", "message": "매칭된 게임이 없습니다."}
+            if self.game_mode != "pvp":
+                raise GameError("현재 게임은 온라인 플레이어 대전이 아닙니다.")
+            obs = self.observation
+            current = obs.get("current") or {}
+            players = current.get("players") or [{}, {}]
+            result = int(current.get("result", -1))
+            actor = int(current.get("yourIndex", -1))
+            viewer_turn = result == -1 and actor == viewer_seat
+            opponent_seat = 1 - viewer_seat
+            select = obs.get("select") if viewer_turn else None
+            enriched_options = []
+            if select:
+                for index, option in enumerate(select.get("option") or []):
+                    enriched_options.append(self._enrich_option(obs, select, option, index))
+
+            result_text = None
+            if result != -1:
+                if result == 2:
+                    result_text = "무승부"
+                elif result == viewer_seat:
+                    result_text = "승리"
+                else:
+                    result_text = "패배"
+
+            def viewer_action(row: dict[str, Any] | None) -> dict[str, Any] | None:
+                if not row:
+                    return None
+                copied = copy.deepcopy(row)
+                row_actor = int(copied.get("actor", -1))
+                copied["source"] = "human" if row_actor == viewer_seat else "ai"
+                copied["actor_name"] = (
+                    self.player_names[row_actor]
+                    if 0 <= row_actor < len(self.player_names)
+                    else f"Player {row_actor}"
+                )
+                return copied
+
+            context = int(select.get("context", 0)) if select else None
+            return {
+                "active": True,
+                "mode": "pvp",
+                "game_id": self.game_id,
+                "human_seat": viewer_seat,
+                "ai_seat": opponent_seat,
+                "viewer_seat": viewer_seat,
+                "opponent_seat": opponent_seat,
+                "player_names": list(self.player_names),
+                "human_deck_label": self.player_deck_labels[viewer_seat],
+                "opponent_deck_label": self.player_deck_labels[opponent_seat],
+                "human_turn": viewer_turn,
+                "ai_pending": False,
+                "opponent_pending": result == -1 and actor == opponent_seat,
+                "actor": actor,
+                "turn": int(current.get("turn", 0)),
+                "turn_action_count": int(current.get("turnActionCount", 0)),
+                "first_player": int(current.get("firstPlayer", -1)),
+                "result": result,
+                "result_text": result_text,
+                "decision_count": self.decision_count,
+                "human": self._serialize_player(players[viewer_seat], reveal_hand=True),
+                "ai": self._serialize_player(players[opponent_seat], reveal_hand=False),
+                "stadium": [self._serialize_card(card) for card in current.get("stadium") or []],
+                "looking": [
+                    self._serialize_card(card) if card else None for card in current.get("looking") or []
+                ],
+                "flags": {
+                    "supporter_played": bool(current.get("supporterPlayed", False)),
+                    "stadium_played": bool(current.get("stadiumPlayed", False)),
+                    "energy_attached": bool(current.get("energyAttached", False)),
+                    "retreated": bool(current.get("retreated", False)),
+                },
+                "selection": None
+                if not select
+                else {
+                    "type": int(select.get("type", 0)),
+                    "context": context,
+                    "context_name": CONTEXT_NAMES.get(context, str(context)),
+                    "prompt": CONTEXT_KO.get(context, "선택지를 고르세요"),
+                    "min_count": int(select.get("minCount", 0)),
+                    "max_count": int(select.get("maxCount", 0)),
+                    "remain_damage_counter": int(select.get("remainDamageCounter", 0)),
+                    "remain_energy_cost": int(select.get("remainEnergyCost", 0)),
+                    "options": enriched_options,
+                },
+                "logs": [self._enrich_log(log) for log in (obs.get("logs") or [])][-24:],
+                "last_action": viewer_action(self.last_action),
+                "action_history": [
+                    viewer_action(row) for row in self.action_history[-80:] if row is not None
+                ],
                 "last_error": self.last_error,
                 "record_available": self.record_dir is not None,
             }
@@ -889,13 +1102,16 @@ class GameManager:
             return {"type": int(log.get("type", -1)), "text": "게임 이벤트", "raw": log}
         event_type = int(log.get("type", -1))
         player_index = log.get("playerIndex")
-        who = (
-            "Human"
-            if player_index == self.human_seat
-            else self.runtime.info.name
-            if self.runtime and player_index == self.ai_seat
-            else "Game"
-        )
+        if self.game_mode == "pvp" and isinstance(player_index, int) and 0 <= player_index < 2:
+            who = self.player_names[player_index]
+        else:
+            who = (
+                "Human"
+                if player_index == self.human_seat
+                else self.runtime.info.name
+                if self.runtime and player_index == self.ai_seat
+                else "Game"
+            )
         text = f"{who}: event {event_type}"
         if event_type == 2:
             text = f"{who} 턴 시작"
@@ -955,7 +1171,10 @@ class GameManager:
         labels = [row["label"] for row in option_rows]
         details = [row["detail"] for row in option_rows if row.get("detail")]
         actor = int((before.get("current") or {}).get("yourIndex", -1))
-        actor_name = "Human" if source == "human" else self.runtime.info.name if self.runtime else "AI"
+        if self.game_mode == "pvp" and 0 <= actor < len(self.player_names):
+            actor_name = self.player_names[actor]
+        else:
+            actor_name = "Human" if source == "human" else self.runtime.info.name if self.runtime else "AI"
         events = [self._enrich_log(log) for log in (after.get("logs") or [])]
         return {
             "sequence": self.decision_count,
