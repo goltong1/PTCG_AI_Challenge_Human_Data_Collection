@@ -1,9 +1,11 @@
+.git
+.gitignore
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *.zip
 *.log
 .env
-.DS_Store
 app/records/*
 !app/records/README.txt
 app/submissions/*

@@ -1,0 +1,1798 @@
+const $ = (selector) => document.querySelector(selector);
+
+let config = null;
+let state = null;
+let selectedAgentId = null;
+let selectedOptions = new Set();
+let imageRevision = 0;
+let aiPaused = false;
+let aiBusy = false;
+let aiTimer = null;
+let aiLoopGeneration = 0;
+let lastRenderedSequence = -1;
+let cardCounter = 0;
+const cardRegistry = new Map();
+let builderDeckId = null;
+let builderCards = [];
+let builderDetails = new Map();
+let builderDirty = false;
+let builderSearchOffset = 0;
+let builderSearchHasMore = false;
+let builderSearchTimer = null;
+let builderSearchGeneration = 0;
+let builderSource = 'new';
+let replayPlaying = false;
+let replayTimer = null;
+let replayBusy = false;
+let replayRequestGeneration = 0;
+let resultSubmitting = false;
+const submittedGameIds = new Set();
+let matchmakingTimer = null;
+let matchmakingBusy = false;
+let matchmakingState = { status: 'idle' };
+let pvpPollTimer = null;
+let pvpPollBusy = false;
+
+function esc(value) {
+  return String(value ?? '').replace(/[&<>'"]/g, (char) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;',
+  }[char]));
+}
+
+function toast(message, tone = 'error') {
+  const element = $('#toast');
+  element.textContent = message;
+  element.dataset.tone = tone;
+  element.classList.remove('hidden');
+  clearTimeout(window.__cabtToast);
+  window.__cabtToast = setTimeout(() => element.classList.add('hidden'), 5200);
+}
+
+function showLobbyLoading(on, title = '준비 중입니다', detail = '잠시만 기다려주세요.') {
+  $('#loading-title').textContent = title;
+  $('#loading-detail').textContent = detail;
+  $('#lobby-loading').classList.toggle('hidden', !on);
+}
+
+async function api(url, options = {}) {
+  const response = await fetch(url, options);
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) throw new Error(payload.detail || `HTTP ${response.status}`);
+  return payload;
+}
+
+function isReplayMode() {
+  return state?.mode === 'replay';
+}
+
+function isPvpMode() {
+  return state?.mode === 'pvp';
+}
+
+function stopReplayPlayback() {
+  replayPlaying = false;
+  replayBusy = false;
+  clearTimeout(replayTimer);
+  replayTimer = null;
+  replayRequestGeneration += 1;
+}
+
+function openReplayPicker() {
+  $('#replay-file').click();
+}
+
+async function cancelPendingMatchmakingQuietly() {
+  if (!['searching', 'waiting_room'].includes(matchmakingState.status)) return;
+  stopMatchmakingPoll();
+  try {
+    await api('/api/matchmaking/cancel', { method: 'POST' });
+  } catch (_error) {
+    // Continue with the explicitly requested local action even if the queue
+    // already expired on the server.
+  }
+  renderMatchmakingStatus({ status: 'idle' });
+}
+
+async function loadReplay(file) {
+  if (!file) return;
+  const extension = file.name.toLowerCase().split('.').pop();
+  if (!['zip', 'json', 'jsonl'].includes(extension)) {
+    toast('CABT 기록 ZIP, JSON 또는 JSONL 파일을 선택하세요.');
+    return;
+  }
+  const maxBytes = Number(config?.replay_upload_limit_mb || 128) * 1024 * 1024;
+  if (file.size > maxBytes) {
+    toast(`리플레이 파일은 ${Math.round(maxBytes / 1024 / 1024)}MB 이하여야 합니다.`);
+    return;
+  }
+  showLobbyLoading(true, '리플레이를 불러오는 중입니다', `${file.name}의 장면과 액션을 분석하고 있습니다.`);
+  await cancelPendingMatchmakingQuietly();
+  abortAiLoop();
+  stopReplayPlayback();
+  setAiThinking(false);
+  aiPaused = true;
+  lastRenderedSequence = -1;
+  try {
+    const next = await api(`/api/replay/load?filename=${encodeURIComponent(file.name)}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/octet-stream' },
+      body: file,
+    });
+    render(next);
+    const actionNote = next.replay?.has_transitions ? '액션 기록 포함' : '장면 재생 모드';
+    toast(`${file.name} · ${next.replay?.total || 0}개 장면 · ${actionNote}`, 'success');
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    $('#replay-file').value = '';
+    showLobbyLoading(false);
+  }
+}
+
+async function goToReplayFrame(index, { keepPlaying = false } = {}) {
+  if (!isReplayMode() || replayBusy) return;
+  const total = Number(state.replay?.total || 1);
+  const target = Math.max(0, Math.min(Number(index) || 0, total - 1));
+  const viewSeat = Number($('#replay-view-seat').value || state.replay?.view_seat || 0);
+  const requestGeneration = ++replayRequestGeneration;
+  replayBusy = true;
+  updatePlaybackButtons();
+  try {
+    const next = await api(`/api/replay/state?index=${target}&view_seat=${viewSeat}`);
+    if (requestGeneration !== replayRequestGeneration) return;
+    replayPlaying = keepPlaying && target < total - 1;
+    render(next);
+  } catch (error) {
+    replayPlaying = false;
+    toast(error.message);
+  } finally {
+    if (requestGeneration === replayRequestGeneration) {
+      replayBusy = false;
+      updatePlaybackButtons();
+      if (replayPlaying) scheduleReplay();
+    }
+  }
+}
+
+function scheduleReplay() {
+  clearTimeout(replayTimer);
+  if (!isReplayMode() || !replayPlaying || replayBusy) return;
+  const index = Number(state.replay?.index || 0);
+  const total = Number(state.replay?.total || 1);
+  if (index >= total - 1) {
+    replayPlaying = false;
+    updatePlaybackButtons();
+    return;
+  }
+  const delay = Number($('#speed-select').value || 750);
+  replayTimer = setTimeout(() => goToReplayFrame(index + 1, { keepPlaying: true }), delay);
+}
+
+function toggleReplayPlayback() {
+  if (!isReplayMode() || replayBusy) return;
+  const index = Number(state.replay?.index || 0);
+  const total = Number(state.replay?.total || 1);
+  if (replayPlaying) {
+    replayPlaying = false;
+    clearTimeout(replayTimer);
+    updatePlaybackButtons();
+    return;
+  }
+  replayPlaying = true;
+  updatePlaybackButtons();
+  if (index >= total - 1) goToReplayFrame(0, { keepPlaying: true });
+  else scheduleReplay();
+}
+
+function imageUrl(card) {
+  return `${card.image_url || `/api/card-image/${card.id}`}?v=${imageRevision}`;
+}
+
+function registerCard(card) {
+  const key = `c${++cardCounter}`;
+  cardRegistry.set(key, card);
+  return key;
+}
+
+function imageHtml(card, className = 'card-art') {
+  return `<div class="${className}-wrap">
+    <img class="${className}" src="${esc(imageUrl(card))}" alt="${esc(card.name)}" loading="lazy"
+      onerror="this.parentElement.classList.add('image-missing');this.remove()">
+    <div class="image-fallback">${esc(card.name)}</div>
+  </div>`;
+}
+
+function agentInitials(name) {
+  return name.split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]).join('').toUpperCase();
+}
+
+function renderAgentLibrary(agents, preferredId = selectedAgentId) {
+  config.agents = agents;
+  const usable = agents.filter((agent) => agent.deck_cards === 60 && agent.has_native_engine);
+  if (!usable.some((agent) => agent.id === preferredId)) {
+    preferredId = usable[0]?.id || null;
+  }
+  selectedAgentId = preferredId;
+  $('#agent-count').textContent = `${agents.length} AI`;
+  $('#agent-grid').innerHTML = agents.length ? agents.map((agent) => {
+    const ready = agent.deck_cards === 60 && agent.has_native_engine;
+    return `<button class="agent-card ${agent.id === selectedAgentId ? 'selected' : ''} ${ready ? '' : 'invalid'}"
+      type="button" role="radio" aria-checked="${agent.id === selectedAgentId}" data-agent-id="${esc(agent.id)}"
+      ${ready ? '' : 'disabled'}>
+      <span class="agent-avatar">${esc(agentInitials(agent.name))}</span>
+      <span class="agent-card-copy">
+        <strong>${esc(agent.name)}</strong>
+        <small>${agent.source === 'bundled' ? '기본 포함 AI' : '추가한 제출 AI'} · ${agent.deck_cards}/60 cards</small>
+      </span>
+      <span class="ready-dot" title="${ready ? '사용 가능' : '구조 오류'}"></span>
+    </button>`;
+  }).join('') : '<div class="empty-state">사용 가능한 AI가 없습니다. 제출 ZIP을 추가하세요.</div>';
+
+  $('#agent-grid').querySelectorAll('.agent-card').forEach((button) => {
+    button.addEventListener('click', () => selectAgent(button.dataset.agentId));
+  });
+  updateSelectedAgentName();
+}
+
+function selectAgent(agentId) {
+  selectedAgentId = agentId;
+  $('#agent-grid').querySelectorAll('.agent-card').forEach((card) => {
+    const selected = card.dataset.agentId === agentId;
+    card.classList.toggle('selected', selected);
+    card.setAttribute('aria-checked', String(selected));
+  });
+  updateSelectedAgentName();
+}
+
+function updateSelectedAgentName() {
+  const agent = config?.agents?.find((item) => item.id === selectedAgentId);
+  $('#selected-agent-name').textContent = agent?.name || 'AI를 선택하세요';
+  updateStartAvailability();
+}
+
+function deckReferenceInfo(reference = $('#deck-select')?.value) {
+  if (!reference || !config) return null;
+  const [source, id] = reference.split(':', 2);
+  if (source === 'preset') {
+    const preset = config.presets.find((item) => item.id === id);
+    return preset ? { source, id, name: preset.label, card_count: 60 } : null;
+  }
+  if (source === 'saved') {
+    const deck = config.saved_decks.find((item) => item.id === id);
+    return deck ? { source, ...deck } : null;
+  }
+  return null;
+}
+
+function updateStartAvailability() {
+  const agent = config?.agents?.find((item) => item.id === selectedAgentId);
+  const deck = deckReferenceInfo();
+  $('#start-button').disabled = !agent || !deck || deck.card_count !== 60;
+}
+
+function updateDeckSelectionNote() {
+  const deck = deckReferenceInfo();
+  if (!deck) {
+    $('#deck-selection-note').textContent = '덱빌더에서 덱을 만들거나 프리셋을 선택하세요.';
+  } else if (deck.card_count === 60) {
+    $('#deck-selection-note').textContent = `${deck.name} · 60장 · 대전 가능`;
+  } else {
+    $('#deck-selection-note').textContent = `${deck.name} · ${deck.card_count}/60장 · 덱빌더에서 완성하세요`;
+  }
+  updateStartAvailability();
+}
+
+function deckOptionsHtml(decks = config?.saved_decks || []) {
+  const presetOptions = (config?.presets || []).map((preset) =>
+    `<option value="preset:${esc(preset.id)}">${esc(preset.label)} · 60장</option>`).join('');
+  const savedOptions = decks.map((deck) =>
+    `<option value="saved:${esc(deck.id)}">${esc(deck.name)} · ${deck.card_count}/60장</option>`).join('');
+  return `<optgroup label="기본 프리셋">${presetOptions}</optgroup>
+    <optgroup label="내가 저장한 덱">${savedOptions || '<option disabled>저장한 덱 없음</option>'}</optgroup>`;
+}
+
+function renderDeckChoices(preferredReference = $('#deck-select')?.value) {
+  const select = $('#deck-select');
+  select.innerHTML = deckOptionsHtml();
+  const exists = [...select.options].some((option) => option.value === preferredReference);
+  if (exists) select.value = preferredReference;
+  updateDeckSelectionNote();
+  renderBuilderLoadOptions(preferredReference);
+}
+
+function renderBuilderLoadOptions(preferredReference = $('#builder-load-select')?.value) {
+  const select = $('#builder-load-select');
+  if (!select || !config) return;
+  select.innerHTML = deckOptionsHtml();
+  const exists = [...select.options].some((option) => option.value === preferredReference);
+  if (exists) select.value = preferredReference;
+}
+
+async function loadConfig() {
+  config = await api('/api/config');
+  imageRevision = Number(config.card_images?.revision || 0);
+  config.saved_decks ||= [];
+  document.body.classList.toggle('public-mode', Boolean(config.public_mode));
+  $('#brand-mode-label').textContent = config.public_mode ? 'CABT WEB ARENA' : 'CABT LOCAL ARENA';
+  const lobbyDescription = $('#lobby-description');
+  if (lobbyDescription) {
+    lobbyDescription.textContent = config.public_mode
+      ? '서버에 준비된 AI와 독립된 세션으로 대전하고, 동의한 완료 기록을 운영자에게 전송할 수 있습니다.'
+      : '제출 ZIP을 그대로 추가하고, AI의 선택을 한 단계씩 확인할 수 있습니다. 별도 개발 환경 없이 로컬 브라우저에서 실행됩니다.';
+  }
+  $('#result-consent-panel').classList.toggle('hidden', !config.result_submission_enabled);
+  $('#online-match-panel').classList.toggle('hidden', !config.online_matching_enabled);
+  $('#online-capacity-text').textContent = config.online_matching_enabled
+    ? `동시 온라인 대전 최대 ${config.max_pvp_matches}개 · 빠른 매칭과 친구 방 지원`
+    : '온라인 매칭 비활성화';
+  $('#rescan-images-btn').classList.toggle('hidden', Boolean(config.public_mode));
+  const savedName = localStorage.getItem('cabtParticipantName') || '';
+  $('#participant-name').value = savedName;
+  renderDeckChoices(`preset:${config.presets[0]?.id || ''}`);
+  $('#builder-type-filter').innerHTML = '<option value="">전체 카드</option>'
+    + (config.card_types || []).map((item) =>
+      `<option value="${esc(item.id)}">${esc(cardTypeLabel(item.id))} · ${item.count}</option>`).join('');
+  renderAgentLibrary(config.agents, config.default_agent);
+  updateImageStatus(config.card_images);
+}
+
+function updateImageStatus(images) {
+  const count = Number(images?.count || 0);
+  $('#image-status').textContent = count
+    ? `카드 이미지 ${count}종 준비됨`
+    : '카드 이미지를 찾지 못했습니다';
+  $('#runtime-dot').classList.toggle('warning', count === 0);
+}
+
+async function rescanImages() {
+  try {
+    const result = await api('/api/card-images/rescan', { method: 'POST' });
+    imageRevision = Number(result.revision || Date.now());
+    updateImageStatus(result);
+    if (state?.active) render(state);
+    toast(`카드 이미지 ${result.count}종을 다시 인식했습니다.`, 'success');
+  } catch (error) {
+    toast(error.message);
+  }
+}
+
+async function installAgent(file) {
+  if (!file) return;
+  if (!file.name.toLowerCase().endsWith('.zip')) {
+    toast('Kaggle 제출 ZIP 파일을 선택하세요.');
+    return;
+  }
+  showLobbyLoading(true, 'AI를 추가하는 중입니다', `${file.name} 구조를 확인하고 있습니다.`);
+  try {
+    const result = await api(`/api/agents/install?filename=${encodeURIComponent(file.name)}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/zip' },
+      body: file,
+    });
+    renderAgentLibrary(result.agents, result.installed.id);
+    toast(`${result.installed.name} AI를 사용할 수 있습니다.`, 'success');
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    $('#agent-file').value = '';
+    showLobbyLoading(false);
+  }
+}
+
+const CARD_TYPE_LABELS = {
+  POKEMON: '포켓몬',
+  ITEM: '아이템',
+  TOOL: '도구',
+  SUPPORTER: '서포트',
+  STADIUM: '스타디움',
+  BASIC_ENERGY: '기본 에너지',
+  SPECIAL_ENERGY: '특수 에너지',
+};
+
+function cardTypeLabel(type) {
+  return CARD_TYPE_LABELS[type] || type || '기타';
+}
+
+function builderQuantities() {
+  const counts = new Map();
+  builderCards.forEach((cardId) => counts.set(cardId, (counts.get(cardId) || 0) + 1));
+  return counts;
+}
+
+function builderNameQuantity(card) {
+  let count = 0;
+  for (const cardId of builderCards) {
+    const detail = builderDetails.get(cardId);
+    if (detail?.name?.toLocaleLowerCase() === card.name.toLocaleLowerCase()) count += 1;
+  }
+  return count;
+}
+
+function builderRuleStatus() {
+  if (builderCards.length > 60) return `60장을 초과했습니다. ${builderCards.length - 60}장을 빼세요.`;
+  const nameCounts = new Map();
+  for (const cardId of builderCards) {
+    const card = builderDetails.get(cardId);
+    if (!card || card.type === 'BASIC_ENERGY') continue;
+    const key = card.name.toLocaleLowerCase();
+    nameCounts.set(key, { name: card.name, count: (nameCounts.get(key)?.count || 0) + 1 });
+  }
+  const invalid = [...nameCounts.values()].filter((item) => item.count > 4);
+  if (invalid.length) return `${invalid[0].name}은(는) ${invalid[0].count}장입니다. 최대 4장만 넣을 수 있습니다.`;
+  if (builderCards.length < 60) return `대전까지 ${60 - builderCards.length}장이 더 필요합니다. 미완성 상태로도 저장할 수 있습니다.`;
+  return '60장 완성 · 저장 후 바로 대전에 사용할 수 있습니다.';
+}
+
+function setBuilderDirty(dirty) {
+  builderDirty = dirty;
+  let text = '저장되지 않은 새 덱';
+  if (builderSource === 'preset') text = dirty ? '프리셋을 수정함 · 새 덱으로 저장됩니다' : '프리셋 복사본 · 새 덱으로 저장됩니다';
+  if (builderSource === 'saved') text = dirty ? '변경사항이 아직 저장되지 않았습니다' : '저장됨';
+  $('#builder-save-state').textContent = text;
+}
+
+function renderBuilderDeck() {
+  const counts = builderQuantities();
+  const typeOrder = {
+    POKEMON: 0, ITEM: 1, TOOL: 2, SUPPORTER: 3,
+    STADIUM: 4, BASIC_ENERGY: 5, SPECIAL_ENERGY: 6,
+  };
+  const cards = [...counts.entries()].map(([id, quantity]) => ({
+    ...(builderDetails.get(id) || {
+      id, name: `Card ${id}`, type: 'UNKNOWN', image_url: `/api/card-image/${id}`,
+    }),
+    quantity,
+  })).sort((a, b) => (typeOrder[a.type] ?? 99) - (typeOrder[b.type] ?? 99)
+    || a.name.localeCompare(b.name)
+    || a.id - b.id);
+
+  const total = builderCards.length;
+  const countElement = $('#builder-count');
+  countElement.textContent = `${total} / 60`;
+  countElement.classList.toggle('complete', total === 60);
+  countElement.classList.toggle('over', total > 60);
+  $('#builder-progress').style.width = `${Math.min(100, total / 60 * 100)}%`;
+
+  const stats = { pokemon: 0, trainer: 0, energy: 0 };
+  for (const cardId of builderCards) {
+    const type = builderDetails.get(cardId)?.type || '';
+    if (type === 'POKEMON') stats.pokemon += 1;
+    else if (type.includes('ENERGY')) stats.energy += 1;
+    else stats.trainer += 1;
+  }
+  $('#builder-type-stats').innerHTML = [
+    `<span>포켓몬 ${stats.pokemon}</span>`,
+    `<span>트레이너 ${stats.trainer}</span>`,
+    `<span>에너지 ${stats.energy}</span>`,
+  ].join('');
+
+  const ruleStatus = builderRuleStatus();
+  $('#builder-rule-note').textContent = ruleStatus;
+  $('#builder-rule-note').classList.toggle('error', total > 60 || /최대 4장/.test(ruleStatus));
+  $('#builder-use-btn').disabled = total !== 60 || $('#builder-rule-note').classList.contains('error');
+  $('#builder-delete-btn').disabled = !builderDeckId;
+
+  const list = $('#builder-deck-list');
+  if (!cards.length) {
+    list.innerHTML = `<div class="builder-empty">
+      <strong>여기에 카드를 놓으세요</strong>
+      <span>왼쪽 카드의 ＋ 버튼을 눌러도 추가됩니다.</span>
+    </div>`;
+    return;
+  }
+  list.innerHTML = cards.map((card) => `<div class="builder-deck-row" draggable="true" data-card-id="${card.id}">
+    <div class="builder-deck-thumb">
+      <img src="${esc(imageUrl(card))}" alt="" loading="lazy"
+        onerror="this.style.display='none'">
+    </div>
+    <div class="builder-deck-copy">
+      <strong>${esc(card.name)}</strong>
+      <small>${esc(cardTypeLabel(card.type))} · #${card.id}</small>
+    </div>
+    <div class="builder-quantity">
+      <button type="button" data-deck-remove="${card.id}" aria-label="${esc(card.name)} 1장 빼기">−</button>
+      <span>${card.quantity}</span>
+      <button type="button" data-deck-add="${card.id}" aria-label="${esc(card.name)} 1장 추가">＋</button>
+    </div>
+  </div>`).join('');
+
+  list.querySelectorAll('[data-deck-remove]').forEach((button) => {
+    button.addEventListener('click', () => removeBuilderCard(Number(button.dataset.deckRemove)));
+  });
+  list.querySelectorAll('[data-deck-add]').forEach((button) => {
+    button.addEventListener('click', () => addBuilderCard(builderDetails.get(Number(button.dataset.deckAdd))));
+  });
+  list.querySelectorAll('.builder-deck-row').forEach((row) => {
+    row.addEventListener('dblclick', (event) => {
+      if (event.target.closest('button')) return;
+      const card = builderDetails.get(Number(row.dataset.cardId));
+      if (card) openCardModal(card);
+    });
+    row.addEventListener('dragstart', (event) => {
+      row.classList.add('dragging');
+      setBuilderDragData(event, Number(row.dataset.cardId), 'deck');
+    });
+    row.addEventListener('dragend', () => row.classList.remove('dragging'));
+  });
+}
+
+function addBuilderCard(card) {
+  if (!card) return;
+  if (builderCards.length >= 60) {
+    toast('덱은 60장을 초과할 수 없습니다.');
+    return;
+  }
+  if (card.type !== 'BASIC_ENERGY' && builderNameQuantity(card) >= 4) {
+    toast(`${card.name}은(는) 최대 4장까지 넣을 수 있습니다.`);
+    return;
+  }
+  builderDetails.set(Number(card.id), card);
+  builderCards.push(Number(card.id));
+  setBuilderDirty(true);
+  renderBuilderDeck();
+}
+
+function removeBuilderCard(cardId) {
+  const index = builderCards.lastIndexOf(Number(cardId));
+  if (index < 0) return;
+  builderCards.splice(index, 1);
+  setBuilderDirty(true);
+  renderBuilderDeck();
+}
+
+function newBuilderDeck() {
+  builderDeckId = null;
+  builderCards = [];
+  builderSource = 'new';
+  $('#builder-deck-name').value = '새 덱';
+  setBuilderDirty(false);
+  renderBuilderDeck();
+}
+
+function canDiscardBuilderChanges() {
+  return !builderDirty || window.confirm('저장하지 않은 변경사항을 버릴까요?');
+}
+
+function closeDeckBuilder() {
+  if (canDiscardBuilderChanges()) $('#deck-builder').close();
+}
+
+async function loadBuilderDeck(reference) {
+  if (!reference) {
+    newBuilderDeck();
+    return;
+  }
+  const [source, id] = reference.split(':', 2);
+  const endpoint = source === 'saved'
+    ? `/api/decks/saved/${encodeURIComponent(id)}`
+    : `/api/decks/preset/${encodeURIComponent(id)}`;
+  try {
+    const deck = await api(endpoint);
+    builderSource = deck.source;
+    builderDeckId = deck.source === 'saved' ? deck.id : null;
+    builderCards = deck.cards.map(Number);
+    (deck.details || []).forEach((card) => builderDetails.set(Number(card.id), card));
+    $('#builder-deck-name').value = deck.source === 'saved' ? deck.name : `${deck.name} 커스텀`;
+    setBuilderDirty(false);
+    renderBuilderDeck();
+  } catch (error) {
+    toast(error.message);
+  }
+}
+
+async function openDeckBuilder() {
+  const dialog = $('#deck-builder');
+  if (!dialog.open) dialog.showModal();
+  const reference = $('#deck-select').value;
+  renderBuilderLoadOptions(reference);
+  await loadBuilderDeck(reference);
+  await searchBuilderCards(true);
+}
+
+function renderBuilderCatalog(cards, append) {
+  const grid = $('#builder-card-grid');
+  if (!append) grid.innerHTML = '';
+  cards.forEach((card) => builderDetails.set(Number(card.id), card));
+  const html = cards.map((card) => `<div class="builder-card-item" draggable="true" data-card-id="${card.id}">
+    <div class="builder-card-art">
+      <img src="${esc(imageUrl(card))}" alt="${esc(card.name)}" loading="lazy"
+        onerror="this.remove()">
+      <div class="image-fallback">${esc(card.name)}</div>
+    </div>
+    <div class="builder-card-copy">
+      <strong>${esc(card.name)}</strong>
+      <small>${esc(cardTypeLabel(card.type))} · #${card.id}</small>
+    </div>
+    <button class="builder-add-card" data-catalog-add="${card.id}" type="button"
+      aria-label="${esc(card.name)} 덱에 추가">＋</button>
+  </div>`).join('');
+  grid.insertAdjacentHTML('beforeend', html);
+  grid.querySelectorAll('[data-catalog-add]').forEach((button) => {
+    if (button.dataset.bound) return;
+    button.dataset.bound = '1';
+    button.addEventListener('click', () => addBuilderCard(builderDetails.get(Number(button.dataset.catalogAdd))));
+  });
+  grid.querySelectorAll('.builder-card-item').forEach((item) => {
+    if (item.dataset.bound) return;
+    item.dataset.bound = '1';
+    item.addEventListener('dblclick', (event) => {
+      if (event.target.closest('button')) return;
+      const card = builderDetails.get(Number(item.dataset.cardId));
+      if (card) openCardModal(card);
+    });
+    item.addEventListener('dragstart', (event) => {
+      item.classList.add('dragging');
+      setBuilderDragData(event, Number(item.dataset.cardId), 'catalog');
+    });
+    item.addEventListener('dragend', () => item.classList.remove('dragging'));
+  });
+}
+
+async function searchBuilderCards(reset = true) {
+  const generation = ++builderSearchGeneration;
+  const grid = $('#builder-card-grid');
+  if (reset) {
+    builderSearchOffset = 0;
+    grid.innerHTML = '<div class="empty-state">카드를 검색하는 중…</div>';
+  }
+  const query = new URLSearchParams({
+    q: $('#builder-search').value.trim(),
+    type: $('#builder-type-filter').value,
+    offset: String(builderSearchOffset),
+    limit: '48',
+  });
+  try {
+    const result = await api(`/api/cards?${query}`);
+    if (generation !== builderSearchGeneration) return;
+    renderBuilderCatalog(result.cards, !reset);
+    builderSearchOffset = result.offset + result.cards.length;
+    builderSearchHasMore = result.has_more;
+    $('#builder-more-btn').classList.toggle('hidden', !result.has_more);
+    $('#builder-result-count').textContent = result.total
+      ? `${result.total}종 중 ${Math.min(builderSearchOffset, result.total)}종 표시`
+      : '검색 결과 없음';
+    if (!result.cards.length && reset) {
+      grid.innerHTML = '<div class="empty-state">조건에 맞는 카드가 없습니다.</div>';
+    }
+  } catch (error) {
+    if (generation !== builderSearchGeneration) return;
+    grid.innerHTML = `<div class="empty-state">${esc(error.message)}</div>`;
+  }
+}
+
+async function saveBuilderDeck(useAfterSave = false) {
+  if (useAfterSave && builderCards.length !== 60) {
+    toast('대전에 사용할 덱은 정확히 60장이어야 합니다.');
+    return;
+  }
+  const name = $('#builder-deck-name').value.trim();
+  if (!name) {
+    toast('덱 이름을 입력하세요.');
+    $('#builder-deck-name').focus();
+    return;
+  }
+  try {
+    const result = await api('/api/decks/save', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        id: builderDeckId,
+        name,
+        cards: builderCards,
+      }),
+    });
+    config.saved_decks = result.decks;
+    builderDeckId = result.deck.id;
+    builderSource = 'saved';
+    builderCards = result.deck.cards.map(Number);
+    (result.deck.details || []).forEach((card) => builderDetails.set(Number(card.id), card));
+    setBuilderDirty(false);
+    renderBuilderDeck();
+    const reference = `saved:${builderDeckId}`;
+    renderDeckChoices(reference);
+    $('#builder-load-select').value = reference;
+    toast(`${result.deck.name} 덱을 저장했습니다.`, 'success');
+    if (useAfterSave) $('#deck-builder').close();
+  } catch (error) {
+    toast(error.message);
+  }
+}
+
+async function deleteBuilderDeck() {
+  if (!builderDeckId) return;
+  const name = $('#builder-deck-name').value.trim() || '이 덱';
+  if (!window.confirm(`${name}을(를) 삭제할까요?`)) return;
+  try {
+    const result = await api('/api/decks/delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: builderDeckId }),
+    });
+    config.saved_decks = result.decks;
+    renderDeckChoices();
+    newBuilderDeck();
+    renderBuilderLoadOptions();
+    toast('덱을 삭제했습니다.', 'success');
+  } catch (error) {
+    toast(error.message);
+  }
+}
+
+function setBuilderDragData(event, cardId, source) {
+  event.dataTransfer.effectAllowed = source === 'deck' ? 'move' : 'copy';
+  const payload = JSON.stringify({ cardId, source });
+  event.dataTransfer.setData('application/x-cabt-card', payload);
+  event.dataTransfer.setData('text/plain', payload);
+}
+
+function readBuilderDragData(event) {
+  const raw = event.dataTransfer.getData('application/x-cabt-card')
+    || event.dataTransfer.getData('text/plain');
+  try {
+    const payload = JSON.parse(raw);
+    if (!Number.isInteger(payload.cardId)) return null;
+    return payload;
+  } catch {
+    return null;
+  }
+}
+
+function prizeMeter(count) {
+  const remaining = Math.max(0, Math.min(6, Number(count) || 0));
+  const cards = Array.from({ length: 6 }, (_, index) =>
+    `<span class="prize-card ${index < remaining ? 'remaining' : 'claimed'}" aria-hidden="true"></span>`).join('');
+  return `<div class="prize-resource" title="남은 프라이즈 ${remaining}장">
+    <span class="resource-label">PRIZE</span>
+    <div class="prize-stack">${cards}</div>
+    <strong>${remaining}</strong>
+  </div>`;
+}
+
+function discardPreview(player) {
+  const latest = player.discard?.length ? player.discard[player.discard.length - 1] : null;
+  if (!latest) {
+    return `<div class="discard-resource empty-discard">
+      <span class="resource-label">TRASH</span>
+      <div class="discard-thumb-placeholder">−</div>
+      <strong>${player.discard_count}</strong>
+    </div>`;
+  }
+  const key = registerCard(latest);
+  return `<button class="discard-resource card-click" type="button" data-card-key="${key}"
+      title="최근 트래시: ${esc(latest.name)}">
+    <span class="resource-label">TRASH</span>
+    ${imageHtml(latest, 'discard-thumb-art')}
+    <strong>${player.discard_count}</strong>
+  </button>`;
+}
+
+function statsHtml(player) {
+  return `<div class="player-resources">
+    <div class="resource-number"><span>DECK</span><strong>${player.deck_count}</strong></div>
+    <div class="resource-number"><span>HAND</span><strong>${player.hand_count}</strong></div>
+    ${prizeMeter(player.prize_count)}
+    ${discardPreview(player)}
+  </div>`;
+}
+
+function attachmentPanel(card) {
+  const energyCards = card.energy_cards || [];
+  const energyCounts = new Map();
+  (card.energies || []).forEach((energy) => energyCounts.set(energy, (energyCounts.get(energy) || 0) + 1));
+  const energyImages = energyCards.slice(0, 5).map((energy, index) => {
+    const key = registerCard(energy);
+    return `<button class="attached-card-mini card-click" type="button" data-card-key="${key}"
+      title="부착 에너지: ${esc(energy.name)}" style="--stack-index:${index}">
+      <img src="${esc(imageUrl(energy))}" alt="${esc(energy.name)}" loading="lazy"
+        onerror="this.parentElement.classList.add('image-missing');this.remove()">
+      <span>${esc(energy.name)}</span>
+    </button>`;
+  }).join('');
+  const energyTypes = [...energyCounts.entries()].map(([name, count]) =>
+    `<span class="energy-type-chip"><b>${count}</b>${esc(name)}</span>`).join('');
+  const tools = (card.tools || []).map((tool) => {
+    const key = registerCard(tool);
+    return `<button class="tool-chip card-click" type="button" data-card-key="${key}" title="도구: ${esc(tool.name)}">
+      도구 · ${esc(tool.name)}
+    </button>`;
+  }).join('');
+  if (!energyImages && !energyTypes && !tools) {
+    return '<div class="attachment-panel empty-attachments"><span>부착 카드 없음</span></div>';
+  }
+  const overflow = Math.max(0, energyCards.length - 5);
+  return `<div class="attachment-panel">
+    <div class="energy-attachment-group">
+      <span class="attachment-label">ENERGY <b>${card.energies?.length || 0}</b></span>
+      <div class="attached-energy-images">${energyImages}${overflow ? `<span class="attachment-overflow">+${overflow}</span>` : ''}</div>
+      <div class="energy-type-row">${energyTypes}</div>
+    </div>
+    ${tools ? `<div class="tool-row">${tools}</div>` : ''}
+  </div>`;
+}
+
+function cardHtml(card, { pokemon = false, compact = false, hidden = false } = {}) {
+  if (hidden) {
+    return `<div class="card-shell hidden-card"><div class="card-back-mark">CABT</div></div>`;
+  }
+  if (!card) return '<div class="empty-slot">비어 있음</div>';
+  const key = registerCard(card);
+  const hpPercent = pokemon
+    ? Math.max(0, Math.min(100, 100 * card.hp_current / Math.max(1, card.hp_max)))
+    : 0;
+  const conditions = pokemon
+    ? Object.entries(card.conditions || {}).filter(([, value]) => value).map(([condition]) => condition)
+    : [];
+  const shell = `<button class="card-shell card-click ${pokemon ? 'pokemon' : ''} ${compact ? 'compact-card' : ''}"
+      type="button" data-card-key="${key}" title="${esc(card.name)} 자세히 보기">
+    ${imageHtml(card)}
+    ${pokemon ? `<div class="pokemon-overlay">
+      <div class="pokemon-name"><span>${esc(card.name)}</span><b>${card.hp_current}/${card.hp_max}</b></div>
+      <div class="hp-bar"><span style="width:${hpPercent}%"></span></div>
+      ${conditions.length ? `<div class="condition-row">${conditions.map((condition) => `<span>${esc(condition)}</span>`).join('')}</div>` : ''}
+    </div>` : `<div class="card-caption">${esc(card.name)}</div>`}
+  </button>`;
+  if (!pokemon) return shell;
+  return `<div class="pokemon-stack ${compact ? 'compact-stack' : ''}">${shell}${attachmentPanel(card)}</div>`;
+}
+
+function renderPlayerSide(target, player, revealHand, name, seatToken = 'YOU') {
+  const active = player.active?.length
+    ? cardHtml(player.active[0], { pokemon: true })
+    : '<div class="empty-slot active-empty">배틀 포켓몬 없음</div>';
+  const bench = player.bench?.length
+    ? player.bench.map((card) => cardHtml(card, { pokemon: true, compact: true })).join('')
+    : '<div class="empty-slot">벤치 없음</div>';
+  const handVisible = revealHand && player.hand !== null;
+  const hand = handVisible
+    ? (player.hand?.length
+      ? player.hand.map((card) => cardHtml(card, { compact: true })).join('')
+      : '<div class="empty-slot">패 없음</div>')
+    : Array.from({ length: Math.min(player.hand_count, 9) }, () => cardHtml(null, { hidden: true })).join('');
+  const discard = player.discard?.length
+    ? [...player.discard].reverse().map((card) => cardHtml(card, { compact: true })).join('')
+    : '<div class="empty-slot">트래시 없음</div>';
+  const latestDiscard = player.discard?.length ? player.discard[player.discard.length - 1] : null;
+  const latestSummary = latestDiscard
+    ? `<span class="discard-summary-copy"><b>${esc(latestDiscard.name)}</b><small>최근 카드 · 전체 ${player.discard_count}장</small></span>`
+    : `<span class="discard-summary-copy"><b>트래시 없음</b><small>전체 0장</small></span>`;
+
+  target.innerHTML = `<div class="player-heading">
+      <div class="player-identity">
+        <span class="seat-token">${esc(seatToken)}</span>
+        <strong>${esc(name)}</strong>
+      </div>
+      ${statsHtml(player)}
+    </div>
+    <div class="battle-row">
+      <div class="active-zone">
+        <span class="zone-label">ACTIVE</span>
+        ${active}
+      </div>
+      <div class="bench-zone">
+        <span class="zone-label">BENCH</span>
+        <div class="card-row bench-row">${bench}</div>
+      </div>
+    </div>
+    <div class="private-row ${handVisible ? '' : 'opponent-hand'}">
+      <div class="hand-zone">
+        <span class="zone-label">HAND ${handVisible ? '' : '· HIDDEN'}</span>
+        <div class="card-row hand-row">${hand}</div>
+      </div>
+      <details class="discard-zone">
+        <summary>
+          <span class="discard-summary-icon">${latestDiscard ? imageHtml(latestDiscard, 'discard-summary-art') : '<span>−</span>'}</span>
+          ${latestSummary}
+          <span class="discard-expand">전체 보기</span>
+        </summary>
+        <div class="card-row discard-row">${discard}</div>
+      </details>
+    </div>`;
+}
+
+function renderOptions(selection) {
+  selectedOptions.clear();
+  const container = $('#options');
+  const confirm = $('#confirm-btn');
+  const clear = $('#clear-btn');
+  const replayMode = isReplayMode();
+  $('#decision-kicker').textContent = replayMode ? 'RECORDED DECISION' : 'YOUR DECISION';
+  if (!selection) {
+    $('#decision-prompt').textContent = replayMode
+      ? (state?.result !== -1 ? '게임이 종료되었습니다' : '이 장면 뒤의 선택 기록이 없습니다')
+      : state?.result !== -1
+        ? '게임이 종료되었습니다'
+        : isPvpMode() && state?.opponent_left
+          ? '상대 플레이어가 나갔습니다'
+          : isPvpMode() && state?.opponent_pending
+            ? '상대 플레이어의 선택을 기다리는 중'
+            : state?.ai_pending
+              ? 'AI 행동을 재생 중입니다'
+          : '선택을 기다리는 중';
+    $('#selection-counter').textContent = '';
+    container.innerHTML = replayMode
+      ? '<div class="waiting-card"><strong>장면 상태</strong><small>슬라이더나 이전·다음 버튼으로 다른 장면을 확인하세요.</small></div>'
+      : isPvpMode() && state?.opponent_pending
+        ? '<div class="waiting-card"><span class="mini-pulse"></span><strong>상대 차례</strong><small>상대의 선택이 서버에 적용되면 보드가 자동으로 갱신됩니다.</small></div>'
+        : state?.ai_pending
+        ? '<div class="waiting-card"><span class="mini-pulse"></span><strong>AI 차례</strong><small>오른쪽 위에서 일시정지하거나 한 단계씩 진행할 수 있습니다.</small></div>'
+        : '<div class="empty-state">현재 선택지가 없습니다.</div>';
+    confirm.disabled = true;
+    clear.disabled = true;
+    return;
+  }
+
+  const replaySelected = new Set(selection.selected_indices || []);
+  $('#decision-prompt').textContent = selection.prompt;
+  container.innerHTML = selection.options.map((option) => {
+    const cardThumb = option.card
+      ? `<div class="option-thumb">${imageHtml(option.card, 'option-art')}</div>`
+      : `<div class="option-symbol">${option.type === 1 ? '✓' : option.type === 2 ? '×' : option.type === 14 ? '↳' : '•'}</div>`;
+    const replayClass = replayMode && replaySelected.has(option.index) ? 'replay-selected' : '';
+    return `<button class="option ${option.card ? 'has-card' : ''} ${replayClass}" data-index="${option.index}" type="button">
+      ${cardThumb}
+      <span class="option-copy">
+        <span class="option-title">${esc(option.label)}</span>
+        <span class="option-detail">${esc(option.detail || option.type_name)}</span>
+      </span>
+      <span class="option-check">✓</span>
+    </button>`;
+  }).join('');
+
+  if (replayMode) {
+    const selectedCount = replaySelected.size;
+    $('#selection-counter').textContent = selectedCount
+      ? `기록된 선택 ${selectedCount}개`
+      : '선택 인덱스 없음';
+    confirm.disabled = true;
+    clear.disabled = true;
+    return;
+  }
+
+  container.querySelectorAll('.option').forEach((button) => {
+    button.addEventListener('click', () => toggleOption(Number(button.dataset.index), selection));
+  });
+  confirm.disabled = true;
+  clear.disabled = false;
+  updateSelectionCounter(selection);
+}
+
+function toggleOption(index, selection) {
+  if (selectedOptions.has(index)) {
+    selectedOptions.delete(index);
+  } else {
+    if (selection.max_count === 1) selectedOptions.clear();
+    if (selectedOptions.size < selection.max_count) selectedOptions.add(index);
+  }
+  document.querySelectorAll('.option').forEach((element) => {
+    element.classList.toggle('selected', selectedOptions.has(Number(element.dataset.index)));
+  });
+  updateSelectionCounter(selection);
+}
+
+function updateSelectionCounter(selection) {
+  const exact = selection.min_count === selection.max_count;
+  $('#selection-counter').textContent = exact
+    ? `${selectedOptions.size}/${selection.max_count} 선택`
+    : `${selectedOptions.size} 선택 · ${selection.min_count}–${selection.max_count} 필요`;
+  $('#confirm-btn').disabled = selectedOptions.size < selection.min_count
+    || selectedOptions.size > selection.max_count;
+}
+
+function renderActionStage(lastAction) {
+  const stage = $('#action-stage');
+  if (!lastAction) {
+    if (isReplayMode()) {
+      $('#action-actor').textContent = 'REPLAY START';
+      $('#action-title').textContent = '기록의 첫 장면입니다';
+      $('#action-detail').textContent = '다음 버튼 또는 재생 버튼으로 실제 진행 순서를 확인하세요.';
+      stage.className = 'action-stage panel human';
+      return;
+    }
+    if (isPvpMode()) {
+      $('#action-actor').textContent = state?.opponent_pending ? 'OPPONENT TURN' : 'YOUR TURN';
+      $('#action-title').textContent = state?.opponent_pending ? '상대 플레이어의 선택을 기다립니다' : '당신의 선택 차례입니다';
+      $('#action-detail').textContent = '양쪽 브라우저는 같은 서버 게임 상태를 공유합니다.';
+      stage.className = `action-stage panel ${state?.opponent_pending ? 'ai' : 'human'}`;
+      return;
+    }
+    $('#action-actor').textContent = state?.ai_pending ? 'AI TURN' : 'READY';
+    $('#action-title').textContent = state?.ai_pending ? 'AI의 첫 행동을 기다립니다' : '당신의 선택 차례입니다';
+    $('#action-detail').textContent = '각 액션이 적용될 때마다 보드와 타임라인이 갱신됩니다.';
+    stage.className = `action-stage panel ${state?.ai_pending ? 'ai' : 'human'}`;
+    return;
+  }
+  $('#action-actor').textContent = isReplayMode()
+    ? `P${lastAction.actor} ACTION`
+    : isPvpMode()
+      ? lastAction.source === 'ai' ? 'OPPONENT ACTION' : 'YOUR ACTION'
+      : lastAction.source === 'ai' ? 'AI ACTION' : 'YOUR ACTION';
+  $('#action-title').textContent = lastAction.text;
+  const detail = [
+    isReplayMode() ? lastAction.actor_name : lastAction.details?.[0],
+    lastAction.think_ms ? `계산 ${lastAction.think_ms}ms` : null,
+    `Turn ${lastAction.turn}`,
+  ].filter(Boolean).join(' · ');
+  $('#action-detail').textContent = detail;
+  stage.className = `action-stage panel ${lastAction.source}`;
+  if (lastAction.sequence !== lastRenderedSequence) {
+    lastRenderedSequence = lastAction.sequence;
+    stage.classList.remove('action-pop');
+    requestAnimationFrame(() => stage.classList.add('action-pop'));
+  }
+}
+
+function renderTimeline(history) {
+  const timeline = $('#timeline');
+  if (!history?.length) {
+    timeline.innerHTML = isReplayMode()
+      ? '<div class="empty-state">다음 장면으로 이동하면 기록된 액션이 여기에 표시됩니다.</div>'
+      : '<div class="empty-state">첫 액션이 실행되면 여기에 순서대로 쌓입니다.</div>';
+    return;
+  }
+  const wasNearBottom = timeline.scrollHeight - timeline.scrollTop - timeline.clientHeight < 80;
+  const currentFrame = Number(state?.replay?.index ?? -1);
+  timeline.innerHTML = history.map((action) => `<div class="timeline-entry ${action.source} ${action.frame_index === currentFrame ? 'current-frame' : ''}"
+    ${Number.isInteger(action.frame_index) ? `data-frame-index="${action.frame_index}"` : ''}>
+    <span class="timeline-index">${action.sequence}</span>
+    <span class="timeline-line"></span>
+    <span class="timeline-copy">
+      <span><b>${esc(action.actor_name)}</b><small>TURN ${action.turn}</small></span>
+      <strong>${esc(action.text)}</strong>
+      ${action.events?.length ? `<em>${esc(action.events[action.events.length - 1].text)}</em>` : ''}
+    </span>
+  </div>`).join('');
+  if (isReplayMode()) {
+    timeline.querySelectorAll('[data-frame-index]').forEach((entry) => {
+      entry.addEventListener('click', () => {
+        stopReplayPlayback();
+        goToReplayFrame(Number(entry.dataset.frameIndex));
+      });
+    });
+  }
+  if (wasNearBottom || history.length <= 2 || isReplayMode()) {
+    requestAnimationFrame(() => { timeline.scrollTop = timeline.scrollHeight; });
+  }
+}
+
+function render(data) {
+  state = data;
+  cardRegistry.clear();
+  cardCounter = 0;
+  if (!data.active) {
+    stopReplayPlayback();
+    $('#lobby').classList.remove('hidden');
+    $('#game').classList.add('hidden');
+    return;
+  }
+
+  const replayMode = data.mode === 'replay';
+  const pvpMode = data.mode === 'pvp';
+  $('#lobby').classList.add('hidden');
+  $('#game').classList.remove('hidden');
+  $('#game').classList.toggle('replay-mode', replayMode);
+  $('#game').classList.toggle('pvp-mode', pvpMode);
+  $('#replay-controls').classList.toggle('hidden', !replayMode);
+  $('#prev-step-btn').classList.toggle('hidden', !replayMode);
+  $('#playback-label').textContent = replayMode ? 'REPLAY' : pvpMode ? 'ONLINE SYNC' : 'AI ACTION';
+  $('#viewer-btn').classList.toggle('disabled', replayMode);
+  $('#official-json-btn').classList.toggle('disabled', replayMode);
+  $('#download-btn').classList.toggle('disabled', replayMode);
+
+  const bottomName = (replayMode || pvpMode)
+    ? data.player_names?.[data.human_seat] || `Player ${data.human_seat}`
+    : 'Human';
+  const topName = (replayMode || pvpMode)
+    ? data.player_names?.[data.ai_seat] || `Player ${data.ai_seat}`
+    : data.agent?.name || 'AI';
+
+  if (pvpMode) {
+    $('#viewer-btn').href = `/api/pvp/viewer/${data.human_seat}`;
+    $('#official-json-btn').href = '/api/pvp/official.json';
+    $('#download-btn').href = '/api/pvp/record.zip';
+    $('#turn-badge').textContent = `TURN ${data.turn}`;
+    $('#seat-text').innerHTML = `${esc(bottomName)} P${data.human_seat} · ${esc(topName)} P${data.ai_seat} · <span class="opponent-connectivity ${data.opponent_online ? '' : 'offline'}">${data.opponent_left ? '상대 퇴장' : data.opponent_online ? '접속 중' : '재연결 대기'}</span>`;
+    $('#decision-text').textContent = `${data.decision_count} actions`;
+    $('#agent-chip').textContent = data.room_code ? `ROOM ${data.room_code}` : 'QUICK MATCH';
+    $('#status-text').textContent = data.result !== -1
+      ? data.result_text
+      : data.opponent_left
+        ? '상대 플레이어가 대전에서 나갔습니다'
+        : data.human_turn
+          ? '당신의 선택 차례'
+          : '상대 플레이어의 선택을 기다리는 중';
+  } else if (!replayMode) {
+    $('#viewer-btn').href = `/api/game/viewer/${data.human_seat}`;
+    $('#official-json-btn').href = '/api/game/official.json';
+    $('#download-btn').href = '/api/game/record.zip';
+    $('#turn-badge').textContent = `TURN ${data.turn}`;
+    $('#seat-text').textContent = `Human P${data.human_seat} · AI P${data.ai_seat}`;
+    $('#decision-text').textContent = `${data.decision_count} actions`;
+    $('#agent-chip').textContent = data.agent?.name || 'AI';
+    $('#status-text').textContent = data.result !== -1
+      ? data.result_text
+      : data.human_turn
+        ? '당신의 선택 차례'
+        : aiPaused
+          ? 'AI 재생 일시정지'
+          : 'AI 액션 재생 중';
+  } else {
+    const replay = data.replay;
+    $('#turn-badge').textContent = `TURN ${data.turn}`;
+    $('#seat-text').textContent = `${bottomName} 아래 · ${topName} 위`;
+    $('#decision-text').textContent = `${Number(replay.index) + 1}/${replay.total} frames`;
+    $('#agent-chip').textContent = replay.filename;
+    $('#status-text').textContent = data.result !== -1
+      ? data.result_text
+      : replayPlaying ? '리플레이 재생 중' : '리플레이 일시정지';
+    $('#replay-filename').textContent = replay.filename;
+    $('#replay-format-note').textContent = replay.has_transitions
+      ? '기록 ZIP의 선택·액션 정보를 함께 표시합니다.'
+      : '액션 인덱스가 없어 장면 상태 중심으로 재생합니다.';
+    $('#replay-scrubber').max = Math.max(0, Number(replay.total) - 1);
+    $('#replay-scrubber').value = Number(replay.index);
+    $('#replay-frame-text').textContent = `${Number(replay.index) + 1} / ${replay.total}`;
+    $('#replay-turn-text').textContent = `Turn ${data.turn} · Action ${data.turn_action_count}`;
+    $('#replay-view-seat').innerHTML = (data.player_names || ['Player 0', 'Player 1'])
+      .map((name, seat) => `<option value="${seat}">P${seat} · ${esc(name)}</option>`).join('');
+    $('#replay-view-seat').value = String(replay.view_seat);
+  }
+
+  renderPlayerSide(
+    $('#ai-side'),
+    data.ai,
+    replayMode ? data.ai.hand !== null : false,
+    topName,
+    (replayMode || pvpMode) ? `P${data.ai_seat}` : 'AI',
+  );
+  renderPlayerSide(
+    $('#human-side'),
+    data.human,
+    replayMode ? data.human.hand !== null : true,
+    bottomName,
+    (replayMode || pvpMode) ? `P${data.human_seat}` : 'YOU',
+  );
+  $('#stadium-zone').innerHTML = data.stadium?.length
+    ? `STADIUM · <b>${esc(data.stadium[0].name)}</b>`
+    : 'STADIUM · 비어 있음';
+  const result = $('#battle-result');
+  result.textContent = data.result_text || '';
+  result.classList.toggle('hidden', data.result === -1);
+  renderOptions(data.selection);
+  renderActionStage(data.last_action);
+  renderTimeline(data.action_history);
+  $('#logs').innerHTML = data.logs?.length
+    ? [...data.logs].reverse().map((log) => `<div class="log-entry">${esc(log.text)}</div>`).join('')
+    : '<div class="empty-state">로그 없음</div>';
+  updatePlaybackButtons();
+  updateResultSubmitPanel(data);
+  if (replayMode) {
+    if (replayPlaying) scheduleReplay();
+  } else if (pvpMode) {
+    schedulePvpPoll();
+  } else {
+    scheduleAi();
+    maybeAutoSubmit(data);
+  }
+}
+
+function abortAiLoop() {
+  aiLoopGeneration += 1;
+  clearTimeout(aiTimer);
+  aiTimer = null;
+}
+
+function setAiThinking(on) {
+  aiBusy = on;
+  $('#thinking-indicator').classList.toggle('hidden', !on);
+  $('#action-stage').classList.toggle('thinking', on);
+  if (on) {
+    $('#action-actor').textContent = 'AI THINKING';
+    $('#action-title').textContent = `${state?.agent?.name || 'AI'}가 다음 행동을 계산 중입니다`;
+    $('#action-detail').textContent = '보드는 그대로 유지되며, 계산이 끝나면 액션 하나만 적용됩니다.';
+  } else if (state?.active) {
+    renderActionStage(state.last_action);
+  }
+  updatePlaybackButtons();
+}
+
+function updatePlaybackButtons() {
+  if (isReplayMode()) {
+    const index = Number(state.replay?.index || 0);
+    const total = Number(state.replay?.total || 1);
+    $('#pause-btn').textContent = replayPlaying ? 'Ⅱ' : '▶';
+    $('#pause-btn').title = replayPlaying ? '리플레이 일시정지' : '리플레이 자동 재생';
+    $('#pause-btn').disabled = replayBusy || total <= 1;
+    $('#step-btn').disabled = replayBusy || index >= total - 1;
+    $('#step-btn').title = '다음 장면';
+    $('#prev-step-btn').disabled = replayBusy || index <= 0;
+    $('#prev-step-btn').title = '이전 장면';
+    return;
+  }
+  if (isPvpMode()) {
+    $('#pause-btn').disabled = true;
+    $('#step-btn').disabled = true;
+    return;
+  }
+  const pending = Boolean(state?.ai_pending);
+  $('#pause-btn').textContent = aiPaused ? '▶' : 'Ⅱ';
+  $('#pause-btn').title = aiPaused ? 'AI 자동 진행 재개' : 'AI 자동 진행 일시정지';
+  $('#pause-btn').disabled = !pending || aiBusy;
+  $('#step-btn').disabled = !pending || aiBusy;
+  $('#step-btn').title = 'AI 액션 한 단계 진행';
+}
+
+function scheduleAi() {
+  clearTimeout(aiTimer);
+  if (isReplayMode() || isPvpMode() || !state?.ai_pending || aiPaused || aiBusy || state.result !== -1) return;
+  const generation = aiLoopGeneration;
+  const delay = Number($('#speed-select').value || 750);
+  aiTimer = setTimeout(() => {
+    if (generation === aiLoopGeneration) advanceAiOnce(false);
+  }, delay);
+}
+
+async function advanceAiOnce(manual) {
+  if (isReplayMode() || isPvpMode() || !state?.ai_pending || aiBusy) return;
+  if (aiPaused && !manual) return;
+  clearTimeout(aiTimer);
+  const generation = aiLoopGeneration;
+  setAiThinking(true);
+  try {
+    const next = await api('/api/game/ai-step', { method: 'POST' });
+    if (generation !== aiLoopGeneration) {
+      setAiThinking(false);
+      return;
+    }
+    setAiThinking(false);
+    render(next);
+  } catch (error) {
+    aiPaused = true;
+    setAiThinking(false);
+    updatePlaybackButtons();
+    toast(error.message);
+  }
+}
+
+async function submitHumanAction() {
+  if (!state?.selection) return;
+  const indices = [...selectedOptions].sort((a, b) => a - b);
+  if (indices.length < state.selection.min_count || indices.length > state.selection.max_count) {
+    toast('선택 개수를 확인하세요.');
+    return;
+  }
+  $('#confirm-btn').disabled = true;
+  try {
+    const next = await api(isPvpMode() ? '/api/pvp/action' : '/api/game/action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ indices }),
+    });
+    render(next);
+  } catch (error) {
+    toast(error.message);
+    if (state?.selection) updateSelectionCounter(state.selection);
+  }
+}
+
+async function startGame(event) {
+  event.preventDefault();
+  if (!selectedAgentId) {
+    toast('상대 AI를 먼저 선택하세요.');
+    return;
+  }
+  const form = new FormData(event.currentTarget);
+  const deckReference = $('#deck-select').value;
+  const deck = deckReferenceInfo(deckReference);
+  if (!deck || deck.card_count !== 60) {
+    toast('대전에 사용할 60장 덱을 선택하세요.');
+    return;
+  }
+  const agent = config.agents.find((item) => item.id === selectedAgentId);
+  localStorage.setItem('cabtParticipantName', $('#participant-name').value.trim());
+  showLobbyLoading(true, '배틀을 시작하는 중입니다', `${agent?.name || 'AI'}를 불러오고 있습니다.`);
+  await cancelPendingMatchmakingQuietly();
+  abortAiLoop();
+  stopReplayPlayback();
+  setAiThinking(false);
+  aiPaused = false;
+  lastRenderedSequence = -1;
+  try {
+    const next = await api('/api/game/start', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        human_seat: Number(form.get('human_seat')),
+        deck_ref: deckReference,
+        agent_id: selectedAgentId,
+      }),
+    });
+    render(next);
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    showLobbyLoading(false);
+  }
+}
+
+
+function updateResultSubmitPanel(data) {
+  const panel = $('#result-submit-panel');
+  const eligible = Boolean(config?.result_submission_enabled)
+    && !isReplayMode()
+    && !isPvpMode()
+    && data?.result !== -1
+    && Boolean(data?.game_id);
+  panel.classList.toggle('hidden', !eligible);
+  if (!eligible) return;
+  const submitted = submittedGameIds.has(data.game_id);
+  const consent = $('#result-consent').checked;
+  $('#submit-result-btn').disabled = submitted || resultSubmitting || !consent;
+  $('#submit-result-btn').textContent = submitted ? '전송 완료' : resultSubmitting ? '전송 중…' : '결과 전송';
+  $('#result-submit-title').textContent = submitted
+    ? '대전 결과가 서버에 저장되었습니다'
+    : consent ? '완료된 대전 기록을 전송합니다' : '결과 전송을 선택하지 않았습니다';
+  $('#result-submit-detail').textContent = submitted
+    ? `${data.game_id} · 운영자 페이지에서 ZIP을 내려받을 수 있습니다.`
+    : consent
+      ? '승패 요약과 공식 JSON이 포함된 기록 ZIP이 전송됩니다.'
+      : '대기실에서 결과 전송 동의를 켠 뒤 새 게임을 시작하세요.';
+}
+
+async function submitCurrentResult({ automatic = false } = {}) {
+  if (!config?.result_submission_enabled || isReplayMode() || isPvpMode() || !state?.game_id || state.result === -1) return;
+  if (submittedGameIds.has(state.game_id) || resultSubmitting) return;
+  if (!$('#result-consent').checked) {
+    if (!automatic) toast('결과 전송 동의를 켜야 합니다.');
+    updateResultSubmitPanel(state);
+    return;
+  }
+  resultSubmitting = true;
+  updateResultSubmitPanel(state);
+  try {
+    const response = await api('/api/game/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        consent: true,
+        player_name: $('#participant-name').value.trim(),
+      }),
+    });
+    submittedGameIds.add(state.game_id);
+    updateResultSubmitPanel(state);
+    if (!automatic) toast(response.duplicate ? '이미 전송된 결과입니다.' : '대전 결과를 서버에 전송했습니다.', 'success');
+  } catch (error) {
+    updateResultSubmitPanel(state);
+    if (!automatic) toast(error.message);
+  } finally {
+    resultSubmitting = false;
+    updateResultSubmitPanel(state);
+  }
+}
+
+function maybeAutoSubmit(data) {
+  if (!config?.result_submission_enabled || data?.result === -1 || isReplayMode() || isPvpMode()) return;
+  if (!$('#result-consent').checked || submittedGameIds.has(data.game_id)) return;
+  queueMicrotask(() => submitCurrentResult({ automatic: true }));
+}
+
+function stopMatchmakingPoll() {
+  clearTimeout(matchmakingTimer);
+  matchmakingTimer = null;
+}
+
+function stopPvpPoll() {
+  clearTimeout(pvpPollTimer);
+  pvpPollTimer = null;
+  pvpPollBusy = false;
+}
+
+function matchmakingPayload() {
+  const deckReference = $('#deck-select').value;
+  const deck = deckReferenceInfo(deckReference);
+  if (!deck || deck.card_count !== 60) {
+    throw new Error('온라인 대전에 사용할 60장 덱을 선택하세요.');
+  }
+  const playerName = $('#participant-name').value.trim() || 'Anonymous';
+  localStorage.setItem('cabtParticipantName', playerName === 'Anonymous' ? '' : playerName);
+  return { deck_ref: deckReference, player_name: playerName };
+}
+
+function renderMatchmakingStatus(next) {
+  matchmakingState = next || { status: 'idle' };
+  const panel = $('#matchmaking-status');
+  const status = matchmakingState.status || 'idle';
+  panel.classList.toggle('hidden', status === 'idle' || status === 'matched');
+  $('#copy-room-code-btn').classList.add('hidden');
+  if (status === 'searching') {
+    $('#matchmaking-kicker').textContent = 'QUICK MATCH';
+    $('#matchmaking-title').textContent = '상대 플레이어를 찾는 중';
+    $('#matchmaking-detail').textContent = `${matchmakingState.player_name || 'Anonymous'} · 대기 ${matchmakingState.queue_seconds || 0}초`;
+  } else if (status === 'waiting_room') {
+    $('#matchmaking-kicker').textContent = 'PRIVATE ROOM';
+    $('#matchmaking-title').textContent = '친구의 참가를 기다리는 중';
+    $('#matchmaking-detail').textContent = '아래 코드를 상대에게 전달하세요. 누르면 복사됩니다.';
+    const codeButton = $('#copy-room-code-btn');
+    codeButton.textContent = matchmakingState.room_code || '';
+    codeButton.classList.remove('hidden');
+  }
+}
+
+function scheduleMatchmakingPoll() {
+  stopMatchmakingPoll();
+  if (!['searching', 'waiting_room'].includes(matchmakingState.status)) return;
+  matchmakingTimer = setTimeout(pollMatchmakingStatus, 1000);
+}
+
+async function pollMatchmakingStatus() {
+  if (matchmakingBusy) return;
+  matchmakingBusy = true;
+  try {
+    const next = await api('/api/matchmaking/status');
+    renderMatchmakingStatus(next);
+    if (next.status === 'matched') {
+      stopMatchmakingPoll();
+      const gameState = await api('/api/pvp/state');
+      lastRenderedSequence = -1;
+      render(gameState);
+      toast(`${next.opponent_name || '상대'} 플레이어와 매칭되었습니다.`, 'success');
+      return;
+    }
+  } catch (error) {
+    stopMatchmakingPoll();
+    renderMatchmakingStatus({ status: 'idle' });
+    toast(error.message);
+  } finally {
+    matchmakingBusy = false;
+  }
+  scheduleMatchmakingPoll();
+}
+
+async function beginMatchmaking(kind) {
+  if (!config?.online_matching_enabled || matchmakingBusy) return;
+  let payload;
+  try {
+    payload = matchmakingPayload();
+  } catch (error) {
+    toast(error.message);
+    return;
+  }
+  let endpoint = '/api/matchmaking/quick';
+  if (kind === 'create-room') endpoint = '/api/matchmaking/create-room';
+  if (kind === 'join-room') {
+    endpoint = '/api/matchmaking/join-room';
+    const roomCode = $('#room-code-input').value.trim().toUpperCase();
+    if (!/^[A-Z2-9]{6}$/.test(roomCode)) {
+      toast('방 코드 6자리를 확인하세요.');
+      return;
+    }
+    payload.room_code = roomCode;
+  }
+  matchmakingBusy = true;
+  stopMatchmakingPoll();
+  abortAiLoop();
+  stopReplayPlayback();
+  try {
+    const next = await api(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    renderMatchmakingStatus(next);
+    if (next.status === 'matched') {
+      const gameState = await api('/api/pvp/state');
+      lastRenderedSequence = -1;
+      render(gameState);
+      toast(`${next.opponent_name || '상대'} 플레이어와 매칭되었습니다.`, 'success');
+    } else {
+      scheduleMatchmakingPoll();
+    }
+  } catch (error) {
+    renderMatchmakingStatus({ status: 'idle' });
+    toast(error.message);
+  } finally {
+    matchmakingBusy = false;
+  }
+}
+
+async function cancelMatchmaking() {
+  if (matchmakingBusy) return;
+  matchmakingBusy = true;
+  stopMatchmakingPoll();
+  try {
+    await api('/api/matchmaking/cancel', { method: 'POST' });
+    renderMatchmakingStatus({ status: 'idle' });
+    toast('온라인 매칭 대기를 취소했습니다.', 'success');
+  } catch (error) {
+    toast(error.message);
+  } finally {
+    matchmakingBusy = false;
+  }
+}
+
+function schedulePvpPoll() {
+  stopPvpPoll();
+  if (!isPvpMode() || state?.result !== -1 || state?.human_turn) return;
+  pvpPollTimer = setTimeout(refreshPvpState, state?.opponent_left ? 3000 : 850);
+}
+
+async function refreshPvpState() {
+  if (!isPvpMode() || pvpPollBusy) return;
+  pvpPollBusy = true;
+  try {
+    const next = await api('/api/pvp/state');
+    render(next);
+  } catch (error) {
+    stopPvpPoll();
+    toast(error.message);
+  } finally {
+    pvpPollBusy = false;
+  }
+}
+
+async function initialGameState() {
+  if (config?.online_matching_enabled) {
+    try {
+      const online = await api('/api/matchmaking/status');
+      renderMatchmakingStatus(online);
+      if (online.status === 'matched') return await api('/api/pvp/state');
+      if (['searching', 'waiting_room'].includes(online.status)) scheduleMatchmakingPoll();
+    } catch (_error) {
+      renderMatchmakingStatus({ status: 'idle' });
+    }
+  }
+  return api('/api/state');
+}
+
+async function returnToLobby() {
+  const leavingPvp = isPvpMode();
+  abortAiLoop();
+  stopReplayPlayback();
+  stopPvpPoll();
+  setAiThinking(false);
+  aiPaused = true;
+  if (leavingPvp) {
+    try {
+      await api('/api/pvp/leave', { method: 'POST' });
+    } catch (_error) {
+      // The local UI can still return to the lobby if the server already
+      // expired the match.
+    }
+  }
+  state = null;
+  $('#lobby').classList.remove('hidden');
+  $('#game').classList.add('hidden');
+  $('#game').classList.remove('replay-mode');
+  $('#game').classList.remove('pvp-mode');
+}
+
+function openCardModal(card) {
+  const attacks = card.attacks?.length
+    ? card.attacks.map((attack) => `<div class="modal-attack">
+        <span><b>${esc(attack.name)}</b><strong>${attack.damage || ''}</strong></span>
+        <small>${esc((attack.energies || []).join(' · '))}</small>
+        <p>${esc(attack.text || '')}</p>
+      </div>`).join('')
+    : '<div class="empty-state">기술 정보 없음</div>';
+  $('#card-modal-content').innerHTML = `<div class="modal-card-layout">
+    <div class="modal-art">${imageHtml(card, 'modal-card-art')}</div>
+    <div class="modal-card-copy">
+      <span class="kicker">CARD #${card.id}</span>
+      <h2>${esc(card.name)}</h2>
+      <div class="modal-stats">
+        <span>${esc(card.type)}</span>
+        ${card.hp ? `<span>HP ${card.hp_current ?? card.hp}</span>` : ''}
+        ${card.energy_type ? `<span>${esc(card.energy_type)}</span>` : ''}
+      </div>
+      ${card.text ? `<p class="card-rule-text">${esc(card.text)}</p>` : ''}
+      <div class="modal-attacks">${attacks}</div>
+    </div>
+  </div>`;
+  $('#card-modal').showModal();
+}
+
+$('#open-replay-btn').addEventListener('click', openReplayPicker);
+$('#replay-browse-btn').addEventListener('click', openReplayPicker);
+$('#replay-file').addEventListener('change', (event) => loadReplay(event.target.files[0]));
+$('#replay-scrubber').addEventListener('input', (event) => {
+  if (!isReplayMode()) return;
+  $('#replay-frame-text').textContent = `${Number(event.target.value) + 1} / ${state.replay.total}`;
+});
+$('#replay-scrubber').addEventListener('change', (event) => {
+  stopReplayPlayback();
+  goToReplayFrame(Number(event.target.value));
+});
+$('#replay-view-seat').addEventListener('change', (event) => {
+  stopReplayPlayback();
+  goToReplayFrame(Number(state.replay?.index || 0));
+});
+
+$('#start-form').addEventListener('submit', startGame);
+$('#quick-match-btn').addEventListener('click', () => beginMatchmaking('quick'));
+$('#create-room-btn').addEventListener('click', () => beginMatchmaking('create-room'));
+$('#join-room-btn').addEventListener('click', () => beginMatchmaking('join-room'));
+$('#cancel-matchmaking-btn').addEventListener('click', cancelMatchmaking);
+$('#copy-room-code-btn').addEventListener('click', async () => {
+  const code = matchmakingState.room_code || '';
+  if (!code) return;
+  try {
+    await navigator.clipboard.writeText(code);
+    toast(`방 코드 ${code}를 복사했습니다.`, 'success');
+  } catch (_error) {
+    toast(`방 코드: ${code}`, 'success');
+  }
+});
+$('#room-code-input').addEventListener('input', (event) => {
+  event.target.value = event.target.value.toUpperCase().replace(/[^A-Z2-9]/g, '').slice(0, 6);
+});
+$('#room-code-input').addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') beginMatchmaking('join-room');
+});
+$('#confirm-btn').addEventListener('click', submitHumanAction);
+$('#submit-result-btn').addEventListener('click', () => submitCurrentResult({ automatic: false }));
+$('#participant-name').addEventListener('input', (event) => localStorage.setItem('cabtParticipantName', event.target.value));
+$('#clear-btn').addEventListener('click', () => {
+  selectedOptions.clear();
+  document.querySelectorAll('.option').forEach((option) => option.classList.remove('selected'));
+  if (state?.selection) updateSelectionCounter(state.selection);
+});
+$('#new-game-btn').addEventListener('click', returnToLobby);
+$('#brand-home').addEventListener('click', returnToLobby);
+$('#rescan-images-btn').addEventListener('click', rescanImages);
+$('#agent-file').addEventListener('change', (event) => installAgent(event.target.files[0]));
+$('#deck-select').addEventListener('change', updateDeckSelectionNote);
+$('#open-deck-builder-btn').addEventListener('click', openDeckBuilder);
+$('#builder-close-btn').addEventListener('click', closeDeckBuilder);
+$('#builder-new-btn').addEventListener('click', () => {
+  if (canDiscardBuilderChanges()) newBuilderDeck();
+});
+$('#builder-load-btn').addEventListener('click', () => {
+  if (canDiscardBuilderChanges()) loadBuilderDeck($('#builder-load-select').value);
+});
+$('#builder-save-btn').addEventListener('click', () => saveBuilderDeck(false));
+$('#builder-use-btn').addEventListener('click', () => saveBuilderDeck(true));
+$('#builder-delete-btn').addEventListener('click', deleteBuilderDeck);
+$('#builder-more-btn').addEventListener('click', () => searchBuilderCards(false));
+$('#builder-type-filter').addEventListener('change', () => searchBuilderCards(true));
+$('#builder-search').addEventListener('input', () => {
+  clearTimeout(builderSearchTimer);
+  builderSearchTimer = setTimeout(() => searchBuilderCards(true), 240);
+});
+$('#builder-deck-name').addEventListener('input', () => setBuilderDirty(true));
+$('#deck-builder').addEventListener('cancel', (event) => {
+  if (!canDiscardBuilderChanges()) event.preventDefault();
+});
+$('#pause-btn').addEventListener('click', () => {
+  if (isPvpMode()) return;
+  if (isReplayMode()) {
+    toggleReplayPlayback();
+    return;
+  }
+  aiPaused = !aiPaused;
+  abortAiLoop();
+  $('#status-text').textContent = aiPaused ? 'AI 재생 일시정지' : 'AI 액션 재생 중';
+  updatePlaybackButtons();
+  if (!aiPaused) scheduleAi();
+});
+$('#prev-step-btn').addEventListener('click', () => {
+  if (!isReplayMode()) return;
+  stopReplayPlayback();
+  goToReplayFrame(Number(state.replay?.index || 0) - 1);
+});
+$('#step-btn').addEventListener('click', () => {
+  if (isPvpMode()) return;
+  if (isReplayMode()) {
+    stopReplayPlayback();
+    goToReplayFrame(Number(state.replay?.index || 0) + 1);
+    return;
+  }
+  aiPaused = true;
+  abortAiLoop();
+  updatePlaybackButtons();
+  advanceAiOnce(true);
+});
+$('#speed-select').addEventListener('change', () => {
+  if (isReplayMode()) {
+    if (replayPlaying) scheduleReplay();
+  } else if (!aiPaused) {
+    scheduleAi();
+  }
+});
+$('#timeline-bottom-btn').addEventListener('click', () => {
+  const timeline = $('#timeline');
+  timeline.scrollTop = timeline.scrollHeight;
+});
+$('#card-modal-close').addEventListener('click', () => $('#card-modal').close());
+$('#card-modal').addEventListener('click', (event) => {
+  if (event.target === $('#card-modal')) $('#card-modal').close();
+});
+document.body.addEventListener('click', (event) => {
+  const button = event.target.closest('.card-click');
+  if (!button) return;
+  const card = cardRegistry.get(button.dataset.cardKey);
+  if (card) openCardModal(card);
+});
+
+const dropzone = $('#agent-dropzone');
+['dragenter', 'dragover'].forEach((name) => dropzone.addEventListener(name, (event) => {
+  event.preventDefault();
+  dropzone.classList.add('dragging');
+}));
+['dragleave', 'drop'].forEach((name) => dropzone.addEventListener(name, (event) => {
+  event.preventDefault();
+  dropzone.classList.remove('dragging');
+}));
+dropzone.addEventListener('drop', (event) => installAgent(event.dataTransfer.files[0]));
+
+const replayDropzone = $('#replay-dropzone');
+['dragenter', 'dragover'].forEach((name) => replayDropzone.addEventListener(name, (event) => {
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'copy';
+  replayDropzone.classList.add('dragging');
+}));
+['dragleave', 'drop'].forEach((name) => replayDropzone.addEventListener(name, (event) => {
+  event.preventDefault();
+  replayDropzone.classList.remove('dragging');
+}));
+replayDropzone.addEventListener('drop', (event) => loadReplay(event.dataTransfer.files[0]));
+
+const builderDeckDropzone = $('#builder-deck-list');
+['dragenter', 'dragover'].forEach((name) => builderDeckDropzone.addEventListener(name, (event) => {
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'copy';
+  builderDeckDropzone.classList.add('drag-over');
+}));
+['dragleave', 'drop'].forEach((name) => builderDeckDropzone.addEventListener(name, (event) => {
+  event.preventDefault();
+  builderDeckDropzone.classList.remove('drag-over');
+}));
+builderDeckDropzone.addEventListener('drop', (event) => {
+  const payload = readBuilderDragData(event);
+  if (!payload || payload.source === 'deck') return;
+  addBuilderCard(builderDetails.get(payload.cardId));
+});
+
+const builderRemoveZone = $('#builder-remove-zone');
+['dragenter', 'dragover'].forEach((name) => builderRemoveZone.addEventListener(name, (event) => {
+  event.preventDefault();
+  event.dataTransfer.dropEffect = 'move';
+  builderRemoveZone.classList.add('drag-over');
+  $('#builder-catalog-pane').classList.add('drag-remove');
+}));
+['dragleave', 'drop'].forEach((name) => builderRemoveZone.addEventListener(name, (event) => {
+  event.preventDefault();
+  builderRemoveZone.classList.remove('drag-over');
+  $('#builder-catalog-pane').classList.remove('drag-remove');
+}));
+builderRemoveZone.addEventListener('drop', (event) => {
+  const payload = readBuilderDragData(event);
+  if (payload?.source === 'deck') removeBuilderCard(payload.cardId);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (!isReplayMode() || event.target.closest('input, select, textarea, dialog')) return;
+  if (event.key === 'ArrowLeft') {
+    event.preventDefault();
+    stopReplayPlayback();
+    goToReplayFrame(Number(state.replay?.index || 0) - 1);
+  } else if (event.key === 'ArrowRight') {
+    event.preventDefault();
+    stopReplayPlayback();
+    goToReplayFrame(Number(state.replay?.index || 0) + 1);
+  } else if (event.key === 'Home') {
+    event.preventDefault();
+    stopReplayPlayback();
+    goToReplayFrame(0);
+  } else if (event.key === 'End') {
+    event.preventDefault();
+    stopReplayPlayback();
+    goToReplayFrame(Number(state.replay?.total || 1) - 1);
+  } else if (event.code === 'Space') {
+    event.preventDefault();
+    toggleReplayPlayback();
+  }
+});
+
+loadConfig()
+  .then(initialGameState)
+  .then(render)
+  .catch((error) => toast(error.message));

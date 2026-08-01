@@ -1,0 +1,25 @@
+{
+  "version": "mega_lucario_multi_ai_competition_learning_v3",
+  "base": "mega_lucario_zero_base_deep_learning_v2_pure",
+  "deck_sha256": "04f87ef197ca94c80a28bb0cb370674fbc929f7e44453c14bdea079e82988fca",
+  "runtime": "pure learned v2 policy plus Alakazam competition ranker high-confidence gate",
+  "selected_change": {
+    "archetype": "alakazam",
+    "model": "alakazam_competition_base_v4",
+    "condition": "single-select and top score gap >= 3.0"
+  },
+  "competition_training": {
+    "opponent_pool": 13,
+    "new_dagger_decisions": 4049,
+    "alakazam_competition_groups": 10527,
+    "alakazam_new_groups": 1527
+  },
+  "adopted": [
+    "Alakazam competition base ranker gap>=3.0"
+  ],
+  "not_adopted": [
+    "Marnie specialist gates: improvement not reproduced on latest offset",
+    "Archaludon specialist gate: small aggregate improvement but latest offset reversed",
+    "second-round DAgger specialists: offline accuracy improved but live performance overfit"
+  ]
+}
