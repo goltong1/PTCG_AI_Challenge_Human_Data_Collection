@@ -35,6 +35,74 @@ let pvpPollBusy = false;
 let clientHeartbeatTimer = null;
 let clientHeartbeatBusy = false;
 
+const BROWSER_DECK_STORAGE_KEY = 'cabtBrowserDecksV1';
+const BROWSER_DECK_LIMIT = 24;
+
+function normalizeBrowserDeck(raw) {
+  if (!raw || typeof raw !== 'object' || !Array.isArray(raw.cards)) return null;
+  const cards = raw.cards.map(Number).filter((value) => Number.isInteger(value));
+  if (cards.length !== raw.cards.length || cards.length > 60) return null;
+  const id = String(raw.id || '').trim();
+  const name = String(raw.name || '').trim().slice(0, 80);
+  if (!id || !name) return null;
+  return {
+    id,
+    name,
+    source: 'saved',
+    card_count: cards.length,
+    cards,
+    details: Array.isArray(raw.details) ? raw.details : [],
+    updated_at: Number(raw.updated_at || 0),
+  };
+}
+
+function loadBrowserDecks() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(BROWSER_DECK_STORAGE_KEY) || '[]');
+    if (!Array.isArray(raw)) return [];
+    return raw.map(normalizeBrowserDeck).filter(Boolean).slice(0, BROWSER_DECK_LIMIT);
+  } catch (_error) {
+    return [];
+  }
+}
+
+function storeBrowserDecks(decks) {
+  const normalized = decks.map(normalizeBrowserDeck).filter(Boolean).slice(0, BROWSER_DECK_LIMIT);
+  try {
+    localStorage.setItem(BROWSER_DECK_STORAGE_KEY, JSON.stringify(normalized));
+  } catch (_error) {
+    throw new Error('브라우저 저장 공간이 부족하거나 차단되어 덱을 저장하지 못했습니다.');
+  }
+  return normalized;
+}
+
+function browserDeckById(id) {
+  return (config?.saved_decks || []).find((deck) => deck.id === id) || null;
+}
+
+function createBrowserDeckId() {
+  if (globalThis.crypto?.randomUUID) return globalThis.crypto.randomUUID();
+  return `deck-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
+async function inspectDeckCards(cards, name, exact = false) {
+  return api('/api/decks/inspect', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ cards, name, exact }),
+  });
+}
+
+function deckPayloadForReference(reference) {
+  const [source, id] = String(reference || '').split(':', 2);
+  if (source === 'saved' && config?.public_mode) {
+    const deck = browserDeckById(id);
+    if (!deck) throw new Error('브라우저에 저장된 덱을 찾을 수 없습니다.');
+    return { deck_cards: deck.cards, deck_name: deck.name };
+  }
+  return { deck_ref: reference };
+}
+
 function esc(value) {
   return String(value ?? '').replace(/[&<>'"]/g, (char) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;',
@@ -356,6 +424,7 @@ async function loadConfig() {
   config = await api('/api/config');
   imageRevision = Number(config.card_images?.revision || 0);
   config.saved_decks ||= [];
+  if (config.public_mode) config.saved_decks = loadBrowserDecks();
   document.body.classList.toggle('public-mode', Boolean(config.public_mode));
   $('#brand-mode-label').textContent = config.public_mode ? 'CABT WEB ARENA' : 'CABT LOCAL ARENA';
   const lobbyDescription = $('#lobby-description');
@@ -471,7 +540,9 @@ function setBuilderDirty(dirty) {
   builderDirty = dirty;
   let text = '저장되지 않은 새 덱';
   if (builderSource === 'preset') text = dirty ? '프리셋을 수정함 · 새 덱으로 저장됩니다' : '프리셋 복사본 · 새 덱으로 저장됩니다';
-  if (builderSource === 'saved') text = dirty ? '변경사항이 아직 저장되지 않았습니다' : '저장됨';
+  if (builderSource === 'saved') text = dirty
+    ? '변경사항이 아직 저장되지 않았습니다'
+    : (config?.public_mode ? '이 브라우저에 저장됨' : '저장됨');
   $('#builder-save-state').textContent = text;
 }
 
@@ -607,14 +678,26 @@ async function loadBuilderDeck(reference) {
     return;
   }
   const [source, id] = reference.split(':', 2);
-  const endpoint = source === 'saved'
-    ? `/api/decks/saved/${encodeURIComponent(id)}`
-    : `/api/decks/preset/${encodeURIComponent(id)}`;
   try {
-    const deck = await api(endpoint);
+    let deck;
+    if (source === 'saved' && config?.public_mode) {
+      const stored = browserDeckById(id);
+      if (!stored) throw new Error('이 브라우저에 저장된 덱을 찾을 수 없습니다.');
+      const inspected = await inspectDeckCards(stored.cards, stored.name, false);
+      deck = { ...stored, ...inspected, id: stored.id, source: 'saved' };
+      config.saved_decks = storeBrowserDecks(config.saved_decks.map((item) => (
+        item.id === stored.id ? deck : item
+      )));
+    } else {
+      const endpoint = source === 'saved'
+        ? `/api/decks/saved/${encodeURIComponent(id)}`
+        : `/api/decks/preset/${encodeURIComponent(id)}`;
+      deck = await api(endpoint);
+    }
     builderSource = deck.source;
     builderDeckId = deck.source === 'saved' ? deck.id : null;
     builderCards = deck.cards.map(Number);
+    builderDetails.clear();
     (deck.details || []).forEach((card) => builderDetails.set(Number(card.id), card));
     $('#builder-deck-name').value = deck.source === 'saved' ? deck.name : `${deck.name} 커스텀`;
     setBuilderDirty(false);
@@ -716,26 +799,47 @@ async function saveBuilderDeck(useAfterSave = false) {
     return;
   }
   try {
-    const result = await api('/api/decks/save', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        id: builderDeckId,
-        name,
-        cards: builderCards,
-      }),
-    });
+    let result;
+    if (config?.public_mode) {
+      const inspected = await inspectDeckCards(builderCards, name, false);
+      const deckId = builderDeckId || createBrowserDeckId();
+      const saved = {
+        id: deckId,
+        name: inspected.name,
+        source: 'saved',
+        card_count: inspected.card_count,
+        cards: inspected.cards.map(Number),
+        details: inspected.details || [],
+        updated_at: Date.now(),
+      };
+      const remaining = (config.saved_decks || []).filter((deck) => deck.id !== deckId);
+      const decks = storeBrowserDecks([saved, ...remaining]);
+      result = { deck: saved, decks };
+    } else {
+      result = await api('/api/decks/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: builderDeckId,
+          name,
+          cards: builderCards,
+        }),
+      });
+    }
     config.saved_decks = result.decks;
     builderDeckId = result.deck.id;
     builderSource = 'saved';
     builderCards = result.deck.cards.map(Number);
+    builderDetails.clear();
     (result.deck.details || []).forEach((card) => builderDetails.set(Number(card.id), card));
     setBuilderDirty(false);
     renderBuilderDeck();
     const reference = `saved:${builderDeckId}`;
     renderDeckChoices(reference);
     $('#builder-load-select').value = reference;
-    toast(`${result.deck.name} 덱을 저장했습니다.`, 'success');
+    toast(config?.public_mode
+      ? `${result.deck.name} 덱을 이 브라우저에 저장했습니다.`
+      : `${result.deck.name} 덱을 저장했습니다.`, 'success');
     if (useAfterSave) $('#deck-builder').close();
   } catch (error) {
     toast(error.message);
@@ -747,12 +851,18 @@ async function deleteBuilderDeck() {
   const name = $('#builder-deck-name').value.trim() || '이 덱';
   if (!window.confirm(`${name}을(를) 삭제할까요?`)) return;
   try {
-    const result = await api('/api/decks/delete', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id: builderDeckId }),
-    });
-    config.saved_decks = result.decks;
+    let decks;
+    if (config?.public_mode) {
+      decks = storeBrowserDecks((config.saved_decks || []).filter((deck) => deck.id !== builderDeckId));
+    } else {
+      const result = await api('/api/decks/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: builderDeckId }),
+      });
+      decks = result.decks;
+    }
+    config.saved_decks = decks;
     renderDeckChoices();
     newBuilderDeck();
     renderBuilderLoadOptions();
@@ -1346,7 +1456,7 @@ async function startGame(event) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         human_seat: Number(form.get('human_seat')),
-        deck_ref: deckReference,
+        ...deckPayloadForReference(deckReference),
         agent_id: selectedAgentId,
       }),
     });
@@ -1438,7 +1548,7 @@ function matchmakingPayload() {
   }
   const playerName = $('#participant-name').value.trim() || 'Anonymous';
   localStorage.setItem('cabtParticipantName', playerName === 'Anonymous' ? '' : playerName);
-  return { deck_ref: deckReference, player_name: playerName };
+  return { ...deckPayloadForReference(deckReference), player_name: playerName };
 }
 
 function renderMatchmakingStatus(next) {

@@ -28,7 +28,7 @@ from pvp_service import PvpHub
 from worker_service import SessionHub, WorkerCapacity, WorkerError
 
 
-APP_VERSION = "5.1.2-railway"
+APP_VERSION = "5.1.3-railway"
 JSON_BODY_LIMIT = 2 * 1024 * 1024
 PUBLIC_MODE = os.environ.get("CABT_PUBLIC_MODE", "0").strip().lower() in {"1", "true", "yes", "on"}
 RESULT_SUBMISSION_ENABLED = os.environ.get(
@@ -300,6 +300,14 @@ class CABTHandler(BaseHTTPRequestHandler):
             raise PermissionError("관리자 토큰이 올바르지 않습니다.")
 
     def _resolve_human_deck(self, request: dict) -> tuple[list[int], str]:
+        # Browser-local deck builder decks are sent as card IDs. This keeps
+        # public users' custom decks isolated without storing them in a shared
+        # Railway volume or requiring accounts.
+        if isinstance(request.get("deck_cards"), list):
+            cards = manager.validate_deck_cards(request["deck_cards"], exact=True)
+            raw_name = str(request.get("deck_name") or "브라우저 저장 덱")
+            deck_name = " ".join(raw_name.split()).strip()[:80] or "브라우저 저장 덱"
+            return cards, deck_name
         deck_ref = str(request.get("deck_ref") or "")
         if deck_ref.startswith("saved:"):
             if PUBLIC_MODE:
@@ -365,7 +373,8 @@ class CABTHandler(BaseHTTPRequestHandler):
                         "replay_upload_limit_mb": REPLAY_UPLOAD_LIMIT // (1024 * 1024),
                         "public_mode": PUBLIC_MODE,
                         "allow_agent_upload": not PUBLIC_MODE,
-                        "allow_deck_save": not PUBLIC_MODE,
+                        "allow_deck_save": True,
+                        "deck_save_scope": "browser" if PUBLIC_MODE else "server",
                         "result_submission_enabled": RESULT_SUBMISSION_ENABLED,
                         "online_matching_enabled": ONLINE_MATCHING_ENABLED,
                         "max_sessions": MAX_SESSIONS if PUBLIC_MODE else 1,
@@ -636,6 +645,21 @@ class CABTHandler(BaseHTTPRequestHandler):
                     self._read_body(JSON_BODY_LIMIT)
                 session_id = self._pvp_session_id(create=False)
                 self._send_json(pvp_hub.leave(session_id))
+                return
+            if path == "/api/decks/inspect":
+                request = self._read_json()
+                exact = bool(request.get("exact", False))
+                cards = manager.validate_deck_cards(request.get("cards"), exact=exact)
+                raw_name = str(request.get("name") or "브라우저 저장 덱")
+                name = " ".join(raw_name.split()).strip()[:80] or "브라우저 저장 덱"
+                self._send_json(
+                    {
+                        "name": name,
+                        "card_count": len(cards),
+                        "cards": cards,
+                        "details": manager.deck_details(cards),
+                    }
+                )
                 return
             if path == "/api/decks/save":
                 if PUBLIC_MODE:

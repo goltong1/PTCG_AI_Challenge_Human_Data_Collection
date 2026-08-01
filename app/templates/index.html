@@ -83,7 +83,7 @@
                 <span class="field-label">사람 덱</span>
                 <div class="deck-picker">
                   <select id="deck-select" name="deck_ref" aria-label="사람 덱 선택"></select>
-                  <button id="open-deck-builder-btn" class="button builder-button local-only-feature" type="button">
+                  <button id="open-deck-builder-btn" class="button builder-button" type="button">
                     <span>덱빌더</span><span aria-hidden="true">＋</span>
                   </button>
                 </div>
@@ -289,9 +289,9 @@
     <div class="builder-shell">
       <header class="builder-header">
         <div>
-          <span class="kicker">LOCAL DECK WORKSHOP</span>
+          <span class="kicker">BROWSER DECK WORKSHOP</span>
           <h2>덱빌더</h2>
-          <p>카드를 검색해 클릭하거나 오른쪽으로 드래그하세요.</p>
+          <p>카드를 검색해 클릭하거나 오른쪽으로 드래그하세요. 저장한 덱은 이 브라우저에만 보관됩니다.</p>
         </div>
         <div class="builder-header-actions">
           <button id="builder-new-btn" class="button quiet" type="button">새 덱</button>
@@ -356,7 +356,7 @@
 
       <footer class="builder-footer">
         <button id="builder-delete-btn" class="button danger-button" type="button" disabled>삭제</button>
-        <span class="builder-save-state" id="builder-save-state">저장되지 않은 새 덱</span>
+        <span class="builder-save-state" id="builder-save-state">이 브라우저에 저장되지 않은 새 덱</span>
         <button id="builder-save-btn" class="button quiet" type="button">저장</button>
         <button id="builder-use-btn" class="button primary" type="button">저장하고 이 덱 사용</button>
       </footer>
