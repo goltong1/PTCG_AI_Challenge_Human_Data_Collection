@@ -1,0 +1,9 @@
+CABT Railway v5.1.0/v5.1 패키지에 적용하는 핫픽스입니다.
+
+이 ZIP의 내용물을 기존 GitHub 저장소 루트에 덮어쓴 뒤 commit/push 하세요.
+특히 아래 두 파일은 반드시 교체되어야 합니다.
+
+app/server.py
+app/static/app.js
+
+Railway 환경 변수와 Volume 설정은 변경할 필요가 없습니다.

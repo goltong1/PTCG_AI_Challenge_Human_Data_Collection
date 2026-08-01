@@ -28,7 +28,7 @@ from pvp_service import PvpHub
 from worker_service import SessionHub, WorkerCapacity, WorkerError
 
 
-APP_VERSION = "5.1.0-railway"
+APP_VERSION = "5.1.1-railway"
 JSON_BODY_LIMIT = 2 * 1024 * 1024
 PUBLIC_MODE = os.environ.get("CABT_PUBLIC_MODE", "0").strip().lower() in {"1", "true", "yes", "on"}
 RESULT_SUBMISSION_ENABLED = os.environ.get(
@@ -218,6 +218,20 @@ class CABTHandler(BaseHTTPRequestHandler):
         session_id = self._session_id(create=create)
         if session_id is None:
             raise GameError("온라인 세션이 없습니다. 다시 매칭을 시작하세요.")
+        return session_id
+
+    def _prepare_pvp_session(self) -> str:
+        """Return the browser session id after releasing its AI/replay worker.
+
+        Matchmaking waiters must not consume the process-wide game-worker slot.
+        A browser may still own an AI or replay worker from an earlier screen,
+        so entering any PvP queue explicitly closes that worker before the
+        player is added to the queue or room. The PvP match itself acquires one
+        shared worker only after two distinct players have been paired.
+        """
+        session_id = self._pvp_session_id(create=True)
+        if PUBLIC_MODE and session_hub is not None:
+            session_hub.close(session_id)
         return session_id
 
     def _game_call(self, command: str, create: bool = True, **kwargs):
@@ -518,8 +532,8 @@ class CABTHandler(BaseHTTPRequestHandler):
                 return
             if path == "/api/matchmaking/quick":
                 request = self._read_json()
-                session_id = self._pvp_session_id(create=True)
                 player_deck, deck_label = self._resolve_human_deck(request)
+                session_id = self._prepare_pvp_session()
                 self._send_json(
                     pvp_hub.join_quick(
                         session_id,
@@ -531,8 +545,8 @@ class CABTHandler(BaseHTTPRequestHandler):
                 return
             if path == "/api/matchmaking/create-room":
                 request = self._read_json()
-                session_id = self._pvp_session_id(create=True)
                 player_deck, deck_label = self._resolve_human_deck(request)
+                session_id = self._prepare_pvp_session()
                 self._send_json(
                     pvp_hub.create_private(
                         session_id,
@@ -544,8 +558,8 @@ class CABTHandler(BaseHTTPRequestHandler):
                 return
             if path == "/api/matchmaking/join-room":
                 request = self._read_json()
-                session_id = self._pvp_session_id(create=True)
                 player_deck, deck_label = self._resolve_human_deck(request)
+                session_id = self._prepare_pvp_session()
                 self._send_json(
                     pvp_hub.join_private(
                         session_id,

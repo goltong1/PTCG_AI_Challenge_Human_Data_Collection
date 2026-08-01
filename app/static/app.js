@@ -323,7 +323,7 @@ async function loadConfig() {
   $('#result-consent-panel').classList.toggle('hidden', !config.result_submission_enabled);
   $('#online-match-panel').classList.toggle('hidden', !config.online_matching_enabled);
   $('#online-capacity-text').textContent = config.online_matching_enabled
-    ? `동시 온라인 대전 최대 ${config.max_pvp_matches}개 · 빠른 매칭과 친구 방 지원`
+    ? `동시 경기 최대 ${config.max_pvp_matches}개 · 경기당 플레이어 2명 · 대기열은 슬롯 미사용`
     : '온라인 매칭 비활성화';
   $('#rescan-images-btn').classList.toggle('hidden', Boolean(config.public_mode));
   const savedName = localStorage.getItem('cabtParticipantName') || '';
