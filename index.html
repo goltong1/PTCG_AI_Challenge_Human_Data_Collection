@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07110f">
+  <title>CABT Local AI Arena</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button id="homeButton" class="brand" type="button">
+      <span class="brand-mark">C</span>
+      <span><strong>CABT</strong><small>LOCAL AI ARENA</small></span>
+    </button>
+    <div class="local-badge"><span></span>LOCAL ONLY</div>
+  </header>
+
+  <main>
+    <section id="landing" class="landing">
+      <div class="hero panel">
+        <div class="hero-copy">
+          <span class="eyebrow">HUMAN VS AI · LOCAL REPLAY</span>
+          <h1>온라인 서버 없이<br>내 PC에서만 플레이합니다.</h1>
+          <p>실시간 AI 대전은 Windows 로컬판에서 실행되며, 대전 기록과 덱은 사용자 PC에만 저장됩니다. 이 GitHub Pages 사이트는 프로그램 배포와 브라우저 리플레이 감상을 담당합니다.</p>
+          <div class="hero-actions">
+            <a id="downloadButton" class="button primary" href="#">Windows 로컬판 다운로드</a>
+            <button id="pickButton" class="button secondary" type="button">리플레이 열기</button>
+          </div>
+          <div class="privacy-line"><span></span>선택한 파일은 외부 서버로 업로드되지 않습니다.</div>
+        </div>
+        <div class="feature-stack">
+          <article><b>01</b><span><strong>개선된 전투 UI</strong><small>부착 에너지, 프라이즈, 트래시 이미지를 즉시 확인</small></span></article>
+          <article><b>02</b><span><strong>브라우저 로컬 보관</strong><small>최근 리플레이는 이 브라우저의 IndexedDB에만 저장</small></span></article>
+          <article><b>03</b><span><strong>정적 배포</strong><small>서버 API, 온라인 매칭, 결과 전송 코드 없음</small></span></article>
+        </div>
+      </div>
+
+      <section class="panel import-panel">
+        <div>
+          <span class="eyebrow">REPLAY VIEWER</span>
+          <h2>대전 기록 불러오기</h2>
+          <p>로컬판이 만든 기록 ZIP, <code>official_replay.json</code>, <code>replay_visualize.json</code>을 지원합니다.</p>
+        </div>
+        <label id="dropzone" class="dropzone">
+          <input id="fileInput" type="file" accept=".zip,.json,application/zip,application/json">
+          <strong>파일을 끌어놓거나 선택</strong>
+          <small>ZIP · JSON / 브라우저 안에서만 처리</small>
+        </label>
+      </section>
+
+      <section class="panel history-panel">
+        <div class="section-title">
+          <div><span class="eyebrow">LOCAL LIBRARY</span><h2>이 브라우저에 저장된 리플레이</h2></div>
+          <button id="clearHistory" class="text-button" type="button">전체 삭제</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </section>
+
+    <section id="viewer" class="viewer hidden">
+      <section class="panel matchbar">
+        <div class="match-title">
+          <span id="turnBadge" class="turn-badge">TURN 0</span>
+          <div><strong id="replayName">Replay</strong><small id="frameMeta">1 / 1</small></div>
+        </div>
+        <div class="playback">
+          <button id="prevButton" type="button" aria-label="이전 장면">◀</button>
+          <button id="playButton" type="button" aria-label="재생">▶</button>
+          <button id="nextButton" type="button" aria-label="다음 장면">▶|</button>
+          <select id="speedSelect" aria-label="재생 속도">
+            <option value="1400">0.5×</option>
+            <option value="750" selected>1×</option>
+            <option value="350">2×</option>
+            <option value="180">4×</option>
+          </select>
+        </div>
+        <label class="seat-select"><span>아래쪽</span><select id="viewSeat"><option value="0">Player 0</option><option value="1">Player 1</option></select></label>
+        <button id="closeViewer" class="button secondary compact" type="button">목록으로</button>
+      </section>
+
+      <section class="panel scrubber-panel">
+        <input id="scrubber" type="range" min="0" max="0" value="0" step="1">
+        <div><span id="actionText">Action 0</span><span id="resultText">진행 중</span></div>
+      </section>
+
+      <div class="viewer-layout">
+        <section class="panel board">
+          <div id="topPlayer" class="player-zone opponent"></div>
+          <div class="center-zone">
+            <span>STADIUM</span>
+            <div id="stadium"></div>
+          </div>
+          <div id="bottomPlayer" class="player-zone self"></div>
+        </section>
+        <aside class="side-rail">
+          <section class="panel log-panel">
+            <span class="eyebrow">LATEST LOG</span>
+            <div id="logList"></div>
+          </section>
+          <section class="panel file-panel">
+            <span class="eyebrow">LOCAL FILE</span>
+            <p>현재 리플레이는 서버가 아니라 이 브라우저 메모리와 IndexedDB에서만 열립니다.</p>
+            <button id="forgetReplay" class="button danger" type="button">이 리플레이 삭제</button>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="cardDialog">
+    <button id="closeCardDialog" class="dialog-close" type="button">×</button>
+    <div id="cardDialogBody"></div>
+  </dialog>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="./assets/vendor/jszip.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

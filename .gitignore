@@ -1,13 +1,2 @@
-.env
-runtime/
-server_data/
-__pycache__/
-*.py[cod]
-*.zip
-*.log
 .DS_Store
-app/records/*
-!app/records/README.txt
-app/submissions/*
-!app/submissions/README.txt
-app/user_data/decks.json
+Thumbs.db
