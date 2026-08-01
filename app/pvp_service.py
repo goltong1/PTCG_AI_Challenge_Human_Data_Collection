@@ -20,6 +20,7 @@ class PlayerEntry:
     deck: list[int]
     deck_label: str
     joined_at: float = field(default_factory=time.monotonic)
+    last_seen: float = field(default_factory=time.monotonic)
 
 
 @dataclass
@@ -61,6 +62,8 @@ class PvpHub:
         queue_timeout: int = 600,
         match_idle_seconds: int = 7200,
         online_grace_seconds: int = 25,
+        client_timeout_seconds: int = 45,
+        disconnect_grace_seconds: int = 15,
         capacity: WorkerCapacity | None = None,
     ) -> None:
         self.max_matches = max(1, int(max_matches))
@@ -68,38 +71,104 @@ class PvpHub:
         self.queue_timeout = max(60, int(queue_timeout))
         self.match_idle_seconds = max(600, int(match_idle_seconds))
         self.online_grace_seconds = max(10, int(online_grace_seconds))
+        self.client_timeout_seconds = max(5, int(client_timeout_seconds))
+        self.disconnect_grace_seconds = max(2, int(disconnect_grace_seconds))
         self.capacity = capacity
         self.lock = threading.RLock()
         self.quick_queue: list[PlayerEntry] = []
         self.waiting_rooms: dict[str, WaitingRoom] = {}
         self.matches: dict[str, MatchRoom] = {}
         self.session_match: dict[str, str] = {}
+        self.disconnect_hints: dict[str, float] = {}
 
     @staticmethod
     def _clean_name(raw: str) -> str:
         value = " ".join(str(raw or "").strip().split())[:32]
         return value or "Anonymous"
 
+    def _hint_expired_locked(self, session_id: str, now: float) -> bool:
+        hinted_at = self.disconnect_hints.get(session_id)
+        return hinted_at is not None and now - hinted_at > self.disconnect_grace_seconds
+
+    def _touch_session_locked(self, session_id: str, now: float | None = None) -> bool:
+        current = time.monotonic() if now is None else now
+        touched = False
+        for entry in self.quick_queue:
+            if entry.session_id == session_id:
+                entry.last_seen = current
+                touched = True
+        for waiting in self.waiting_rooms.values():
+            if waiting.host.session_id == session_id:
+                waiting.host.last_seen = current
+                touched = True
+        match_id = self.session_match.get(session_id)
+        room = self.matches.get(match_id or "")
+        if room is not None:
+            room.last_seen[session_id] = current
+            touched = True
+        if touched:
+            self.disconnect_hints.pop(session_id, None)
+        return touched
+
     def _cleanup_locked(self) -> None:
         now = time.monotonic()
+        removed_waiters = {
+            entry.session_id
+            for entry in self.quick_queue
+            if now - entry.joined_at > self.queue_timeout
+            or now - entry.last_seen > self.client_timeout_seconds
+            or self._hint_expired_locked(entry.session_id, now)
+        }
         self.quick_queue = [
-            entry for entry in self.quick_queue if now - entry.joined_at <= self.queue_timeout
+            entry for entry in self.quick_queue if entry.session_id not in removed_waiters
         ]
-        expired_codes = [
-            code
-            for code, room in self.waiting_rooms.items()
-            if now - room.created_at > self.queue_timeout
-        ]
+
+        expired_codes = []
+        for code, room in self.waiting_rooms.items():
+            host = room.host
+            if (
+                now - room.created_at > self.queue_timeout
+                or now - host.last_seen > self.client_timeout_seconds
+                or self._hint_expired_locked(host.session_id, now)
+            ):
+                expired_codes.append(code)
+                removed_waiters.add(host.session_id)
         for code in expired_codes:
             self.waiting_rooms.pop(code, None)
 
         expired_matches: list[str] = []
         for match_id, room in self.matches.items():
             latest = max(room.last_seen.values(), default=room.created_at)
-            if not room.worker.process.is_alive() or now - latest > self.match_idle_seconds:
+            player_stale = any(
+                now - room.last_seen.get(player.session_id, room.created_at)
+                > self.client_timeout_seconds
+                for player in room.players
+            )
+            disconnect_expired = any(
+                self._hint_expired_locked(player.session_id, now)
+                for player in room.players
+            )
+            if (
+                not room.worker.process.is_alive()
+                or room.departed
+                or player_stale
+                or disconnect_expired
+                or now - latest > self.match_idle_seconds
+            ):
                 expired_matches.append(match_id)
         for match_id in expired_matches:
             self._close_match_locked(match_id)
+
+        active_sessions = set(self.session_match)
+        active_sessions.update(entry.session_id for entry in self.quick_queue)
+        active_sessions.update(room.host.session_id for room in self.waiting_rooms.values())
+        for session_id in list(self.disconnect_hints):
+            if session_id not in active_sessions:
+                self.disconnect_hints.pop(session_id, None)
+
+    def cleanup(self) -> None:
+        with self.lock:
+            self._cleanup_locked()
 
     def _remove_waiting_locked(self, session_id: str) -> None:
         self.quick_queue = [entry for entry in self.quick_queue if entry.session_id != session_id]
@@ -108,6 +177,7 @@ class PvpHub:
         ]
         for code in codes:
             self.waiting_rooms.pop(code, None)
+        self.disconnect_hints.pop(session_id, None)
 
     def _ensure_waiting_capacity_locked(self) -> None:
         waiting_count = len(self.quick_queue) + len(self.waiting_rooms)
@@ -169,6 +239,7 @@ class PvpHub:
         for player in room.players:
             if self.session_match.get(player.session_id) == match_id:
                 self.session_match.pop(player.session_id, None)
+            self.disconnect_hints.pop(player.session_id, None)
         room.worker.terminate()
 
     def _entry(self, session_id: str, name: str, deck: list[int], deck_label: str) -> PlayerEntry:
@@ -260,9 +331,11 @@ class PvpHub:
             raise GameError("매칭된 온라인 게임이 없습니다.")
         seat = room.seat_of(session_id)
         room.last_seen[session_id] = time.monotonic()
+        self.disconnect_hints.pop(session_id, None)
         return room, seat
 
     def _status_locked(self, session_id: str) -> dict[str, Any]:
+        self._touch_session_locked(session_id)
         match_id = self.session_match.get(session_id)
         room = self.matches.get(match_id or "")
         if room is not None:
@@ -360,6 +433,25 @@ class PvpHub:
             worker = room.worker
         return str(worker.call(command, **kwargs))
 
+    def heartbeat(self, session_id: str) -> dict[str, Any]:
+        with self.lock:
+            self._touch_session_locked(session_id)
+            self._cleanup_locked()
+            return self._status_locked(session_id)
+
+    def mark_disconnected(self, session_id: str) -> None:
+        with self.lock:
+            active = session_id in self.session_match
+            if not active:
+                active = any(entry.session_id == session_id for entry in self.quick_queue)
+            if not active:
+                active = any(
+                    waiting.host.session_id == session_id
+                    for waiting in self.waiting_rooms.values()
+                )
+            if active:
+                self.disconnect_hints[session_id] = time.monotonic()
+
     def leave(self, session_id: str) -> dict[str, Any]:
         with self.lock:
             self._cleanup_locked()
@@ -368,12 +460,11 @@ class PvpHub:
             room = self.matches.get(match_id or "")
             if room is None:
                 self.session_match.pop(session_id, None)
+                self.disconnect_hints.pop(session_id, None)
                 return {"status": "idle"}
-            room.departed.add(session_id)
-            room.last_seen[session_id] = time.monotonic()
-            self.session_match.pop(session_id, None)
-            if len(room.departed) >= 2:
-                self._close_match_locked(room.match_id)
+            # An explicit lobby/leave action is final. Close the shared worker
+            # immediately so a one-game Railway deployment frees its slot.
+            self._close_match_locked(room.match_id)
             return {"status": "idle"}
 
     def stats(self) -> dict[str, int]:
@@ -394,6 +485,7 @@ class PvpHub:
             self.session_match.clear()
             self.quick_queue.clear()
             self.waiting_rooms.clear()
+            self.disconnect_hints.clear()
         for room in rooms:
             try:
                 room.worker.terminate()

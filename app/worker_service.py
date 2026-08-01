@@ -212,30 +212,75 @@ class GameWorkerProxy:
 
 
 class SessionHub:
-    def __init__(self, max_sessions: int = 8, idle_seconds: int = 3600, capacity: WorkerCapacity | None = None) -> None:
+    def __init__(
+        self,
+        max_sessions: int = 8,
+        idle_seconds: int = 3600,
+        capacity: WorkerCapacity | None = None,
+        disconnect_seconds: int = 45,
+        disconnect_grace_seconds: int = 15,
+    ) -> None:
         self.max_sessions = max(1, max_sessions)
         self.idle_seconds = max(300, idle_seconds)
+        self.disconnect_seconds = max(5, int(disconnect_seconds))
+        self.disconnect_grace_seconds = max(2, int(disconnect_grace_seconds))
         self.capacity = capacity
         self.lock = threading.RLock()
         self.sessions: dict[str, GameWorkerProxy] = {}
+        self.disconnect_hints: dict[str, float] = {}
 
     def _cleanup_locked(self) -> None:
         now = time.monotonic()
-        expired = [
-            session_id
-            for session_id, worker in self.sessions.items()
-            if not worker.process.is_alive() or now - worker.last_access > self.idle_seconds
-        ]
+        expired = []
+        for session_id, worker in self.sessions.items():
+            hinted_at = self.disconnect_hints.get(session_id)
+            hint_expired = (
+                hinted_at is not None
+                and now - hinted_at > self.disconnect_grace_seconds
+            )
+            inactive = now - worker.last_access > min(self.idle_seconds, self.disconnect_seconds)
+            if not worker.process.is_alive() or hint_expired or inactive:
+                expired.append(session_id)
         for session_id in expired:
             worker = self.sessions.pop(session_id, None)
+            self.disconnect_hints.pop(session_id, None)
             if worker is not None:
                 worker.terminate()
+
+    def cleanup(self) -> None:
+        with self.lock:
+            self._cleanup_locked()
+
+    def touch(self, session_id: str) -> bool:
+        with self.lock:
+            now = time.monotonic()
+            worker = self.sessions.get(session_id)
+            if worker is None:
+                self._cleanup_locked()
+                return False
+            hinted_at = self.disconnect_hints.get(session_id)
+            if hinted_at is not None and now - hinted_at > self.disconnect_grace_seconds:
+                self._cleanup_locked()
+                return False
+            if now - worker.last_access > min(self.idle_seconds, self.disconnect_seconds):
+                self._cleanup_locked()
+                return False
+            self.disconnect_hints.pop(session_id, None)
+            worker.last_access = now
+            self._cleanup_locked()
+            return session_id in self.sessions
+
+    def mark_disconnected(self, session_id: str) -> None:
+        with self.lock:
+            if session_id in self.sessions:
+                self.disconnect_hints[session_id] = time.monotonic()
 
     def peek(self, session_id: str) -> GameWorkerProxy | None:
         with self.lock:
             self._cleanup_locked()
             worker = self.sessions.get(session_id)
             if worker is not None:
+                self.disconnect_hints.pop(session_id, None)
                 worker.last_access = time.monotonic()
             return worker
 
@@ -244,6 +289,7 @@ class SessionHub:
             self._cleanup_locked()
             worker = self.sessions.get(session_id)
             if worker is not None:
+                self.disconnect_hints.pop(session_id, None)
                 worker.last_access = time.monotonic()
                 return worker
             if len(self.sessions) >= self.max_sessions:
@@ -252,11 +298,13 @@ class SessionHub:
                 )
             worker = GameWorkerProxy(session_id, capacity=self.capacity)
             self.sessions[session_id] = worker
+            self.disconnect_hints.pop(session_id, None)
             return worker
 
     def close(self, session_id: str) -> None:
         with self.lock:
             worker = self.sessions.pop(session_id, None)
+            self.disconnect_hints.pop(session_id, None)
         if worker is not None:
             worker.terminate()
 
@@ -264,5 +312,6 @@ class SessionHub:
         with self.lock:
             workers = list(self.sessions.values())
             self.sessions.clear()
+            self.disconnect_hints.clear()
         for worker in workers:
             worker.terminate()

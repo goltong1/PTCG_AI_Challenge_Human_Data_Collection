@@ -28,7 +28,7 @@ from pvp_service import PvpHub
 from worker_service import SessionHub, WorkerCapacity, WorkerError
 
 
-APP_VERSION = "5.1.1-railway"
+APP_VERSION = "5.1.2-railway"
 JSON_BODY_LIMIT = 2 * 1024 * 1024
 PUBLIC_MODE = os.environ.get("CABT_PUBLIC_MODE", "0").strip().lower() in {"1", "true", "yes", "on"}
 RESULT_SUBMISSION_ENABLED = os.environ.get(
@@ -43,6 +43,8 @@ MAX_PVP_MATCHES = max(1, int(os.environ.get("CABT_MAX_PVP_MATCHES", "8")))
 MAX_PVP_WAITERS = max(2, int(os.environ.get("CABT_MAX_PVP_WAITERS", "64")))
 PVP_QUEUE_TIMEOUT = max(60, int(os.environ.get("CABT_PVP_QUEUE_TIMEOUT", "600")))
 PVP_MATCH_IDLE_SECONDS = max(600, int(os.environ.get("CABT_PVP_MATCH_IDLE_SECONDS", "7200")))
+CLIENT_DISCONNECT_SECONDS = max(5, int(os.environ.get("CABT_CLIENT_DISCONNECT_SECONDS", "45")))
+CLIENT_DISCONNECT_GRACE_SECONDS = max(2, int(os.environ.get("CABT_CLIENT_DISCONNECT_GRACE_SECONDS", "15")))
 MAX_ACTIVE_WORKERS = max(1, int(os.environ.get("CABT_MAX_ACTIVE_WORKERS", "1")))
 SESSION_COOKIE = "CABT_SESSION"
 
@@ -54,7 +56,13 @@ image_index = CardImageIndex(ROOT, manager.card_ids())
 result_collector = ResultCollector()
 worker_capacity = WorkerCapacity(MAX_ACTIVE_WORKERS) if PUBLIC_MODE else None
 session_hub = (
-    SessionHub(MAX_SESSIONS, SESSION_IDLE_SECONDS, capacity=worker_capacity)
+    SessionHub(
+        MAX_SESSIONS,
+        SESSION_IDLE_SECONDS,
+        capacity=worker_capacity,
+        disconnect_seconds=CLIENT_DISCONNECT_SECONDS,
+        disconnect_grace_seconds=CLIENT_DISCONNECT_GRACE_SECONDS,
+    )
     if PUBLIC_MODE
     else None
 )
@@ -64,6 +72,8 @@ pvp_hub = (
         max_waiting=MAX_PVP_WAITERS,
         queue_timeout=PVP_QUEUE_TIMEOUT,
         match_idle_seconds=PVP_MATCH_IDLE_SECONDS,
+        client_timeout_seconds=CLIENT_DISCONNECT_SECONDS,
+        disconnect_grace_seconds=CLIENT_DISCONNECT_GRACE_SECONDS,
         capacity=worker_capacity,
     )
     if ONLINE_MATCHING_ENABLED
@@ -209,6 +219,8 @@ class CABTHandler(BaseHTTPRequestHandler):
         session_id = self._session_id(create=create)
         if session_id is None:
             return None
+        if create and pvp_hub is not None:
+            pvp_hub.cleanup()
         worker = session_hub.get(session_id) if create else session_hub.peek(session_id)
         return worker
 
@@ -231,7 +243,10 @@ class CABTHandler(BaseHTTPRequestHandler):
         """
         session_id = self._pvp_session_id(create=True)
         if PUBLIC_MODE and session_hub is not None:
+            session_hub.cleanup()
             session_hub.close(session_id)
+        if pvp_hub is not None:
+            pvp_hub.cleanup()
         return session_id
 
     def _game_call(self, command: str, create: bool = True, **kwargs):
@@ -318,6 +333,10 @@ class CABTHandler(BaseHTTPRequestHandler):
                 self._send_file(ROOT / "templates" / "admin.html", "text/html; charset=utf-8")
                 return
             if path == "/api/health":
+                if session_hub is not None:
+                    session_hub.cleanup()
+                if pvp_hub is not None:
+                    pvp_hub.cleanup()
                 self._send_json(
                     {
                         "ok": True,
@@ -353,6 +372,8 @@ class CABTHandler(BaseHTTPRequestHandler):
                         "max_pvp_matches": MAX_PVP_MATCHES if ONLINE_MATCHING_ENABLED else 0,
                         "max_pvp_waiters": MAX_PVP_WAITERS if ONLINE_MATCHING_ENABLED else 0,
                         "max_active_workers": MAX_ACTIVE_WORKERS if PUBLIC_MODE else 1,
+                        "client_disconnect_seconds": CLIENT_DISCONNECT_SECONDS,
+                        "client_disconnect_grace_seconds": CLIENT_DISCONNECT_GRACE_SECONDS,
                     }
                 )
                 return
@@ -514,6 +535,30 @@ class CABTHandler(BaseHTTPRequestHandler):
                 if content_length:
                     self._read_body(JSON_BODY_LIMIT)
                 self._send_json(self._game_call("replay_close", create=False))
+                return
+            if path == "/api/client/heartbeat":
+                content_length = int(self.headers.get("Content-Length", "0") or "0")
+                if content_length:
+                    self._read_body(JSON_BODY_LIMIT)
+                session_id = self._session_id(create=False)
+                if session_id is not None:
+                    if session_hub is not None:
+                        session_hub.touch(session_id)
+                    if pvp_hub is not None:
+                        pvp_hub.heartbeat(session_id)
+                self._send_json({"ok": True})
+                return
+            if path == "/api/client/disconnect":
+                content_length = int(self.headers.get("Content-Length", "0") or "0")
+                if content_length:
+                    self._read_body(JSON_BODY_LIMIT)
+                session_id = self._session_id(create=False)
+                if session_id is not None:
+                    if session_hub is not None:
+                        session_hub.mark_disconnected(session_id)
+                    if pvp_hub is not None:
+                        pvp_hub.mark_disconnected(session_id)
+                self._send_json({"ok": True})
                 return
             if path == "/api/game/start":
                 request = self._read_json()

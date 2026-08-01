@@ -32,6 +32,8 @@ let matchmakingBusy = false;
 let matchmakingState = { status: 'idle' };
 let pvpPollTimer = null;
 let pvpPollBusy = false;
+let clientHeartbeatTimer = null;
+let clientHeartbeatBusy = false;
 
 function esc(value) {
   return String(value ?? '').replace(/[&<>'"]/g, (char) => ({
@@ -59,6 +61,48 @@ async function api(url, options = {}) {
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) throw new Error(payload.detail || `HTTP ${response.status}`);
   return payload;
+}
+
+async function sendClientHeartbeat() {
+  if (!config?.public_mode || clientHeartbeatBusy) return;
+  clientHeartbeatBusy = true;
+  try {
+    await fetch('/api/client/heartbeat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: '{}',
+      keepalive: true,
+    });
+  } catch (_error) {
+    // A later heartbeat or normal API request will recover the session.
+  } finally {
+    clientHeartbeatBusy = false;
+  }
+}
+
+function startClientHeartbeat() {
+  clearInterval(clientHeartbeatTimer);
+  clientHeartbeatTimer = null;
+  if (!config?.public_mode) return;
+  const disconnectSeconds = Math.max(5, Number(config.client_disconnect_seconds || 45));
+  const intervalMs = Math.min(10000, Math.max(5000, (disconnectSeconds * 1000) / 4));
+  sendClientHeartbeat();
+  clientHeartbeatTimer = setInterval(sendClientHeartbeat, intervalMs);
+}
+
+function signalClientDisconnect() {
+  if (!config?.public_mode) return;
+  const body = new Blob(['{}'], { type: 'application/json' });
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon('/api/client/disconnect', body);
+    return;
+  }
+  fetch('/api/client/disconnect', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: '{}',
+    keepalive: true,
+  }).catch(() => {});
 }
 
 function isReplayMode() {
@@ -1523,7 +1567,12 @@ async function refreshPvpState() {
     render(next);
   } catch (error) {
     stopPvpPoll();
-    toast(error.message);
+    state = null;
+    renderMatchmakingStatus({ status: 'idle' });
+    $('#lobby').classList.remove('hidden');
+    $('#game').classList.add('hidden');
+    $('#game').classList.remove('pvp-mode');
+    toast(error.message || '온라인 대전이 종료되었습니다.');
   } finally {
     pvpPollBusy = false;
   }
@@ -1792,7 +1841,17 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+window.addEventListener('pagehide', (event) => {
+  if (!event.persisted) signalClientDisconnect();
+});
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible') sendClientHeartbeat();
+});
+
 loadConfig()
-  .then(initialGameState)
+  .then(() => {
+    startClientHeartbeat();
+    return initialGameState();
+  })
   .then(render)
   .catch((error) => toast(error.message));
