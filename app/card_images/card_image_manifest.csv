@@ -1,0 +1,1268 @@
+﻿card_id,card_name,expansion,collection_no,table_page,image_page,width,height,format,image_path,id_only_path
+1,Basic {G} Energy,SVE,1,1,40,451,630,jpg,named/0001_Basic_{G}_Energy_SVE_1.jpg,by_id/1.jpg
+2,Basic {R} Energy,SVE,2,1,41,451,630,jpg,named/0002_Basic_{R}_Energy_SVE_2.jpg,by_id/2.jpg
+3,Basic {W} Energy,SVE,3,1,42,451,630,jpg,named/0003_Basic_{W}_Energy_SVE_3.jpg,by_id/3.jpg
+4,Basic {L} Energy,SVE,4,1,43,451,630,jpg,named/0004_Basic_{L}_Energy_SVE_4.jpg,by_id/4.jpg
+5,Basic {P} Energy,SVE,5,1,44,451,630,jpg,named/0005_Basic_{P}_Energy_SVE_5.jpg,by_id/5.jpg
+6,Basic {F} Energy,SVE,6,1,45,451,630,jpg,named/0006_Basic_{F}_Energy_SVE_6.jpg,by_id/6.jpg
+7,Basic {D} Energy,SVE,7,1,46,451,630,jpg,named/0007_Basic_{D}_Energy_SVE_7.jpg,by_id/7.jpg
+8,Basic {M} Energy,SVE,8,1,47,451,630,jpg,named/0008_Basic_{M}_Energy_SVE_8.jpg,by_id/8.jpg
+9,Boomerang Energy,TWM,166,1,48,660,920,jpg,named/0009_Boomerang_Energy_TWM_166.jpg,by_id/9.jpg
+10,Neo Upper Energy,TEF,162,1,49,660,920,jpg,named/0010_Neo_Upper_Energy_TEF_162.jpg,by_id/10.jpg
+11,Mist Energy,TEF,161,1,50,660,920,jpg,named/0011_Mist_Energy_TEF_161.jpg,by_id/11.jpg
+12,Legacy Energy,TWM,167,1,51,660,920,jpg,named/0012_Legacy_Energy_TWM_167.jpg,by_id/12.jpg
+13,Enriching Energy,SSP,191,1,52,660,923,jpg,named/0013_Enriching_Energy_SSP_191.jpg,by_id/13.jpg
+14,Spiky Energy,JTG,159,1,53,660,920,jpg,named/0014_Spiky_Energy_JTG_159.jpg,by_id/14.jpg
+15,Team Rocket's Energy,DRI,182,1,54,660,920,jpg,named/0015_Team_Rocket's_Energy_DRI_182.jpg,by_id/15.jpg
+16,Prism Energy,BLK,86,1,55,660,920,jpg,named/0016_Prism_Energy_BLK_86.jpg,by_id/16.jpg
+17,Ignition Energy,WHT,86,1,56,660,920,jpg,named/0017_Ignition_Energy_WHT_86.jpg,by_id/17.jpg
+18,Grow Grass Energy,POR,86,1,57,451,630,jpg,named/0018_Grow_Grass_Energy_POR_86.jpg,by_id/18.jpg
+19,Telepath Psychic Energy,POR,88,1,58,451,630,jpg,named/0019_Telepath_Psychic_Energy_POR_88.jpg,by_id/19.jpg
+20,Rock Fighting Energy,POR,87,1,59,451,630,jpg,named/0020_Rock_Fighting_Energy_POR_87.jpg,by_id/20.jpg
+21,Scrafty,PROMO,188,1,60,450,630,jpg,named/0021_Scrafty_PROMO_188.jpg,by_id/21.jpg
+22,Hippopotas,DRI,105,1,61,660,920,jpg,named/0022_Hippopotas_DRI_105.jpg,by_id/22.jpg
+23,Hippowdon,DRI,106,1,62,660,920,jpg,named/0023_Hippowdon_DRI_106.jpg,by_id/23.jpg
+24,Team Rocket's Kangaskhan ex,ASC,162,1,63,660,920,jpg,named/0024_Team_Rocket's_Kangaskhan_ex_ASC_162.jpg,by_id/24.jpg
+25,Pinsir,TWM,3,1,64,660,920,jpg,named/0025_Pinsir_TWM_3.jpg,by_id/25.jpg
+26,Leafeon,TWM,11,1,65,660,920,jpg,named/0026_Leafeon_TWM_11.jpg,by_id/26.jpg
+27,Iron Leaves,TWM,19,1,66,660,920,jpg,named/0027_Iron_Leaves_TWM_19.jpg,by_id/27.jpg
+28,Poltchageist,TWM,20,1,67,660,920,jpg,named/0028_Poltchageist_TWM_20.jpg,by_id/28.jpg
+29,Sinistcha ex,TWM,23,1,68,660,920,jpg,named/0029_Sinistcha_ex_TWM_23.jpg,by_id/29.jpg
+30,Magcargo ex,TWM,29,1,69,660,920,jpg,named/0030_Magcargo_ex_TWM_29.jpg,by_id/30.jpg
+31,Chi-Yu,TWM,39,1,70,660,920,jpg,named/0031_Chi-Yu_TWM_39.jpg,by_id/31.jpg
+32,Glaceon,TWM,54,1,71,660,920,jpg,named/0032_Glaceon_TWM_54.jpg,by_id/32.jpg
+33,Froakie,TWM,56,1,72,660,920,jpg,named/0033_Froakie_TWM_56.jpg,by_id/33.jpg
+34,Frogadier,TWM,57,2,73,660,920,jpg,named/0034_Frogadier_TWM_57.jpg,by_id/34.jpg
+35,Walking Wake,TWM,63,2,74,660,920,jpg,named/0035_Walking_Wake_TWM_63.jpg,by_id/35.jpg
+36,Morpeko,TWM,72,2,75,660,920,jpg,named/0036_Morpeko_TWM_72.jpg,by_id/36.jpg
+37,Iron Thorns ex,TWM,77,2,76,660,920,jpg,named/0037_Iron_Thorns_ex_TWM_77.jpg,by_id/37.jpg
+38,Girafarig,TWM,83,2,77,660,920,jpg,named/0038_Girafarig_TWM_83.jpg,by_id/38.jpg
+39,Enamorus,TWM,93,2,78,660,920,jpg,named/0039_Enamorus_TWM_93.jpg,by_id/39.jpg
+40,Greninja ex,TWM,106,2,79,660,920,jpg,named/0040_Greninja_ex_TWM_106.jpg,by_id/40.jpg
+41,Ting-Lu,TWM,110,2,80,660,920,jpg,named/0041_Ting-Lu_TWM_110.jpg,by_id/41.jpg
+42,Applin,TWM,126,2,81,660,920,jpg,named/0042_Applin_TWM_126.jpg,by_id/42.jpg
+43,Eevee,TWM,135,2,82,660,920,jpg,named/0043_Eevee_TWM_135.jpg,by_id/43.jpg
+44,Bloodmoon Ursaluna ex,TWM,141,2,83,660,920,jpg,named/0044_Bloodmoon_Ursaluna_ex_TWM_141.jpg,by_id/44.jpg
+45,Shaymin,TEF,13,2,84,660,920,jpg,named/0045_Shaymin_TEF_13.jpg,by_id/45.jpg
+46,Gouging Fire ex,TEF,38,2,85,660,920,jpg,named/0046_Gouging_Fire_ex_TEF_38.jpg,by_id/46.jpg
+47,Totodile,TEF,39,2,86,660,920,jpg,named/0047_Totodile_TEF_39.jpg,by_id/47.jpg
+48,Croconaw,TEF,40,2,87,660,920,jpg,named/0048_Croconaw_TEF_40.jpg,by_id/48.jpg
+49,Feraligatr,TEF,41,2,88,660,920,jpg,named/0049_Feraligatr_TEF_41.jpg,by_id/49.jpg
+50,Wiglett,TEF,47,2,89,660,920,jpg,named/0050_Wiglett_TEF_47.jpg,by_id/50.jpg
+51,Palafin,TEF,49,2,90,660,920,jpg,named/0051_Palafin_TEF_49.jpg,by_id/51.jpg
+52,Wugtrio ex,TEF,60,2,91,660,920,jpg,named/0052_Wugtrio_ex_TEF_60.jpg,by_id/52.jpg
+53,Marill,TEF,64,2,92,660,920,jpg,named/0053_Marill_TEF_64.jpg,by_id/53.jpg
+54,Bronzor,TEF,68,2,93,660,920,jpg,named/0054_Bronzor_TEF_68.jpg,by_id/54.jpg
+55,Bronzong,TEF,69,2,94,660,920,jpg,named/0055_Bronzong_TEF_69.jpg,by_id/55.jpg
+56,Flutter Mane,TEF,78,2,95,660,920,jpg,named/0056_Flutter_Mane_TEF_78.jpg,by_id/56.jpg
+57,Relicanth,TEF,84,2,96,660,920,jpg,named/0057_Relicanth_TEF_84.jpg,by_id/57.jpg
+58,Great Tusk,TEF,97,2,97,660,920,jpg,named/0058_Great_Tusk_TEF_97.jpg,by_id/58.jpg
+59,Gastly,TEF,102,2,98,660,920,jpg,named/0059_Gastly_TEF_102.jpg,by_id/59.jpg
+60,Haunter,TEF,103,2,99,660,920,jpg,named/0060_Haunter_TEF_103.jpg,by_id/60.jpg
+61,Roaring Moon,TEF,109,2,100,660,920,jpg,named/0061_Roaring_Moon_TEF_109.jpg,by_id/61.jpg
+62,Koraidon,TEF,119,2,101,660,920,jpg,named/0062_Koraidon_TEF_119.jpg,by_id/62.jpg
+63,Raging Bolt ex,TEF,123,2,102,660,920,jpg,named/0063_Raging_Bolt_ex_TEF_123.jpg,by_id/63.jpg
+64,Hoothoot,TEF,126,2,103,660,920,jpg,named/0064_Hoothoot_TEF_126.jpg,by_id/64.jpg
+65,Dunsparce,TEF,128,2,104,660,920,jpg,named/0065_Dunsparce_TEF_128.jpg,by_id/65.jpg
+66,Dudunsparce,TEF,129,2,105,660,920,jpg,named/0066_Dudunsparce_TEF_129.jpg,by_id/66.jpg
+67,Pineco,TEF,2,3,106,660,920,jpg,named/0067_Pineco_TEF_2.jpg,by_id/67.jpg
+68,Seedot,TEF,3,3,107,660,920,jpg,named/0068_Seedot_TEF_3.jpg,by_id/68.jpg
+69,Nuzleaf,TEF,4,3,108,660,920,jpg,named/0069_Nuzleaf_TEF_4.jpg,by_id/69.jpg
+70,Shiftry,TEF,5,3,109,660,920,jpg,named/0070_Shiftry_TEF_5.jpg,by_id/70.jpg
+71,Deerling,TEF,16,3,110,660,920,jpg,named/0071_Deerling_TEF_16.jpg,by_id/71.jpg
+72,Sawsbuck,TEF,17,3,111,660,920,jpg,named/0072_Sawsbuck_TEF_17.jpg,by_id/72.jpg
+73,Rellor,TEF,23,3,112,660,920,jpg,named/0073_Rellor_TEF_23.jpg,by_id/73.jpg
+74,Rabsca,TEF,24,3,113,660,920,jpg,named/0074_Rabsca_TEF_24.jpg,by_id/74.jpg
+75,Iron Leaves ex,TEF,25,3,114,660,920,jpg,named/0075_Iron_Leaves_ex_TEF_25.jpg,by_id/75.jpg
+76,Slugma,TEF,28,3,115,660,920,jpg,named/0076_Slugma_TEF_28.jpg,by_id/76.jpg
+77,Litten,TEF,32,3,116,660,920,jpg,named/0077_Litten_TEF_32.jpg,by_id/77.jpg
+78,Torracat,TEF,33,3,117,660,920,jpg,named/0078_Torracat_TEF_33.jpg,by_id/78.jpg
+79,Incineroar ex,TEF,34,3,118,660,920,jpg,named/0079_Incineroar_ex_TEF_34.jpg,by_id/79.jpg
+80,Iron Crown ex,TEF,81,3,119,660,920,jpg,named/0080_Iron_Crown_ex_TEF_81.jpg,by_id/80.jpg
+81,Drilbur,TEF,85,3,120,660,920,jpg,named/0081_Drilbur_TEF_85.jpg,by_id/81.jpg
+82,Excadrill,TEF,86,3,121,660,920,jpg,named/0082_Excadrill_TEF_86.jpg,by_id/82.jpg
+83,Farigiraf ex,TEF,108,3,122,660,920,jpg,named/0083_Farigiraf_ex_TEF_108.jpg,by_id/83.jpg
+84,Scizor ex,TEF,111,3,123,660,920,jpg,named/0084_Scizor_ex_TEF_111.jpg,by_id/84.jpg
+85,Beldum,TEF,113,3,124,660,920,jpg,named/0085_Beldum_TEF_113.jpg,by_id/85.jpg
+86,Metang,TEF,114,3,125,660,920,jpg,named/0086_Metang_TEF_114.jpg,by_id/86.jpg
+87,Miraidon,TEF,121,3,126,660,920,jpg,named/0087_Miraidon_TEF_121.jpg,by_id/87.jpg
+88,Volbeat,TWM,9,3,127,660,920,jpg,named/0088_Volbeat_TWM_9.jpg,by_id/88.jpg
+89,Grookey,TWM,14,3,128,660,920,jpg,named/0089_Grookey_TWM_14.jpg,by_id/89.jpg
+90,Thwackey,TWM,15,3,129,660,920,jpg,named/0090_Thwackey_TWM_15.jpg,by_id/90.jpg
+91,Rillaboom,TWM,16,3,130,660,920,jpg,named/0091_Rillaboom_TWM_16.jpg,by_id/91.jpg
+92,Applin,TWM,17,3,131,660,920,jpg,named/0092_Applin_TWM_17.jpg,by_id/92.jpg
+93,Dipplin,TWM,18,3,132,660,920,jpg,named/0093_Dipplin_TWM_18.jpg,by_id/93.jpg
+94,Sinistcha,TWM,22,3,133,660,920,jpg,named/0094_Sinistcha_TWM_22.jpg,by_id/94.jpg
+95,Teal Mask Ogerpon,TWM,24,3,134,660,920,jpg,named/0095_Teal_Mask_Ogerpon_TWM_24.jpg,by_id/95.jpg
+96,Teal Mask Ogerpon ex,TWM,25,3,135,660,920,jpg,named/0096_Teal_Mask_Ogerpon_ex_TWM_25.jpg,by_id/96.jpg
+97,Litwick,TWM,36,3,136,660,920,jpg,named/0097_Litwick_TWM_36.jpg,by_id/97.jpg
+98,Chandelure,TWM,38,3,137,660,920,jpg,named/0098_Chandelure_TWM_38.jpg,by_id/98.jpg
+99,Hearthflame Mask Ogerpon ex,TWM,40,3,138,660,920,jpg,named/0099_Hearthflame_Mask_Ogerpon_ex_TWM_40.jpg,by_id/99.jpg
+100,Goldeen,TWM,44,4,139,660,920,jpg,named/0100_Goldeen_TWM_44.jpg,by_id/100.jpg
+101,Jynx,TWM,46,4,140,660,920,jpg,named/0101_Jynx_TWM_46.jpg,by_id/101.jpg
+102,Milotic,TWM,50,4,141,660,920,jpg,named/0102_Milotic_TWM_50.jpg,by_id/102.jpg
+103,Snorunt,TWM,51,4,142,660,920,jpg,named/0103_Snorunt_TWM_51.jpg,by_id/103.jpg
+104,Froslass,TWM,53,4,143,660,920,jpg,named/0104_Froslass_TWM_53.jpg,by_id/104.jpg
+105,Finizen,TWM,59,4,144,660,920,jpg,named/0105_Finizen_TWM_59.jpg,by_id/105.jpg
+106,Palafin,TWM,60,4,145,660,920,jpg,named/0106_Palafin_TWM_60.jpg,by_id/106.jpg
+107,Palafin ex,TWM,61,4,146,660,920,jpg,named/0107_Palafin_ex_TWM_61.jpg,by_id/107.jpg
+108,Wellspring Mask Ogerpon ex,TWM,64,4,147,660,920,jpg,named/0108_Wellspring_Mask_Ogerpon_ex_TWM_64.jpg,by_id/108.jpg
+109,Abra,TWM,80,4,148,660,920,jpg,named/0109_Abra_TWM_80.jpg,by_id/109.jpg
+110,Slurpuff,TWM,90,4,149,660,920,jpg,named/0110_Slurpuff_TWM_90.jpg,by_id/110.jpg
+111,Sandygast,TWM,91,4,150,660,920,jpg,named/0111_Sandygast_TWM_91.jpg,by_id/111.jpg
+112,Munkidori,TWM,95,4,151,660,920,jpg,named/0112_Munkidori_TWM_95.jpg,by_id/112.jpg
+113,Timburr,TWM,103,4,152,660,920,jpg,named/0113_Timburr_TWM_103.jpg,by_id/113.jpg
+114,Gurdurr,TWM,104,4,153,660,920,jpg,named/0114_Gurdurr_TWM_104.jpg,by_id/114.jpg
+115,Conkeldurr,TWM,105,4,154,660,920,jpg,named/0115_Conkeldurr_TWM_105.jpg,by_id/115.jpg
+116,Okidogi,TWM,111,4,155,660,920,jpg,named/0116_Okidogi_TWM_111.jpg,by_id/116.jpg
+117,Cornerstone Mask Ogerpon ex,TWM,112,4,156,660,920,jpg,named/0117_Cornerstone_Mask_Ogerpon_ex_TWM_112.jpg,by_id/117.jpg
+118,Heatran,TWM,123,4,157,660,920,jpg,named/0118_Heatran_TWM_123.jpg,by_id/118.jpg
+119,Dreepy,TWM,128,4,158,660,920,jpg,named/0119_Dreepy_TWM_128.jpg,by_id/119.jpg
+120,Drakloak,TWM,129,4,159,660,920,jpg,named/0120_Drakloak_TWM_129.jpg,by_id/120.jpg
+121,Dragapult ex,TWM,130,4,160,660,920,jpg,named/0121_Dragapult_ex_TWM_130.jpg,by_id/121.jpg
+122,Tatsugiri,TWM,131,4,161,660,920,jpg,named/0122_Tatsugiri_TWM_131.jpg,by_id/122.jpg
+123,Farfetch'd,TWM,132,4,162,660,920,jpg,named/0123_Farfetch'd_TWM_132.jpg,by_id/123.jpg
+124,Chansey,TWM,133,4,163,660,920,jpg,named/0124_Chansey_TWM_133.jpg,by_id/124.jpg
+125,Blissey ex,TWM,134,4,164,660,920,jpg,named/0125_Blissey_ex_TWM_134.jpg,by_id/125.jpg
+126,Galvantula,SFA,2,4,165,660,920,jpg,named/0126_Galvantula_SFA_2.jpg,by_id/126.jpg
+127,Rowlet,SFA,3,4,166,660,920,jpg,named/0127_Rowlet_SFA_3.jpg,by_id/127.jpg
+128,Dartrix,SFA,4,4,167,660,920,jpg,named/0128_Dartrix_SFA_4.jpg,by_id/128.jpg
+129,Decidueye,SFA,5,4,168,660,920,jpg,named/0129_Decidueye_SFA_5.jpg,by_id/129.jpg
+130,Revavroom ex,SFA,15,4,169,660,920,jpg,named/0130_Revavroom_ex_SFA_15.jpg,by_id/130.jpg
+131,Duskull,SFA,18,4,170,660,920,jpg,named/0131_Duskull_SFA_18.jpg,by_id/131.jpg
+132,Dusclops,SFA,19,4,171,660,920,jpg,named/0132_Dusclops_SFA_19.jpg,by_id/132.jpg
+133,Dusknoir,SFA,20,5,172,660,920,jpg,named/0133_Dusknoir_SFA_20.jpg,by_id/133.jpg
+134,Sylveon,SFA,22,5,173,660,920,jpg,named/0134_Sylveon_SFA_22.jpg,by_id/134.jpg
+135,Bloodmoon Ursaluna,SFA,25,5,174,660,920,jpg,named/0135_Bloodmoon_Ursaluna_SFA_25.jpg,by_id/135.jpg
+136,Zorua,SFA,31,5,175,660,920,jpg,named/0136_Zorua_SFA_31.jpg,by_id/136.jpg
+137,Zoroark,SFA,32,5,176,660,920,jpg,named/0137_Zoroark_SFA_32.jpg,by_id/137.jpg
+138,Okidogi ex,SFA,36,5,177,660,920,jpg,named/0138_Okidogi_ex_SFA_36.jpg,by_id/138.jpg
+139,Munkidori ex,SFA,37,5,178,660,920,jpg,named/0139_Munkidori_ex_SFA_37.jpg,by_id/139.jpg
+140,Fezandipiti ex,SFA,38,5,179,660,920,jpg,named/0140_Fezandipiti_ex_SFA_38.jpg,by_id/140.jpg
+141,Pecharunt ex,SFA,39,5,180,660,920,jpg,named/0141_Pecharunt_ex_SFA_39.jpg,by_id/141.jpg
+142,Genesect,SFA,40,5,181,660,920,jpg,named/0142_Genesect_SFA_40.jpg,by_id/142.jpg
+143,Varoom,SFA,43,5,182,660,920,jpg,named/0143_Varoom_SFA_43.jpg,by_id/143.jpg
+144,Kyurem,SFA,47,5,183,660,920,jpg,named/0144_Kyurem_SFA_47.jpg,by_id/144.jpg
+145,Eevee,SFA,50,5,184,660,920,jpg,named/0145_Eevee_SFA_50.jpg,by_id/145.jpg
+146,Lileep,SCR,5,5,185,660,920,jpg,named/0146_Lileep_SCR_5.jpg,by_id/146.jpg
+147,Cradily,SCR,6,5,186,660,920,jpg,named/0147_Cradily_SCR_6.jpg,by_id/147.jpg
+148,Mow Rotom,SCR,8,5,187,660,920,jpg,named/0148_Mow_Rotom_SCR_8.jpg,by_id/148.jpg
+149,Applin,SCR,12,5,188,660,920,jpg,named/0149_Applin_SCR_12.jpg,by_id/149.jpg
+150,Hydrapple ex,SCR,14,5,189,660,920,jpg,named/0150_Hydrapple_ex_SCR_14.jpg,by_id/150.jpg
+151,Scorbunny,SCR,26,5,190,660,920,jpg,named/0151_Scorbunny_SCR_26.jpg,by_id/151.jpg
+152,Raboot,SCR,27,5,191,660,920,jpg,named/0152_Raboot_SCR_27.jpg,by_id/152.jpg
+153,Cinderace ex,SCR,28,5,192,660,920,jpg,named/0153_Cinderace_ex_SCR_28.jpg,by_id/153.jpg
+154,Lapras ex,SCR,32,5,193,660,920,jpg,named/0154_Lapras_ex_SCR_32.jpg,by_id/154.jpg
+155,Carracosta,SCR,38,5,194,660,920,jpg,named/0155_Carracosta_SCR_38.jpg,by_id/155.jpg
+156,Crabominable,SCR,42,5,195,660,920,jpg,named/0156_Crabominable_SCR_42.jpg,by_id/156.jpg
+157,Chewtle,SCR,43,5,196,660,920,jpg,named/0157_Chewtle_SCR_43.jpg,by_id/157.jpg
+158,Drednaw,SCR,44,5,197,660,920,jpg,named/0158_Drednaw_SCR_44.jpg,by_id/158.jpg
+159,Veluza,SCR,45,5,198,660,920,jpg,named/0159_Veluza_SCR_45.jpg,by_id/159.jpg
+160,Joltik,SCR,50,5,199,660,920,jpg,named/0160_Joltik_SCR_50.jpg,by_id/160.jpg
+161,Galvantula ex,SCR,51,5,200,660,920,jpg,named/0161_Galvantula_ex_SCR_51.jpg,by_id/161.jpg
+162,Slowpoke,SCR,57,5,201,660,920,jpg,named/0162_Slowpoke_SCR_57.jpg,by_id/162.jpg
+163,Slowking,SCR,58,5,202,660,920,jpg,named/0163_Slowking_SCR_58.jpg,by_id/163.jpg
+164,Comfey,SCR,63,5,203,660,920,jpg,named/0164_Comfey_SCR_63.jpg,by_id/164.jpg
+165,Klink,SCR,99,5,204,660,920,jpg,named/0165_Klink_SCR_99.jpg,by_id/165.jpg
+166,Klang,SCR,100,6,205,660,920,jpg,named/0166_Klang_SCR_100.jpg,by_id/166.jpg
+167,Klinklang,SCR,101,6,206,660,920,jpg,named/0167_Klinklang_SCR_101.jpg,by_id/167.jpg
+168,Meltan,SCR,103,6,207,660,920,jpg,named/0168_Meltan_SCR_103.jpg,by_id/168.jpg
+169,Duraludon,SCR,106,6,208,660,920,jpg,named/0169_Duraludon_SCR_106.jpg,by_id/169.jpg
+170,Archaludon,SCR,107,6,209,660,920,jpg,named/0170_Archaludon_SCR_107.jpg,by_id/170.jpg
+171,Raging Bolt,SCR,111,6,210,660,920,jpg,named/0171_Raging_Bolt_SCR_111.jpg,by_id/171.jpg
+172,Hoothoot,SCR,114,6,211,660,920,jpg,named/0172_Hoothoot_SCR_114.jpg,by_id/172.jpg
+173,Noctowl,SCR,115,6,212,660,920,jpg,named/0173_Noctowl_SCR_115.jpg,by_id/173.jpg
+174,Fan Rotom,SCR,118,6,213,660,920,jpg,named/0174_Fan_Rotom_SCR_118.jpg,by_id/174.jpg
+175,Bouffalant,SCR,119,6,214,660,920,jpg,named/0175_Bouffalant_SCR_119.jpg,by_id/175.jpg
+176,Terapagos ex,SCR,128,6,215,660,920,jpg,named/0176_Terapagos_ex_SCR_128.jpg,by_id/176.jpg
+177,Exeggcute,SSP,1,6,216,660,923,jpg,named/0177_Exeggcute_SSP_1.jpg,by_id/177.jpg
+178,Zarude,SSP,11,6,217,660,923,jpg,named/0178_Zarude_SSP_11.jpg,by_id/178.jpg
+179,Black Kyurem ex,SSP,48,6,218,660,923,jpg,named/0179_Black_Kyurem_ex_SSP_48.jpg,by_id/179.jpg
+180,Bruxish,SSP,49,6,219,660,923,jpg,named/0180_Bruxish_SSP_49.jpg,by_id/180.jpg
+181,Quaxwell,SSP,51,6,220,660,923,jpg,named/0181_Quaxwell_SSP_51.jpg,by_id/181.jpg
+182,Quaquaval,SSP,52,6,221,660,923,jpg,named/0182_Quaquaval_SSP_52.jpg,by_id/182.jpg
+183,Smoochum,SSP,75,6,222,660,923,jpg,named/0183_Smoochum_SSP_75.jpg,by_id/183.jpg
+184,Latias ex,SSP,76,6,223,660,923,jpg,named/0184_Latias_ex_SSP_76.jpg,by_id/184.jpg
+185,Flittle,SSP,94,6,224,660,923,jpg,named/0185_Flittle_SSP_94.jpg,by_id/185.jpg
+186,Gimmighoul,SSP,97,6,225,660,923,jpg,named/0186_Gimmighoul_SSP_97.jpg,by_id/186.jpg
+187,Trapinch,SSP,104,6,226,660,923,jpg,named/0187_Trapinch_SSP_104.jpg,by_id/187.jpg
+188,Vibrava,SSP,105,6,227,660,923,jpg,named/0188_Vibrava_SSP_105.jpg,by_id/188.jpg
+189,Flygon ex,SSP,106,6,228,660,923,jpg,named/0189_Flygon_ex_SSP_106.jpg,by_id/189.jpg
+190,Archaludon ex,SSP,130,6,229,660,923,jpg,named/0190_Archaludon_ex_SSP_130.jpg,by_id/190.jpg
+191,Gholdengo,SSP,131,6,230,660,923,jpg,named/0191_Gholdengo_SSP_131.jpg,by_id/191.jpg
+192,Iron Crown,SSP,132,6,231,660,923,jpg,named/0192_Iron_Crown_SSP_132.jpg,by_id/192.jpg
+193,Alolan Exeggutor ex,SSP,133,6,232,660,923,jpg,named/0193_Alolan_Exeggutor_ex_SSP_133.jpg,by_id/193.jpg
+194,Altaria,SSP,134,6,233,660,923,jpg,named/0194_Altaria_SSP_134.jpg,by_id/194.jpg
+195,Dialga,SSP,135,6,234,660,923,jpg,named/0195_Dialga_SSP_135.jpg,by_id/195.jpg
+196,Turtonator,SSP,137,6,235,660,923,jpg,named/0196_Turtonator_SSP_137.jpg,by_id/196.jpg
+197,Swablu,SSP,148,6,236,660,923,jpg,named/0197_Swablu_SSP_148.jpg,by_id/197.jpg
+198,Durant ex,SSP,4,6,237,660,923,jpg,named/0198_Durant_ex_SSP_4.jpg,by_id/198.jpg
+199,Scatterbug,SSP,5,7,238,660,923,jpg,named/0199_Scatterbug_SSP_5.jpg,by_id/199.jpg
+200,Spewpa,SSP,6,7,239,660,923,jpg,named/0200_Spewpa_SSP_6.jpg,by_id/200.jpg
+201,Wo-Chien,SSP,15,7,240,660,923,jpg,named/0201_Wo-Chien_SSP_15.jpg,by_id/201.jpg
+202,Victini,SSP,21,7,241,660,923,jpg,named/0202_Victini_SSP_21.jpg,by_id/202.jpg
+203,Skeledirge,SSP,31,7,242,660,923,jpg,named/0203_Skeledirge_SSP_31.jpg,by_id/203.jpg
+204,Charcadet,SSP,33,7,243,660,923,jpg,named/0204_Charcadet_SSP_33.jpg,by_id/204.jpg
+205,Scovillain ex,SSP,37,7,244,660,923,jpg,named/0205_Scovillain_ex_SSP_37.jpg,by_id/205.jpg
+206,Feebas,SSP,41,7,245,660,923,jpg,named/0206_Feebas_SSP_41.jpg,by_id/206.jpg
+207,Milotic ex,SSP,42,7,246,660,923,jpg,named/0207_Milotic_ex_SSP_42.jpg,by_id/207.jpg
+208,Shellos,SSP,46,7,247,660,923,jpg,named/0208_Shellos_SSP_46.jpg,by_id/208.jpg
+209,Chien-Pao,SSP,56,7,248,660,923,jpg,named/0209_Chien-Pao_SSP_56.jpg,by_id/209.jpg
+210,Pikachu ex,SSP,57,7,249,660,923,jpg,named/0210_Pikachu_ex_SSP_57.jpg,by_id/210.jpg
+211,Magneton,SSP,59,7,250,660,923,jpg,named/0211_Magneton_SSP_59.jpg,by_id/211.jpg
+212,Rotom,SSP,61,7,251,660,923,jpg,named/0212_Rotom_SSP_61.jpg,by_id/212.jpg
+213,Tapu Koko,SSP,65,7,252,660,923,jpg,named/0213_Tapu_Koko_SSP_65.jpg,by_id/213.jpg
+214,Togekiss,SSP,72,7,253,660,923,jpg,named/0214_Togekiss_SSP_72.jpg,by_id/214.jpg
+215,Uxie,SSP,78,7,254,660,923,jpg,named/0215_Uxie_SSP_78.jpg,by_id/215.jpg
+216,Mesprit,SSP,79,7,255,660,923,jpg,named/0216_Mesprit_SSP_79.jpg,by_id/216.jpg
+217,Azelf,SSP,80,7,256,660,923,jpg,named/0217_Azelf_SSP_80.jpg,by_id/217.jpg
+218,Yamask,SSP,82,7,257,660,923,jpg,named/0218_Yamask_SSP_82.jpg,by_id/218.jpg
+219,Cofagrigus,SSP,83,7,258,660,923,jpg,named/0219_Cofagrigus_SSP_83.jpg,by_id/219.jpg
+220,Espurr,SSP,84,7,259,660,923,jpg,named/0220_Espurr_SSP_84.jpg,by_id/220.jpg
+221,Meowstic,SSP,85,7,260,660,923,jpg,named/0221_Meowstic_SSP_85.jpg,by_id/221.jpg
+222,Dedenne,SSP,87,7,261,660,923,jpg,named/0222_Dedenne_SSP_87.jpg,by_id/222.jpg
+223,PalossandEX,SSP,91,7,262,660,923,jpg,named/0223_PalossandEX_SSP_91.jpg,by_id/223.jpg
+224,Annihilape,SSP,100,7,263,660,923,jpg,named/0224_Annihilape_SSP_100.jpg,by_id/224.jpg
+225,Gastrodon,SSP,107,7,264,660,923,jpg,named/0225_Gastrodon_SSP_107.jpg,by_id/225.jpg
+226,Koraidon,SSP,116,7,265,660,923,jpg,named/0226_Koraidon_SSP_116.jpg,by_id/226.jpg
+227,Deino,SSP,117,7,266,660,923,jpg,named/0227_Deino_SSP_117.jpg,by_id/227.jpg
+228,Zweilous,SSP,118,7,267,660,923,jpg,named/0228_Zweilous_SSP_118.jpg,by_id/228.jpg
+229,Hydreigon ex,SSP,119,7,268,660,923,jpg,named/0229_Hydreigon_ex_SSP_119.jpg,by_id/229.jpg
+230,Pecharunt,SVP,149,7,269,450,629,jpg,named/0230_Pecharunt_SVP_149.jpg,by_id/230.jpg
+231,Tatsugiri ex,SSP,142,7,270,660,923,jpg,named/0231_Tatsugiri_ex_SSP_142.jpg,by_id/231.jpg
+232,Slaking ex,SSP,147,8,271,660,923,jpg,named/0232_Slaking_ex_SSP_147.jpg,by_id/232.jpg
+233,Bouffalant,SSP,151,8,272,660,923,jpg,named/0233_Bouffalant_SSP_151.jpg,by_id/233.jpg
+234,Terapagos,SSP,161,8,273,660,923,jpg,named/0234_Terapagos_SSP_161.jpg,by_id/234.jpg
+235,Budew,PRE,4,8,274,660,920,jpg,named/0235_Budew_PRE_4.jpg,by_id/235.jpg
+236,Leafeon ex,PRE,6,8,275,660,920,jpg,named/0236_Leafeon_ex_PRE_6.jpg,by_id/236.jpg
+237,Cottonee,PRE,7,8,276,660,920,jpg,named/0237_Cottonee_PRE_7.jpg,by_id/237.jpg
+238,Whimsicott,PRE,8,8,277,660,920,jpg,named/0238_Whimsicott_PRE_8.jpg,by_id/238.jpg
+239,Flareon ex,PRE,14,8,278,660,920,jpg,named/0239_Flareon_ex_PRE_14.jpg,by_id/239.jpg
+240,Seaking,PRE,21,8,279,660,920,jpg,named/0240_Seaking_PRE_21.jpg,by_id/240.jpg
+241,Vaporeon ex,PRE,23,8,280,660,920,jpg,named/0241_Vaporeon_ex_PRE_23.jpg,by_id/241.jpg
+242,Feebas,TWM,49,8,281,660,920,jpg,named/0242_Feebas_TWM_49.jpg,by_id/242.jpg
+243,Glaceon ex,PRE,26,8,282,660,920,jpg,named/0243_Glaceon_ex_PRE_26.jpg,by_id/243.jpg
+244,Jolteon ex,PRE,30,8,283,660,920,jpg,named/0244_Jolteon_ex_PRE_30.jpg,by_id/244.jpg
+245,Alakazam,TWM,82,8,284,660,920,jpg,named/0245_Alakazam_TWM_82.jpg,by_id/245.jpg
+246,Espeon ex,PRE,34,8,285,660,920,jpg,named/0246_Espeon_ex_PRE_34.jpg,by_id/246.jpg
+247,Swirlix,TWM,89,8,286,660,920,jpg,named/0247_Swirlix_TWM_89.jpg,by_id/247.jpg
+248,Umbreon ex,PRE,60,8,287,660,920,jpg,named/0248_Umbreon_ex_PRE_60.jpg,by_id/248.jpg
+249,Eevee ex,PRE,75,8,288,660,920,jpg,named/0249_Eevee_ex_PRE_75.jpg,by_id/249.jpg
+250,Hoothoot,PRE,77,8,289,660,920,jpg,named/0250_Hoothoot_PRE_77.jpg,by_id/250.jpg
+251,Regigigas,PRE,86,8,290,660,920,jpg,named/0251_Regigigas_PRE_86.jpg,by_id/251.jpg
+252,Caterpie,JTG,1,8,291,660,920,jpg,named/0252_Caterpie_JTG_1.jpg,by_id/252.jpg
+253,Metapod,JTG,2,8,292,660,920,jpg,named/0253_Metapod_JTG_2.jpg,by_id/253.jpg
+254,Butterfree,JTG,3,8,293,660,920,jpg,named/0254_Butterfree_JTG_3.jpg,by_id/254.jpg
+255,Maractus,JTG,8,8,294,660,920,jpg,named/0255_Maractus_JTG_8.jpg,by_id/255.jpg
+256,Magmortar,JTG,21,8,295,660,920,jpg,named/0256_Magmortar_JTG_21.jpg,by_id/256.jpg
+257,N’s Darumaka,JTG,26,8,296,660,920,jpg,named/0257_N's_Darumaka_JTG_26.jpg,by_id/257.jpg
+258,N’s Darmanitan,JTG,27,8,297,660,920,jpg,named/0258_N's_Darmanitan_JTG_27.jpg,by_id/258.jpg
+259,Volcanion ex,JTG,31,8,298,660,920,jpg,named/0259_Volcanion_ex_JTG_31.jpg,by_id/259.jpg
+260,Lotad,JTG,35,8,299,660,920,jpg,named/0260_Lotad_JTG_35.jpg,by_id/260.jpg
+261,Lombre,JTG,36,8,300,660,920,jpg,named/0261_Lombre_JTG_36.jpg,by_id/261.jpg
+262,Ludicolo,JTG,37,8,301,660,920,jpg,named/0262_Ludicolo_JTG_37.jpg,by_id/262.jpg
+263,Wailmer,JTG,40,8,302,660,920,jpg,named/0263_Wailmer_JTG_40.jpg,by_id/263.jpg
+264,Wailord,JTG,41,8,303,660,920,jpg,named/0264_Wailord_JTG_41.jpg,by_id/264.jpg
+265,Iono’s Voltorb,JTG,47,9,304,660,920,jpg,named/0265_Iono's_Voltorb_JTG_47.jpg,by_id/265.jpg
+266,Iono’s Electrode,JTG,48,9,305,660,920,jpg,named/0266_Iono's_Electrode_JTG_48.jpg,by_id/266.jpg
+267,N’s Joltik,JTG,49,9,306,660,920,jpg,named/0267_N's_Joltik_JTG_49.jpg,by_id/267.jpg
+268,Iono’s Tadbulb,JTG,52,9,307,660,920,jpg,named/0268_Iono's_Tadbulb_JTG_52.jpg,by_id/268.jpg
+269,Iono’s Bellibolt ex,JTG,53,9,308,660,920,jpg,named/0269_Iono's_Bellibolt_ex_JTG_53.jpg,by_id/269.jpg
+270,Iono’s Wattrel,JTG,54,9,309,660,920,jpg,named/0270_Iono's_Wattrel_JTG_54.jpg,by_id/270.jpg
+271,Iono’s Kilowattrel,JTG,55,9,310,660,920,jpg,named/0271_Iono's_Kilowattrel_JTG_55.jpg,by_id/271.jpg
+272,Lillie’s Clefairy ex,JTG,56,9,311,660,920,jpg,named/0272_Lillie's_Clefairy_ex_JTG_56.jpg,by_id/272.jpg
+273,Banette,JTG,60,9,312,660,920,jpg,named/0273_Banette_JTG_60.jpg,by_id/273.jpg
+274,Beldum,JTG,61,9,313,660,920,jpg,named/0274_Beldum_JTG_61.jpg,by_id/274.jpg
+275,Metang,JTG,62,9,314,660,920,jpg,named/0275_Metang_JTG_62.jpg,by_id/275.jpg
+276,Metagross,JTG,63,9,315,660,920,jpg,named/0276_Metagross_JTG_63.jpg,by_id/276.jpg
+277,N’s Sigilyph,JTG,64,9,316,660,920,jpg,named/0277_N's_Sigilyph_JTG_64.jpg,by_id/277.jpg
+278,Lillie’s Cutiefly,JTG,66,9,317,660,920,jpg,named/0278_Lillie's_Cutiefly_JTG_66.jpg,by_id/278.jpg
+279,Lillie’s Ribombee,JTG,67,9,318,660,920,jpg,named/0279_Lillie's_Ribombee_JTG_67.jpg,by_id/279.jpg
+280,Lillie’s Comfey,JTG,68,9,319,660,920,jpg,named/0280_Lillie's_Comfey_JTG_68.jpg,by_id/280.jpg
+281,Swinub,JTG,77,9,320,660,920,jpg,named/0281_Swinub_JTG_77.jpg,by_id/281.jpg
+282,Piloswine,JTG,78,9,321,660,920,jpg,named/0282_Piloswine_JTG_78.jpg,by_id/282.jpg
+283,Mamoswine ex,JTG,79,9,322,660,920,jpg,named/0283_Mamoswine_ex_JTG_79.jpg,by_id/283.jpg
+284,Larvitar,JTG,80,9,323,660,920,jpg,named/0284_Larvitar_JTG_80.jpg,by_id/284.jpg
+285,Pupitar,JTG,81,9,324,660,920,jpg,named/0285_Pupitar_JTG_81.jpg,by_id/285.jpg
+286,Rockruff,JTG,84,9,325,660,920,jpg,named/0286_Rockruff_JTG_84.jpg,by_id/286.jpg
+287,Lycanroc,JTG,85,9,326,660,920,jpg,named/0287_Lycanroc_JTG_85.jpg,by_id/287.jpg
+288,Hop’s Silicobra,JTG,86,9,327,660,920,jpg,named/0288_Hop's_Silicobra_JTG_86.jpg,by_id/288.jpg
+289,Hop’s Sandaconda,JTG,87,9,328,660,920,jpg,named/0289_Hop's_Sandaconda_JTG_87.jpg,by_id/289.jpg
+290,Tyranitar,JTG,95,9,329,660,920,jpg,named/0290_Tyranitar_JTG_95.jpg,by_id/290.jpg
+291,N’s Purrloin,JTG,96,9,330,660,920,jpg,named/0291_N's_Purrloin_JTG_96.jpg,by_id/291.jpg
+292,N’s Zorua,JTG,97,9,331,660,920,jpg,named/0292_N's_Zorua_JTG_97.jpg,by_id/292.jpg
+293,N’s Zoroark ex,JTG,98,9,332,660,920,jpg,named/0293_N's_Zoroark_ex_JTG_98.jpg,by_id/293.jpg
+294,N’s Klink,JTG,103,9,333,660,920,jpg,named/0294_N's_Klink_JTG_103.jpg,by_id/294.jpg
+295,N’s Klang,JTG,104,9,334,660,920,jpg,named/0295_N's_Klang_JTG_104.jpg,by_id/295.jpg
+296,N’s Klinklang,JTG,105,9,335,660,920,jpg,named/0296_N's_Klinklang_JTG_105.jpg,by_id/296.jpg
+297,Magearna,JTG,107,9,336,660,920,jpg,named/0297_Magearna_JTG_107.jpg,by_id/297.jpg
+298,Hop’s Corviknight,JTG,108,10,337,660,920,jpg,named/0298_Hop's_Corviknight_JTG_108.jpg,by_id/298.jpg
+299,Hop’s Zacian ex,JTG,111,10,338,660,920,jpg,named/0299_Hop's_Zacian_ex_JTG_111.jpg,by_id/299.jpg
+300,Bagon,JTG,112,10,339,660,920,jpg,named/0300_Bagon_JTG_112.jpg,by_id/300.jpg
+301,Shelgon,JTG,113,10,340,660,920,jpg,named/0301_Shelgon_JTG_113.jpg,by_id/301.jpg
+302,Salamence ex,JTG,114,10,341,660,920,jpg,named/0302_Salamence_ex_JTG_114.jpg,by_id/302.jpg
+303,N’s Reshiram,JTG,116,10,342,660,920,jpg,named/0303_N's_Reshiram_JTG_116.jpg,by_id/303.jpg
+304,Hop’s Snorlax,JTG,117,10,343,660,920,jpg,named/0304_Hop's_Snorlax_JTG_117.jpg,by_id/304.jpg
+305,Dunsparce,JTG,120,10,344,660,920,jpg,named/0305_Dunsparce_JTG_120.jpg,by_id/305.jpg
+306,Dudunsparce ex,JTG,121,10,345,660,920,jpg,named/0306_Dudunsparce_ex_JTG_121.jpg,by_id/306.jpg
+307,Hop’s Rookidee,JTG,133,10,346,660,920,jpg,named/0307_Hop's_Rookidee_JTG_133.jpg,by_id/307.jpg
+308,Hop’s Corvisquire,JTG,134,10,347,660,920,jpg,named/0308_Hop's_Corvisquire_JTG_134.jpg,by_id/308.jpg
+309,Hop’s Wooloo,JTG,135,10,348,660,920,jpg,named/0309_Hop's_Wooloo_JTG_135.jpg,by_id/309.jpg
+310,Hop’s Dubwool,JTG,136,10,349,660,920,jpg,named/0310_Hop's_Dubwool_JTG_136.jpg,by_id/310.jpg
+311,Hop’s Cramorant,JTG,138,10,350,660,920,jpg,named/0311_Hop's_Cramorant_JTG_138.jpg,by_id/311.jpg
+312,Sandy Shocks,TEF,98,10,351,660,920,jpg,named/0312_Sandy_Shocks_TEF_98.jpg,by_id/312.jpg
+313,Miraidon ex,TEF,122,10,352,660,920,jpg,named/0313_Miraidon_ex_TEF_122.jpg,by_id/313.jpg
+314,Marill,SCR,33,10,353,660,920,jpg,named/0314_Marill_SCR_33.jpg,by_id/314.jpg
+315,Azumarill,SSP,74,10,354,660,923,jpg,named/0315_Azumarill_SSP_74.jpg,by_id/315.jpg
+316,Sylveon ex,SSP,86,10,355,660,923,jpg,named/0316_Sylveon_ex_SSP_86.jpg,by_id/316.jpg
+317,Eevee,SSP,143,10,356,660,923,jpg,named/0317_Eevee_SSP_143.jpg,by_id/317.jpg
+318,Ho-Oh,SSP,19,10,357,660,923,jpg,named/0318_Ho-Oh_SSP_19.jpg,by_id/318.jpg
+319,Charcadet,SSP,32,10,358,660,923,jpg,named/0319_Charcadet_SSP_32.jpg,by_id/319.jpg
+320,Ceruledge ex,SSP,36,10,359,660,923,jpg,named/0320_Ceruledge_ex_SSP_36.jpg,by_id/320.jpg
+321,Petilil,JTG,6,10,360,660,920,jpg,named/0321_Petilil_JTG_6.jpg,by_id/321.jpg
+322,Lilligant,JTG,7,10,361,660,920,jpg,named/0322_Lilligant_JTG_7.jpg,by_id/322.jpg
+323,Nymble,JTG,19,10,362,660,920,jpg,named/0323_Nymble_JTG_19.jpg,by_id/323.jpg
+324,Torchic,JTG,22,10,363,660,920,jpg,named/0324_Torchic_JTG_22.jpg,by_id/324.jpg
+325,Combusken,JTG,23,10,364,660,920,jpg,named/0325_Combusken_JTG_23.jpg,by_id/325.jpg
+326,Blaziken ex,JTG,24,10,365,660,920,jpg,named/0326_Blaziken_ex_JTG_24.jpg,by_id/326.jpg
+327,Slowpoke,PRE,18,10,366,660,920,jpg,named/0327_Slowpoke_PRE_18.jpg,by_id/327.jpg
+328,Pikachu ex,PRE,28,10,367,660,920,jpg,named/0328_Pikachu_ex_PRE_28.jpg,by_id/328.jpg
+329,Tapu Koko ex,JTG,51,10,368,660,920,jpg,named/0329_Tapu_Koko_ex_JTG_51.jpg,by_id/329.jpg
+330,Sylveon,PRE,40,10,369,660,920,jpg,named/0330_Sylveon_PRE_40.jpg,by_id/330.jpg
+331,XerneasEX,PROMO,179,11,370,450,630,jpg,named/0331_XerneasEX_PROMO_179.jpg,by_id/331.jpg
+332,Dhelmise,JTG,70,11,371,660,920,jpg,named/0332_Dhelmise_JTG_70.jpg,by_id/332.jpg
+333,Riolu,PRE,50,11,372,660,920,jpg,named/0333_Riolu_PRE_50.jpg,by_id/333.jpg
+334,Sneasel,PRE,61,11,373,660,920,jpg,named/0334_Sneasel_PRE_61.jpg,by_id/334.jpg
+335,Bronzor,PRE,66,11,374,660,920,jpg,named/0335_Bronzor_PRE_66.jpg,by_id/335.jpg
+336,Zacian ex,SVP,198,11,375,450,630,jpg,named/0336_Zacian_ex_SVP_198.jpg,by_id/336.jpg
+337,LugiaEX,PRE,82,11,376,660,920,jpg,named/0337_LugiaEX_PRE_82.jpg,by_id/337.jpg
+338,Ethan's Pinsir,DRI,1,11,377,660,920,jpg,named/0338_Ethan's_Pinsir_DRI_1.jpg,by_id/338.jpg
+339,Yanma,DRI,2,11,378,660,920,jpg,named/0339_Yanma_DRI_2.jpg,by_id/339.jpg
+340,Yanmega ex,DRI,3,11,379,660,920,jpg,named/0340_Yanmega_ex_DRI_3.jpg,by_id/340.jpg
+341,Cynthia's Roselia,DRI,7,11,380,660,920,jpg,named/0341_Cynthia's_Roselia_DRI_7.jpg,by_id/341.jpg
+342,Cynthia's Roserade,DRI,8,11,381,660,920,jpg,named/0342_Cynthia's_Roserade_DRI_8.jpg,by_id/342.jpg
+343,Shaymin,DRI,10,11,382,660,920,jpg,named/0343_Shaymin_DRI_10.jpg,by_id/343.jpg
+344,Dwebble,DRI,11,11,383,660,920,jpg,named/0344_Dwebble_DRI_11.jpg,by_id/344.jpg
+345,Crustle,DRI,12,11,384,660,920,jpg,named/0345_Crustle_DRI_12.jpg,by_id/345.jpg
+346,Applin,DRI,16,11,385,660,920,jpg,named/0346_Applin_DRI_16.jpg,by_id/346.jpg
+347,Dipplin,DRI,17,11,386,660,920,jpg,named/0347_Dipplin_DRI_17.jpg,by_id/347.jpg
+348,Hydrapple,DRI,18,11,387,660,920,jpg,named/0348_Hydrapple_DRI_18.jpg,by_id/348.jpg
+349,Teal Mask Ogerpon,DRI,26,11,388,660,920,jpg,named/0349_Teal_Mask_Ogerpon_DRI_26.jpg,by_id/349.jpg
+350,Ponyta,DRI,29,11,389,660,920,jpg,named/0350_Ponyta_DRI_29.jpg,by_id/350.jpg
+351,Rapidash,DRI,30,11,390,660,920,jpg,named/0351_Rapidash_DRI_30.jpg,by_id/351.jpg
+352,Ethan's Cyndaquil,DRI,32,11,391,660,920,jpg,named/0352_Ethan's_Cyndaquil_DRI_32.jpg,by_id/352.jpg
+353,Ethan's Quilava,DRI,33,11,392,660,920,jpg,named/0353_Ethan's_Quilava_DRI_33.jpg,by_id/353.jpg
+354,Ethan's Typhlosion,DRI,34,11,393,660,920,jpg,named/0354_Ethan's_Typhlosion_DRI_34.jpg,by_id/354.jpg
+355,Ethan's Slugma,DRI,35,11,394,660,920,jpg,named/0355_Ethan's_Slugma_DRI_35.jpg,by_id/355.jpg
+356,Ethan's Magcargo,DRI,36,11,395,660,920,jpg,named/0356_Ethan's_Magcargo_DRI_36.jpg,by_id/356.jpg
+357,Ethan's Ho-Oh ex,DRI,39,11,396,660,920,jpg,named/0357_Ethan's_Ho-Oh_ex_DRI_39.jpg,by_id/357.jpg
+358,Hearthflame Mask Ogerpon,DRI,44,11,397,660,920,jpg,named/0358_Hearthflame_Mask_Ogerpon_DRI_44.jpg,by_id/358.jpg
+359,Misty's Psyduck,DRI,45,11,398,660,920,jpg,named/0359_Misty's_Psyduck_DRI_45.jpg,by_id/359.jpg
+360,Misty's Staryu,DRI,46,11,399,660,920,jpg,named/0360_Misty's_Staryu_DRI_46.jpg,by_id/360.jpg
+361,Misty's Starmie,DRI,47,11,400,660,920,jpg,named/0361_Misty's_Starmie_DRI_47.jpg,by_id/361.jpg
+362,Misty's Magikarp,DRI,48,11,401,660,920,jpg,named/0362_Misty's_Magikarp_DRI_48.jpg,by_id/362.jpg
+363,Misty's Gyarados,DRI,49,11,402,660,920,jpg,named/0363_Misty's_Gyarados_DRI_49.jpg,by_id/363.jpg
+364,Misty's Lapras,DRI,50,12,403,660,920,jpg,named/0364_Misty's_Lapras_DRI_50.jpg,by_id/364.jpg
+365,Cynthia's Feebas,DRI,52,12,404,660,920,jpg,named/0365_Cynthia's_Feebas_DRI_52.jpg,by_id/365.jpg
+366,Cynthia's Milotic,DRI,53,12,405,660,920,jpg,named/0366_Cynthia's_Milotic_DRI_53.jpg,by_id/366.jpg
+367,Buizel,DRI,57,12,406,660,920,jpg,named/0367_Buizel_DRI_57.jpg,by_id/367.jpg
+368,Floatzel,DRI,58,12,407,660,920,jpg,named/0368_Floatzel_DRI_58.jpg,by_id/368.jpg
+369,Dondozo ex,DRI,66,12,408,660,920,jpg,named/0369_Dondozo_ex_DRI_66.jpg,by_id/369.jpg
+370,Wellspring Mask Ogerpon,DRI,67,12,409,660,920,jpg,named/0370_Wellspring_Mask_Ogerpon_DRI_67.jpg,by_id/370.jpg
+371,Electabuzz,DRI,68,12,410,660,920,jpg,named/0371_Electabuzz_DRI_68.jpg,by_id/371.jpg
+372,Electivire ex,DRI,69,12,411,660,920,jpg,named/0372_Electivire_ex_DRI_69.jpg,by_id/372.jpg
+373,Ethan's Pichu,DRI,71,12,412,660,920,jpg,named/0373_Ethan's_Pichu_DRI_71.jpg,by_id/373.jpg
+374,Electrike,DRI,75,12,413,660,920,jpg,named/0374_Electrike_DRI_75.jpg,by_id/374.jpg
+375,Manectric,DRI,76,12,414,660,920,jpg,named/0375_Manectric_DRI_76.jpg,by_id/375.jpg
+376,Rotom,DRI,77,12,415,660,920,jpg,named/0376_Rotom_DRI_77.jpg,by_id/376.jpg
+377,Zeraora,DRI,78,12,416,660,920,jpg,named/0377_Zeraora_DRI_78.jpg,by_id/377.jpg
+378,Ethan's Sudowoodo,DRI,93,12,417,660,920,jpg,named/0378_Ethan's_Sudowoodo_DRI_93.jpg,by_id/378.jpg
+379,Cynthia's Gible,DRI,102,12,418,660,920,jpg,named/0379_Cynthia's_Gible_DRI_102.jpg,by_id/379.jpg
+380,Cynthia's Gabite,DRI,103,12,419,660,920,jpg,named/0380_Cynthia's_Gabite_DRI_103.jpg,by_id/380.jpg
+381,Cynthia's Garchomp ex,DRI,104,12,420,660,920,jpg,named/0381_Cynthia's_Garchomp_ex_DRI_104.jpg,by_id/381.jpg
+382,Mudbray,DRI,107,12,421,660,920,jpg,named/0382_Mudbray_DRI_107.jpg,by_id/382.jpg
+383,Mudsdale,DRI,108,12,422,660,920,jpg,named/0383_Mudsdale_DRI_108.jpg,by_id/383.jpg
+384,Arven's Toedscool,DRI,109,12,423,660,920,jpg,named/0384_Arven's_Toedscool_DRI_109.jpg,by_id/384.jpg
+385,Arven's Toedscruel,DRI,110,12,424,660,920,jpg,named/0385_Arven's_Toedscruel_DRI_110.jpg,by_id/385.jpg
+386,Cornerstone Mask Ogerpon,DRI,111,12,425,660,920,jpg,named/0386_Cornerstone_Mask_Ogerpon_DRI_111.jpg,by_id/386.jpg
+387,Cynthia's Spiritomb,DRI,129,12,426,660,920,jpg,named/0387_Cynthia's_Spiritomb_DRI_129.jpg,by_id/387.jpg
+388,Arven's Maschiff,DRI,138,12,427,660,920,jpg,named/0388_Arven's_Maschiff_DRI_138.jpg,by_id/388.jpg
+389,Arven's Mabosstiff ex,DRI,139,12,428,660,920,jpg,named/0389_Arven's_Mabosstiff_ex_DRI_139.jpg,by_id/389.jpg
+390,Tauros,DRI,152,12,429,660,920,jpg,named/0390_Tauros_DRI_152.jpg,by_id/390.jpg
+391,Arven's Skwovet,DRI,158,12,430,660,920,jpg,named/0391_Arven's_Skwovet_DRI_158.jpg,by_id/391.jpg
+392,Arven's Greedent,DRI,159,12,431,660,920,jpg,named/0392_Arven's_Greedent_DRI_159.jpg,by_id/392.jpg
+393,Pineco,DRI,4,12,432,660,920,jpg,named/0393_Pineco_DRI_4.jpg,by_id/393.jpg
+394,Shroomish,DRI,5,12,433,660,920,jpg,named/0394_Shroomish_DRI_5.jpg,by_id/394.jpg
+395,Breloom,DRI,6,12,434,660,920,jpg,named/0395_Breloom_DRI_6.jpg,by_id/395.jpg
+396,Mow Rotom,DRI,9,12,435,660,920,jpg,named/0396_Mow_Rotom_DRI_9.jpg,by_id/396.jpg
+397,Fomantis,DRI,13,13,436,660,920,jpg,named/0397_Fomantis_DRI_13.jpg,by_id/397.jpg
+398,Lurantis,DRI,14,13,437,660,920,jpg,named/0398_Lurantis_DRI_14.jpg,by_id/398.jpg
+399,Team Rocket's Blipbug,DRI,15,13,438,660,920,jpg,named/0399_Team_Rocket's_Blipbug_DRI_15.jpg,by_id/399.jpg
+400,Team Rocket's Tarountula,DRI,19,13,439,660,920,jpg,named/0400_Team_Rocket's_Tarountula_DRI_19.jpg,by_id/400.jpg
+401,Team Rocket's Spidops,DRI,20,13,440,660,920,jpg,named/0401_Team_Rocket's_Spidops_DRI_20.jpg,by_id/401.jpg
+402,Smoliv,DRI,21,13,441,660,920,jpg,named/0402_Smoliv_DRI_21.jpg,by_id/402.jpg
+403,Dolliv,DRI,22,13,442,660,920,jpg,named/0403_Dolliv_DRI_22.jpg,by_id/403.jpg
+404,Arboliva ex,DRI,23,13,443,660,920,jpg,named/0404_Arboliva_ex_DRI_23.jpg,by_id/404.jpg
+405,Growlithe,DRI,27,13,444,660,920,jpg,named/0405_Growlithe_DRI_27.jpg,by_id/405.jpg
+406,Arcanine,DRI,28,13,445,660,920,jpg,named/0406_Arcanine_DRI_28.jpg,by_id/406.jpg
+407,Team Rocket's Moltres ex,DRI,31,13,446,660,920,jpg,named/0407_Team_Rocket's_Moltres_ex_DRI_31.jpg,by_id/407.jpg
+408,Team Rocket's Houndour,DRI,37,13,447,660,920,jpg,named/0408_Team_Rocket's_Houndour_DRI_37.jpg,by_id/408.jpg
+409,Team Rocket's Houndoom,DRI,38,13,448,660,920,jpg,named/0409_Team_Rocket's_Houndoom_DRI_38.jpg,by_id/409.jpg
+410,Torchic,DRI,40,13,449,660,920,jpg,named/0410_Torchic_DRI_40.jpg,by_id/410.jpg
+411,Combusken,DRI,41,13,450,660,920,jpg,named/0411_Combusken_DRI_41.jpg,by_id/411.jpg
+412,Blaziken,DRI,42,13,451,660,920,jpg,named/0412_Blaziken_DRI_42.jpg,by_id/412.jpg
+413,Heat Rotom,DRI,43,13,452,660,920,jpg,named/0413_Heat_Rotom_DRI_43.jpg,by_id/413.jpg
+414,Team Rocket's Articuno,DRI,51,13,453,660,920,jpg,named/0414_Team_Rocket's_Articuno_DRI_51.jpg,by_id/414.jpg
+415,Clamperl,DRI,54,13,454,660,920,jpg,named/0415_Clamperl_DRI_54.jpg,by_id/415.jpg
+416,Huntail,DRI,55,13,455,660,920,jpg,named/0416_Huntail_DRI_55.jpg,by_id/416.jpg
+417,Gorebyss,DRI,56,13,456,660,920,jpg,named/0417_Gorebyss_DRI_56.jpg,by_id/417.jpg
+418,Snover,DRI,59,13,457,660,920,jpg,named/0418_Snover_DRI_59.jpg,by_id/418.jpg
+419,Abomasnow,DRI,60,13,458,660,920,jpg,named/0419_Abomasnow_DRI_60.jpg,by_id/419.jpg
+420,Wash Rotom,DRI,61,13,459,660,920,jpg,named/0420_Wash_Rotom_DRI_61.jpg,by_id/420.jpg
+421,Arrokuda,DRI,62,13,460,660,920,jpg,named/0421_Arrokuda_DRI_62.jpg,by_id/421.jpg
+422,Barraskewda,DRI,63,13,461,660,920,jpg,named/0422_Barraskewda_DRI_63.jpg,by_id/422.jpg
+423,Cetoddle,DRI,64,13,462,660,920,jpg,named/0423_Cetoddle_DRI_64.jpg,by_id/423.jpg
+424,Cetitan ex,DRI,65,13,463,660,920,jpg,named/0424_Cetitan_ex_DRI_65.jpg,by_id/424.jpg
+425,Team Rocket's Zapdos,DRI,70,13,464,660,920,jpg,named/0425_Team_Rocket's_Zapdos_DRI_70.jpg,by_id/425.jpg
+426,Team Rocket's Mareep,DRI,72,13,465,660,920,jpg,named/0426_Team_Rocket's_Mareep_DRI_72.jpg,by_id/426.jpg
+427,Team Rocket's Flaaffy,DRI,73,13,466,660,920,jpg,named/0427_Team_Rocket's_Flaaffy_DRI_73.jpg,by_id/427.jpg
+428,Team Rocket's Ampharos,DRI,74,13,467,660,920,jpg,named/0428_Team_Rocket's_Ampharos_DRI_74.jpg,by_id/428.jpg
+429,Team Rocket's Drowzee,DRI,79,13,468,660,920,jpg,named/0429_Team_Rocket's_Drowzee_DRI_79.jpg,by_id/429.jpg
+430,Team Rocket's Hypno,DRI,80,14,469,660,920,jpg,named/0430_Team_Rocket's_Hypno_DRI_80.jpg,by_id/430.jpg
+431,Team Rocket's Mewtwo ex,DRI,81,14,470,660,920,jpg,named/0431_Team_Rocket's_Mewtwo_ex_DRI_81.jpg,by_id/431.jpg
+432,Team Rocket's Wobbuffet,DRI,82,14,471,660,920,jpg,named/0432_Team_Rocket's_Wobbuffet_DRI_82.jpg,by_id/432.jpg
+433,Team Rocket's Chingling,DRI,85,14,472,660,920,jpg,named/0433_Team_Rocket's_Chingling_DRI_85.jpg,by_id/433.jpg
+434,Team Rocket's Mimikyu,DRI,87,14,473,660,920,jpg,named/0434_Team_Rocket's_Mimikyu_DRI_87.jpg,by_id/434.jpg
+435,Team Rocket's Dottler,DRI,88,14,474,660,920,jpg,named/0435_Team_Rocket's_Dottler_DRI_88.jpg,by_id/435.jpg
+436,Team Rocket's Orbeetle,DRI,89,14,475,660,920,jpg,named/0436_Team_Rocket's_Orbeetle_DRI_89.jpg,by_id/436.jpg
+437,Mankey,DRI,90,14,476,660,920,jpg,named/0437_Mankey_DRI_90.jpg,by_id/437.jpg
+438,Primeape,DRI,91,14,477,660,920,jpg,named/0438_Primeape_DRI_91.jpg,by_id/438.jpg
+439,Annihilape,DRI,92,14,478,660,920,jpg,named/0439_Annihilape_DRI_92.jpg,by_id/439.jpg
+440,Team Rocket's Larvitar,DRI,94,14,479,660,920,jpg,named/0440_Team_Rocket's_Larvitar_DRI_94.jpg,by_id/440.jpg
+441,Team Rocket's Pupitar,DRI,95,14,480,660,920,jpg,named/0441_Team_Rocket's_Pupitar_DRI_95.jpg,by_id/441.jpg
+442,Team Rocket's Tyranitar,DRI,96,14,481,660,920,jpg,named/0442_Team_Rocket's_Tyranitar_DRI_96.jpg,by_id/442.jpg
+443,Nosepass,DRI,97,14,482,660,920,jpg,named/0443_Nosepass_DRI_97.jpg,by_id/443.jpg
+444,Probopass,DRI,98,14,483,660,920,jpg,named/0444_Probopass_DRI_98.jpg,by_id/444.jpg
+445,Meditite,DRI,99,14,484,660,920,jpg,named/0445_Meditite_DRI_99.jpg,by_id/445.jpg
+446,Medicham,DRI,100,14,485,660,920,jpg,named/0446_Medicham_DRI_100.jpg,by_id/446.jpg
+447,Regirock ex,DRI,101,14,486,660,920,jpg,named/0447_Regirock_ex_DRI_101.jpg,by_id/447.jpg
+448,Team Rocket's Ekans,DRI,112,14,487,660,920,jpg,named/0448_Team_Rocket's_Ekans_DRI_112.jpg,by_id/448.jpg
+449,Team Rocket's Arbok,DRI,113,14,488,660,920,jpg,named/0449_Team_Rocket's_Arbok_DRI_113.jpg,by_id/449.jpg
+450,Team Rocket's NidoranI,DRI,114,14,489,660,920,jpg,named/0450_Team_Rocket's_NidoranI_DRI_114.jpg,by_id/450.jpg
+451,Team Rocket's Nidorina,DRI,115,14,490,660,920,jpg,named/0451_Team_Rocket's_Nidorina_DRI_115.jpg,by_id/451.jpg
+452,Team Rocket's Nidoqueen,DRI,116,14,491,660,920,jpg,named/0452_Team_Rocket's_Nidoqueen_DRI_116.jpg,by_id/452.jpg
+453,Team Rocket's NidoranI,DRI,117,14,492,660,920,jpg,named/0453_Team_Rocket's_NidoranI_DRI_117.jpg,by_id/453.jpg
+454,Team Rocket's Nidorino,DRI,118,14,493,660,920,jpg,named/0454_Team_Rocket's_Nidorino_DRI_118.jpg,by_id/454.jpg
+455,Team Rocket's Nidoking ex,DRI,119,14,494,660,920,jpg,named/0455_Team_Rocket's_Nidoking_ex_DRI_119.jpg,by_id/455.jpg
+456,Team Rocket's Zubat,DRI,120,14,495,660,920,jpg,named/0456_Team_Rocket's_Zubat_DRI_120.jpg,by_id/456.jpg
+457,Team Rocket's Golbat,DRI,121,14,496,660,920,jpg,named/0457_Team_Rocket's_Golbat_DRI_121.jpg,by_id/457.jpg
+458,Team Rocket's Crobat ex,DRI,122,14,497,660,920,jpg,named/0458_Team_Rocket's_Crobat_ex_DRI_122.jpg,by_id/458.jpg
+459,Team Rocket's Grimer,DRI,123,14,498,660,920,jpg,named/0459_Team_Rocket's_Grimer_DRI_123.jpg,by_id/459.jpg
+460,Team Rocket's Muk,DRI,124,14,499,660,920,jpg,named/0460_Team_Rocket's_Muk_DRI_124.jpg,by_id/460.jpg
+461,Team Rocket's Koffing,DRI,125,14,500,660,920,jpg,named/0461_Team_Rocket's_Koffing_DRI_125.jpg,by_id/461.jpg
+462,Team Rocket's Weezing,DRI,126,14,501,660,920,jpg,named/0462_Team_Rocket's_Weezing_DRI_126.jpg,by_id/462.jpg
+463,Team Rocket's Murkrow,DRI,127,15,502,660,920,jpg,named/0463_Team_Rocket's_Murkrow_DRI_127.jpg,by_id/463.jpg
+464,Team Rocket's Sneasel,DRI,128,15,503,660,920,jpg,named/0464_Team_Rocket's_Sneasel_DRI_128.jpg,by_id/464.jpg
+465,Forretress,DRI,140,15,504,660,920,jpg,named/0465_Forretress_DRI_140.jpg,by_id/465.jpg
+466,Skarmory,DRI,141,15,505,660,920,jpg,named/0466_Skarmory_DRI_141.jpg,by_id/466.jpg
+467,Zamazenta,DRI,146,15,506,660,920,jpg,named/0467_Zamazenta_DRI_146.jpg,by_id/467.jpg
+468,Team Rocket's Rattata,DRI,147,15,507,660,920,jpg,named/0468_Team_Rocket's_Rattata_DRI_147.jpg,by_id/468.jpg
+469,Team Rocket's Raticate,DRI,148,15,508,660,920,jpg,named/0469_Team_Rocket's_Raticate_DRI_148.jpg,by_id/469.jpg
+470,Team Rocket's Meowth,DRI,149,15,509,660,920,jpg,named/0470_Team_Rocket's_Meowth_DRI_149.jpg,by_id/470.jpg
+471,Team Rocket's Persian ex,DRI,150,15,510,660,920,jpg,named/0471_Team_Rocket's_Persian_ex_DRI_150.jpg,by_id/471.jpg
+472,Kangaskhan,DRI,151,15,511,660,920,jpg,named/0472_Kangaskhan_DRI_151.jpg,by_id/472.jpg
+473,Team Rocket's Porygon,DRI,153,15,512,660,920,jpg,named/0473_Team_Rocket's_Porygon_DRI_153.jpg,by_id/473.jpg
+474,Team Rocket's Porygon2,DRI,154,15,513,660,920,jpg,named/0474_Team_Rocket's_Porygon2_DRI_154.jpg,by_id/474.jpg
+475,Team Rocket's Porygon-Z,DRI,155,15,514,660,920,jpg,named/0475_Team_Rocket's_Porygon-Z_DRI_155.jpg,by_id/475.jpg
+476,Taillow,DRI,156,15,515,660,920,jpg,named/0476_Taillow_DRI_156.jpg,by_id/476.jpg
+477,Swellow,DRI,157,15,516,660,920,jpg,named/0477_Swellow_DRI_157.jpg,by_id/477.jpg
+478,Squawkabilly,DRI,160,15,517,660,920,jpg,named/0478_Squawkabilly_DRI_160.jpg,by_id/478.jpg
+479,Snivy,BLK,1,15,518,660,920,jpg,named/0479_Snivy_BLK_1.jpg,by_id/479.jpg
+480,Servine,BLK,2,15,519,660,920,jpg,named/0480_Servine_BLK_2.jpg,by_id/480.jpg
+481,Serperior ex,BLK,3,15,520,660,920,jpg,named/0481_Serperior_ex_BLK_3.jpg,by_id/481.jpg
+482,Pansage,BLK,4,15,521,660,920,jpg,named/0482_Pansage_BLK_4.jpg,by_id/482.jpg
+483,Simisage,BLK,5,15,522,660,920,jpg,named/0483_Simisage_BLK_5.jpg,by_id/483.jpg
+484,Petilil,BLK,6,15,523,660,920,jpg,named/0484_Petilil_BLK_6.jpg,by_id/484.jpg
+485,Lilligant,BLK,7,15,524,660,920,jpg,named/0485_Lilligant_BLK_7.jpg,by_id/485.jpg
+486,Maractus,BLK,8,15,525,660,920,jpg,named/0486_Maractus_BLK_8.jpg,by_id/486.jpg
+487,Karrablast,BLK,9,15,526,660,920,jpg,named/0487_Karrablast_BLK_9.jpg,by_id/487.jpg
+488,Foongus,BLK,10,15,527,660,920,jpg,named/0488_Foongus_BLK_10.jpg,by_id/488.jpg
+489,Amoonguss,BLK,11,15,528,660,920,jpg,named/0489_Amoonguss_BLK_11.jpg,by_id/489.jpg
+490,Victini,BLK,12,15,529,660,920,jpg,named/0490_Victini_BLK_12.jpg,by_id/490.jpg
+491,Darumaka,BLK,13,15,530,660,920,jpg,named/0491_Darumaka_BLK_13.jpg,by_id/491.jpg
+492,Darmanitan,BLK,14,15,531,660,920,jpg,named/0492_Darmanitan_BLK_14.jpg,by_id/492.jpg
+493,Litwick,WHT,16,15,532,660,920,jpg,named/0493_Litwick_WHT_16.jpg,by_id/493.jpg
+494,Lampent,WHT,17,15,533,660,920,jpg,named/0494_Lampent_WHT_17.jpg,by_id/494.jpg
+495,Chandelure,WHT,18,15,534,660,920,jpg,named/0495_Chandelure_WHT_18.jpg,by_id/495.jpg
+496,Larvesta,BLK,15,16,535,660,920,jpg,named/0496_Larvesta_BLK_15.jpg,by_id/496.jpg
+497,Volcarona,BLK,16,16,536,660,920,jpg,named/0497_Volcarona_BLK_16.jpg,by_id/497.jpg
+498,Panpour,BLK,17,16,537,660,920,jpg,named/0498_Panpour_BLK_17.jpg,by_id/498.jpg
+499,Simipour,BLK,18,16,538,660,920,jpg,named/0499_Simipour_BLK_18.jpg,by_id/499.jpg
+500,Tympole,BLK,19,16,539,660,920,jpg,named/0500_Tympole_BLK_19.jpg,by_id/500.jpg
+501,Palpitoad,BLK,20,16,540,660,920,jpg,named/0501_Palpitoad_BLK_20.jpg,by_id/501.jpg
+502,Seismitoad,BLK,21,16,541,660,920,jpg,named/0502_Seismitoad_BLK_21.jpg,by_id/502.jpg
+503,Tirtouga,BLK,22,16,542,660,920,jpg,named/0503_Tirtouga_BLK_22.jpg,by_id/503.jpg
+504,Carracosta,BLK,23,16,543,660,920,jpg,named/0504_Carracosta_BLK_23.jpg,by_id/504.jpg
+505,Alomomola,BLK,24,16,544,660,920,jpg,named/0505_Alomomola_BLK_24.jpg,by_id/505.jpg
+506,Cubchoo,BLK,25,16,545,660,920,jpg,named/0506_Cubchoo_BLK_25.jpg,by_id/506.jpg
+507,Beartic,BLK,26,16,546,660,920,jpg,named/0507_Beartic_BLK_26.jpg,by_id/507.jpg
+508,Cryogonal,BLK,27,16,547,660,920,jpg,named/0508_Cryogonal_BLK_27.jpg,by_id/508.jpg
+509,Kyurem ex,BLK,28,16,548,660,920,jpg,named/0509_Kyurem_ex_BLK_28.jpg,by_id/509.jpg
+510,Emolga,BLK,29,16,549,660,920,jpg,named/0510_Emolga_BLK_29.jpg,by_id/510.jpg
+511,Tynamo,BLK,30,16,550,660,920,jpg,named/0511_Tynamo_BLK_30.jpg,by_id/511.jpg
+512,Eelektrik,BLK,31,16,551,660,920,jpg,named/0512_Eelektrik_BLK_31.jpg,by_id/512.jpg
+513,Eelektross,BLK,32,16,552,660,920,jpg,named/0513_Eelektross_BLK_32.jpg,by_id/513.jpg
+514,Thundurus,BLK,33,16,553,660,920,jpg,named/0514_Thundurus_BLK_33.jpg,by_id/514.jpg
+515,Zekrom ex,BLK,34,16,554,660,920,jpg,named/0515_Zekrom_ex_BLK_34.jpg,by_id/515.jpg
+516,Munna,BLK,35,16,555,660,920,jpg,named/0516_Munna_BLK_35.jpg,by_id/516.jpg
+517,Musharna,BLK,36,16,556,660,920,jpg,named/0517_Musharna_BLK_36.jpg,by_id/517.jpg
+518,Solosis,BLK,37,16,557,660,920,jpg,named/0518_Solosis_BLK_37.jpg,by_id/518.jpg
+519,Duosion,BLK,38,16,558,660,920,jpg,named/0519_Duosion_BLK_38.jpg,by_id/519.jpg
+520,Reuniclus,BLK,39,16,559,660,920,jpg,named/0520_Reuniclus_BLK_39.jpg,by_id/520.jpg
+521,Elgyem,BLK,40,16,560,660,920,jpg,named/0521_Elgyem_BLK_40.jpg,by_id/521.jpg
+522,Beheeyem,BLK,41,16,561,660,920,jpg,named/0522_Beheeyem_BLK_41.jpg,by_id/522.jpg
+523,Golett,BLK,42,16,562,660,920,jpg,named/0523_Golett_BLK_42.jpg,by_id/523.jpg
+524,Golurk,BLK,43,16,563,660,920,jpg,named/0524_Golurk_BLK_43.jpg,by_id/524.jpg
+525,Meloetta ex,BLK,44,16,564,660,920,jpg,named/0525_Meloetta_ex_BLK_44.jpg,by_id/525.jpg
+526,Drilbur,BLK,45,16,565,660,920,jpg,named/0526_Drilbur_BLK_45.jpg,by_id/526.jpg
+527,Excadrill ex,BLK,46,16,566,660,920,jpg,named/0527_Excadrill_ex_BLK_46.jpg,by_id/527.jpg
+528,Timburr,BLK,47,16,567,660,920,jpg,named/0528_Timburr_BLK_47.jpg,by_id/528.jpg
+529,Gurdurr,BLK,48,17,568,660,920,jpg,named/0529_Gurdurr_BLK_48.jpg,by_id/529.jpg
+530,Conkeldurr,BLK,49,17,569,660,920,jpg,named/0530_Conkeldurr_BLK_49.jpg,by_id/530.jpg
+531,Throh,BLK,50,17,570,660,920,jpg,named/0531_Throh_BLK_50.jpg,by_id/531.jpg
+532,Dwebble,BLK,51,17,571,660,920,jpg,named/0532_Dwebble_BLK_51.jpg,by_id/532.jpg
+533,Crustle,BLK,52,17,572,660,920,jpg,named/0533_Crustle_BLK_52.jpg,by_id/533.jpg
+534,Landorus,BLK,53,17,573,660,920,jpg,named/0534_Landorus_BLK_53.jpg,by_id/534.jpg
+535,Venipede,BLK,54,17,574,660,920,jpg,named/0535_Venipede_BLK_54.jpg,by_id/535.jpg
+536,Whirlipede,BLK,55,17,575,660,920,jpg,named/0536_Whirlipede_BLK_55.jpg,by_id/536.jpg
+537,Scolipede,BLK,56,17,576,660,920,jpg,named/0537_Scolipede_BLK_56.jpg,by_id/537.jpg
+538,Sandile,BLK,57,17,577,660,920,jpg,named/0538_Sandile_BLK_57.jpg,by_id/538.jpg
+539,Krokorok,BLK,58,17,578,660,920,jpg,named/0539_Krokorok_BLK_58.jpg,by_id/539.jpg
+540,Krookodile,BLK,59,17,579,660,920,jpg,named/0540_Krookodile_BLK_59.jpg,by_id/540.jpg
+541,Vullaby,WHT,63,17,580,660,920,jpg,named/0541_Vullaby_WHT_63.jpg,by_id/541.jpg
+542,Mandibuzz,WHT,64,17,581,660,920,jpg,named/0542_Mandibuzz_WHT_64.jpg,by_id/542.jpg
+543,Escavalier,BLK,60,17,582,660,920,jpg,named/0543_Escavalier_BLK_60.jpg,by_id/543.jpg
+544,Pawniard,BLK,64,17,583,660,920,jpg,named/0544_Pawniard_BLK_64.jpg,by_id/544.jpg
+545,Bisharp,BLK,65,17,584,660,920,jpg,named/0545_Bisharp_BLK_65.jpg,by_id/545.jpg
+546,Cobalion,BLK,66,17,585,660,920,jpg,named/0546_Cobalion_BLK_66.jpg,by_id/546.jpg
+547,Genesect ex,BLK,67,17,586,660,920,jpg,named/0547_Genesect_ex_BLK_67.jpg,by_id/547.jpg
+548,Axew,BLK,68,17,587,660,920,jpg,named/0548_Axew_BLK_68.jpg,by_id/548.jpg
+549,Fraxure,BLK,69,17,588,660,920,jpg,named/0549_Fraxure_BLK_69.jpg,by_id/549.jpg
+550,Haxorus,BLK,70,17,589,660,920,jpg,named/0550_Haxorus_BLK_70.jpg,by_id/550.jpg
+551,Pidove,BLK,71,17,590,660,920,jpg,named/0551_Pidove_BLK_71.jpg,by_id/551.jpg
+552,Tranquill,BLK,72,17,591,660,920,jpg,named/0552_Tranquill_BLK_72.jpg,by_id/552.jpg
+553,Unfezant,BLK,73,17,592,660,920,jpg,named/0553_Unfezant_BLK_73.jpg,by_id/553.jpg
+554,Audino,BLK,74,17,593,660,920,jpg,named/0554_Audino_BLK_74.jpg,by_id/554.jpg
+555,Minccino,BLK,75,17,594,660,920,jpg,named/0555_Minccino_BLK_75.jpg,by_id/555.jpg
+556,Cinccino,BLK,76,17,595,660,920,jpg,named/0556_Cinccino_BLK_76.jpg,by_id/556.jpg
+557,Sewaddle,WHT,1,17,596,660,920,jpg,named/0557_Sewaddle_WHT_1.jpg,by_id/557.jpg
+558,Swadloon,WHT,2,17,597,660,920,jpg,named/0558_Swadloon_WHT_2.jpg,by_id/558.jpg
+559,Leavanny,WHT,3,17,598,660,920,jpg,named/0559_Leavanny_WHT_3.jpg,by_id/559.jpg
+560,Cottonee,WHT,4,17,599,660,920,jpg,named/0560_Cottonee_WHT_4.jpg,by_id/560.jpg
+561,Whimsicott ex,WHT,5,17,600,660,920,jpg,named/0561_Whimsicott_ex_WHT_5.jpg,by_id/561.jpg
+562,Deerling,WHT,6,18,601,660,920,jpg,named/0562_Deerling_WHT_6.jpg,by_id/562.jpg
+563,Sawsbuck,WHT,7,18,602,660,920,jpg,named/0563_Sawsbuck_WHT_7.jpg,by_id/563.jpg
+564,Shelmet,WHT,8,18,603,660,920,jpg,named/0564_Shelmet_WHT_8.jpg,by_id/564.jpg
+565,Accelgor,WHT,9,18,604,660,920,jpg,named/0565_Accelgor_WHT_9.jpg,by_id/565.jpg
+566,Virizion,WHT,10,18,605,660,920,jpg,named/0566_Virizion_WHT_10.jpg,by_id/566.jpg
+567,Tepig,WHT,11,18,606,660,920,jpg,named/0567_Tepig_WHT_11.jpg,by_id/567.jpg
+568,Pignite,WHT,12,18,607,660,920,jpg,named/0568_Pignite_WHT_12.jpg,by_id/568.jpg
+569,Emboar,WHT,13,18,608,660,920,jpg,named/0569_Emboar_WHT_13.jpg,by_id/569.jpg
+570,Pansear,WHT,14,18,609,660,920,jpg,named/0570_Pansear_WHT_14.jpg,by_id/570.jpg
+571,Simisear,WHT,15,18,610,660,920,jpg,named/0571_Simisear_WHT_15.jpg,by_id/571.jpg
+572,Heatmor,WHT,19,18,611,660,920,jpg,named/0572_Heatmor_WHT_19.jpg,by_id/572.jpg
+573,Reshiram ex,WHT,20,18,612,660,920,jpg,named/0573_Reshiram_ex_WHT_20.jpg,by_id/573.jpg
+574,Oshawott,WHT,21,18,613,660,920,jpg,named/0574_Oshawott_WHT_21.jpg,by_id/574.jpg
+575,Dewott,WHT,22,18,614,660,920,jpg,named/0575_Dewott_WHT_22.jpg,by_id/575.jpg
+576,Samurott,WHT,23,18,615,660,920,jpg,named/0576_Samurott_WHT_23.jpg,by_id/576.jpg
+577,Basculin,WHT,24,18,616,660,920,jpg,named/0577_Basculin_WHT_24.jpg,by_id/577.jpg
+578,Ducklett,WHT,25,18,617,660,920,jpg,named/0578_Ducklett_WHT_25.jpg,by_id/578.jpg
+579,Swanna,WHT,26,18,618,660,920,jpg,named/0579_Swanna_WHT_26.jpg,by_id/579.jpg
+580,Vanillite,WHT,27,18,619,660,920,jpg,named/0580_Vanillite_WHT_27.jpg,by_id/580.jpg
+581,Vanillish,WHT,28,18,620,660,920,jpg,named/0581_Vanillish_WHT_28.jpg,by_id/581.jpg
+582,Vanilluxe,WHT,29,18,621,660,920,jpg,named/0582_Vanilluxe_WHT_29.jpg,by_id/582.jpg
+583,Keldeo ex,WHT,30,18,622,660,920,jpg,named/0583_Keldeo_ex_WHT_30.jpg,by_id/583.jpg
+584,Blitzle,WHT,31,18,623,660,920,jpg,named/0584_Blitzle_WHT_31.jpg,by_id/584.jpg
+585,Zebstrika,WHT,32,18,624,660,920,jpg,named/0585_Zebstrika_WHT_32.jpg,by_id/585.jpg
+586,Joltik,WHT,33,18,625,660,920,jpg,named/0586_Joltik_WHT_33.jpg,by_id/586.jpg
+587,Galvantula,WHT,34,18,626,660,920,jpg,named/0587_Galvantula_WHT_34.jpg,by_id/587.jpg
+588,Stunfisk,WHT,35,18,627,660,920,jpg,named/0588_Stunfisk_WHT_35.jpg,by_id/588.jpg
+589,Woobat,WHT,36,18,628,660,920,jpg,named/0589_Woobat_WHT_36.jpg,by_id/589.jpg
+590,Swoobat,WHT,37,18,629,660,920,jpg,named/0590_Swoobat_WHT_37.jpg,by_id/590.jpg
+591,Sigilyph,WHT,38,18,630,660,920,jpg,named/0591_Sigilyph_WHT_38.jpg,by_id/591.jpg
+592,Yamask,WHT,39,18,631,660,920,jpg,named/0592_Yamask_WHT_39.jpg,by_id/592.jpg
+593,Cofagrigus,WHT,40,18,632,660,920,jpg,named/0593_Cofagrigus_WHT_40.jpg,by_id/593.jpg
+594,Gothita,WHT,41,18,633,660,920,jpg,named/0594_Gothita_WHT_41.jpg,by_id/594.jpg
+595,Gothorita,WHT,42,19,634,660,920,jpg,named/0595_Gothorita_WHT_42.jpg,by_id/595.jpg
+596,Gothitelle,WHT,43,19,635,660,920,jpg,named/0596_Gothitelle_WHT_43.jpg,by_id/596.jpg
+597,Frillish,WHT,44,19,636,660,920,jpg,named/0597_Frillish_WHT_44.jpg,by_id/597.jpg
+598,Jellicent ex,WHT,45,19,637,660,920,jpg,named/0598_Jellicent_ex_WHT_45.jpg,by_id/598.jpg
+599,Roggenrola,WHT,46,19,638,660,920,jpg,named/0599_Roggenrola_WHT_46.jpg,by_id/599.jpg
+600,Boldore,WHT,47,19,639,660,920,jpg,named/0600_Boldore_WHT_47.jpg,by_id/600.jpg
+601,Gigalith,WHT,48,19,640,660,920,jpg,named/0601_Gigalith_WHT_48.jpg,by_id/601.jpg
+602,Sawk,WHT,49,19,641,660,920,jpg,named/0602_Sawk_WHT_49.jpg,by_id/602.jpg
+603,Archen,WHT,50,19,642,660,920,jpg,named/0603_Archen_WHT_50.jpg,by_id/603.jpg
+604,Archeops,WHT,51,19,643,660,920,jpg,named/0604_Archeops_WHT_51.jpg,by_id/604.jpg
+605,Mienfoo,WHT,52,19,644,660,920,jpg,named/0605_Mienfoo_WHT_52.jpg,by_id/605.jpg
+606,Mienshao,WHT,53,19,645,660,920,jpg,named/0606_Mienshao_WHT_53.jpg,by_id/606.jpg
+607,Terrakion,WHT,54,19,646,660,920,jpg,named/0607_Terrakion_WHT_54.jpg,by_id/607.jpg
+608,Purrloin,WHT,55,19,647,660,920,jpg,named/0608_Purrloin_WHT_55.jpg,by_id/608.jpg
+609,Liepard,WHT,56,19,648,660,920,jpg,named/0609_Liepard_WHT_56.jpg,by_id/609.jpg
+610,Scraggy,WHT,57,19,649,660,920,jpg,named/0610_Scraggy_WHT_57.jpg,by_id/610.jpg
+611,Scrafty,WHT,58,19,650,660,920,jpg,named/0611_Scrafty_WHT_58.jpg,by_id/611.jpg
+612,Trubbish,WHT,59,19,651,660,920,jpg,named/0612_Trubbish_WHT_59.jpg,by_id/612.jpg
+613,Garbodor,WHT,60,19,652,660,920,jpg,named/0613_Garbodor_WHT_60.jpg,by_id/613.jpg
+614,Zorua,WHT,61,19,653,660,920,jpg,named/0614_Zorua_WHT_61.jpg,by_id/614.jpg
+615,Zoroark,WHT,62,19,654,660,920,jpg,named/0615_Zoroark_WHT_62.jpg,by_id/615.jpg
+616,Deino,WHT,65,19,655,660,920,jpg,named/0616_Deino_WHT_65.jpg,by_id/616.jpg
+617,Zweilous,WHT,66,19,656,660,920,jpg,named/0617_Zweilous_WHT_66.jpg,by_id/617.jpg
+618,Hydreigon ex,WHT,67,19,657,660,920,jpg,named/0618_Hydreigon_ex_WHT_67.jpg,by_id/618.jpg
+619,Ferroseed,WHT,68,19,658,660,920,jpg,named/0619_Ferroseed_WHT_68.jpg,by_id/619.jpg
+620,Ferrothorn,WHT,69,19,659,660,920,jpg,named/0620_Ferrothorn_WHT_69.jpg,by_id/620.jpg
+621,Klink,BLK,61,19,660,660,920,jpg,named/0621_Klink_BLK_61.jpg,by_id/621.jpg
+622,Klang,BLK,62,19,661,660,920,jpg,named/0622_Klang_BLK_62.jpg,by_id/622.jpg
+623,Klinklang,BLK,63,19,662,660,920,jpg,named/0623_Klinklang_BLK_63.jpg,by_id/623.jpg
+624,Durant,WHT,70,19,663,660,920,jpg,named/0624_Durant_WHT_70.jpg,by_id/624.jpg
+625,Druddigon,WHT,71,19,664,660,920,jpg,named/0625_Druddigon_WHT_71.jpg,by_id/625.jpg
+626,Patrat,WHT,72,19,665,660,920,jpg,named/0626_Patrat_WHT_72.jpg,by_id/626.jpg
+627,Watchog,WHT,73,19,666,660,920,jpg,named/0627_Watchog_WHT_73.jpg,by_id/627.jpg
+628,Lillipup,WHT,74,20,667,660,920,jpg,named/0628_Lillipup_WHT_74.jpg,by_id/628.jpg
+629,Herdier,WHT,75,20,668,660,920,jpg,named/0629_Herdier_WHT_75.jpg,by_id/629.jpg
+630,Stoutland,WHT,76,20,669,660,920,jpg,named/0630_Stoutland_WHT_76.jpg,by_id/630.jpg
+631,Bouffalant ex,WHT,77,20,670,660,920,jpg,named/0631_Bouffalant_ex_WHT_77.jpg,by_id/631.jpg
+632,Rufflet,BLK,77,20,671,660,920,jpg,named/0632_Rufflet_BLK_77.jpg,by_id/632.jpg
+633,Braviary,BLK,78,20,672,660,920,jpg,named/0633_Braviary_BLK_78.jpg,by_id/633.jpg
+634,Tornadus,WHT,78,20,673,660,920,jpg,named/0634_Tornadus_WHT_78.jpg,by_id/634.jpg
+635,Steven's Baltoy,DRI,83,20,674,660,920,jpg,named/0635_Steven's_Baltoy_DRI_83.jpg,by_id/635.jpg
+636,Steven's Claydol,DRI,84,20,675,660,920,jpg,named/0636_Steven's_Claydol_DRI_84.jpg,by_id/636.jpg
+637,Steven's Carbink,DRI,86,20,676,660,920,jpg,named/0637_Steven's_Carbink_DRI_86.jpg,by_id/637.jpg
+638,Steven's Skarmory,DRI,142,20,677,660,920,jpg,named/0638_Steven's_Skarmory_DRI_142.jpg,by_id/638.jpg
+639,Steven's Beldum,DRI,143,20,678,660,920,jpg,named/0639_Steven's_Beldum_DRI_143.jpg,by_id/639.jpg
+640,Steven's Metang,DRI,144,20,679,660,920,jpg,named/0640_Steven's_Metang_DRI_144.jpg,by_id/640.jpg
+641,Steven's Metagross ex,DRI,145,20,680,660,920,jpg,named/0641_Steven's_Metagross_ex_DRI_145.jpg,by_id/641.jpg
+642,Marnie's Purrloin,DRI,130,20,681,660,920,jpg,named/0642_Marnie's_Purrloin_DRI_130.jpg,by_id/642.jpg
+643,Marnie's Liepard,DRI,131,20,682,660,920,jpg,named/0643_Marnie's_Liepard_DRI_131.jpg,by_id/643.jpg
+644,Marnie's Scraggy,DRI,132,20,683,660,920,jpg,named/0644_Marnie's_Scraggy_DRI_132.jpg,by_id/644.jpg
+645,Marnie's Scrafty,DRI,133,20,684,660,920,jpg,named/0645_Marnie's_Scrafty_DRI_133.jpg,by_id/645.jpg
+646,Marnie's Impidimp,DRI,134,20,685,660,920,jpg,named/0646_Marnie's_Impidimp_DRI_134.jpg,by_id/646.jpg
+647,Marnie's Morgrem,DRI,135,20,686,660,920,jpg,named/0647_Marnie's_Morgrem_DRI_135.jpg,by_id/647.jpg
+648,Marnie's Grimmsnarl ex,DRI,136,20,687,660,920,jpg,named/0648_Marnie's_Grimmsnarl_ex_DRI_136.jpg,by_id/648.jpg
+649,Marnie's Morpeko,DRI,137,20,688,660,920,jpg,named/0649_Marnie's_Morpeko_DRI_137.jpg,by_id/649.jpg
+650,Bulbasaur,MEG,1,20,689,660,920,jpg,named/0650_Bulbasaur_MEG_1.jpg,by_id/650.jpg
+651,Ivysaur,MEG,2,20,690,660,920,jpg,named/0651_Ivysaur_MEG_2.jpg,by_id/651.jpg
+652,Mega Venusaur ex,MEG,3,20,691,660,920,jpg,named/0652_Mega_Venusaur_ex_MEG_3.jpg,by_id/652.jpg
+653,Exeggcute,MEG,4,20,692,660,920,jpg,named/0653_Exeggcute_MEG_4.jpg,by_id/653.jpg
+654,Exeggutor,MEG,5,20,693,660,920,jpg,named/0654_Exeggutor_MEG_5.jpg,by_id/654.jpg
+655,Celebi,MEG,12,20,694,660,920,jpg,named/0655_Celebi_MEG_12.jpg,by_id/655.jpg
+656,Seedot,MEG,13,20,695,660,920,jpg,named/0656_Seedot_MEG_13.jpg,by_id/656.jpg
+657,Nuzleaf,MEG,14,20,696,660,920,jpg,named/0657_Nuzleaf_MEG_14.jpg,by_id/657.jpg
+658,Shiftry,MEG,15,20,697,660,920,jpg,named/0658_Shiftry_MEG_15.jpg,by_id/658.jpg
+659,Vulpix,MEG,19,20,698,660,920,jpg,named/0659_Vulpix_MEG_19.jpg,by_id/659.jpg
+660,Ninetales,MEG,20,20,699,660,920,jpg,named/0660_Ninetales_MEG_20.jpg,by_id/660.jpg
+661,Numel,MEG,21,21,700,660,920,jpg,named/0661_Numel_MEG_21.jpg,by_id/661.jpg
+662,Mega Camerupt ex,MEG,22,21,701,660,920,jpg,named/0662_Mega_Camerupt_ex_MEG_22.jpg,by_id/662.jpg
+663,Volcanion,MEG,25,21,702,660,920,jpg,named/0663_Volcanion_MEG_25.jpg,by_id/663.jpg
+664,Scorbunny,MEG,26,21,703,660,920,jpg,named/0664_Scorbunny_MEG_26.jpg,by_id/664.jpg
+665,Raboot,MEG,27,21,704,660,920,jpg,named/0665_Raboot_MEG_27.jpg,by_id/665.jpg
+666,Cinderace,MEG,28,21,705,660,920,jpg,named/0666_Cinderace_MEG_28.jpg,by_id/666.jpg
+667,Corphish,MEG,33,21,706,660,920,jpg,named/0667_Corphish_MEG_33.jpg,by_id/667.jpg
+668,Gimmighoul,MEG,67,21,707,660,920,jpg,named/0668_Gimmighoul_MEG_67.jpg,by_id/668.jpg
+669,Sandshrew,MEG,68,21,708,660,920,jpg,named/0669_Sandshrew_MEG_68.jpg,by_id/669.jpg
+670,Sandslash,MEG,69,21,709,660,920,jpg,named/0670_Sandslash_MEG_69.jpg,by_id/670.jpg
+671,Onix,MEG,70,21,710,660,920,jpg,named/0671_Onix_MEG_70.jpg,by_id/671.jpg
+672,Tyrogue,MEG,71,21,711,660,920,jpg,named/0672_Tyrogue_MEG_71.jpg,by_id/672.jpg
+673,Makuhita,MEG,72,21,712,660,920,jpg,named/0673_Makuhita_MEG_72.jpg,by_id/673.jpg
+674,Hariyama,MEG,73,21,713,660,920,jpg,named/0674_Hariyama_MEG_73.jpg,by_id/674.jpg
+675,Lunatone,MEG,74,21,714,660,920,jpg,named/0675_Lunatone_MEG_74.jpg,by_id/675.jpg
+676,Solrock,MEG,75,21,715,660,920,jpg,named/0676_Solrock_MEG_75.jpg,by_id/676.jpg
+677,Riolu,MEG,76,21,716,660,920,jpg,named/0677_Riolu_MEG_76.jpg,by_id/677.jpg
+678,Mega Lucario ex,MEG,77,21,717,660,920,jpg,named/0678_Mega_Lucario_ex_MEG_77.jpg,by_id/678.jpg
+679,Croagunk,MEG,78,21,718,660,920,jpg,named/0679_Croagunk_MEG_78.jpg,by_id/679.jpg
+680,Toxicroak,MEG,79,21,719,660,920,jpg,named/0680_Toxicroak_MEG_79.jpg,by_id/680.jpg
+681,Marshadow,MEG,80,21,720,660,920,jpg,named/0681_Marshadow_MEG_80.jpg,by_id/681.jpg
+682,Stonjourner,MEG,81,21,721,660,920,jpg,named/0682_Stonjourner_MEG_81.jpg,by_id/682.jpg
+683,Nacli,MEG,82,21,722,660,920,jpg,named/0683_Nacli_MEG_82.jpg,by_id/683.jpg
+684,Naclstack,MEG,83,21,723,660,920,jpg,named/0684_Naclstack_MEG_83.jpg,by_id/684.jpg
+685,Garganacl,MEG,84,21,724,660,920,jpg,named/0685_Garganacl_MEG_84.jpg,by_id/685.jpg
+686,Crawdaunt,MEG,85,21,725,660,920,jpg,named/0686_Crawdaunt_MEG_85.jpg,by_id/686.jpg
+687,Mega Absol ex,MEG,86,21,726,660,920,jpg,named/0687_Mega_Absol_ex_MEG_86.jpg,by_id/687.jpg
+688,Spiritomb,MEG,87,21,727,660,920,jpg,named/0688_Spiritomb_MEG_87.jpg,by_id/688.jpg
+689,Yveltal,MEG,88,21,728,660,920,jpg,named/0689_Yveltal_MEG_88.jpg,by_id/689.jpg
+690,Nickit,MEG,89,21,729,660,920,jpg,named/0690_Nickit_MEG_89.jpg,by_id/690.jpg
+691,Thievul,MEG,90,21,730,660,920,jpg,named/0691_Thievul_MEG_90.jpg,by_id/691.jpg
+692,Shroodle,MEG,91,21,731,660,920,jpg,named/0692_Shroodle_MEG_91.jpg,by_id/692.jpg
+693,Grafaiai,MEG,92,21,732,660,920,jpg,named/0693_Grafaiai_MEG_92.jpg,by_id/693.jpg
+694,Steelix,MEG,93,22,733,660,920,jpg,named/0694_Steelix_MEG_93.jpg,by_id/694.jpg
+695,Mega Mawile ex,MEG,94,22,734,660,920,jpg,named/0695_Mega_Mawile_ex_MEG_94.jpg,by_id/695.jpg
+696,Dialga,MEG,95,22,735,660,920,jpg,named/0696_Dialga_MEG_95.jpg,by_id/696.jpg
+697,Tinkatink,MEG,96,22,736,660,920,jpg,named/0697_Tinkatink_MEG_96.jpg,by_id/697.jpg
+698,Tinkatuff,MEG,97,22,737,660,920,jpg,named/0698_Tinkatuff_MEG_97.jpg,by_id/698.jpg
+699,Tinkaton,MEG,98,22,738,660,920,jpg,named/0699_Tinkaton_MEG_98.jpg,by_id/699.jpg
+700,Gholdengo,MEG,99,22,739,660,920,jpg,named/0700_Gholdengo_MEG_99.jpg,by_id/700.jpg
+701,Spearow,MEG,102,22,740,660,920,jpg,named/0701_Spearow_MEG_102.jpg,by_id/701.jpg
+702,Fearow,MEG,103,22,741,660,920,jpg,named/0702_Fearow_MEG_103.jpg,by_id/702.jpg
+703,Miltank,MEG,106,22,742,660,920,jpg,named/0703_Miltank_MEG_106.jpg,by_id/703.jpg
+704,Yungoos,MEG,109,22,743,660,920,jpg,named/0704_Yungoos_MEG_109.jpg,by_id/704.jpg
+705,Gumshoos,MEG,110,22,744,660,920,jpg,named/0705_Gumshoos_MEG_110.jpg,by_id/705.jpg
+706,Tangela,MEG,6,22,745,660,920,jpg,named/0706_Tangela_MEG_6.jpg,by_id/706.jpg
+707,Tangrowth,MEG,7,22,746,660,920,jpg,named/0707_Tangrowth_MEG_7.jpg,by_id/707.jpg
+708,Chikorita,MEG,8,22,747,660,920,jpg,named/0708_Chikorita_MEG_8.jpg,by_id/708.jpg
+709,Bayleef,MEG,9,22,748,660,920,jpg,named/0709_Bayleef_MEG_9.jpg,by_id/709.jpg
+710,Meganium,MEG,10,22,749,660,920,jpg,named/0710_Meganium_MEG_10.jpg,by_id/710.jpg
+711,Shuckle,MEG,11,22,750,660,920,jpg,named/0711_Shuckle_MEG_11.jpg,by_id/711.jpg
+712,Nincada,MEG,16,22,751,660,920,jpg,named/0712_Nincada_MEG_16.jpg,by_id/712.jpg
+713,Ninjask,MEG,17,22,752,660,920,jpg,named/0713_Ninjask_MEG_17.jpg,by_id/713.jpg
+714,Dhelmise,MEG,18,22,753,660,920,jpg,named/0714_Dhelmise_MEG_18.jpg,by_id/714.jpg
+715,Litleo,MEG,23,22,754,660,920,jpg,named/0715_Litleo_MEG_23.jpg,by_id/715.jpg
+716,Pyroar,MEG,24,22,755,660,920,jpg,named/0716_Pyroar_MEG_24.jpg,by_id/716.jpg
+717,Sizzlipede,MEG,29,22,756,660,920,jpg,named/0717_Sizzlipede_MEG_29.jpg,by_id/717.jpg
+718,Centiskorch,MEG,30,22,757,660,920,jpg,named/0718_Centiskorch_MEG_30.jpg,by_id/718.jpg
+719,Chi-Yu,MEG,31,22,758,660,920,jpg,named/0719_Chi-Yu_MEG_31.jpg,by_id/719.jpg
+720,Mantine,MEG,32,22,759,660,920,jpg,named/0720_Mantine_MEG_32.jpg,by_id/720.jpg
+721,Kyogre,MEG,34,22,760,660,920,jpg,named/0721_Kyogre_MEG_34.jpg,by_id/721.jpg
+722,Snover,MEG,35,22,761,660,920,jpg,named/0722_Snover_MEG_35.jpg,by_id/722.jpg
+723,Mega Abomasnow ex,MEG,36,22,762,660,920,jpg,named/0723_Mega_Abomasnow_ex_MEG_36.jpg,by_id/723.jpg
+724,Clauncher,MEG,37,22,763,660,920,jpg,named/0724_Clauncher_MEG_37.jpg,by_id/724.jpg
+725,Clawitzer,MEG,38,22,764,660,920,jpg,named/0725_Clawitzer_MEG_38.jpg,by_id/725.jpg
+726,Sobble,MEG,39,22,765,660,920,jpg,named/0726_Sobble_MEG_39.jpg,by_id/726.jpg
+727,Drizzile,MEG,40,23,766,660,920,jpg,named/0727_Drizzile_MEG_40.jpg,by_id/727.jpg
+728,Inteleon,MEG,41,23,767,660,920,jpg,named/0728_Inteleon_MEG_41.jpg,by_id/728.jpg
+729,Snom,MEG,42,23,768,660,920,jpg,named/0729_Snom_MEG_42.jpg,by_id/729.jpg
+730,Frosmoth,MEG,43,23,769,660,920,jpg,named/0730_Frosmoth_MEG_43.jpg,by_id/730.jpg
+731,Eiscue,MEG,44,23,770,660,920,jpg,named/0731_Eiscue_MEG_44.jpg,by_id/731.jpg
+732,Magnemite,MEG,45,23,771,660,920,jpg,named/0732_Magnemite_MEG_45.jpg,by_id/732.jpg
+733,Magneton,MEG,46,23,772,660,920,jpg,named/0733_Magneton_MEG_46.jpg,by_id/733.jpg
+734,Magnezone,MEG,47,23,773,660,920,jpg,named/0734_Magnezone_MEG_47.jpg,by_id/734.jpg
+735,Raikou,MEG,48,23,774,660,920,jpg,named/0735_Raikou_MEG_48.jpg,by_id/735.jpg
+736,Electrike,MEG,49,23,775,660,920,jpg,named/0736_Electrike_MEG_49.jpg,by_id/736.jpg
+737,Mega Manectric ex,MEG,50,23,776,660,920,jpg,named/0737_Mega_Manectric_ex_MEG_50.jpg,by_id/737.jpg
+738,Pachirisu,MEG,51,23,777,660,920,jpg,named/0738_Pachirisu_MEG_51.jpg,by_id/738.jpg
+739,Helioptile,MEG,52,23,778,660,920,jpg,named/0739_Helioptile_MEG_52.jpg,by_id/739.jpg
+740,Heliolisk,MEG,53,23,779,660,920,jpg,named/0740_Heliolisk_MEG_53.jpg,by_id/740.jpg
+741,Abra,MEG,54,23,780,660,920,jpg,named/0741_Abra_MEG_54.jpg,by_id/741.jpg
+742,Kadabra,MEG,55,23,781,660,920,jpg,named/0742_Kadabra_MEG_55.jpg,by_id/742.jpg
+743,Alakazam,MEG,56,23,782,660,920,jpg,named/0743_Alakazam_MEG_56.jpg,by_id/743.jpg
+744,Jynx,MEG,57,23,783,660,920,jpg,named/0744_Jynx_MEG_57.jpg,by_id/744.jpg
+745,Ralts,MEG,58,23,784,660,920,jpg,named/0745_Ralts_MEG_58.jpg,by_id/745.jpg
+746,Kirlia,MEG,59,23,785,660,920,jpg,named/0746_Kirlia_MEG_59.jpg,by_id/746.jpg
+747,Mega Gardevoir ex,MEG,60,23,786,660,920,jpg,named/0747_Mega_Gardevoir_ex_MEG_60.jpg,by_id/747.jpg
+748,Shedinja,MEG,61,23,787,660,920,jpg,named/0748_Shedinja_MEG_61.jpg,by_id/748.jpg
+749,Spoink,MEG,62,23,788,660,920,jpg,named/0749_Spoink_MEG_62.jpg,by_id/749.jpg
+750,Grumpig,MEG,63,23,789,660,920,jpg,named/0750_Grumpig_MEG_63.jpg,by_id/750.jpg
+751,Xerneas,MEG,64,23,790,660,920,jpg,named/0751_Xerneas_MEG_64.jpg,by_id/751.jpg
+752,Greavard,MEG,65,23,791,660,920,jpg,named/0752_Greavard_MEG_65.jpg,by_id/752.jpg
+753,Houndstone,MEG,66,23,792,660,920,jpg,named/0753_Houndstone_MEG_66.jpg,by_id/753.jpg
+754,Mega Latias ex,MEG,100,23,793,660,920,jpg,named/0754_Mega_Latias_ex_MEG_100.jpg,by_id/754.jpg
+755,Latios,MEG,101,23,794,660,920,jpg,named/0755_Latios_MEG_101.jpg,by_id/755.jpg
+756,Mega Kangaskhan ex,MEG,104,23,795,660,920,jpg,named/0756_Mega_Kangaskhan_ex_MEG_104.jpg,by_id/756.jpg
+757,Delibird,MEG,105,23,796,660,920,jpg,named/0757_Delibird_MEG_105.jpg,by_id/757.jpg
+758,Buneary,MEG,107,23,797,660,920,jpg,named/0758_Buneary_MEG_107.jpg,by_id/758.jpg
+759,Lopunny,MEG,108,23,798,660,920,jpg,named/0759_Lopunny_MEG_108.jpg,by_id/759.jpg
+760,Stufful,MEG,111,24,799,660,920,jpg,named/0760_Stufful_MEG_111.jpg,by_id/760.jpg
+761,Bewear,MEG,112,24,800,660,920,jpg,named/0761_Bewear_MEG_112.jpg,by_id/761.jpg
+762,Snubbull,PFL,37,24,801,660,920,jpg,named/0762_Snubbull_PFL_37.jpg,by_id/762.jpg
+763,Granbull,PFL,38,24,802,660,920,jpg,named/0763_Granbull_PFL_38.jpg,by_id/763.jpg
+764,Cresselia,PFL,39,24,803,660,920,jpg,named/0764_Cresselia_PFL_39.jpg,by_id/764.jpg
+765,Meloetta,PFL,40,24,804,660,920,jpg,named/0765_Meloetta_PFL_40.jpg,by_id/765.jpg
+766,Mega Diancie ex,PFL,41,24,805,660,920,jpg,named/0766_Mega_Diancie_ex_PFL_41.jpg,by_id/766.jpg
+767,Mimikyu,PFL,42,24,806,660,920,jpg,named/0767_Mimikyu_PFL_42.jpg,by_id/767.jpg
+768,Milcery,PFL,43,24,807,660,920,jpg,named/0768_Milcery_PFL_43.jpg,by_id/768.jpg
+769,Alcremie,PFL,44,24,808,660,920,jpg,named/0769_Alcremie_PFL_44.jpg,by_id/769.jpg
+770,Gastly,PFL,54,24,809,660,920,jpg,named/0770_Gastly_PFL_54.jpg,by_id/770.jpg
+771,Haunter,PFL,55,24,810,660,920,jpg,named/0771_Haunter_PFL_55.jpg,by_id/771.jpg
+772,Mega Gengar ex,PFL,56,24,811,660,920,jpg,named/0772_Mega_Gengar_ex_PFL_56.jpg,by_id/772.jpg
+773,Murkrow,PFL,57,24,812,660,920,jpg,named/0773_Murkrow_PFL_57.jpg,by_id/773.jpg
+774,Honchkrow,PFL,58,24,813,660,920,jpg,named/0774_Honchkrow_PFL_58.jpg,by_id/774.jpg
+775,Sableye,PFL,59,24,814,660,920,jpg,named/0775_Sableye_PFL_59.jpg,by_id/775.jpg
+776,Absol,PFL,63,24,815,660,920,jpg,named/0776_Absol_PFL_63.jpg,by_id/776.jpg
+777,Eternatus,PFL,69,24,816,660,920,jpg,named/0777_Eternatus_PFL_69.jpg,by_id/777.jpg
+778,Oddish,PFL,1,24,817,660,920,jpg,named/0778_Oddish_PFL_1.jpg,by_id/778.jpg
+779,Gloom,PFL,2,24,818,660,920,jpg,named/0779_Gloom_PFL_2.jpg,by_id/779.jpg
+780,Vileplume,PFL,3,24,819,660,920,jpg,named/0780_Vileplume_PFL_3.jpg,by_id/780.jpg
+781,Mega Heracross ex,PFL,4,24,820,660,920,jpg,named/0781_Mega_Heracross_ex_PFL_4.jpg,by_id/781.jpg
+782,Lotad,PFL,5,24,821,660,920,jpg,named/0782_Lotad_PFL_5.jpg,by_id/782.jpg
+783,Lombre,PFL,6,24,822,660,920,jpg,named/0783_Lombre_PFL_6.jpg,by_id/783.jpg
+784,Ludicolo,PFL,7,24,823,660,920,jpg,named/0784_Ludicolo_PFL_7.jpg,by_id/784.jpg
+785,Genesect,PFL,8,24,824,660,920,jpg,named/0785_Genesect_PFL_8.jpg,by_id/785.jpg
+786,Nymble,PFL,9,24,825,660,920,jpg,named/0786_Nymble_PFL_9.jpg,by_id/786.jpg
+787,Lokix,PFL,10,24,826,660,920,jpg,named/0787_Lokix_PFL_10.jpg,by_id/787.jpg
+788,Charmander,PFL,11,24,827,660,920,jpg,named/0788_Charmander_PFL_11.jpg,by_id/788.jpg
+789,Charmeleon,PFL,12,24,828,660,920,jpg,named/0789_Charmeleon_PFL_12.jpg,by_id/789.jpg
+790,Mega Charizard X ex,PFL,13,24,829,660,920,jpg,named/0790_Mega_Charizard_X_ex_PFL_13.jpg,by_id/790.jpg
+791,Moltres,PFL,14,24,830,660,920,jpg,named/0791_Moltres_PFL_14.jpg,by_id/791.jpg
+792,Darumaka,PFL,15,24,831,660,920,jpg,named/0792_Darumaka_PFL_15.jpg,by_id/792.jpg
+793,Darmanitan,PFL,16,25,832,660,920,jpg,named/0793_Darmanitan_PFL_16.jpg,by_id/793.jpg
+794,Reshiram,PFL,17,25,833,660,920,jpg,named/0794_Reshiram_PFL_17.jpg,by_id/794.jpg
+795,Oricorio ex,PFL,18,25,834,660,920,jpg,named/0795_Oricorio_ex_PFL_18.jpg,by_id/795.jpg
+796,Charcadet,PFL,19,25,835,660,920,jpg,named/0796_Charcadet_PFL_19.jpg,by_id/796.jpg
+797,Ceruledge,PFL,20,25,836,660,920,jpg,named/0797_Ceruledge_PFL_20.jpg,by_id/797.jpg
+798,Seel,PFL,21,25,837,660,920,jpg,named/0798_Seel_PFL_21.jpg,by_id/798.jpg
+799,Dewgong,PFL,22,25,838,660,920,jpg,named/0799_Dewgong_PFL_22.jpg,by_id/799.jpg
+800,Swinub,PFL,23,25,839,660,920,jpg,named/0800_Swinub_PFL_23.jpg,by_id/800.jpg
+801,Piloswine,PFL,24,25,840,660,920,jpg,named/0801_Piloswine_PFL_24.jpg,by_id/801.jpg
+802,Mamoswine,PFL,25,25,841,660,920,jpg,named/0802_Mamoswine_PFL_25.jpg,by_id/802.jpg
+803,Suicune,PFL,26,25,842,660,920,jpg,named/0803_Suicune_PFL_26.jpg,by_id/803.jpg
+804,Piplup,PFL,27,25,843,660,920,jpg,named/0804_Piplup_PFL_27.jpg,by_id/804.jpg
+805,Prinplup,PFL,28,25,844,660,920,jpg,named/0805_Prinplup_PFL_28.jpg,by_id/805.jpg
+806,Rotom ex,PFL,29,25,845,660,920,jpg,named/0806_Rotom_ex_PFL_29.jpg,by_id/806.jpg
+807,Yamper,PFL,30,25,846,660,920,jpg,named/0807_Yamper_PFL_30.jpg,by_id/807.jpg
+808,Boltund,PFL,31,25,847,660,920,jpg,named/0808_Boltund_PFL_31.jpg,by_id/808.jpg
+809,Pawmi,PFL,32,25,848,660,920,jpg,named/0809_Pawmi_PFL_32.jpg,by_id/809.jpg
+810,Pawmo,PFL,33,25,849,660,920,jpg,named/0810_Pawmo_PFL_33.jpg,by_id/810.jpg
+811,Pawmot,PFL,34,25,850,660,920,jpg,named/0811_Pawmot_PFL_34.jpg,by_id/811.jpg
+812,Misdreavus,PFL,35,25,851,660,920,jpg,named/0812_Misdreavus_PFL_35.jpg,by_id/812.jpg
+813,Mismagius ex,PFL,36,25,852,660,920,jpg,named/0813_Mismagius_ex_PFL_36.jpg,by_id/813.jpg
+814,Cottonee,PROMO,18,25,853,451,630,jpg,named/0814_Cottonee_PROMO_18.jpg,by_id/814.jpg
+815,Whimsicott,PROMO,19,25,854,451,630,jpg,named/0815_Whimsicott_PROMO_19.jpg,by_id/815.jpg
+816,Zacian,PFL,45,25,855,660,920,jpg,named/0816_Zacian_PFL_45.jpg,by_id/816.jpg
+817,Bramblin,PFL,46,25,856,660,920,jpg,named/0817_Bramblin_PFL_46.jpg,by_id/817.jpg
+818,Brambleghast,PFL,47,25,857,660,920,jpg,named/0818_Brambleghast_PFL_47.jpg,by_id/818.jpg
+819,Paldean Tauros,PFL,48,25,858,660,920,jpg,named/0819_Paldean_Tauros_PFL_48.jpg,by_id/819.jpg
+820,Gligar,PFL,49,25,859,660,920,jpg,named/0820_Gligar_PFL_49.jpg,by_id/820.jpg
+821,Gliscor,PFL,50,25,860,660,920,jpg,named/0821_Gliscor_PFL_50.jpg,by_id/821.jpg
+822,Trapinch,PFL,51,25,861,660,920,jpg,named/0822_Trapinch_PFL_51.jpg,by_id/822.jpg
+823,Vibrava,PFL,52,25,862,660,920,jpg,named/0823_Vibrava_PFL_52.jpg,by_id/823.jpg
+824,Flygon,PFL,53,25,863,660,920,jpg,named/0824_Flygon_PFL_53.jpg,by_id/824.jpg
+825,Sneasel,PROMO,20,25,864,451,630,jpg,named/0825_Sneasel_PROMO_20.jpg,by_id/825.jpg
+826,Weavile,PROMO,21,26,865,451,630,jpg,named/0826_Weavile_PROMO_21.jpg,by_id/826.jpg
+827,Carvanha,PFL,60,26,866,660,920,jpg,named/0827_Carvanha_PFL_60.jpg,by_id/827.jpg
+828,Mega Sharpedo ex,PFL,61,26,867,660,920,jpg,named/0828_Mega_Sharpedo_ex_PFL_61.jpg,by_id/828.jpg
+829,Seviper,PFL,62,26,868,660,920,jpg,named/0829_Seviper_PFL_62.jpg,by_id/829.jpg
+830,Sandile,PFL,64,26,869,660,920,jpg,named/0830_Sandile_PFL_64.jpg,by_id/830.jpg
+831,Krokorok,PFL,65,26,870,660,920,jpg,named/0831_Krokorok_PFL_65.jpg,by_id/831.jpg
+832,Krookodile,PFL,66,26,871,660,920,jpg,named/0832_Krookodile_PFL_66.jpg,by_id/832.jpg
+833,Toxel,PFL,67,26,872,660,920,jpg,named/0833_Toxel_PFL_67.jpg,by_id/833.jpg
+834,Toxtricity,PFL,68,26,873,660,920,jpg,named/0834_Toxtricity_PFL_68.jpg,by_id/834.jpg
+835,Empoleon ex,PFL,70,26,874,660,920,jpg,named/0835_Empoleon_ex_PFL_70.jpg,by_id/835.jpg
+836,Bronzor,PFL,71,26,875,660,920,jpg,named/0836_Bronzor_PFL_71.jpg,by_id/836.jpg
+837,Bronzong,PFL,72,26,876,660,920,jpg,named/0837_Bronzong_PFL_72.jpg,by_id/837.jpg
+838,Togedemaru,PFL,73,26,877,660,920,jpg,named/0838_Togedemaru_PFL_73.jpg,by_id/838.jpg
+839,Duraludon,PFL,74,26,878,660,920,jpg,named/0839_Duraludon_PFL_74.jpg,by_id/839.jpg
+840,Archaludon,PFL,75,26,879,660,920,jpg,named/0840_Archaludon_PFL_75.jpg,by_id/840.jpg
+841,Jigglypuff,PFL,76,26,880,660,920,jpg,named/0841_Jigglypuff_PFL_76.jpg,by_id/841.jpg
+842,Wigglytuff,PFL,77,26,881,660,920,jpg,named/0842_Wigglytuff_PFL_77.jpg,by_id/842.jpg
+843,Aipom,PFL,78,26,882,660,920,jpg,named/0843_Aipom_PFL_78.jpg,by_id/843.jpg
+844,Ambipom,PFL,79,26,883,660,920,jpg,named/0844_Ambipom_PFL_79.jpg,by_id/844.jpg
+845,Smeargle,PFL,80,26,884,660,920,jpg,named/0845_Smeargle_PFL_80.jpg,by_id/845.jpg
+846,Zigzagoon,PFL,81,26,885,660,920,jpg,named/0846_Zigzagoon_PFL_81.jpg,by_id/846.jpg
+847,Linoone,PFL,82,26,886,660,920,jpg,named/0847_Linoone_PFL_82.jpg,by_id/847.jpg
+848,Buneary,PFL,83,26,887,660,920,jpg,named/0848_Buneary_PFL_83.jpg,by_id/848.jpg
+849,Mega Lopunny ex,PFL,84,26,888,660,920,jpg,named/0849_Mega_Lopunny_ex_PFL_84.jpg,by_id/849.jpg
+850,Wurmple,ASC,11,26,889,660,920,jpg,named/0850_Wurmple_ASC_11.jpg,by_id/850.jpg
+851,Silcoon,ASC,12,26,890,660,920,jpg,named/0851_Silcoon_ASC_12.jpg,by_id/851.jpg
+852,Beautifly,ASC,13,26,891,660,920,jpg,named/0852_Beautifly_ASC_13.jpg,by_id/852.jpg
+853,Cascoon,ASC,14,26,892,660,920,jpg,named/0853_Cascoon_ASC_14.jpg,by_id/853.jpg
+854,Dustox,ASC,15,26,893,660,920,jpg,named/0854_Dustox_ASC_15.jpg,by_id/854.jpg
+855,Entei,ASC,25,26,894,660,920,jpg,named/0855_Entei_ASC_25.jpg,by_id/855.jpg
+856,Numel,ASC,27,26,895,660,920,jpg,named/0856_Numel_ASC_27.jpg,by_id/856.jpg
+857,Camerupt,ASC,28,26,896,660,920,jpg,named/0857_Camerupt_ASC_28.jpg,by_id/857.jpg
+858,Psyduck,ASC,39,26,897,660,920,jpg,named/0858_Psyduck_ASC_39.jpg,by_id/858.jpg
+859,Golduck,ASC,40,27,898,660,920,jpg,named/0859_Golduck_ASC_40.jpg,by_id/859.jpg
+860,Snorunt,ASC,46,27,899,660,920,jpg,named/0860_Snorunt_ASC_46.jpg,by_id/860.jpg
+861,Mega Froslass ex,ASC,47,27,900,660,920,jpg,named/0861_Mega_Froslass_ex_ASC_47.jpg,by_id/861.jpg
+862,N's Vanillite,ASC,49,27,901,660,920,jpg,named/0862_N's_Vanillite_ASC_49.jpg,by_id/862.jpg
+863,N's Vanillish,ASC,50,27,902,660,920,jpg,named/0863_N's_Vanillish_ASC_50.jpg,by_id/863.jpg
+864,N's Vanilluxe,ASC,51,27,903,660,920,jpg,named/0864_N's_Vanilluxe_ASC_51.jpg,by_id/864.jpg
+865,Snom,ASC,52,27,904,660,920,jpg,named/0865_Snom_ASC_52.jpg,by_id/865.jpg
+866,Frosmoth,ASC,53,27,905,660,920,jpg,named/0866_Frosmoth_ASC_53.jpg,by_id/866.jpg
+867,Glastrier,ASC,54,27,906,660,920,jpg,named/0867_Glastrier_ASC_54.jpg,by_id/867.jpg
+868,Mega Eelektross ex,ASC,61,27,907,660,920,jpg,named/0868_Mega_Eelektross_ex_ASC_61.jpg,by_id/868.jpg
+869,Stunfisk,ASC,62,27,908,660,920,jpg,named/0869_Stunfisk_ASC_62.jpg,by_id/869.jpg
+870,Helioptile,ASC,63,27,909,660,920,jpg,named/0870_Helioptile_ASC_63.jpg,by_id/870.jpg
+871,Heliolisk,ASC,64,27,910,660,920,jpg,named/0871_Heliolisk_ASC_64.jpg,by_id/871.jpg
+872,Tapu Koko,ASC,67,27,911,660,920,jpg,named/0872_Tapu_Koko_ASC_67.jpg,by_id/872.jpg
+873,Team Rocket's Exeggcute,ASC,77,27,912,660,920,jpg,named/0873_Team_Rocket's_Exeggcute_ASC_77.jpg,by_id/873.jpg
+874,Team Rocket's Exeggutor,ASC,78,27,913,660,920,jpg,named/0874_Team_Rocket's_Exeggutor_ASC_78.jpg,by_id/874.jpg
+875,Misdreavus,ASC,85,27,914,660,920,jpg,named/0875_Misdreavus_ASC_85.jpg,by_id/875.jpg
+876,Mismagius,ASC,86,27,915,660,920,jpg,named/0876_Mismagius_ASC_86.jpg,by_id/876.jpg
+877,Rotom,ASC,92,27,916,660,920,jpg,named/0877_Rotom_ASC_92.jpg,by_id/877.jpg
+878,Hop's Phantump,ASC,95,27,917,660,920,jpg,named/0878_Hop's_Phantump_ASC_95.jpg,by_id/878.jpg
+879,Hop's Trevenant,ASC,96,27,918,660,920,jpg,named/0879_Hop's_Trevenant_ASC_96.jpg,by_id/879.jpg
+880,Spectrier,ASC,98,27,919,660,920,jpg,named/0880_Spectrier_ASC_98.jpg,by_id/880.jpg
+881,Team Rocket's Diglett,ASC,100,27,920,660,920,jpg,named/0881_Team_Rocket's_Diglett_ASC_100.jpg,by_id/881.jpg
+882,Team Rocket's Dugtrio,ASC,101,27,921,660,920,jpg,named/0882_Team_Rocket's_Dugtrio_ASC_101.jpg,by_id/882.jpg
+883,Meditite,ASC,103,27,922,660,920,jpg,named/0883_Meditite_ASC_103.jpg,by_id/883.jpg
+884,Medicham,ASC,104,27,923,660,920,jpg,named/0884_Medicham_ASC_104.jpg,by_id/884.jpg
+885,Pancham,ASC,115,27,924,660,920,jpg,named/0885_Pancham_ASC_115.jpg,by_id/885.jpg
+886,Mega Hawlucha ex,ASC,116,27,925,660,920,jpg,named/0886_Mega_Hawlucha_ex_ASC_116.jpg,by_id/886.jpg
+887,Rolycoly,ASC,118,27,926,660,920,jpg,named/0887_Rolycoly_ASC_118.jpg,by_id/887.jpg
+888,Carkol,ASC,119,27,927,660,920,jpg,named/0888_Carkol_ASC_119.jpg,by_id/888.jpg
+889,Coalossal,ASC,120,27,928,660,920,jpg,named/0889_Coalossal_ASC_120.jpg,by_id/889.jpg
+890,Okidogi,ASC,122,27,929,660,920,jpg,named/0890_Okidogi_ASC_122.jpg,by_id/890.jpg
+891,Team Rocket's Honchkrow,ASC,127,27,930,660,920,jpg,named/0891_Team_Rocket's_Honchkrow_ASC_127.jpg,by_id/891.jpg
+892,Galarian Zigzagoon,ASC,130,28,931,660,920,jpg,named/0892_Galarian_Zigzagoon_ASC_130.jpg,by_id/892.jpg
+893,Galarian Linoone,ASC,131,28,932,660,920,jpg,named/0893_Galarian_Linoone_ASC_131.jpg,by_id/893.jpg
+894,Galarian Obstagoon,ASC,132,28,933,660,920,jpg,named/0894_Galarian_Obstagoon_ASC_132.jpg,by_id/894.jpg
+895,Scraggy,ASC,134,28,934,660,920,jpg,named/0895_Scraggy_ASC_134.jpg,by_id/895.jpg
+896,Mega Scrafty ex,ASC,135,28,935,660,920,jpg,named/0896_Mega_Scrafty_ex_ASC_135.jpg,by_id/896.jpg
+897,Pangoro,ASC,140,28,936,660,920,jpg,named/0897_Pangoro_ASC_140.jpg,by_id/897.jpg
+898,Pecharunt,ASC,143,28,937,660,920,jpg,named/0898_Pecharunt_ASC_143.jpg,by_id/898.jpg
+899,Pawniard,ASC,146,28,938,660,920,jpg,named/0899_Pawniard_ASC_146.jpg,by_id/899.jpg
+900,Bisharp,ASC,147,28,939,660,920,jpg,named/0900_Bisharp_ASC_147.jpg,by_id/900.jpg
+901,Kingambit,ASC,148,28,940,660,920,jpg,named/0901_Kingambit_ASC_148.jpg,by_id/901.jpg
+902,Dratini,ASC,150,28,941,660,920,jpg,named/0902_Dratini_ASC_150.jpg,by_id/902.jpg
+903,Dragonair,ASC,151,28,942,660,920,jpg,named/0903_Dragonair_ASC_151.jpg,by_id/903.jpg
+904,Mega Dragonite ex,ASC,152,28,943,660,920,jpg,named/0904_Mega_Dragonite_ex_ASC_152.jpg,by_id/904.jpg
+905,Rayquaza,ASC,153,28,944,660,920,jpg,named/0905_Rayquaza_ASC_153.jpg,by_id/905.jpg
+906,N's Zekrom,ASC,155,28,945,660,920,jpg,named/0906_N's_Zekrom_ASC_155.jpg,by_id/906.jpg
+907,Noibat,ASC,156,28,946,660,920,jpg,named/0907_Noibat_ASC_156.jpg,by_id/907.jpg
+908,Noivern,ASC,157,28,947,660,920,jpg,named/0908_Noivern_ASC_157.jpg,by_id/908.jpg
+909,Erika's Oddish,ASC,1,28,948,660,920,jpg,named/0909_Erika's_Oddish_ASC_1.jpg,by_id/909.jpg
+910,Erika's Gloom,ASC,2,28,949,660,920,jpg,named/0910_Erika's_Gloom_ASC_2.jpg,by_id/910.jpg
+911,Erika's Vileplume ex,ASC,3,28,950,660,920,jpg,named/0911_Erika's_Vileplume_ex_ASC_3.jpg,by_id/911.jpg
+912,Erika's Bellsprout,ASC,4,28,951,660,920,jpg,named/0912_Erika's_Bellsprout_ASC_4.jpg,by_id/912.jpg
+913,Erika's Weepinbell,ASC,5,28,952,660,920,jpg,named/0913_Erika's_Weepinbell_ASC_5.jpg,by_id/913.jpg
+914,Erika's Victreebel,ASC,6,28,953,660,920,jpg,named/0914_Erika's_Victreebel_ASC_6.jpg,by_id/914.jpg
+915,Erika's Tangela,ASC,7,28,954,660,920,jpg,named/0915_Erika's_Tangela_ASC_7.jpg,by_id/915.jpg
+916,Scyther,,1,28,955,660,920,jpg,named/0916_Scyther_unnamed_1.jpg,by_id/916.jpg
+917,Chikorita,ASC,8,28,956,660,920,jpg,named/0917_Chikorita_ASC_8.jpg,by_id/917.jpg
+918,Bayleef,ASC,9,28,957,660,920,jpg,named/0918_Bayleef_ASC_9.jpg,by_id/918.jpg
+919,Mega Meganium ex,ASC,10,28,958,660,920,jpg,named/0919_Mega_Meganium_ex_ASC_10.jpg,by_id/919.jpg
+920,Tapu Bulu,SFA,6,28,959,660,920,jpg,named/0920_Tapu_Bulu_SFA_6.jpg,by_id/920.jpg
+921,Dipplin,SCR,13,28,960,660,920,jpg,named/0921_Dipplin_SCR_13.jpg,by_id/921.jpg
+922,Sprigatito,JTG,16,28,961,660,920,jpg,named/0922_Sprigatito_JTG_16.jpg,by_id/922.jpg
+923,Floragato,JTG,17,28,962,660,920,jpg,named/0923_Floragato_JTG_17.jpg,by_id/923.jpg
+924,Meowscarada,JTG,18,28,963,660,920,jpg,named/0924_Meowscarada_JTG_18.jpg,by_id/924.jpg
+925,Capsakid,,12,29,964,660,923,jpg,named/0925_Capsakid_unnamed_12.jpg,by_id/925.jpg
+926,Charmander,ASC,20,29,965,660,920,jpg,named/0926_Charmander_ASC_20.jpg,by_id/926.jpg
+927,Charmeleon,ASC,21,29,966,660,920,jpg,named/0927_Charmeleon_ASC_21.jpg,by_id/927.jpg
+928,Mega Charizard Y ex,ASC,22,29,967,660,920,jpg,named/0928_Mega_Charizard_Y_ex_ASC_22.jpg,by_id/928.jpg
+929,Magmar,,20,29,968,660,920,jpg,named/0929_Magmar_unnamed_20.jpg,by_id/929.jpg
+930,Tepig,ASC,29,29,969,660,920,jpg,named/0930_Tepig_ASC_29.jpg,by_id/930.jpg
+931,Pignite,ASC,30,29,970,660,920,jpg,named/0931_Pignite_ASC_30.jpg,by_id/931.jpg
+932,Mega Emboar ex,ASC,31,29,971,660,920,jpg,named/0932_Mega_Emboar_ex_ASC_31.jpg,by_id/932.jpg
+933,Larvesta,SSP,24,29,972,660,923,jpg,named/0933_Larvesta_SSP_24.jpg,by_id/933.jpg
+934,Centiskorch,SSP,28,29,973,660,923,jpg,named/0934_Centiskorch_SSP_28.jpg,by_id/934.jpg
+935,Fuecoco,SSP,29,29,974,660,923,jpg,named/0935_Fuecoco_SSP_29.jpg,by_id/935.jpg
+936,Crocalor,SSP,30,29,975,660,923,jpg,named/0936_Crocalor_SSP_30.jpg,by_id/936.jpg
+937,Totodile,ASC,41,29,976,660,920,jpg,named/0937_Totodile_ASC_41.jpg,by_id/937.jpg
+938,Croconaw,ASC,42,29,977,660,920,jpg,named/0938_Croconaw_ASC_42.jpg,by_id/938.jpg
+939,Mega Feraligatr ex,ASC,43,29,978,660,920,jpg,named/0939_Mega_Feraligatr_ex_ASC_43.jpg,by_id/939.jpg
+940,Glalie,TWM,52,29,979,660,920,jpg,named/0940_Glalie_TWM_52.jpg,by_id/940.jpg
+941,Spheal,SSP,43,29,980,660,923,jpg,named/0941_Spheal_SSP_43.jpg,by_id/941.jpg
+942,Sealeo,SSP,44,29,981,660,923,jpg,named/0942_Sealeo_SSP_44.jpg,by_id/942.jpg
+943,Walrein,SSP,45,29,982,660,923,jpg,named/0943_Walrein_SSP_45.jpg,by_id/943.jpg
+944,Regice ex,ASC,48,29,983,660,920,jpg,named/0944_Regice_ex_ASC_48.jpg,by_id/944.jpg
+945,Froakie,SCR,39,29,984,660,920,jpg,named/0945_Froakie_SCR_39.jpg,by_id/945.jpg
+946,Cramorant,TWM,58,29,985,660,920,jpg,named/0946_Cramorant_TWM_58.jpg,by_id/946.jpg
+947,Quaxly,,50,29,986,660,923,jpg,named/0947_Quaxly_unnamed_50.jpg,by_id/947.jpg
+948,Pikachu,ASC,55,29,987,660,920,jpg,named/0948_Pikachu_ASC_55.jpg,by_id/948.jpg
+949,Raichu,ASC,56,29,988,660,920,jpg,named/0949_Raichu_ASC_56.jpg,by_id/949.jpg
+950,Magnemite,SSP,58,29,989,660,923,jpg,named/0950_Magnemite_SSP_58.jpg,by_id/950.jpg
+951,Voltorb ex,ASC,58,29,990,660,920,jpg,named/0951_Voltorb_ex_ASC_58.jpg,by_id/951.jpg
+952,Zapdos,PROMO,157,29,991,451,630,jpg,named/0952_Zapdos_PROMO_157.jpg,by_id/952.jpg
+953,Zapdos,TWM,65,29,992,660,920,jpg,named/0953_Zapdos_TWM_65.jpg,by_id/953.jpg
+954,Luxray ex,TWM,68,29,993,660,920,jpg,named/0954_Luxray_ex_TWM_68.jpg,by_id/954.jpg
+955,Helioptile,TWM,70,29,994,660,920,jpg,named/0955_Helioptile_TWM_70.jpg,by_id/955.jpg
+956,Zeraora,SCR,55,29,995,660,920,jpg,named/0956_Zeraora_SCR_55.jpg,by_id/956.jpg
+957,Miraidon ex,ASC,73,29,996,660,920,jpg,named/0957_Miraidon_ex_ASC_73.jpg,by_id/957.jpg
+958,Clefable,ASC,75,30,997,660,920,jpg,named/0958_Clefable_ASC_75.jpg,by_id/958.jpg
+959,Togepi,ASC,80,30,998,660,920,jpg,named/0959_Togepi_ASC_80.jpg,by_id/959.jpg
+960,Togetic,ASC,81,30,999,660,920,jpg,named/0960_Togetic_ASC_81.jpg,by_id/960.jpg
+961,Marill,ASC,83,30,1000,660,920,jpg,named/0961_Marill_ASC_83.jpg,by_id/961.jpg
+962,Azumarill ex,ASC,84,30,1001,660,920,jpg,named/0962_Azumarill_ex_ASC_84.jpg,by_id/962.jpg
+963,Shuppet,ASC,90,30,1002,660,920,jpg,named/0963_Shuppet_ASC_90.jpg,by_id/963.jpg
+964,Beheeyem,TEF,74,30,1003,660,920,jpg,named/0964_Beheeyem_TEF_74.jpg,by_id/964.jpg
+965,Swirlix,ASC,93,30,1004,660,920,jpg,named/0965_Swirlix_ASC_93.jpg,by_id/965.jpg
+966,Slurpuff,ASC,94,30,1005,660,920,jpg,named/0966_Slurpuff_ASC_94.jpg,by_id/966.jpg
+967,Fidough,SCR,66,30,1006,660,920,jpg,named/0967_Fidough_SCR_66.jpg,by_id/967.jpg
+968,Dachsbun ex,SCR,67,30,1007,660,920,jpg,named/0968_Dachsbun_ex_SCR_67.jpg,by_id/968.jpg
+969,Scream Tail ex,TWM,94,30,1008,660,920,jpg,named/0969_Scream_Tail_ex_TWM_94.jpg,by_id/969.jpg
+970,Fezandipiti,TWM,96,30,1009,660,920,jpg,named/0970_Fezandipiti_TWM_96.jpg,by_id/970.jpg
+971,Iron Boulder,SCR,71,30,1010,660,920,jpg,named/0971_Iron_Boulder_SCR_71.jpg,by_id/971.jpg
+972,Hitmontop,ASC,102,30,1011,660,920,jpg,named/0972_Hitmontop_ASC_102.jpg,by_id/972.jpg
+973,Groudon,ASC,108,30,1012,660,920,jpg,named/0973_Groudon_ASC_108.jpg,by_id/973.jpg
+974,Riolu,SCR,81,30,1013,660,920,jpg,named/0974_Riolu_SCR_81.jpg,by_id/974.jpg
+975,Stunfisk ex,ASC,114,30,1014,660,920,jpg,named/0975_Stunfisk_ex_ASC_114.jpg,by_id/975.jpg
+976,Carbink,ASC,117,30,1015,660,920,jpg,named/0976_Carbink_ASC_117.jpg,by_id/976.jpg
+977,Crabrawler,SCR,87,30,1016,660,920,jpg,named/0977_Crabrawler_SCR_87.jpg,by_id/977.jpg
+978,Passimian,SSP,111,30,1017,660,923,jpg,named/0978_Passimian_SSP_111.jpg,by_id/978.jpg
+979,Koraidon ex,ASC,121,30,1018,660,920,jpg,named/0979_Koraidon_ex_ASC_121.jpg,by_id/979.jpg
+980,Venipede,TWM,115,30,1019,660,920,jpg,named/0980_Venipede_TWM_115.jpg,by_id/980.jpg
+981,Whirlipede,TWM,116,30,1020,660,920,jpg,named/0981_Whirlipede_TWM_116.jpg,by_id/981.jpg
+982,Scolipede,TWM,117,30,1021,660,920,jpg,named/0982_Scolipede_TWM_117.jpg,by_id/982.jpg
+983,Vullaby,ASC,138,30,1022,660,920,jpg,named/0983_Vullaby_ASC_138.jpg,by_id/983.jpg
+984,Mandibuzz ex,ASC,139,30,1023,660,920,jpg,named/0984_Mandibuzz_ex_ASC_139.jpg,by_id/984.jpg
+985,Hoopa,ASC,141,30,1024,660,920,jpg,named/0985_Hoopa_ASC_141.jpg,by_id/985.jpg
+986,Brute Bonnet,TWM,118,30,1025,660,920,jpg,named/0986_Brute_Bonnet_TWM_118.jpg,by_id/986.jpg
+987,Mawile,ASC,144,30,1026,660,920,jpg,named/0987_Mawile_ASC_144.jpg,by_id/987.jpg
+988,Registeel ex,ASC,145,30,1027,660,920,jpg,named/0988_Registeel_ex_ASC_145.jpg,by_id/988.jpg
+989,Bronzor,SSP,126,30,1028,660,923,jpg,named/0989_Bronzor_SSP_126.jpg,by_id/989.jpg
+990,Togedemaru ex,ASC,149,30,1029,660,920,jpg,named/0990_Togedemaru_ex_ASC_149.jpg,by_id/990.jpg
+991,Melmetal,TEF,117,31,1030,660,920,jpg,named/0991_Melmetal_TEF_117.jpg,by_id/991.jpg
+992,Duraludon,,129,31,1031,660,923,jpg,named/0992_Duraludon_unnamed_129.jpg,by_id/992.jpg
+993,Orthworm ex,SCR,110,31,1032,660,920,jpg,named/0993_Orthworm_ex_SCR_110.jpg,by_id/993.jpg
+994,Fraxure,SFA,45,31,1033,660,920,jpg,named/0994_Fraxure_SFA_45.jpg,by_id/994.jpg
+995,Haxorus,SFA,46,31,1034,660,920,jpg,named/0995_Haxorus_SFA_46.jpg,by_id/995.jpg
+996,Larry's Dunsparce,ASC,163,31,1035,660,920,jpg,named/0996_Larry's_Dunsparce_ASC_163.jpg,by_id/996.jpg
+997,Larry's Dudunsparce ex,ASC,164,31,1036,660,920,jpg,named/0997_Larry's_Dudunsparce_ex_ASC_164.jpg,by_id/997.jpg
+998,Slakoth,,145,31,1037,660,923,jpg,named/0998_Slakoth_unnamed_145.jpg,by_id/998.jpg
+999,Vigoroth,,146,31,1038,660,923,jpg,named/0999_Vigoroth_unnamed_146.jpg,by_id/999.jpg
+1000,Skitty,ASC,165,31,1039,660,920,jpg,named/1000_Skitty_ASC_165.jpg,by_id/1000.jpg
+1001,Delcatty,ASC,166,31,1040,660,920,jpg,named/1001_Delcatty_ASC_166.jpg,by_id/1001.jpg
+1002,Zangoose ex,ASC,167,31,1041,660,920,jpg,named/1002_Zangoose_ex_ASC_167.jpg,by_id/1002.jpg
+1003,Larry's Starly,ASC,168,31,1042,660,920,jpg,named/1003_Larry's_Starly_ASC_168.jpg,by_id/1003.jpg
+1004,Larry's Staravia,ASC,169,31,1043,660,920,jpg,named/1004_Larry's_Staravia_ASC_169.jpg,by_id/1004.jpg
+1005,Larry's Staraptor,ASC,170,31,1044,660,920,jpg,named/1005_Larry's_Staraptor_ASC_170.jpg,by_id/1005.jpg
+1006,Mega Audino ex,ASC,172,31,1045,660,920,jpg,named/1006_Mega_Audino_ex_ASC_172.jpg,by_id/1006.jpg
+1007,Larry's Rufflet,ASC,173,31,1046,660,920,jpg,named/1007_Larry's_Rufflet_ASC_173.jpg,by_id/1007.jpg
+1008,Larry's Braviary,ASC,174,31,1047,660,920,jpg,named/1008_Larry's_Braviary_ASC_174.jpg,by_id/1008.jpg
+1009,Larry's Komala,ASC,175,31,1048,660,920,jpg,named/1009_Larry's_Komala_ASC_175.jpg,by_id/1009.jpg
+1010,Drampa,ASC,176,31,1049,660,920,jpg,named/1010_Drampa_ASC_176.jpg,by_id/1010.jpg
+1011,Spinarak,POR,1,31,1050,451,630,jpg,named/1011_Spinarak_POR_1.jpg,by_id/1011.jpg
+1012,Ariados,POR,2,31,1051,451,630,jpg,named/1012_Ariados_POR_2.jpg,by_id/1012.jpg
+1013,Shaymin,POR,3,31,1052,451,630,jpg,named/1013_Shaymin_POR_3.jpg,by_id/1013.jpg
+1014,Snivy,POR,4,31,1053,451,630,jpg,named/1014_Snivy_POR_4.jpg,by_id/1014.jpg
+1015,Servine,POR,5,31,1054,451,630,jpg,named/1015_Servine_POR_5.jpg,by_id/1015.jpg
+1016,Serperior,POR,6,31,1055,451,630,jpg,named/1016_Serperior_POR_6.jpg,by_id/1016.jpg
+1017,Scatterbug,POR,7,31,1056,451,630,jpg,named/1017_Scatterbug_POR_7.jpg,by_id/1017.jpg
+1018,Spewpa,POR,8,31,1057,451,630,jpg,named/1018_Spewpa_POR_8.jpg,by_id/1018.jpg
+1019,Vivillon,POR,9,31,1058,451,630,jpg,named/1019_Vivillon_POR_9.jpg,by_id/1019.jpg
+1020,Rowlet,POR,10,31,1059,451,630,jpg,named/1020_Rowlet_POR_10.jpg,by_id/1020.jpg
+1021,Dartrix,POR,11,31,1060,451,630,jpg,named/1021_Dartrix_POR_11.jpg,by_id/1021.jpg
+1022,Decidueye ex,POR,12,31,1061,451,630,jpg,named/1022_Decidueye_ex_POR_12.jpg,by_id/1022.jpg
+1023,Fletchinder,POR,13,31,1062,451,630,jpg,named/1023_Fletchinder_POR_13.jpg,by_id/1023.jpg
+1024,Talonflame,POR,14,32,1063,451,630,jpg,named/1024_Talonflame_POR_14.jpg,by_id/1024.jpg
+1025,Salandit,POR,15,32,1064,451,630,jpg,named/1025_Salandit_POR_15.jpg,by_id/1025.jpg
+1026,Salazzle ex,POR,16,32,1065,451,630,jpg,named/1026_Salazzle_ex_POR_16.jpg,by_id/1026.jpg
+1027,Turtonator,POR,17,32,1066,451,630,jpg,named/1027_Turtonator_POR_17.jpg,by_id/1027.jpg
+1028,Seel,POR,18,32,1067,451,630,jpg,named/1028_Seel_POR_18.jpg,by_id/1028.jpg
+1029,Dewgong,POR,19,32,1068,451,630,jpg,named/1029_Dewgong_POR_19.jpg,by_id/1029.jpg
+1030,Staryu,POR,20,32,1069,451,630,jpg,named/1030_Staryu_POR_20.jpg,by_id/1030.jpg
+1031,Mega Starmie ex,POR,21,32,1070,451,630,jpg,named/1031_Mega_Starmie_ex_POR_21.jpg,by_id/1031.jpg
+1032,Amaura,POR,23,32,1071,451,630,jpg,named/1032_Amaura_POR_23.jpg,by_id/1032.jpg
+1033,Aurorus,POR,24,32,1072,451,630,jpg,named/1033_Aurorus_POR_24.jpg,by_id/1033.jpg
+1034,Volcanion,POR,25,32,1073,451,630,jpg,named/1034_Volcanion_POR_25.jpg,by_id/1034.jpg
+1035,Shinx,POR,26,32,1074,451,630,jpg,named/1035_Shinx_POR_26.jpg,by_id/1035.jpg
+1036,Luxio,POR,27,32,1075,451,630,jpg,named/1036_Luxio_POR_27.jpg,by_id/1036.jpg
+1037,Luxray,POR,28,32,1076,451,630,jpg,named/1037_Luxray_POR_28.jpg,by_id/1037.jpg
+1038,Dedenne,POR,29,32,1077,451,630,jpg,named/1038_Dedenne_POR_29.jpg,by_id/1038.jpg
+1039,Clefairy,POR,30,32,1078,451,630,jpg,named/1039_Clefairy_POR_30.jpg,by_id/1039.jpg
+1040,Mega Clefable ex,POR,31,32,1079,451,630,jpg,named/1040_Mega_Clefable_ex_POR_31.jpg,by_id/1040.jpg
+1041,Mawile,POR,32,32,1080,451,630,jpg,named/1041_Mawile_POR_32.jpg,by_id/1041.jpg
+1042,Espurr,POR,33,32,1081,451,630,jpg,named/1042_Espurr_POR_33.jpg,by_id/1042.jpg
+1043,Meowstic,POR,34,32,1082,451,630,jpg,named/1043_Meowstic_POR_34.jpg,by_id/1043.jpg
+1044,Spritzee,POR,35,32,1083,451,630,jpg,named/1044_Spritzee_POR_35.jpg,by_id/1044.jpg
+1045,Aromatisse,POR,36,32,1084,451,630,jpg,named/1045_Aromatisse_POR_36.jpg,by_id/1045.jpg
+1046,Nosepass,POR,37,32,1085,451,630,jpg,named/1046_Nosepass_POR_37.jpg,by_id/1046.jpg
+1047,Probopass,POR,38,32,1086,451,630,jpg,named/1047_Probopass_POR_38.jpg,by_id/1047.jpg
+1048,Hippopotas,POR,39,32,1087,451,630,jpg,named/1048_Hippopotas_POR_39.jpg,by_id/1048.jpg
+1049,Hippowdon,POR,40,32,1088,451,630,jpg,named/1049_Hippowdon_POR_40.jpg,by_id/1049.jpg
+1050,Landorus,POR,41,32,1089,451,630,jpg,named/1050_Landorus_POR_41.jpg,by_id/1050.jpg
+1051,Binacle,POR,42,32,1090,451,630,jpg,named/1051_Binacle_POR_42.jpg,by_id/1051.jpg
+1052,Barbaracle,POR,43,32,1091,451,630,jpg,named/1052_Barbaracle_POR_43.jpg,by_id/1052.jpg
+1053,Tyrunt,POR,44,32,1092,451,630,jpg,named/1053_Tyrunt_POR_44.jpg,by_id/1053.jpg
+1054,Tyrantrum,POR,45,32,1093,451,630,jpg,named/1054_Tyrantrum_POR_45.jpg,by_id/1054.jpg
+1055,Hawlucha,POR,46,32,1094,451,630,jpg,named/1055_Hawlucha_POR_46.jpg,by_id/1055.jpg
+1056,Mega Zygarde ex,POR,47,32,1095,451,630,jpg,named/1056_Mega_Zygarde_ex_POR_47.jpg,by_id/1056.jpg
+1057,Gastly,POR,48,33,1096,451,630,jpg,named/1057_Gastly_POR_48.jpg,by_id/1057.jpg
+1058,Haunter,POR,49,33,1097,451,630,jpg,named/1058_Haunter_POR_49.jpg,by_id/1058.jpg
+1059,Gengar,POR,50,33,1098,451,630,jpg,named/1059_Gengar_POR_50.jpg,by_id/1059.jpg
+1060,Skorupi,POR,51,33,1099,451,630,jpg,named/1060_Skorupi_POR_51.jpg,by_id/1060.jpg
+1061,Drapion,POR,52,33,1100,451,630,jpg,named/1061_Drapion_POR_52.jpg,by_id/1061.jpg
+1062,Yveltal ex,POR,53,33,1101,451,630,jpg,named/1062_Yveltal_ex_POR_53.jpg,by_id/1062.jpg
+1063,Chien-Pao,POR,54,33,1102,451,630,jpg,named/1063_Chien-Pao_POR_54.jpg,by_id/1063.jpg
+1064,Mega Skarmory ex,POR,55,33,1103,451,630,jpg,named/1064_Mega_Skarmory_ex_POR_55.jpg,by_id/1064.jpg
+1065,Honedge,POR,56,33,1104,451,630,jpg,named/1065_Honedge_POR_56.jpg,by_id/1065.jpg
+1066,Doublade,POR,57,33,1105,451,630,jpg,named/1066_Doublade_POR_57.jpg,by_id/1066.jpg
+1067,Aegislash,POR,58,33,1106,451,630,jpg,named/1067_Aegislash_POR_58.jpg,by_id/1067.jpg
+1068,Klefki,POR,59,33,1107,451,630,jpg,named/1068_Klefki_POR_59.jpg,by_id/1068.jpg
+1069,Rattata,POR,60,33,1108,451,630,jpg,named/1069_Rattata_POR_60.jpg,by_id/1069.jpg
+1070,Raticate,POR,61,33,1109,451,630,jpg,named/1070_Raticate_POR_61.jpg,by_id/1070.jpg
+1071,Meowth ex,POR,62,33,1110,451,630,jpg,named/1071_Meowth_ex_POR_62.jpg,by_id/1071.jpg
+1072,Snorlax,POR,63,33,1111,451,630,jpg,named/1072_Snorlax_POR_63.jpg,by_id/1072.jpg
+1073,Bunnelby,POR,64,33,1112,451,630,jpg,named/1073_Bunnelby_POR_64.jpg,by_id/1073.jpg
+1074,Diggersby,POR,65,33,1113,451,630,jpg,named/1074_Diggersby_POR_65.jpg,by_id/1074.jpg
+1075,Fletchling,POR,66,33,1114,451,630,jpg,named/1075_Fletchling_POR_66.jpg,by_id/1075.jpg
+1076,Furfrou,POR,67,33,1115,451,630,jpg,named/1076_Furfrou_POR_67.jpg,by_id/1076.jpg
+1077,Roto-Stick,PRE,127,33,1116,660,920,jpg,named/1077_Roto-Stick_PRE_127.jpg,by_id/1077.jpg
+1078,Hole-Digging Shovel,POR,74,33,1117,451,630,jpg,named/1078_Hole-Digging_Shovel_POR_74.jpg,by_id/1078.jpg
+1079,Rare Candy,SVI,191,33,1118,660,920,jpg,named/1079_Rare_Candy_SVI_191.jpg,by_id/1079.jpg
+1080,Unfair Stamp,TWM,165,33,1119,660,920,jpg,named/1080_Unfair_Stamp_TWM_165.jpg,by_id/1080.jpg
+1081,Enhanced Hammer,TWM,148,33,1120,660,920,jpg,named/1081_Enhanced_Hammer_TWM_148.jpg,by_id/1081.jpg
+1082,Hyper Aroma,TWM,152,33,1121,660,920,jpg,named/1082_Hyper_Aroma_TWM_152.jpg,by_id/1082.jpg
+1083,Love Ball,,156,33,1122,660,920,jpg,named/1083_Love_Ball_unnamed_156.jpg,by_id/1083.jpg
+1084,Boxed Order,TEF,143,33,1123,660,920,jpg,named/1084_Boxed_Order_TEF_143.jpg,by_id/1084.jpg
+1085,Awakening Drum,TEF,141,33,1124,660,920,jpg,named/1085_Awakening_Drum_TEF_141.jpg,by_id/1085.jpg
+1086,Buddy-Buddy Poffin,TEF,144,33,1125,660,920,jpg,named/1086_Buddy-Buddy_Poffin_TEF_144.jpg,by_id/1086.jpg
+1087,Hand Trimmer,TEF,150,33,1126,660,920,jpg,named/1087_Hand_Trimmer_TEF_150.jpg,by_id/1087.jpg
+1088,Prime Catcher,TEF,157,33,1127,660,920,jpg,named/1088_Prime_Catcher_TEF_157.jpg,by_id/1088.jpg
+1089,Reboot Pod,TEF,158,33,1128,660,920,jpg,named/1089_Reboot_Pod_TEF_158.jpg,by_id/1089.jpg
+1090,Ogre’s Mask,TWM,159,34,1129,660,920,jpg,named/1090_Ogre's_Mask_TWM_159.jpg,by_id/1090.jpg
+1091,Accompanying Flute,TWM,142,34,1130,660,920,jpg,named/1091_Accompanying_Flute_TWM_142.jpg,by_id/1091.jpg
+1092,Secret Box,TWM,163,34,1131,660,920,jpg,named/1092_Secret_Box_TWM_163.jpg,by_id/1092.jpg
+1093,Scoop Up Cyclone,TWM,162,34,1132,660,920,jpg,named/1093_Scoop_Up_Cyclone_TWM_162.jpg,by_id/1093.jpg
+1094,Bug Catching Set,TWM,143,34,1133,660,920,jpg,named/1094_Bug_Catching_Set_TWM_143.jpg,by_id/1094.jpg
+1095,Dangerous Laser,SFA,58,34,1134,660,920,jpg,named/1095_Dangerous_Laser_SFA_58.jpg,by_id/1095.jpg
+1096,Poké Vital A,SFA,62,34,1135,660,920,jpg,named/1096_Poké_Vital_A_SFA_62.jpg,by_id/1096.jpg
+1097,Night Stretcher,SFA,61,34,1136,660,920,jpg,named/1097_Night_Stretcher_SFA_61.jpg,by_id/1097.jpg
+1098,Glass Trumpet,SCR,135,34,1137,660,920,jpg,named/1098_Glass_Trumpet_SCR_135.jpg,by_id/1098.jpg
+1099,Antique Root Fossil,SCR,130,34,1138,660,920,jpg,named/1099_Antique_Root_Fossil_SCR_130.jpg,by_id/1099.jpg
+1100,Energy Search Pro,SSP,176,34,1139,660,923,jpg,named/1100_Energy_Search_Pro_SSP_176.jpg,by_id/1100.jpg
+1101,Call Bell,SSP,165,34,1140,660,923,jpg,named/1101_Call_Bell_SSP_165.jpg,by_id/1101.jpg
+1102,Dusk Ball,SSP,175,34,1141,660,923,jpg,named/1102_Dusk_Ball_SSP_175.jpg,by_id/1102.jpg
+1103,Meddling Memo,SSP,181,34,1142,660,923,jpg,named/1103_Meddling_Memo_SSP_181.jpg,by_id/1103.jpg
+1104,Megaton Blower,SSP,182,34,1143,660,923,jpg,named/1104_Megaton_Blower_SSP_182.jpg,by_id/1104.jpg
+1105,Dragon Elixir,SSP,172,34,1144,660,923,jpg,named/1105_Dragon_Elixir_SSP_172.jpg,by_id/1105.jpg
+1106,Deduction Kit,SSP,171,34,1145,660,923,jpg,named/1106_Deduction_Kit_SSP_171.jpg,by_id/1106.jpg
+1107,Scramble Switch,SSP,186,34,1146,660,923,jpg,named/1107_Scramble_Switch_SSP_186.jpg,by_id/1107.jpg
+1108,Chill Teaser Toy,SSP,166,34,1147,660,923,jpg,named/1108_Chill_Teaser_Toy_SSP_166.jpg,by_id/1108.jpg
+1109,Miracle Headset,SSP,183,34,1148,660,923,jpg,named/1109_Miracle_Headset_SSP_183.jpg,by_id/1109.jpg
+1110,Max Rod,PRE,116,34,1149,660,920,jpg,named/1110_Max_Rod_PRE_116.jpg,by_id/1110.jpg
+1111,Treasure Tracker,PRE,131,34,1150,660,920,jpg,named/1111_Treasure_Tracker_PRE_131.jpg,by_id/1111.jpg
+1112,Super Potion,JTG,158,34,1151,660,920,jpg,named/1112_Super_Potion_JTG_158.jpg,by_id/1112.jpg
+1113,N’s PP Up,JTG,153,34,1152,660,920,jpg,named/1113_N's_PP_Up_JTG_153.jpg,by_id/1113.jpg
+1114,Redeemable Ticket,JTG,156,34,1153,660,920,jpg,named/1114_Redeemable_Ticket_JTG_156.jpg,by_id/1114.jpg
+1115,Hop’s Bag,JTG,147,34,1154,660,920,jpg,named/1115_Hop's_Bag_JTG_147.jpg,by_id/1115.jpg
+1116,Energy Switch,SVI,173,34,1155,660,920,jpg,named/1116_Energy_Switch_SVI_173.jpg,by_id/1116.jpg
+1117,Potion,SVI,188,34,1156,451,630,jpg,named/1117_Potion_SVI_188.jpg,by_id/1117.jpg
+1118,Energy Retrieval,SVI,171,34,1157,660,920,jpg,named/1118_Energy_Retrieval_SVI_171.jpg,by_id/1118.jpg
+1119,Energy Search,SVI,172,34,1158,451,630,jpg,named/1119_Energy_Search_SVI_172.jpg,by_id/1119.jpg
+1120,Crushing Hammer,SVI,168,34,1159,451,630,jpg,named/1120_Crushing_Hammer_SVI_168.jpg,by_id/1120.jpg
+1121,Ultra Ball,SVI,196,34,1160,660,920,jpg,named/1121_Ultra_Ball_SVI_196.jpg,by_id/1121.jpg
+1122,Pokégear 3.0,SVI,186,34,1161,660,920,jpg,named/1122_Pokégear_3.0_SVI_186.jpg,by_id/1122.jpg
+1123,Switch,SVI,194,35,1162,660,920,jpg,named/1123_Switch_SVI_194.jpg,by_id/1123.jpg
+1124,Pokémon Catcher,SVI,187,35,1163,451,630,jpg,named/1124_Pokémon_Catcher_SVI_187.jpg,by_id/1124.jpg
+1125,Master Ball,TEF,153,35,1164,660,920,jpg,named/1125_Master_Ball_TEF_153.jpg,by_id/1125.jpg
+1126,Precious Trolley,SSP,185,35,1165,660,923,jpg,named/1126_Precious_Trolley_SSP_185.jpg,by_id/1126.jpg
+1127,Tera Orb,SSP,189,35,1166,660,923,jpg,named/1127_Tera_Orb_SSP_189.jpg,by_id/1127.jpg
+1128,Brilliant Blender,SSP,164,35,1167,660,923,jpg,named/1128_Brilliant_Blender_SSP_164.jpg,by_id/1128.jpg
+1129,Sacred Ash,DRI,168,35,1168,660,920,jpg,named/1129_Sacred_Ash_DRI_168.jpg,by_id/1129.jpg
+1130,Arven's Sandwich,DRI,161,35,1169,660,920,jpg,named/1130_Arven's_Sandwich_DRI_161.jpg,by_id/1130.jpg
+1131,Team Rocket's Bother-Bot,DRI,172,35,1170,660,920,jpg,named/1131_Team_Rocket's_Bother-Bot_DRI_172.jpg,by_id/1131.jpg
+1132,Team Rocket's Great Ball,DRI,175,35,1171,660,920,jpg,named/1132_Team_Rocket's_Great_Ball_DRI_175.jpg,by_id/1132.jpg
+1133,Team Rocket's Venture Bomb,DRI,179,35,1172,660,920,jpg,named/1133_Team_Rocket's_Venture_Bomb_DRI_179.jpg,by_id/1133.jpg
+1134,Team Rocket's Transceiver,DRI,178,35,1173,660,920,jpg,named/1134_Team_Rocket's_Transceiver_DRI_178.jpg,by_id/1134.jpg
+1135,Energy Coin,BLK,81,35,1174,660,920,jpg,named/1135_Energy_Coin_BLK_81.jpg,by_id/1135.jpg
+1136,Antique Cover Fossil,BLK,80,35,1175,660,920,jpg,named/1136_Antique_Cover_Fossil_BLK_80.jpg,by_id/1136.jpg
+1137,Tool Scrapper,WHT,85,35,1176,660,920,jpg,named/1137_Tool_Scrapper_WHT_85.jpg,by_id/1137.jpg
+1138,Antique Plume Fossil,WHT,79,35,1177,660,920,jpg,named/1138_Antique_Plume_Fossil_WHT_79.jpg,by_id/1138.jpg
+1139,Energy Recycler,DRI,164,35,1178,660,920,jpg,named/1139_Energy_Recycler_DRI_164.jpg,by_id/1139.jpg
+1140,Iron Defender,MEG,118,35,1179,660,920,jpg,named/1140_Iron_Defender_MEG_118.jpg,by_id/1140.jpg
+1141,Premium Power Pro,MEG,124,35,1180,660,920,jpg,named/1141_Premium_Power_Pro_MEG_124.jpg,by_id/1141.jpg
+1142,Fighting Gong,MEG,116,35,1181,660,920,jpg,named/1142_Fighting_Gong_MEG_116.jpg,by_id/1142.jpg
+1143,Repel,MEG,126,35,1182,660,920,jpg,named/1143_Repel_MEG_126.jpg,by_id/1143.jpg
+1144,Strange Timepiece,MEG,128,35,1183,660,920,jpg,named/1144_Strange_Timepiece_MEG_128.jpg,by_id/1144.jpg
+1145,Mega Signal,MEG,121,35,1184,660,920,jpg,named/1145_Mega_Signal_MEG_121.jpg,by_id/1145.jpg
+1146,Wondrous Patch,PFL,94,35,1185,660,920,jpg,named/1146_Wondrous_Patch_PFL_94.jpg,by_id/1146.jpg
+1147,Jumbo Ice Cream,PFL,91,35,1186,660,920,jpg,named/1147_Jumbo_Ice_Cream_PFL_91.jpg,by_id/1147.jpg
+1148,Blowtorch,PFL,86,35,1187,660,920,jpg,named/1148_Blowtorch_PFL_86.jpg,by_id/1148.jpg
+1149,Energy Swatter,POR,73,35,1188,451,630,jpg,named/1149_Energy_Swatter_POR_73.jpg,by_id/1149.jpg
+1150,Antique Jaw Fossil,POR,68,35,1189,451,630,jpg,named/1150_Antique_Jaw_Fossil_POR_68.jpg,by_id/1150.jpg
+1151,Antique Sail Fossil,POR,69,35,1190,451,630,jpg,named/1151_Antique_Sail_Fossil_POR_69.jpg,by_id/1151.jpg
+1152,Poké Pad,POR,81,35,1191,451,630,jpg,named/1152_Poké_Pad_POR_81.jpg,by_id/1152.jpg
+1153,Lumiose Galette,POR,78,35,1192,451,630,jpg,named/1153_Lumiose_Galette_POR_78.jpg,by_id/1153.jpg
+1154,Team Rocket’s Hypnotizer,ASC,206,35,1193,660,920,jpg,named/1154_Team_Rocket's_Hypnotizer_ASC_206.jpg,by_id/1154.jpg
+1155,Survival Brace,TWM,164,35,1194,660,920,jpg,named/1155_Survival_Brace_TWM_164.jpg,by_id/1155.jpg
+1156,Lucky Helmet,TWM,158,36,1195,660,920,jpg,named/1156_Lucky_Helmet_TWM_158.jpg,by_id/1156.jpg
+1157,Rescue Board,TEF,159,36,1196,660,920,jpg,named/1157_Rescue_Board_TEF_159.jpg,by_id/1157.jpg
+1158,Maximum Belt,TEF,154,36,1197,660,920,jpg,named/1158_Maximum_Belt_TEF_154.jpg,by_id/1158.jpg
+1159,Hero’s Cape,TEF,152,36,1198,660,920,jpg,named/1159_Hero's_Cape_TEF_152.jpg,by_id/1159.jpg
+1160,Heavy Baton,TEF,151,36,1199,660,920,jpg,named/1160_Heavy_Baton_TEF_151.jpg,by_id/1160.jpg
+1161,Handheld Fan,TWM,150,36,1200,660,920,jpg,named/1161_Handheld_Fan_TWM_150.jpg,by_id/1161.jpg
+1162,Binding Mochi,SFA,55,36,1201,660,920,jpg,named/1162_Binding_Mochi_SFA_55.jpg,by_id/1162.jpg
+1163,Powerglass,SFA,63,36,1202,660,920,jpg,named/1163_Powerglass_SFA_63.jpg,by_id/1163.jpg
+1164,Payapa Berry,SCR,141,36,1203,660,920,jpg,named/1164_Payapa_Berry_SCR_141.jpg,by_id/1164.jpg
+1165,Sparkling Crystal,SCR,142,36,1204,660,920,jpg,named/1165_Sparkling_Crystal_SCR_142.jpg,by_id/1165.jpg
+1166,Gravity Gemstone,SCR,137,36,1205,660,920,jpg,named/1166_Gravity_Gemstone_SCR_137.jpg,by_id/1166.jpg
+1167,Deluxe Bomb,SCR,134,36,1206,660,920,jpg,named/1167_Deluxe_Bomb_SCR_134.jpg,by_id/1167.jpg
+1168,Counter Gain,SSP,169,36,1207,660,923,jpg,named/1168_Counter_Gain_SSP_169.jpg,by_id/1168.jpg
+1169,Amulet of Hope,SSP,162,36,1208,660,923,jpg,named/1169_Amulet_of_Hope_SSP_162.jpg,by_id/1169.jpg
+1170,Haban Berry,PRE,111,36,1209,660,920,jpg,named/1170_Haban_Berry_PRE_111.jpg,by_id/1170.jpg
+1171,Hop’s Choice Band,JTG,148,36,1210,660,920,jpg,named/1171_Hop's_Choice_Band_JTG_148.jpg,by_id/1171.jpg
+1172,Lillie’s Pearl,JTG,151,36,1211,660,920,jpg,named/1172_Lillie's_Pearl_JTG_151.jpg,by_id/1172.jpg
+1173,Cynthia's Power Weight,DRI,162,36,1212,660,920,jpg,named/1173_Cynthia's_Power_Weight_DRI_162.jpg,by_id/1173.jpg
+1174,Air Balloon,BLK,79,36,1213,660,920,jpg,named/1174_Air_Balloon_BLK_79.jpg,by_id/1174.jpg
+1175,Brave Bangle,WHT,80,36,1214,660,920,jpg,named/1175_Brave_Bangle_WHT_80.jpg,by_id/1175.jpg
+1176,Punk Helmet,PFL,92,36,1215,660,920,jpg,named/1176_Punk_Helmet_PFL_92.jpg,by_id/1176.jpg
+1177,Sacred Charm,PFL,93,36,1216,660,920,jpg,named/1177_Sacred_Charm_PFL_93.jpg,by_id/1177.jpg
+1178,Light Ball,ASC,191,36,1217,660,920,jpg,named/1178_Light_Ball_ASC_191.jpg,by_id/1178.jpg
+1179,Thick Scale,ASC,211,36,1218,660,920,jpg,named/1179_Thick_Scale_ASC_211.jpg,by_id/1179.jpg
+1180,Core Memory,POR,70,36,1219,451,630,jpg,named/1180_Core_Memory_POR_70.jpg,by_id/1180.jpg
+1181,Billy & O'Nare,JTG,142,36,1220,660,920,jpg,named/1181_Billy_&_O'Nare_JTG_142.jpg,by_id/1181.jpg
+1182,Boss’s Orders,PAL,172,36,1221,660,920,jpg,named/1182_Boss's_Orders_PAL_172.jpg,by_id/1182.jpg
+1183,Perrin,TWM,160,36,1222,660,920,jpg,named/1183_Perrin_TWM_160.jpg,by_id/1183.jpg
+1184,Lana’s Aid,TWM,155,36,1223,660,920,jpg,named/1184_Lana's_Aid_TWM_155.jpg,by_id/1184.jpg
+1185,Explorer’s Guidance,TEF,147,36,1224,660,920,jpg,named/1185_Explorer's_Guidance_TEF_147.jpg,by_id/1185.jpg
+1186,Eri,TEF,146,36,1225,660,920,jpg,named/1186_Eri_TEF_146.jpg,by_id/1186.jpg
+1187,Morty’s Conviction,TEF,155,36,1226,660,920,jpg,named/1187_Morty's_Conviction_TEF_155.jpg,by_id/1187.jpg
+1188,Ciphermaniac’s Codebreaking,TEF,145,36,1227,660,920,jpg,named/1188_Ciphermaniac's_Codebreaking_TEF_145.jpg,by_id/1188.jpg
+1189,Salvatore,TEF,160,37,1228,660,920,jpg,named/1189_Salvatore_TEF_160.jpg,by_id/1189.jpg
+1190,Bianca’s Devotion,TEF,142,37,1229,660,920,jpg,named/1190_Bianca's_Devotion_TEF_142.jpg,by_id/1190.jpg
+1191,Kieran,TWM,154,37,1230,660,920,jpg,named/1191_Kieran_TWM_154.jpg,by_id/1191.jpg
+1192,Carmine,TWM,145,37,1231,660,920,jpg,named/1192_Carmine_TWM_145.jpg,by_id/1192.jpg
+1193,Hassel,TWM,151,37,1232,660,920,jpg,named/1193_Hassel_TWM_151.jpg,by_id/1193.jpg
+1194,Colress’s Tenacity,SFA,57,37,1233,660,920,jpg,named/1194_Colress's_Tenacity_SFA_57.jpg,by_id/1194.jpg
+1195,Janine’s Secret Art,SFA,59,37,1234,660,920,jpg,named/1195_Janine's_Secret_Art_SFA_59.jpg,by_id/1195.jpg
+1196,Cassiopeia,SFA,56,37,1235,660,920,jpg,named/1196_Cassiopeia_SFA_56.jpg,by_id/1196.jpg
+1197,Xerosic’s Machinations,SFA,64,37,1236,660,920,jpg,named/1197_Xerosic's_Machinations_SFA_64.jpg,by_id/1197.jpg
+1198,Crispin,SCR,133,37,1237,660,920,jpg,named/1198_Crispin_SCR_133.jpg,by_id/1198.jpg
+1199,Lacey,SCR,139,37,1238,660,920,jpg,named/1199_Lacey_SCR_139.jpg,by_id/1199.jpg
+1200,Kofu,SCR,138,37,1239,660,920,jpg,named/1200_Kofu_SCR_138.jpg,by_id/1200.jpg
+1201,Briar,SCR,132,37,1240,660,920,jpg,named/1201_Briar_SCR_132.jpg,by_id/1201.jpg
+1202,Drayton,SSP,174,37,1241,660,923,jpg,named/1202_Drayton_SSP_174.jpg,by_id/1202.jpg
+1203,Surfer,SSP,187,37,1242,660,923,jpg,named/1203_Surfer_SSP_187.jpg,by_id/1203.jpg
+1204,Lisia’s Appeal,SSP,179,37,1243,660,923,jpg,named/1204_Lisia's_Appeal_SSP_179.jpg,by_id/1204.jpg
+1205,Cyrano,SSP,170,37,1244,660,923,jpg,named/1205_Cyrano_SSP_170.jpg,by_id/1205.jpg
+1206,Larry’s Skill,PRE,115,37,1245,660,920,jpg,named/1206_Larry's_Skill_PRE_115.jpg,by_id/1206.jpg
+1207,Amarys,PRE,93,37,1246,660,920,jpg,named/1207_Amarys_PRE_93.jpg,by_id/1207.jpg
+1208,Iris’s Fighting Spirit,JTG,149,37,1247,660,920,jpg,named/1208_Iris's_Fighting_Spirit_JTG_149.jpg,by_id/1208.jpg
+1209,Ruffian,JTG,157,37,1248,660,920,jpg,named/1209_Ruffian_JTG_157.jpg,by_id/1209.jpg
+1210,Brock’s Scouting,JTG,146,37,1249,660,920,jpg,named/1210_Brock's_Scouting_JTG_146.jpg,by_id/1210.jpg
+1211,Black Belt’s Training,PRE,96,37,1250,660,920,jpg,named/1211_Black_Belt's_Training_PRE_96.jpg,by_id/1211.jpg
+1212,Cook,TWM,147,37,1251,660,920,jpg,named/1212_Cook_TWM_147.jpg,by_id/1212.jpg
+1213,Judge,SVI,176,37,1252,451,630,jpg,named/1213_Judge_SVI_176.jpg,by_id/1213.jpg
+1214,Emcee's Hype,DRI,163,37,1253,660,920,jpg,named/1214_Emcee's_Hype_DRI_163.jpg,by_id/1214.jpg
+1215,Ethan's Adventure,DRI,165,37,1254,660,920,jpg,named/1215_Ethan's_Adventure_DRI_165.jpg,by_id/1215.jpg
+1216,Team Rocket's Ariana,DRI,171,37,1255,660,920,jpg,named/1216_Team_Rocket's_Ariana_DRI_171.jpg,by_id/1216.jpg
+1217,Team Rocket's Archer,DRI,170,37,1256,660,920,jpg,named/1217_Team_Rocket's_Archer_DRI_170.jpg,by_id/1217.jpg
+1218,Team Rocket's Giovanni,DRI,174,37,1257,660,920,jpg,named/1218_Team_Rocket's_Giovanni_DRI_174.jpg,by_id/1218.jpg
+1219,Team Rocket's Petrel,DRI,176,37,1258,660,920,jpg,named/1219_Team_Rocket's_Petrel_DRI_176.jpg,by_id/1219.jpg
+1220,Team Rocket's Proton,DRI,177,37,1259,660,920,jpg,named/1220_Team_Rocket's_Proton_DRI_177.jpg,by_id/1220.jpg
+1221,N's Plan,BLK,83,37,1260,660,920,jpg,named/1221_N's_Plan_BLK_83.jpg,by_id/1221.jpg
+1222,Fennel,BLK,82,38,1261,660,920,jpg,named/1222_Fennel_BLK_82.jpg,by_id/1222.jpg
+1223,Harlequin,WHT,83,38,1262,660,920,jpg,named/1223_Harlequin_WHT_83.jpg,by_id/1223.jpg
+1224,Cheren,WHT,81,38,1263,660,920,jpg,named/1224_Cheren_WHT_81.jpg,by_id/1224.jpg
+1225,Hilda,WHT,84,38,1264,660,920,jpg,named/1225_Hilda_WHT_84.jpg,by_id/1225.jpg
+1226,Lt. Surge's Bargain,MEG,120,38,1265,660,920,jpg,named/1226_Lt._Surge's_Bargain_MEG_120.jpg,by_id/1226.jpg
+1227,Lillie's Determination,MEG,119,38,1266,660,920,jpg,named/1227_Lillie's_Determination_MEG_119.jpg,by_id/1227.jpg
+1228,Acerola's Mischief,MEG,113,38,1267,660,920,jpg,named/1228_Acerola's_Mischief_MEG_113.jpg,by_id/1228.jpg
+1229,Wally's Compassion,MEG,132,38,1268,660,920,jpg,named/1229_Wally's_Compassion_MEG_132.jpg,by_id/1229.jpg
+1230,Grimsley's Move,PFL,90,38,1269,660,920,jpg,named/1230_Grimsley's_Move_PFL_90.jpg,by_id/1230.jpg
+1231,Dawn,PFL,87,38,1270,660,920,jpg,named/1231_Dawn_PFL_87.jpg,by_id/1231.jpg
+1232,Firebreather,PFL,89,38,1271,660,920,jpg,named/1232_Firebreather_PFL_89.jpg,by_id/1232.jpg
+1233,Canari,ASC,185,38,1272,660,920,jpg,named/1233_Canari_ASC_185.jpg,by_id/1233.jpg
+1234,Anthea & Concordia,ASC,182,38,1273,660,920,jpg,named/1234_Anthea_&_Concordia_ASC_182.jpg,by_id/1234.jpg
+1235,Waitress,ASC,215,38,1274,660,920,jpg,named/1235_Waitress_ASC_215.jpg,by_id/1235.jpg
+1236,Urbain,ASC,214,38,1275,660,920,jpg,named/1236_Urbain_ASC_214.jpg,by_id/1236.jpg
+1237,Lucian,TWM,157,38,1276,660,920,jpg,named/1237_Lucian_TWM_157.jpg,by_id/1237.jpg
+1238,Tarragon,POR,85,38,1277,451,630,jpg,named/1238_Tarragon_POR_85.jpg,by_id/1238.jpg
+1239,Naveen,POR,79,38,1278,451,630,jpg,named/1239_Naveen_POR_79.jpg,by_id/1239.jpg
+1240,Rosa's Encouragement,POR,84,38,1279,451,630,jpg,named/1240_Rosa's_Encouragement_POR_84.jpg,by_id/1240.jpg
+1241,Jacinthe,POR,75,38,1280,451,630,jpg,named/1241_Jacinthe_POR_75.jpg,by_id/1241.jpg
+1242,Community Center,TWM,146,38,1281,660,920,jpg,named/1242_Community_Center_TWM_146.jpg,by_id/1242.jpg
+1243,Perilous Jungle,TEF,156,38,1282,660,920,jpg,named/1243_Perilous_Jungle_TEF_156.jpg,by_id/1243.jpg
+1244,Full Metal Lab,TEF,148,38,1283,660,920,jpg,named/1244_Full_Metal_Lab_TEF_148.jpg,by_id/1244.jpg
+1245,Festival Grounds,TWM,149,38,1284,660,920,jpg,named/1245_Festival_Grounds_TWM_149.jpg,by_id/1245.jpg
+1246,Jamming Tower,TWM,153,38,1285,660,920,jpg,named/1246_Jamming_Tower_TWM_153.jpg,by_id/1246.jpg
+1247,Neutralization Zone,SFA,60,38,1286,660,920,jpg,named/1247_Neutralization_Zone_SFA_60.jpg,by_id/1247.jpg
+1248,Academy at Night,SFA,54,38,1287,660,920,jpg,named/1248_Academy_at_Night_SFA_54.jpg,by_id/1248.jpg
+1249,Grand Tree,SCR,136,38,1288,660,920,jpg,named/1249_Grand_Tree_SCR_136.jpg,by_id/1249.jpg
+1250,Area Zero Underdepths,SCR,131,38,1289,660,920,jpg,named/1250_Area_Zero_Underdepths_SCR_131.jpg,by_id/1250.jpg
+1251,Lively Stadium,SSP,180,38,1290,660,923,jpg,named/1251_Lively_Stadium_SSP_180.jpg,by_id/1251.jpg
+1252,Gravity Mountain,SSP,177,38,1291,660,923,jpg,named/1252_Gravity_Mountain_SSP_177.jpg,by_id/1252.jpg
+1253,N’s Castle,JTG,152,38,1292,660,920,jpg,named/1253_N's_Castle_JTG_152.jpg,by_id/1253.jpg
+1254,Levincia,JTG,150,38,1293,660,920,jpg,named/1254_Levincia_JTG_150.jpg,by_id/1254.jpg
+1255,Postwick,JTG,154,39,1294,660,920,jpg,named/1255_Postwick_JTG_154.jpg,by_id/1255.jpg
+1256,Team Rocket's Watchtower,DRI,180,39,1295,660,920,jpg,named/1256_Team_Rocket's_Watchtower_DRI_180.jpg,by_id/1256.jpg
+1257,Team Rocket's Factory,DRI,173,39,1296,660,920,jpg,named/1257_Team_Rocket's_Factory_DRI_173.jpg,by_id/1257.jpg
+1258,Granite Cave,DRI,166,39,1297,660,920,jpg,named/1258_Granite_Cave_DRI_166.jpg,by_id/1258.jpg
+1259,Spikemuth Gym,DRI,169,39,1298,660,920,jpg,named/1259_Spikemuth_Gym_DRI_169.jpg,by_id/1259.jpg
+1260,Risky Ruins,MEG,127,39,1299,660,920,jpg,named/1260_Risky_Ruins_MEG_127.jpg,by_id/1260.jpg
+1261,Forest of Vitality,MEG,117,39,1300,660,920,jpg,named/1261_Forest_of_Vitality_MEG_117.jpg,by_id/1261.jpg
+1262,Surfing Beach,MEG,129,39,1301,660,920,jpg,named/1262_Surfing_Beach_MEG_129.jpg,by_id/1262.jpg
+1263,Mystery Garden,MEG,122,39,1302,660,920,jpg,named/1263_Mystery_Garden_MEG_122.jpg,by_id/1263.jpg
+1264,Battle Cage,PFL,85,39,1303,660,920,jpg,named/1264_Battle_Cage_PFL_85.jpg,by_id/1264.jpg
+1265,Dizzying Valley,PFL,88,39,1304,660,920,jpg,named/1265_Dizzying_Valley_PFL_88.jpg,by_id/1265.jpg
+1266,Nighttime Mine,ASC,197,39,1305,660,920,jpg,named/1266_Nighttime_Mine_ASC_197.jpg,by_id/1266.jpg
+1267,Lumiose City,POR,77,39,1306,451,630,jpg,named/1267_Lumiose_City_POR_77.jpg,by_id/1267.jpg

@@ -1,0 +1,404 @@
+{
+  "version": "v21",
+  "base": "v20",
+  "training_games": 150,
+  "training_results": [
+    {
+      "opponent": "mirror",
+      "games": 30,
+      "wins": 12,
+      "losses": 18,
+      "errors": 0,
+      "win_rate": 40.0,
+      "avg_steps": 191.36666666666667
+    },
+    {
+      "opponent": "lucario",
+      "games": 30,
+      "wins": 12,
+      "losses": 18,
+      "errors": 0,
+      "win_rate": 40.0,
+      "avg_steps": 139.06666666666666
+    },
+    {
+      "opponent": "alakazam",
+      "games": 30,
+      "wins": 14,
+      "losses": 16,
+      "errors": 0,
+      "win_rate": 46.666666666666664,
+      "avg_steps": 156.3
+    },
+    {
+      "opponent": "archaludon",
+      "games": 30,
+      "wins": 16,
+      "losses": 14,
+      "errors": 0,
+      "win_rate": 53.333333333333336,
+      "avg_steps": 143.23333333333332
+    },
+    {
+      "opponent": "dragapult",
+      "games": 30,
+      "wins": 18,
+      "losses": 12,
+      "errors": 0,
+      "win_rate": 60.0,
+      "avg_steps": 167.76666666666668
+    }
+  ],
+  "competition_delta_keys": 2505,
+  "refinement_candidates": {
+    "v20": 0,
+    "quarter_all": 1035,
+    "local025": 672,
+    "local05": 945,
+    "positive025": 1031
+  },
+  "evaluation_24_each": {
+    "v20": {
+      "alakazam": {
+        "games": 24,
+        "wins": 17,
+        "losses": 7,
+        "errors": 0,
+        "win_rate": 70.83333333333333,
+        "avg_steps": 143.66666666666666,
+        "long_games": 0
+      },
+      "mirror": {
+        "games": 24,
+        "wins": 13,
+        "losses": 11,
+        "errors": 0,
+        "win_rate": 54.166666666666664,
+        "avg_steps": 182.91666666666666,
+        "long_games": 0
+      },
+      "archaludon": {
+        "games": 24,
+        "wins": 11,
+        "losses": 13,
+        "errors": 0,
+        "win_rate": 45.833333333333336,
+        "avg_steps": 146.16666666666666,
+        "long_games": 0
+      },
+      "v19": {
+        "games": 24,
+        "wins": 7,
+        "losses": 17,
+        "errors": 0,
+        "win_rate": 29.166666666666668,
+        "avg_steps": 176.54166666666666,
+        "long_games": 0
+      },
+      "dragapult": {
+        "games": 24,
+        "wins": 15,
+        "losses": 9,
+        "errors": 0,
+        "win_rate": 62.5,
+        "avg_steps": 155.5,
+        "long_games": 0
+      },
+      "cmp": {
+        "games": 24,
+        "wins": 12,
+        "losses": 12,
+        "errors": 0,
+        "win_rate": 50.0,
+        "avg_steps": 181.54166666666666,
+        "long_games": 0
+      },
+      "lucario": {
+        "games": 24,
+        "wins": 8,
+        "losses": 16,
+        "errors": 0,
+        "win_rate": 33.333333333333336,
+        "avg_steps": 139.20833333333334,
+        "long_games": 0
+      }
+    },
+    "quarter_all": {
+      "mirror": {
+        "games": 24,
+        "wins": 10,
+        "losses": 14,
+        "errors": 0,
+        "win_rate": 41.666666666666664,
+        "avg_steps": 188.25,
+        "long_games": 0
+      },
+      "archaludon": {
+        "games": 24,
+        "wins": 16,
+        "losses": 8,
+        "errors": 0,
+        "win_rate": 66.66666666666667,
+        "avg_steps": 145.45833333333334,
+        "long_games": 0
+      },
+      "cmp": {
+        "games": 24,
+        "wins": 8,
+        "losses": 16,
+        "errors": 0,
+        "win_rate": 33.333333333333336,
+        "avg_steps": 178.08333333333334,
+        "long_games": 0
+      },
+      "alakazam": {
+        "games": 24,
+        "wins": 17,
+        "losses": 7,
+        "errors": 0,
+        "win_rate": 70.83333333333333,
+        "avg_steps": 158.875,
+        "long_games": 0
+      },
+      "v19": {
+        "games": 24,
+        "wins": 11,
+        "losses": 13,
+        "errors": 0,
+        "win_rate": 45.833333333333336,
+        "avg_steps": 183.75,
+        "long_games": 0
+      },
+      "lucario": {
+        "games": 24,
+        "wins": 7,
+        "losses": 17,
+        "errors": 0,
+        "win_rate": 29.166666666666668,
+        "avg_steps": 158.33333333333334,
+        "long_games": 0
+      },
+      "dragapult": {
+        "games": 24,
+        "wins": 14,
+        "losses": 10,
+        "errors": 0,
+        "win_rate": 58.333333333333336,
+        "avg_steps": 179.70833333333334,
+        "long_games": 0
+      }
+    },
+    "local025": {
+      "mirror": {
+        "games": 24,
+        "wins": 16,
+        "losses": 8,
+        "errors": 0,
+        "win_rate": 66.66666666666667,
+        "avg_steps": 187.54166666666666,
+        "long_games": 0
+      },
+      "alakazam": {
+        "games": 24,
+        "wins": 15,
+        "losses": 9,
+        "errors": 0,
+        "win_rate": 62.5,
+        "avg_steps": 150.04166666666666,
+        "long_games": 0
+      },
+      "archaludon": {
+        "games": 24,
+        "wins": 11,
+        "losses": 13,
+        "errors": 0,
+        "win_rate": 45.833333333333336,
+        "avg_steps": 130.04166666666666,
+        "long_games": 0
+      },
+      "v19": {
+        "games": 24,
+        "wins": 14,
+        "losses": 10,
+        "errors": 0,
+        "win_rate": 58.333333333333336,
+        "avg_steps": 182.08333333333334,
+        "long_games": 0
+      },
+      "dragapult": {
+        "games": 24,
+        "wins": 13,
+        "losses": 11,
+        "errors": 0,
+        "win_rate": 54.166666666666664,
+        "avg_steps": 158.04166666666666,
+        "long_games": 0
+      },
+      "lucario": {
+        "games": 24,
+        "wins": 9,
+        "losses": 15,
+        "errors": 0,
+        "win_rate": 37.5,
+        "avg_steps": 132.29166666666666,
+        "long_games": 0
+      },
+      "cmp": {
+        "games": 24,
+        "wins": 10,
+        "losses": 14,
+        "errors": 0,
+        "win_rate": 41.666666666666664,
+        "avg_steps": 185.83333333333334,
+        "long_games": 0
+      }
+    },
+    "local05": {
+      "alakazam": {
+        "games": 24,
+        "wins": 16,
+        "losses": 8,
+        "errors": 0,
+        "win_rate": 66.66666666666667,
+        "avg_steps": 140.04166666666666,
+        "long_games": 0
+      },
+      "mirror": {
+        "games": 24,
+        "wins": 17,
+        "losses": 7,
+        "errors": 0,
+        "win_rate": 70.83333333333333,
+        "avg_steps": 193.45833333333334,
+        "long_games": 0
+      },
+      "archaludon": {
+        "games": 24,
+        "wins": 12,
+        "losses": 12,
+        "errors": 0,
+        "win_rate": 50.0,
+        "avg_steps": 148.875,
+        "long_games": 0
+      },
+      "dragapult": {
+        "games": 24,
+        "wins": 13,
+        "losses": 11,
+        "errors": 0,
+        "win_rate": 54.166666666666664,
+        "avg_steps": 175.58333333333334,
+        "long_games": 0
+      },
+      "lucario": {
+        "games": 24,
+        "wins": 8,
+        "losses": 16,
+        "errors": 0,
+        "win_rate": 33.333333333333336,
+        "avg_steps": 145.20833333333334,
+        "long_games": 0
+      },
+      "cmp": {
+        "games": 24,
+        "wins": 12,
+        "losses": 12,
+        "errors": 0,
+        "win_rate": 50.0,
+        "avg_steps": 184.75,
+        "long_games": 0
+      },
+      "v19": {
+        "games": 24,
+        "wins": 14,
+        "losses": 10,
+        "errors": 0,
+        "win_rate": 58.333333333333336,
+        "avg_steps": 179.25,
+        "long_games": 0
+      }
+    },
+    "positive025": {
+      "alakazam": {
+        "games": 24,
+        "wins": 17,
+        "losses": 7,
+        "errors": 0,
+        "win_rate": 70.83333333333333,
+        "avg_steps": 156.875,
+        "long_games": 0
+      },
+      "archaludon": {
+        "games": 24,
+        "wins": 10,
+        "losses": 14,
+        "errors": 0,
+        "win_rate": 41.666666666666664,
+        "avg_steps": 131.54166666666666,
+        "long_games": 0
+      },
+      "mirror": {
+        "games": 24,
+        "wins": 11,
+        "losses": 13,
+        "errors": 0,
+        "win_rate": 45.833333333333336,
+        "avg_steps": 180.91666666666666,
+        "long_games": 0
+      },
+      "dragapult": {
+        "games": 24,
+        "wins": 16,
+        "losses": 8,
+        "errors": 0,
+        "win_rate": 66.66666666666667,
+        "avg_steps": 175.41666666666666,
+        "long_games": 0
+      },
+      "cmp": {
+        "games": 24,
+        "wins": 15,
+        "losses": 9,
+        "errors": 0,
+        "win_rate": 62.5,
+        "avg_steps": 181.75,
+        "long_games": 0
+      },
+      "v19": {
+        "games": 24,
+        "wins": 11,
+        "losses": 13,
+        "errors": 0,
+        "win_rate": 45.833333333333336,
+        "avg_steps": 190.125,
+        "long_games": 0
+      },
+      "lucario": {
+        "games": 24,
+        "wins": 12,
+        "losses": 12,
+        "errors": 0,
+        "win_rate": 50.0,
+        "avg_steps": 148.625,
+        "long_games": 0
+      }
+    }
+  },
+  "weighted_scores": {
+    "v20": 75.4,
+    "quarter_all": 75.39999999999999,
+    "local025": 78.4,
+    "local05": 81.60000000000001,
+    "positive025": 81.6
+  },
+  "valid_candidates": [
+    "v20",
+    "quarter_all",
+    "local025",
+    "local05",
+    "positive025"
+  ],
+  "selected_candidate": "local05",
+  "selected_changed_keys": 945,
+  "selection_constraints": "zero errors; no opponent >4-win regression vs v20; supplied-five aggregate non-regression"
+}
