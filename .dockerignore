@@ -1,0 +1,11 @@
+.git
+.gitignore
+runtime
+scripts
+app/__pycache__
+app/**/__pycache__
+app/records
+app/submissions
+app/user_data/decks.json
+*.zip
+*.pyc
