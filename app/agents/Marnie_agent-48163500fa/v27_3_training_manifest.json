@@ -1,0 +1,52 @@
+{
+  "version": "v27.3",
+  "base": "v27.2 actual-Crustle guarded rule-first",
+  "deck_change": {
+    "basic_darkness": 9,
+    "prism_energy": 1,
+    "replaced": "1 Basic Darkness Energy"
+  },
+  "card_ids": {
+    "munkidori": 112,
+    "basic_darkness": 7,
+    "prism_energy": 16,
+    "mind_bend_attack": 141
+  },
+  "strategy": [
+    "Prism is reserved for Munkidori and never intentionally attached to an evolving Marnie line.",
+    "With one Darkness already attached, Prism is used when Mind Bend gives an immediate KO, a forced attack, an endgame backup, or a Crustle wall route.",
+    "With zero Energy, Prism may replace the first Darkness only when no Darkness is in hand and Adrena-Brain is immediately useful; against real Crustle it may be used earlier to preserve Basic Darkness for Punk Up.",
+    "Historical 10-Darkness replays are treated as the same deck lineage as the 9-Darkness + 1-Prism list."
+  ],
+  "replay_corpus": {
+    "files": 126,
+    "detected_sides": 125,
+    "wins": 54,
+    "losses": 71,
+    "decisions": 11497,
+    "rule_disagreements": 2746,
+    "unchosen_options": 846
+  },
+  "screening": {
+    "general_350": {
+      "v27_2_wins": 189,
+      "v27_3_middle_wins": 187,
+      "agent_errors": 0
+    },
+    "actual_crustle_120": {
+      "v27_2_wins": 79,
+      "v27_3_wins": 80,
+      "prism_attachments": 48,
+      "mind_bend_uses": 26,
+      "agent_errors": 0
+    },
+    "final_safety_140": {
+      "wins": 77,
+      "prism_attachments": 16,
+      "mind_bend_uses": 10,
+      "agent_errors": 0,
+      "timeouts": 0
+    }
+  },
+  "status": "accepted as requested deck variant; general performance was near-neutral and actual Crustle was non-inferior in the targeted batch"
+}

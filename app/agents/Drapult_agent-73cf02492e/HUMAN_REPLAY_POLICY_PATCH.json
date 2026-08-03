@@ -1,0 +1,11 @@
+{
+  "version": "dragapult_universal_v38_human_order_candidate",
+  "source_human_game": "20260804_074137_e48988f2",
+  "patches": [
+    "Drakloak ability before Dragapult evolution",
+    "early Drakloak establishment",
+    "Phantom Dive timing versus Marnie",
+    "defer opening Lucky Helmet on Latias"
+  ],
+  "scope": "only when exact legal options and conservative timing conditions are satisfied"
+}

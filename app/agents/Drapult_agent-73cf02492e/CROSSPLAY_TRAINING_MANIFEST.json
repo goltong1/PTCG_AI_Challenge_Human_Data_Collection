@@ -1,0 +1,43 @@
+{
+  "version": "dragapult_universal_rule_core_v31_crossplay_engine_denial_submission",
+  "generated_local_date": "2026-08-04",
+  "training_method": "simultaneous four-agent cross-play, matchup loss mining, candidate A/B screening, second-generation counter-training",
+  "changes": [
+    "Phantom Dive counter priority added for Duskull/Impidimp/Snorunt engines",
+    "Secondary priority for Dusclops/Dusknoir/Morgrem/Munkidori",
+    "Boss target scoring extended to exposed low-HP evolution engines"
+  ],
+  "screening": {
+    "vs_updated_marnie": "36-24 (60.0%) over 60 games"
+  },
+  "final_gen2_league": {
+    "games_per_unordered_pair": 40,
+    "total_games": 240,
+    "draws": 1,
+    "results": {
+      "okidogi_v17": {
+        "wins": 48,
+        "losses": 72,
+        "win_rate_decisive": 0.4
+      },
+      "dragapult_v31": {
+        "wins": 61,
+        "losses": 59,
+        "win_rate_decisive": 0.5083
+      },
+      "dusk_dragapult_v17": {
+        "wins": 54,
+        "losses": 65,
+        "draws": 1,
+        "win_rate_decisive": 0.4538
+      },
+      "marnie_v34": {
+        "wins": 76,
+        "losses": 43,
+        "draws": 1,
+        "win_rate_decisive": 0.6387
+      }
+    }
+  },
+  "caveat": "Local simulator cross-play is stochastic and does not guarantee leaderboard performance."
+}

@@ -1,0 +1,18 @@
+{
+  "deck": "dragapult",
+  "replays_processed": 708,
+  "direct_replay_games": 130,
+  "transfer_source": null,
+  "common_structure": [
+    "deck policy proposer",
+    "opponent recognition",
+    "hidden-state reconstruction",
+    "candidate search",
+    "state value",
+    "replay residual",
+    "regression gate"
+  ],
+  "learning_enabled_final": true,
+  "selected_source": "agents/aug0/dragapult",
+  "gate": "replay/search candidate accepted"
+}

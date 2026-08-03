@@ -1,0 +1,97 @@
+{
+  "version": "v33-replay-retrained-exact-tempo",
+  "base": "v31-post-ko-promotion-efficiency",
+  "deck": {
+    "cards": 60,
+    "basic_darkness_energy": 9,
+    "prism_energy": 1,
+    "recipe_changed": false
+  },
+  "replay_import": {
+    "new_files": 28,
+    "all_new_episode_ids": true,
+    "combined_unique_files": 154,
+    "detected_marnie_trajectories_new": 31,
+    "new_wins": 10,
+    "new_losses": 21,
+    "new_decisions": 2648,
+    "full_detected_trajectories": 156,
+    "full_decisions": 14145
+  },
+  "rejected_broad_learning": {
+    "reason": "Outcome-weighted mirror residual was unstable across independent shuffle batches and the new-only residual had zero live policy hits.",
+    "screen_80_each": {
+      "v31_wins": 32,
+      "candidate_wins": 41,
+      "candidate_hits": 143,
+      "errors": 0
+    },
+    "confirmation_partial_97_each": {
+      "v31_wins": 52,
+      "candidate_wins": 46,
+      "errors": 0
+    },
+    "new_only_80_each": {
+      "v31_wins": 40,
+      "candidate_wins": 46,
+      "candidate_hits": 0,
+      "interpretation": "win difference is shuffle variance because policy never activated"
+    }
+  },
+  "accepted_changes": [
+    {
+      "name": "post_ko_prism_munkidori_tempo",
+      "source_episode": 89608633,
+      "behavior": "After a forced promotion, if no offered Pokemon attacks now, manual attachment is unused, Prism Energy is visible, and a one-Dark Munkidori becomes immediately Mind Bend-ready with Prism, promote Munkidori."
+    },
+    {
+      "name": "post_retreat_attack_completion",
+      "source_episode": 89635610,
+      "behavior": "After selecting Retreat, keep a same-turn follow-up flag and make a legal Impidimp/Morgrem attack instead of END after all productive setup actions are exhausted; disabled against Crustle and while Confused."
+    }
+  ],
+  "replay_shadow": {
+    "new_replays": {
+      "files": 28,
+      "trajectories": 31,
+      "decisions": 2648,
+      "changed_actions": 2,
+      "errors": 0
+    },
+    "full_corpus": {
+      "files": 154,
+      "trajectories": 156,
+      "decisions": 14145,
+      "changed_actions": 4,
+      "errors": 0,
+      "note": "Three changes correct retreat-then-END losses; one corrects the Prism promotion."
+    }
+  },
+  "validation": {
+    "v33_vs_v31_head_to_head": {
+      "games": 120,
+      "v33_wins": 65,
+      "v31_wins": 55,
+      "errors": 0
+    },
+    "mirror_independent_ab": {
+      "games_each": 60,
+      "v31_wins": 26,
+      "v33_wins": 29,
+      "errors": 0
+    },
+    "seven_opponent_safety_smoke": {
+      "games": 70,
+      "wins": 32,
+      "agent_errors": 0,
+      "note": "Safety check only, not a leaderboard win-rate estimate."
+    },
+    "python_compile": true,
+    "deck_count": 60,
+    "submission_structure": "root main.py + deck.csv + cg/"
+  },
+  "limitations": [
+    "The local engine does not expose a controlled shuffle seed, so independent A/B matchup win counts remain noisy.",
+    "No broad replay residual was enabled; v33 is intentionally a narrow exact-state correction over the validated v31 policy."
+  ]
+}

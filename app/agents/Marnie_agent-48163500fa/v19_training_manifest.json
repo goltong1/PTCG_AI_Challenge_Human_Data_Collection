@@ -1,0 +1,235 @@
+{
+  "version": "v19",
+  "base": "marnie_grimmsnarl_v4_selfplay_distilled_v18",
+  "new_replay": "89291844",
+  "new_replay_result": "loss vs Archaludon/Duraludon",
+  "root_cause": [
+    "Archaludon was recognized but omitted from desired_froslass target logic.",
+    "The replay delayed Snorunt development until turn 13.",
+    "When replay states were re-evaluated, v18 selected END instead of a legal Froslass evolution on turn 15."
+  ],
+  "policy_changes": [
+    "Target 1 Froslass against Archaludon, 2 after 3+ opposing Ability Pokemon are visible.",
+    "Reserve the third Munkidori slot until the Froslass target is established.",
+    "Conservative Archaludon-only search preference for Snorunt/Froslass after the first Grimmsnarl line exists.",
+    "Executable Froslass evolution receives priority over ending/shuffling.",
+    "Replay hard-negative corrections plus 5% outcome-weighted cross-play distillation."
+  ],
+  "training": {
+    "outcome_training_games": 300,
+    "opponents": [
+      "Archaludon reconstructed from supplied public agent/deck",
+      "provided Marnie comparison AI",
+      "v18",
+      "replay-deck Lucario heuristic",
+      "replay-deck Alakazam heuristic",
+      "replay-deck Crustle heuristic",
+      "replay-deck Rocket Spidops heuristic"
+    ],
+    "generated_delta_entries": 1244,
+    "tested_blends": [
+      0.05,
+      0.1,
+      0.15,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "selected_blend": 0.05
+  },
+  "final_evaluation": {
+    "alakazam": {
+      "games": 60,
+      "wins": 58,
+      "losses": 2,
+      "errors": 0,
+      "avg_steps": 106.11666666666666,
+      "win_rate": 96.66666666666667
+    },
+    "arch": {
+      "games": 120,
+      "wins": 113,
+      "losses": 7,
+      "errors": 0,
+      "avg_steps": 120.91666666666667,
+      "win_rate": 94.16666666666667
+    },
+    "cmp": {
+      "games": 120,
+      "wins": 66,
+      "losses": 54,
+      "errors": 0,
+      "avg_steps": 186.63333333333333,
+      "win_rate": 55.00000000000001
+    },
+    "crustle": {
+      "games": 60,
+      "wins": 56,
+      "losses": 4,
+      "errors": 0,
+      "avg_steps": 143.96666666666667,
+      "win_rate": 93.33333333333333
+    },
+    "lucario": {
+      "games": 60,
+      "wins": 52,
+      "losses": 8,
+      "errors": 0,
+      "avg_steps": 115.9,
+      "win_rate": 86.66666666666667
+    },
+    "rocket": {
+      "games": 60,
+      "wins": 60,
+      "losses": 0,
+      "errors": 0,
+      "avg_steps": 119.05,
+      "win_rate": 100.0
+    },
+    "v18": {
+      "games": 120,
+      "wins": 56,
+      "losses": 64,
+      "errors": 0,
+      "avg_steps": 185.10833333333332,
+      "win_rate": 46.666666666666664
+    },
+    "total": {
+      "games": 600,
+      "wins": 461,
+      "losses": 139,
+      "errors": 0,
+      "win_rate": 76.83333333333333
+    }
+  },
+  "baseline_v18_evaluation": {
+    "alakazam": {
+      "games": 60,
+      "wins": 55,
+      "losses": 5,
+      "errors": 0,
+      "avg_steps": 114.78333333333333,
+      "win_rate": 91.66666666666666
+    },
+    "arch": {
+      "games": 120,
+      "wins": 101,
+      "losses": 19,
+      "errors": 0,
+      "avg_steps": 122.35,
+      "win_rate": 84.16666666666667
+    },
+    "cmp": {
+      "games": 120,
+      "wins": 62,
+      "losses": 58,
+      "errors": 0,
+      "avg_steps": 189.20833333333334,
+      "win_rate": 51.66666666666667
+    },
+    "crustle": {
+      "games": 60,
+      "wins": 54,
+      "losses": 6,
+      "errors": 0,
+      "avg_steps": 151.48333333333332,
+      "win_rate": 90.0
+    },
+    "lucario": {
+      "games": 60,
+      "wins": 54,
+      "losses": 6,
+      "errors": 0,
+      "avg_steps": 119.11666666666666,
+      "win_rate": 90.0
+    },
+    "rocket": {
+      "games": 60,
+      "wins": 59,
+      "losses": 1,
+      "errors": 0,
+      "avg_steps": 121.7,
+      "win_rate": 98.33333333333333
+    },
+    "v18": {
+      "games": 120,
+      "wins": 53,
+      "losses": 67,
+      "errors": 0,
+      "avg_steps": 191.86666666666667,
+      "win_rate": 44.166666666666664
+    },
+    "total": {
+      "games": 600,
+      "wins": 438,
+      "losses": 162,
+      "errors": 0,
+      "win_rate": 73.0
+    }
+  },
+  "replay_base_evaluation": {
+    "alakazam": {
+      "games": 60,
+      "wins": 56,
+      "losses": 4,
+      "errors": 0,
+      "avg_steps": 118.2,
+      "win_rate": 93.33333333333333
+    },
+    "arch": {
+      "games": 120,
+      "wins": 105,
+      "losses": 15,
+      "errors": 0,
+      "avg_steps": 116.39166666666667,
+      "win_rate": 87.5
+    },
+    "cmp": {
+      "games": 120,
+      "wins": 61,
+      "losses": 59,
+      "errors": 0,
+      "avg_steps": 187.18333333333334,
+      "win_rate": 50.83333333333333
+    },
+    "crustle": {
+      "games": 60,
+      "wins": 56,
+      "losses": 4,
+      "errors": 0,
+      "avg_steps": 159.41666666666666,
+      "win_rate": 93.33333333333333
+    },
+    "lucario": {
+      "games": 60,
+      "wins": 56,
+      "losses": 4,
+      "errors": 0,
+      "avg_steps": 118.4,
+      "win_rate": 93.33333333333333
+    },
+    "rocket": {
+      "games": 60,
+      "wins": 58,
+      "losses": 2,
+      "errors": 0,
+      "avg_steps": 109.7,
+      "win_rate": 96.66666666666667
+    },
+    "v18": {
+      "games": 120,
+      "wins": 64,
+      "losses": 56,
+      "errors": 0,
+      "avg_steps": 182.03333333333333,
+      "win_rate": 53.333333333333336
+    },
+    "total": {
+      "games": 600,
+      "wins": 456,
+      "losses": 144,
+      "errors": 0,
+      "win_rate": 76.0
+    }
+  }
+}

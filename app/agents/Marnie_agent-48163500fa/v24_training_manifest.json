@@ -1,0 +1,50 @@
+{
+  "version": "v24-rule-first-residual",
+  "base_policy": "marnie_grimmsnarl_v4_froslass_archaludon_selfplay_v19",
+  "architecture": {
+    "primary": "unchanged v19 deterministic rule policy",
+    "auxiliary": "opponent-archetype-isolated exact-state replay residual",
+    "safety": [
+      "residual is disabled for multi-card selection",
+      "residual is disabled for number and energy-payment combinations",
+      "unvalidated archetypes always use pure v19",
+      "local training accepts each archetype independently"
+    ]
+  },
+  "provided_replays": {
+    "files": 102,
+    "detected_marnie_sides": 81,
+    "wins": 37,
+    "losses": 44,
+    "decision_states": 14792,
+    "v19_disagreements": 12299
+  },
+  "enabled_residuals": ["alakazam", "lucario"],
+  "validation": {
+    "alakazam_common": {
+      "games": 100,
+      "v19_wins": 63,
+      "v24_wins": 68,
+      "agent_errors": 0
+    },
+    "mega_lucario": {
+      "games_requested": 100,
+      "v19_wins": 40,
+      "v24_wins": 43,
+      "v24_losses": 56,
+      "opponent_errors": 1,
+      "agent_errors": 0
+    },
+    "macro_dragapult": {
+      "games": 100,
+      "v19_wins": 54,
+      "candidate_wins": 54,
+      "enabled": false
+    }
+  },
+  "rejected_candidates": [
+    "broad 25 percent replay residual: 151 wins versus v19 172 across 300 games",
+    "global conservative residual: 151 wins versus v19 159 across 300 games",
+    "Marnie mirror residual due material regression"
+  ]
+}

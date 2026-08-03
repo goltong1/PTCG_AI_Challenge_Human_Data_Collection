@@ -1,0 +1,81 @@
+{
+  "version": "v26-rule-first-validated-counterfactual",
+  "base": "v19 high-rating deterministic rules + validated v24 residuals + v25 aligned counterfactual framework",
+  "enabled_matchup_rules": {
+    "marnie": [
+      "damaged Munkidori survival targeting",
+      "Spikemuth search priority before non-tactical Adrena-Brain/evolution while line incomplete"
+    ],
+    "dragapult": [
+      "damaged Munkidori survival targeting"
+    ]
+  },
+  "disabled_elsewhere": true,
+  "replay_alignment": "previous ACTIVE observation paired with next row action",
+  "replay_analysis": {
+    "files": 119,
+    "detected_trajectories": 117,
+    "wins": 51,
+    "losses": 66,
+    "valid_decisions": 10794,
+    "rule_disagreements": 2635,
+    "unchosen_near_top_options": 869
+  },
+  "final_validation": {
+    "v25_vs_v26_mirror_250": {
+      "v25_wins": 119,
+      "v26_wins": 127,
+      "errors": 0
+    },
+    "v25_vs_v26_dragapult_250": {
+      "v25_wins": 128,
+      "v26_wins": 138,
+      "errors": 0
+    },
+    "absolute_480": {
+      "games": 480,
+      "wins": 269,
+      "losses": 211,
+      "agent_errors": 0,
+      "win_rate": 56.041666666666664
+    },
+    "head_to_head": {
+      "v19_raw": {
+        "games": 200,
+        "wins": 111,
+        "losses": 89,
+        "errors": 0,
+        "opponent": "v19_raw",
+        "steps": 36746,
+        "win_rate": 55.5,
+        "avg_steps": 183.73
+      },
+      "v24_raw": {
+        "games": 200,
+        "wins": 110,
+        "losses": 90,
+        "errors": 0,
+        "opponent": "v24_raw",
+        "steps": 36873,
+        "win_rate": 55.0,
+        "avg_steps": 184.365
+      },
+      "v25_raw": {
+        "games": 200,
+        "wins": 103,
+        "losses": 97,
+        "errors": 0,
+        "opponent": "v25_raw",
+        "steps": 37424,
+        "win_rate": 51.5,
+        "avg_steps": 187.12
+      }
+    }
+  },
+  "safety": [
+    "multi-card, numeric, and energy-payment choices remain deterministic rules",
+    "v26 rule changes are gated by detected opponent archetype",
+    "live shadow test confirmed zero action differences in Alakazam, Archaludon, Crustle, and Lucario observations",
+    "new replay residuals require two-stage target validation plus holdout regression checks"
+  ]
+}

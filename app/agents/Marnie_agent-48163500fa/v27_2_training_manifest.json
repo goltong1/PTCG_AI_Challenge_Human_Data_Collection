@@ -1,0 +1,20 @@
+{
+  "version": "v27.2",
+  "base": "v27.1 rule-first under-70 loss corrected",
+  "change": "Add the real Crustle/Mega Kangaskhan guarded-learning v17 opponent as an independent archetype and validation target.",
+  "real_crustle_opponent": "crustle_kangaskhan_guarded_v17.zip",
+  "baseline_200_games": {
+    "wins": 126,
+    "losses": 74,
+    "win_rate": 63.0,
+    "agent_errors": 0
+  },
+  "residual_status": "disabled by default; must pass three independent guarded batches",
+  "acceptance_defaults": {
+    "batches": 3,
+    "games_each": 80,
+    "min_total_gain": 8,
+    "min_batch_gain": -3,
+    "candidate_errors_must_not_increase": true
+  }
+}

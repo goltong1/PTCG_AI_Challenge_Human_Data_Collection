@@ -1,0 +1,21 @@
+{
+  "final_name": "dragapult_universal_v34_all_replay_gated",
+  "source_candidate": "dragapult_safe",
+  "selection_note": "Dragapult replay value/prior update retained; original Crustle-targeted loss-adaptive search scope preserved.",
+  "source_archive": "89422843.zip",
+  "family_stats": {
+    "games": 26,
+    "wins": 14,
+    "losses": 12,
+    "states": 3034,
+    "variants": 3
+  },
+  "final_smoke_league": {
+    "agent": "dragapult_safe",
+    "wins": 10,
+    "losses": 12,
+    "games": 22,
+    "win_rate": 0.45454545454545453,
+    "errors": 0
+  }
+}

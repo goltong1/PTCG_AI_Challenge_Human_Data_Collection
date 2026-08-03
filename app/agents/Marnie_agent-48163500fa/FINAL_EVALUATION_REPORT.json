@@ -1,0 +1,155 @@
+{
+  "date": "2026-08-04",
+  "method": {
+    "targets": [
+      "marnie_grimmsnarl",
+      "dragapult_universal"
+    ],
+    "fixed_sparring_opponents": [
+      "okidogi",
+      "dragapult_dusknoir",
+      "archaludon",
+      "crustle_kangaskhan",
+      "alakazam"
+    ],
+    "training": "Loss games were traced by matchup and phase. Win/loss action residuals generated candidate priors. Candidates were accepted only after independent bilateral validation; failed candidates were rolled back.",
+    "final_evaluation": "40 games per matchup (20 in each seat), 200 games per target."
+  },
+  "baseline": {
+    "marnie_v35": {
+      "okidogi": {
+        "wins": 27,
+        "games": 40
+      },
+      "dusk": {
+        "wins": 27,
+        "games": 40
+      },
+      "archaludon": {
+        "wins": 15,
+        "games": 40
+      },
+      "crustle": {
+        "wins": 22,
+        "games": 40
+      },
+      "alakazam": {
+        "wins": 28,
+        "games": 40
+      },
+      "total": {
+        "wins": 119,
+        "games": 200
+      }
+    },
+    "dragapult_v32": {
+      "okidogi": {
+        "wins": 27,
+        "games": 40
+      },
+      "dusk": {
+        "wins": 19,
+        "games": 40
+      },
+      "archaludon": {
+        "wins": 16,
+        "games": 40
+      },
+      "crustle": {
+        "wins": 17,
+        "games": 40
+      },
+      "alakazam": {
+        "wins": 21,
+        "games": 40
+      },
+      "total": {
+        "wins": 100,
+        "games": 200
+      }
+    }
+  },
+  "final": {
+    "marnie_v36": {
+      "okidogi": {
+        "wins": 29,
+        "games": 40
+      },
+      "dusk": {
+        "wins": 20,
+        "games": 40
+      },
+      "archaludon": {
+        "wins": 21,
+        "games": 40
+      },
+      "crustle": {
+        "wins": 25,
+        "games": 40
+      },
+      "alakazam": {
+        "wins": 32,
+        "games": 40
+      },
+      "total": {
+        "wins": 127,
+        "games": 200
+      }
+    },
+    "drag_v33_final": {
+      "okidogi": {
+        "wins": 18,
+        "games": 40
+      },
+      "dusk": {
+        "wins": 23,
+        "games": 40
+      },
+      "archaludon": {
+        "wins": 15,
+        "games": 40
+      },
+      "crustle": {
+        "wins": 24,
+        "games": 40
+      },
+      "alakazam": {
+        "wins": 22,
+        "games": 40
+      },
+      "total": {
+        "wins": 102,
+        "games": 200
+      }
+    }
+  },
+  "accepted_updates": {
+    "marnie_v36": "Archaludon-only conservative loss-conditioned residual search. Other matchup policies retained.",
+    "dragapult_v33": "Crustle-only conservative loss-conditioned residual search. Dusk and Archaludon candidates failed validation and v32 policies were retained."
+  },
+  "headline": {
+    "marnie_overall_change_pp": 4.0,
+    "marnie_archaludon_change_pp": 15.0,
+    "dragapult_overall_change_pp": 1.0,
+    "dragapult_crustle_change_pp": 17.5
+  },
+  "errors": 0,
+  "illegal_actions": 0,
+  "caution": "Game outcomes are stochastic. Unchanged matchups can vary between independent batches; only matchup-specific accepted modules changed behavior.",
+  "validation": {
+    "marnie_v36": {
+      "compile_errors": [],
+      "deck_count": 60,
+      "initialized": true,
+      "init_output": "60",
+      "init_error": ""
+    },
+    "dragapult_v33": {
+      "compile_errors": [],
+      "deck_count": 60,
+      "initialized": true,
+      "init_output": "60",
+      "init_error": ""
+    }
+  }
+}

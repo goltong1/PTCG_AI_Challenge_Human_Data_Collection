@@ -1,0 +1,21 @@
+{
+  "final_name": "marnie_grimmsnarl_v38_all_replay_gated",
+  "source_candidate": "marnie_safe",
+  "selection_note": "312 new games merged into value/replay priors; original Archaludon-only search scope retained by no-regression gate.",
+  "source_archive": "89422843.zip",
+  "family_stats": {
+    "games": 338,
+    "wins": 158,
+    "losses": 180,
+    "states": 31380,
+    "variants": 10
+  },
+  "final_smoke_league": {
+    "agent": "marnie_safe",
+    "wins": 17,
+    "losses": 5,
+    "games": 22,
+    "win_rate": 0.7727272727272727,
+    "errors": 0
+  }
+}

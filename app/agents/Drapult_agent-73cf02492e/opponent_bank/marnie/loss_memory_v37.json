@@ -1,0 +1,375 @@
+{
+  "version": "marnie_v37_exact_loss_memory",
+  "base": "v36",
+  "source_replays": 18,
+  "record": "2-16",
+  "alignment": "action at step t+1 paired with observation at step t",
+  "threshold_margin": 150000,
+  "entries": {
+    "0987a8e331a240e9ed7d": {
+      "archetype": "lucario",
+      "phase": "mid",
+      "turn": 6,
+      "turn_action": 4,
+      "desired": {
+        "type": 7,
+        "subject": 1227,
+        "target": 0,
+        "attack": 0
+      },
+      "avoid": {
+        "type": 10,
+        "subject": 1259,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 239445.68677306804,
+      "source_file": "89762901.json",
+      "source_step": 65
+    },
+    "69d2fdb119f971621b32": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 1,
+      "desired": {
+        "type": 8,
+        "subject": 16,
+        "target": 860,
+        "attack": 0
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 1227,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1962599.5973969526,
+      "source_file": "89765288.json",
+      "source_step": 107
+    },
+    "7af7e98f6b5c198c634f": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 2,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 1259,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1902223.3798888745,
+      "source_file": "89765288.json",
+      "source_step": 108
+    },
+    "f7e69dc1fde36afbe5fa": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 3,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 1086,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1891904.156059139,
+      "source_file": "89765288.json",
+      "source_step": 109
+    },
+    "186e4c6cea24df482a79": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 5,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 1086,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1891904.156059139,
+      "source_file": "89765288.json",
+      "source_step": 111
+    },
+    "b94350331824c1d28eb1": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 7,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 9,
+        "subject": 104,
+        "target": 860,
+        "attack": 0
+      },
+      "margin": 1707135.0429592333,
+      "source_file": "89765288.json",
+      "source_step": 113
+    },
+    "dfd498c81a0a2fefc674": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 8,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 10,
+        "subject": 1259,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1767712.7155597913,
+      "source_file": "89765288.json",
+      "source_step": 114
+    },
+    "770cd1f70ea737494c9e": {
+      "archetype": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 10,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 9,
+        "subject": 648,
+        "target": 647,
+        "attack": 0
+      },
+      "margin": 1826131.5618225904,
+      "source_file": "89765288.json",
+      "source_step": 116
+    },
+    "2b4d17a37079862caa01": {
+      "archetype": "unknown",
+      "phase": "mid",
+      "turn": 6,
+      "turn_action": 1,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 9,
+        "subject": 648,
+        "target": 647,
+        "attack": 0
+      },
+      "margin": 1749469.78581286,
+      "source_file": "89774814.json",
+      "source_step": 98
+    },
+    "71d6b2035524c1b6306e": {
+      "archetype": "unknown",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 1,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 112,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1939284.8691304622,
+      "source_file": "89774814.json",
+      "source_step": 158
+    },
+    "8692b4361b1995087ee5": {
+      "archetype": "unknown",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 2,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 1219,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1976199.9675468772,
+      "source_file": "89774814.json",
+      "source_step": 159
+    },
+    "d7b5e92c3c89542345cd": {
+      "archetype": "unknown",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 4,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 7,
+        "subject": 1097,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1965517.0911166961,
+      "source_file": "89774814.json",
+      "source_step": 161
+    },
+    "96347398d6dae74e0e5f": {
+      "archetype": "unknown",
+      "phase": "late",
+      "turn": 10,
+      "turn_action": 6,
+      "desired": {
+        "type": 13,
+        "subject": 937,
+        "target": 0,
+        "attack": 937
+      },
+      "avoid": {
+        "type": 10,
+        "subject": 1259,
+        "target": 0,
+        "attack": 0
+      },
+      "margin": 1915810.1586169826,
+      "source_file": "89774814.json",
+      "source_step": 163
+    }
+  },
+  "meta": [
+    {
+      "file": "89762901.json",
+      "win": false,
+      "corrections": 1
+    },
+    {
+      "file": "89763494.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89764104.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89765288.json",
+      "win": false,
+      "corrections": 7
+    },
+    {
+      "file": "89766472.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89767668.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89768269.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89768863.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89773031.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89774217.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89774814.json",
+      "win": false,
+      "corrections": 5
+    },
+    {
+      "file": "89777162.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89777744.json",
+      "win": true,
+      "corrections": 0
+    },
+    {
+      "file": "89778328.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89779522.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89781315.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89781908.json",
+      "win": false,
+      "corrections": 0
+    },
+    {
+      "file": "89784348.json",
+      "win": true,
+      "corrections": 0
+    }
+  ]
+}

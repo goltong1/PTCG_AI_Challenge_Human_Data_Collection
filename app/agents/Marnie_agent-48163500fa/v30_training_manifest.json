@@ -1,0 +1,35 @@
+{
+  "version": "v30-reasoned-selfplay-efficiency",
+  "base": "v29 rule-first mirror pressure",
+  "deck": {
+    "dark_energy": 9,
+    "prism_energy": 1,
+    "cards": 60
+  },
+  "accepted_change": {
+    "name": "empty_punk_up_guard",
+    "rule": "Decline Punk Up when every Marnie-line Pokemon in play already has at least two effective Darkness Energy.",
+    "reason": "The activation cannot attach useful Energy and only adds a selection step.",
+    "scope": "all matchups, exact no-value condition only"
+  },
+  "evidence": {
+    "selfplay_games_analyzed": 20,
+    "branch_decisions": 336,
+    "dominated_or_lower_efficiency_choices": 107,
+    "exact_equivalence_games": 84,
+    "empty_punk_up_occurrences": 37,
+    "equal_resulting_public_states": 37,
+    "shadow_games": 42,
+    "shadow_action_differences": 21,
+    "shadow_differences_only_accepted_rule": true
+  },
+  "rejected_candidates": [
+    "hard redundant-search suppression",
+    "hard Bench-space cap",
+    "forced Froslass-first order",
+    "refresh-supporter-before-stadium search",
+    "broad Boss conservation",
+    "global efficiency tiebreaker"
+  ],
+  "safety": "No branch-utility suggestion is enabled automatically. Exact equivalence or independent cross-play is required."
+}

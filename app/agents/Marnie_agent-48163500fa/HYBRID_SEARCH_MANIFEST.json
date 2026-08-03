@@ -1,0 +1,21 @@
+{
+  "architecture": "hybrid nested search with exact-policy opponent response",
+  "version": "marnie_grimmsnarl_v40_hybrid_search",
+  "root_policy": "deck-specific/native internal search remains enabled at the real observation",
+  "outer_policy": "common candidate search includes the native root action and alternative legal actions",
+  "branch_policy": "native recursive search disabled only inside hypothetical branches; deck policy still completes the current turn",
+  "opponent_policy": "recognized opponent AI is loaded and called on the simulated opponent observation",
+  "value_line": [
+    "native root proposal",
+    "own candidate continuation",
+    "opponent exact-policy response",
+    "post-response state value",
+    "regression-safe override margin"
+  ],
+  "safety": {
+    "no_recursive_native_search_in_branches": true,
+    "opponent_state_snapshot_restore": true,
+    "fallback_to_native_action": true,
+    "matchup_specific_thresholds_retained": true
+  }
+}

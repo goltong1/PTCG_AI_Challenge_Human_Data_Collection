@@ -1,0 +1,14 @@
+{
+  "bundle_version": "human_highrating_continual_20260804",
+  "agent": "dragapult_universal_v38_human_continual",
+  "source_directory": "dragapult_universal_v38_human_order_candidate",
+  "selection": "promoted",
+  "reason": "Human MAIN imitation 31.4%->48.6%; representative internal 10/20->12/20; high-rated 16/36 tie, earlier safe high gate 22/48->25/48.",
+  "human_replay": "20260804_074137_e48988f2",
+  "benchmarks": [
+    "legacy high-rated Dragapult",
+    "Mega Lucario Dudunsparce 784",
+    "Marnie Grimmsnarl v5"
+  ],
+  "continual_learning": "performed between completed games; candidate must pass champion regression gate"
+}

@@ -1,0 +1,42 @@
+{
+  "version": "marnie_grimmsnarl_replay_retrained_v34_crossplay_submission",
+  "generated_local_date": "2026-08-04",
+  "training_method": "simultaneous four-agent cross-play, matchup loss mining, candidate A/B screening, second-generation counter-training",
+  "changes": [
+    "Replay-learned residual restored for Dragapult matchups",
+    "Rule policy remains the base; learned residual only adjusts action ranking"
+  ],
+  "screening": {
+    "round1_pool": "45-27 (62.5%) over 72 games versus three original opponents"
+  },
+  "final_gen2_league": {
+    "games_per_unordered_pair": 40,
+    "total_games": 240,
+    "draws": 1,
+    "results": {
+      "okidogi_v17": {
+        "wins": 48,
+        "losses": 72,
+        "win_rate_decisive": 0.4
+      },
+      "dragapult_v31": {
+        "wins": 61,
+        "losses": 59,
+        "win_rate_decisive": 0.5083
+      },
+      "dusk_dragapult_v17": {
+        "wins": 54,
+        "losses": 65,
+        "draws": 1,
+        "win_rate_decisive": 0.4538
+      },
+      "marnie_v34": {
+        "wins": 76,
+        "losses": 43,
+        "draws": 1,
+        "win_rate_decisive": 0.6387
+      }
+    }
+  },
+  "caveat": "Local simulator cross-play is stochastic and does not guarantee leaderboard performance."
+}

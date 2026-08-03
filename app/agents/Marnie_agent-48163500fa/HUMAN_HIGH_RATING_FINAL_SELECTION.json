@@ -1,0 +1,14 @@
+{
+  "bundle_version": "human_highrating_continual_20260804",
+  "agent": "marnie_grimmsnarl_v41_hybrid_replay_fixed",
+  "source_directory": "marnie_grimmsnarl_v41_hybrid_replay_fixed",
+  "selection": "retained",
+  "reason": "Global/routed teacher candidates regressed on current champions.",
+  "human_replay": "20260804_074137_e48988f2",
+  "benchmarks": [
+    "legacy high-rated Dragapult",
+    "Mega Lucario Dudunsparce 784",
+    "Marnie Grimmsnarl v5"
+  ],
+  "continual_learning": "performed between completed games; candidate must pass champion regression gate"
+}

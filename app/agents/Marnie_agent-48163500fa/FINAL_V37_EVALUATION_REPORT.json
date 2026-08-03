@@ -1,0 +1,87 @@
+{
+  "version": "marnie_grimmsnarl_v37_exact_loss_memory",
+  "base": "v36_loss_adaptive",
+  "training_replays": 18,
+  "replay_record": {
+    "wins": 2,
+    "losses": 16
+  },
+  "alignment": "action at step t+1 paired with observation at step t",
+  "aligned_decisions": 1173,
+  "counterfactual_main_states": 394,
+  "accepted_exact_corrections": 13,
+  "margin_threshold": 150000,
+  "counterfactual_margin": {
+    "min": 239445.68677306804,
+    "mean": 1748872.1668263588,
+    "max": 1976199.9675468772
+  },
+  "generalized_candidate_results": {
+    "lucario_attach": {
+      "candidate": 0.6,
+      "baseline": 0.7,
+      "accepted": false
+    },
+    "alakazam_attack_now": {
+      "candidate": 0.5,
+      "baseline": 0.64,
+      "accepted": false
+    },
+    "dragapult_charge": {
+      "candidate": 0.525,
+      "baseline": 0.625,
+      "accepted": false
+    },
+    "crustle_nonex": {
+      "candidate": 0.7,
+      "baseline": 0.68,
+      "accepted": false,
+      "reason": "gain too small for confidence"
+    }
+  },
+  "historical_replay_action_changes": 13,
+  "ordinary_policy_equivalence": {
+    "games": 50,
+    "states": 4327,
+    "differences": 1,
+    "errors": 0
+  },
+  "standalone_smoke_league": {
+    "games": 50,
+    "wins": 28,
+    "rate": 0.56,
+    "matchups": [
+      [
+        "alakazam",
+        6,
+        10
+      ],
+      [
+        "archaludon",
+        5,
+        10
+      ],
+      [
+        "crustle",
+        4,
+        10
+      ],
+      [
+        "dusk",
+        6,
+        10
+      ],
+      [
+        "okidogi",
+        7,
+        10
+      ]
+    ]
+  },
+  "validation": {
+    "compile": true,
+    "deck_cards": 60,
+    "initialization": true,
+    "illegal_actions": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "source_archive": "89497418.zip",
+  "archive_games": 583,
+  "exact_decks": 46,
+  "direct_family_games": 581,
+  "sampled_decision_states": 2960,
+  "learning": [
+    "all-game deck/outcome statistics",
+    "stratified state-value fitting",
+    "phase and matchup action residuals",
+    "rich option-ranking merge where supported"
+  ],
+  "submission_fix": "runtime-relative root discovery; no /kaggle/working dependency",
+  "base_version": "marnie_grimmsnarl_v40_hybrid_search",
+  "new_version": "marnie_grimmsnarl_v41_hybrid_replay_fixed"
+}
