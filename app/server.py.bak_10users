@@ -28,24 +28,24 @@ from pvp_service import PvpHub
 from worker_service import SessionHub, WorkerCapacity, WorkerError
 
 
-APP_VERSION = "5.1.4-railway-10users"
+APP_VERSION = "5.1.3-railway"
 JSON_BODY_LIMIT = 2 * 1024 * 1024
 PUBLIC_MODE = os.environ.get("CABT_PUBLIC_MODE", "0").strip().lower() in {"1", "true", "yes", "on"}
 RESULT_SUBMISSION_ENABLED = os.environ.get(
     "CABT_ENABLE_RESULT_SUBMISSION", "1" if PUBLIC_MODE else "0"
 ).strip().lower() in {"1", "true", "yes", "on"}
-MAX_SESSIONS = max(1, int(os.environ.get("CABT_MAX_SESSIONS", "10")))
+MAX_SESSIONS = max(1, int(os.environ.get("CABT_MAX_SESSIONS", "8")))
 SESSION_IDLE_SECONDS = max(300, int(os.environ.get("CABT_SESSION_IDLE_SECONDS", "3600")))
 ONLINE_MATCHING_ENABLED = os.environ.get(
     "CABT_ENABLE_ONLINE_MATCHING", "1" if PUBLIC_MODE else "0"
 ).strip().lower() in {"1", "true", "yes", "on"}
-MAX_PVP_MATCHES = max(1, int(os.environ.get("CABT_MAX_PVP_MATCHES", "5")))
-MAX_PVP_WAITERS = max(2, int(os.environ.get("CABT_MAX_PVP_WAITERS", "20")))
+MAX_PVP_MATCHES = max(1, int(os.environ.get("CABT_MAX_PVP_MATCHES", "8")))
+MAX_PVP_WAITERS = max(2, int(os.environ.get("CABT_MAX_PVP_WAITERS", "64")))
 PVP_QUEUE_TIMEOUT = max(60, int(os.environ.get("CABT_PVP_QUEUE_TIMEOUT", "600")))
 PVP_MATCH_IDLE_SECONDS = max(600, int(os.environ.get("CABT_PVP_MATCH_IDLE_SECONDS", "7200")))
 CLIENT_DISCONNECT_SECONDS = max(5, int(os.environ.get("CABT_CLIENT_DISCONNECT_SECONDS", "45")))
 CLIENT_DISCONNECT_GRACE_SECONDS = max(2, int(os.environ.get("CABT_CLIENT_DISCONNECT_GRACE_SECONDS", "15")))
-MAX_ACTIVE_WORKERS = max(1, int(os.environ.get("CABT_MAX_ACTIVE_WORKERS", "10")))
+MAX_ACTIVE_WORKERS = max(1, int(os.environ.get("CABT_MAX_ACTIVE_WORKERS", "1")))
 SESSION_COOKIE = "CABT_SESSION"
 
 agents = AgentRepository(ROOT / "agents")
