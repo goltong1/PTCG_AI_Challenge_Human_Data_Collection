@@ -397,23 +397,7 @@
       </section>
     </div>
   </dialog>
-  
-  <!-- PTCG_AI_DECK_VIEW_V2 -->
-  <dialog id="agent-deck-dialog" class="agent-deck-dialog">
-    <div class="agent-deck-shell">
-      <header class="agent-deck-header">
-        <div>
-          <span class="kicker">OPPONENT DECK LIST</span>
-          <h2 id="agent-deck-title">AI 덱리스트</h2>
-          <p id="agent-deck-subtitle">상대 AI가 사용하는 60장 덱입니다.</p>
-        </div>
-        <button id="agent-deck-close" class="modal-close static-close" type="button" aria-label="닫기">×</button>
-      </header>
-      <div id="agent-deck-summary" class="agent-deck-summary"></div>
-      <div id="agent-deck-content" class="agent-deck-content"></div>
-    </div>
-  </dialog>
-<dialog id="card-modal" class="card-modal">
+  <dialog id="card-modal" class="card-modal">
     <button id="card-modal-close" class="modal-close" type="button" aria-label="닫기">×</button>
     <div id="card-modal-content"></div>
   </dialog>

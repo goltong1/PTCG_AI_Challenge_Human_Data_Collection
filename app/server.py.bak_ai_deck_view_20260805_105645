@@ -386,15 +386,6 @@ class CABTHandler(BaseHTTPRequestHandler):
                     }
                 )
                 return
-            # PTCG_AI_DECK_VIEW_V2
-            if path.startswith("/api/agents/") and path.endswith("/deck"):
-                agent_id = unquote(path[len("/api/agents/") : -len("/deck")].strip("/"))
-                if not agent_id:
-                    raise GameError("AI ID가 필요합니다.")
-                info = agents.get(agent_id)
-                cards = read_deck(info.path / "deck.csv")
-                self._send_json({"agent": info.public(), "total": len(cards), "cards": manager.deck_details(cards)})
-                return
             if path == "/api/cards":
                 query = parse_qs(parsed.query)
                 search = (query.get("q") or [""])[0]
