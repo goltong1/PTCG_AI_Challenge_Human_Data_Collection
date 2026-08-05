@@ -261,10 +261,10 @@
             <section id="prize-check-panel" class="panel prize-check-panel hidden">
               <div class="prize-check-panel-copy">
                 <span class="kicker">PRIZE CHECK</span>
-                <strong id="prize-check-status">프라이즈 체크 대기</strong>
-                <small id="prize-check-summary">덱 서치가 끝나면 프라이즈 목록이 자동으로 표시됩니다.</small>
+                <strong id="prize-check-status">서치 기록 없음</strong>
+                <small id="prize-check-summary">덱을 서치하면 프라이즈 체크 기록이 생성됩니다.</small>
               </div>
-              <button id="prize-check-open" class="button quiet" type="button">프라이즈 목록 보기</button>
+              <button id="prize-check-open" class="button quiet" type="button">프라이즈 체크</button>
             </section>
             <section id="result-submit-panel" class="panel result-submit-panel hidden">
               <div>
@@ -378,20 +378,20 @@
     <div class="prize-check-shell">
       <header class="prize-check-header">
         <div>
-          <span class="kicker">POST-SEARCH PRIZE RESULT</span>
-          <h2>프라이즈 목록</h2>
+          <span class="kicker">DECK SEARCH SNAPSHOT</span>
+          <h2>프라이즈 체크</h2>
           <p id="prize-check-dialog-status"></p>
         </div>
         <button id="prize-check-close" class="modal-close static-close" type="button" aria-label="닫기">×</button>
       </header>
       <div class="prize-check-note">
-        덱 서치가 끝난 뒤, 서치 시점의 덱 구성과 현재 상태를 기준으로 계산한 프라이즈 목록입니다.
+        본인이 덱 전체를 서치할 수 있는 선택이 열린 순간에만 생성됩니다. 서치 종료 후에도 마지막 기록을 다시 볼 수 있습니다.
       </div>
       <section class="prize-check-section prize-section">
-        <div class="prize-check-section-heading"><h3>프라이즈로 간 카드</h3><strong id="prize-check-prize-count">0장</strong></div>
+        <div class="prize-check-section-heading"><h3>추정 프라이즈</h3><strong id="prize-check-prize-count">0장</strong></div>
         <div id="prize-check-prize-grid" class="prize-check-grid"></div>
       </section>
-      <section class="prize-check-section hidden" aria-hidden="true">
+      <section class="prize-check-section">
         <div class="prize-check-section-heading"><h3>서치 시점의 덱</h3><strong id="prize-check-deck-count">0장</strong></div>
         <div id="prize-check-deck-grid" class="prize-check-grid"></div>
       </section>

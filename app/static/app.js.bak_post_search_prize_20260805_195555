@@ -30,10 +30,6 @@ const submittedGameIds = new Set();
 // PTCG_UI_PRIZE_CHECK_V1
 let prizeCheckSnapshot = null;
 let prizeCheckGameId = null;
-// PTCG_POST_SEARCH_PRIZE_V1
-let prizeCheckWasLive = false;
-let prizeCheckAutoOpenPending = false;
-let prizeCheckLastShownKey = null;
 let matchmakingTimer = null;
 let matchmakingBusy = false;
 let matchmakingState = { status: 'idle' };
@@ -1243,95 +1239,48 @@ function capturePrizeCheck(data) {
   if (!data?.active || data.mode === 'replay') {
     prizeCheckSnapshot = null;
     prizeCheckGameId = null;
-    prizeCheckWasLive = false;
-    prizeCheckAutoOpenPending = false;
-    prizeCheckLastShownKey = null;
     return;
   }
-
   if (prizeCheckGameId !== data.game_id) {
     prizeCheckSnapshot = null;
     prizeCheckGameId = data.game_id;
-    prizeCheckWasLive = false;
-    prizeCheckAutoOpenPending = false;
-    prizeCheckLastShownKey = null;
   }
-
-  const live = Boolean(data.prize_check);
-  if (live) {
+  if (data.prize_check) {
     prizeCheckSnapshot = {
       ...data.prize_check,
       game_id: data.game_id,
       captured_at: Date.now(),
     };
-    prizeCheckWasLive = true;
-    prizeCheckAutoOpenPending = false;
-    return;
   }
-
-  if (prizeCheckWasLive && prizeCheckSnapshot) {
-    prizeCheckAutoOpenPending = true;
-  }
-  prizeCheckWasLive = false;
 }
-
 function renderPrizeCheck(data) {
   const panel = $('#prize-check-panel');
   if (!panel) return;
-
-  const live = Boolean(data?.prize_check);
-  const available = Boolean(
-    data?.active
-    && data.mode !== 'replay'
-    && prizeCheckSnapshot
-    && !live
-  );
-
+  const available = Boolean(data?.active && data.mode !== 'replay' && prizeCheckSnapshot);
   panel.classList.toggle('hidden', !available);
   if (!available) return;
-
-  $('#prize-check-status').textContent = `프라이즈 체크 완료 · Turn ${prizeCheckSnapshot.turn}`;
-  $('#prize-check-summary').textContent =
-    `덱 서치가 끝난 뒤 계산된 프라이즈 ${prizeCheckSnapshot.prize_count}장입니다.`;
-  $('#prize-check-open').textContent = '프라이즈 목록 다시 보기';
-
-  if (!prizeCheckAutoOpenPending) return;
-  prizeCheckAutoOpenPending = false;
-
-  const snapshotKey = [
-    prizeCheckSnapshot.game_id,
-    prizeCheckSnapshot.turn,
-    prizeCheckSnapshot.captured_at,
-  ].join(':');
-
-  if (prizeCheckLastShownKey === snapshotKey) return;
-  prizeCheckLastShownKey = snapshotKey;
-
-  window.setTimeout(() => {
-    if (!state?.active || state.mode === 'replay' || state.prize_check) return;
-    if (!prizeCheckSnapshot || prizeCheckSnapshot.game_id !== state.game_id) return;
-    openPrizeCheckDialog();
-  }, 80);
+  const live = Boolean(data.prize_check);
+  $('#prize-check-status').textContent = live
+    ? `지금 덱을 확인 중 · Turn ${prizeCheckSnapshot.turn}`
+    : `마지막 체크 · Turn ${prizeCheckSnapshot.turn}`;
+  $('#prize-check-summary').textContent = live
+    ? `덱 ${prizeCheckSnapshot.deck_count}장과 프라이즈 ${prizeCheckSnapshot.prize_count}장을 확인할 수 있습니다.`
+    : `서치할 때 저장한 덱·프라이즈 기록입니다. 이후 프라이즈를 가져갔다면 실제 남은 장수와 비교하세요.`;
+  $('#prize-check-open').textContent = live ? '지금 프라이즈 체크' : '체크 기록 다시 보기';
 }
-
 function openPrizeCheckDialog() {
-  if (!prizeCheckSnapshot || state?.prize_check) return;
-
+  if (!prizeCheckSnapshot) return;
   const dialog = $('#prize-check-dialog');
-  $('#prize-check-dialog-status').textContent =
-    `Turn ${prizeCheckSnapshot.turn} · 덱 서치 종료 후 계산 결과`;
+  const live = Boolean(state?.prize_check);
+  $('#prize-check-dialog-status').textContent = live
+    ? `Turn ${prizeCheckSnapshot.turn} · 현재 서치 화면`
+    : `Turn ${prizeCheckSnapshot.turn} · 저장된 서치 스냅샷`;
+  $('#prize-check-deck-count').textContent = `${prizeCheckSnapshot.deck_count}장`;
   $('#prize-check-prize-count').textContent = `${prizeCheckSnapshot.prize_count}장`;
-  $('#prize-check-prize-grid').innerHTML = prizeCheckCardsHtml(
-    prizeCheckSnapshot.prizes,
-    '남아 있는 프라이즈가 없습니다.',
-  );
-
-  const deckSection = $('#prize-check-deck-grid')?.closest('.prize-check-section');
-  deckSection?.classList.add('hidden');
-
-  if (!dialog.open) dialog.showModal();
+  $('#prize-check-deck-grid').innerHTML = prizeCheckCardsHtml(prizeCheckSnapshot.deck, '확인 가능한 덱 카드가 없습니다.');
+  $('#prize-check-prize-grid').innerHTML = prizeCheckCardsHtml(prizeCheckSnapshot.prizes, '남은 프라이즈가 없습니다.');
+  dialog.showModal();
 }
-
 function render(data) {
   state = data;
   capturePrizeCheck(data);
