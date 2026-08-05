@@ -1,0 +1,13 @@
+{
+  "model_type": "RandomForest state-value estimator, pure-Python inference",
+  "training_source": "self-play and multi-policy games against six uploaded opponents",
+  "training_rows": 1909,
+  "heldout_rows": 888,
+  "heldout_auc": 0.8162751502208823,
+  "features": 120,
+  "trees": 31,
+  "max_depth": 6,
+  "runtime_use": "Only Crustle/Kangaskhan matchup; compare up to 5 complete own-turn counterfactual plans through up to 12 decisions; override base FSM only at >=0.10 learned-value margin.",
+  "hidden_information": "Uses only public observations plus deterministic completion from the known opponent deck list; no access to actual hidden cards.",
+  "deck_changed": false
+}

@@ -1,0 +1,43 @@
+{
+  "version": "dragapult_dusknoir_judge_macrofsm_v17_crossplay_submission",
+  "generated_local_date": "2026-08-04",
+  "training_method": "simultaneous four-agent cross-play, matchup loss mining, candidate A/B screening, second-generation counter-training",
+  "changes": [
+    "v13 value policy used for Marnie matchup instead of v6",
+    "Turn-plan search enabled through turn 8 versus Marnie",
+    "Stable macro-FSM retained outside targeted matchup"
+  ],
+  "screening": {
+    "vs_updated_marnie": "25-23 (52.1%) across 48 completed decisive games; batch stopped after time limit"
+  },
+  "final_gen2_league": {
+    "games_per_unordered_pair": 40,
+    "total_games": 240,
+    "draws": 1,
+    "results": {
+      "okidogi_v17": {
+        "wins": 48,
+        "losses": 72,
+        "win_rate_decisive": 0.4
+      },
+      "dragapult_v31": {
+        "wins": 61,
+        "losses": 59,
+        "win_rate_decisive": 0.5083
+      },
+      "dusk_dragapult_v17": {
+        "wins": 54,
+        "losses": 65,
+        "draws": 1,
+        "win_rate_decisive": 0.4538
+      },
+      "marnie_v34": {
+        "wins": 76,
+        "losses": 43,
+        "draws": 1,
+        "win_rate_decisive": 0.6387
+      }
+    }
+  },
+  "caveat": "Local simulator cross-play is stochastic and does not guarantee leaderboard performance."
+}

@@ -1,0 +1,11 @@
+{
+  "source": "89422843.zip",
+  "family": "cynthia",
+  "games": 17,
+  "wins": 11,
+  "losses": 6,
+  "states": 1196,
+  "variants": 2,
+  "representative_deck_selection": "high-performing exact replay variant with sufficient sample",
+  "architecture": "generic legal-option policy + unified hidden-state search + learned value"
+}

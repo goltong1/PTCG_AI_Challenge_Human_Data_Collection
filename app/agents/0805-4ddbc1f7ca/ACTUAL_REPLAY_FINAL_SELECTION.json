@@ -1,0 +1,8 @@
+{
+  "agent": "dragapult",
+  "final_name": "dragapult_universal_v43_actual_replay_learned",
+  "selected_variant": "small",
+  "source": "/mnt/data/new_replay_train/human_training/candidates/dragapult__small",
+  "actual_replay_games": 135,
+  "selection_rule": "rating benchmarks first; no promotion if total gain absent or one benchmark materially regresses"
+}

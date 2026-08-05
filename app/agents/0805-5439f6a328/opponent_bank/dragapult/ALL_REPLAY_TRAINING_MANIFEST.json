@@ -1,0 +1,8 @@
+{
+  "source_archive": "89422843.zip",
+  "games": 312,
+  "extracted_states": 3034,
+  "direct_family_games": 26,
+  "learning": "continual logistic state value + phase/matchup action residual + expanded opponent catalog",
+  "candidate_mode": "safe"
+}

@@ -1,0 +1,9 @@
+{
+  "agent": "lucario",
+  "baseline_dir": "mega_lucario_v2_learned_benchmark",
+  "selected_variant": "micro",
+  "training_games_per_opponent": 100,
+  "total_training_games": 1200,
+  "selection_basis": "7,800-game full league plus paired high-rating A/B",
+  "source": "/mnt/data/league500_work/league100_training/candidates/lucario__micro"
+}

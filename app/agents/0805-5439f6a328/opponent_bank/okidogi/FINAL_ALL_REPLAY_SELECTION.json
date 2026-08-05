@@ -1,0 +1,15 @@
+{
+  "final_name": "okidogi_cosmic_v19_all_replay_transfer_gated",
+  "source_candidate": "okidogi_safe",
+  "selection_note": "Global/opponent transfer model updated; existing matchup search scope retained.",
+  "source_archive": "89422843.zip",
+  "family_stats": {},
+  "final_smoke_league": {
+    "agent": "okidogi_safe",
+    "wins": 17,
+    "losses": 5,
+    "games": 22,
+    "win_rate": 0.7727272727272727,
+    "errors": 0
+  }
+}

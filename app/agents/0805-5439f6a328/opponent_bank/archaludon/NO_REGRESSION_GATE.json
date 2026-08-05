@@ -1,0 +1,9 @@
+{
+  "status": "runtime_rollback",
+  "reason": "candidate underperformed fixed baseline in focused gate",
+  "candidate_files": [
+    "candidate_89497418_unified_config.json",
+    "candidate_89497418_replay_prior.json"
+  ],
+  "submission_fix_retained": true
+}

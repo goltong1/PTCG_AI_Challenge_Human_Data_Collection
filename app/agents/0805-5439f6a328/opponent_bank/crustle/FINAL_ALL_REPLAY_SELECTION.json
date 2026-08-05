@@ -1,0 +1,21 @@
+{
+  "final_name": "crustle_kangaskhan_v20_all_replay_expanded",
+  "source_candidate": "crustle_expanded",
+  "selection_note": "Direct Crustle replay update plus expanded new-archetype search; 32/40 vs new pool compared with base 30/40.",
+  "source_archive": "89422843.zip",
+  "family_stats": {
+    "games": 40,
+    "wins": 20,
+    "losses": 20,
+    "states": 2117,
+    "variants": 7
+  },
+  "final_smoke_league": {
+    "agent": "crustle_expanded",
+    "wins": 15,
+    "losses": 7,
+    "games": 22,
+    "win_rate": 0.6818181818181818,
+    "errors": 0
+  }
+}

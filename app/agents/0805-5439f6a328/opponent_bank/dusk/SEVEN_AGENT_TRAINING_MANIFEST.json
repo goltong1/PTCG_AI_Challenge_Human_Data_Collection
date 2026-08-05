@@ -1,0 +1,17 @@
+{
+  "seven_agent_league": true,
+  "status": "updated",
+  "source_agent": "03_dragapult_dusknoir_judge_macrofsm_v18",
+  "report": "../SEVEN_AGENT_LEAGUE_REPORT.json",
+  "version": "v18",
+  "accepted_change": "Archaludon value-search enabled through turn 8",
+  "confirmation": "21-49 vs Archaludon; baseline 16-54",
+  "final_validation": {
+    "compile": "pass",
+    "deck_60": "pass",
+    "agent_init": "pass",
+    "bidirectional_smoke_league": "pass",
+    "exceptions": 0,
+    "invalid_actions": 0
+  }
+}

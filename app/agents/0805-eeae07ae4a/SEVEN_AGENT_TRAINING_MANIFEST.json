@@ -1,0 +1,14 @@
+{
+  "seven_agent_league": true,
+  "status": "retained",
+  "source_agent": "05_archaludon_kaggle_sparring",
+  "report": "../SEVEN_AGENT_LEAGUE_REPORT.json",
+  "final_validation": {
+    "compile": "pass",
+    "deck_60": "pass",
+    "agent_init": "pass",
+    "bidirectional_smoke_league": "pass",
+    "exceptions": 0,
+    "invalid_actions": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "bundle_version": "human_highrating_continual_20260804",
+  "agent": "dragapult_dusknoir_v23_hybrid_replay_fixed",
+  "source_directory": "dragapult_dusknoir_v23_hybrid_replay_fixed",
+  "selection": "retained",
+  "reason": "Safe candidate high-rated 29/48->22/48 regression.",
+  "human_replay": "20260804_074137_e48988f2",
+  "benchmarks": [
+    "legacy high-rated Dragapult",
+    "Mega Lucario Dudunsparce 784",
+    "Marnie Grimmsnarl v5"
+  ],
+  "continual_learning": "performed between completed games; candidate must pass champion regression gate"
+}

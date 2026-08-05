@@ -1,0 +1,11 @@
+{
+  "source": "89422843.zip",
+  "family": "spidops",
+  "games": 14,
+  "wins": 3,
+  "losses": 11,
+  "states": 825,
+  "variants": 5,
+  "representative_deck_selection": "high-performing exact replay variant with sufficient sample",
+  "architecture": "generic legal-option policy + unified hidden-state search + learned value"
+}

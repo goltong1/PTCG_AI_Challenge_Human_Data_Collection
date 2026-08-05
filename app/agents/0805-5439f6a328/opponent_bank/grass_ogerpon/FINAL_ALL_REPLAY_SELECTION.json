@@ -1,0 +1,21 @@
+{
+  "final_name": "grass_ogerpon_v1_rich_replay_search",
+  "source_candidate": "grass_ogerpon_r320",
+  "selection_note": "New AI from 68 games/4,365 states. Rich win-weighted option ranking selected: 19/56 vs strong seven-agent pool, base 16/56.",
+  "source_archive": "89422843.zip",
+  "family_stats": {
+    "games": 68,
+    "wins": 37,
+    "losses": 31,
+    "states": 4365,
+    "variants": 6
+  },
+  "final_smoke_league": {
+    "agent": "grass_ogerpon_r320",
+    "wins": 10,
+    "losses": 12,
+    "games": 22,
+    "win_rate": 0.45454545454545453,
+    "errors": 0
+  }
+}

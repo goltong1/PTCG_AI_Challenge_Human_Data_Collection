@@ -1,0 +1,8 @@
+{
+  "agent": "archaludon",
+  "final_name": "archaludon_v7_actual_replay_learned",
+  "selected_variant": "small",
+  "source": "/mnt/data/new_replay_train/human_training/candidates/archaludon__small",
+  "actual_replay_games": 135,
+  "selection_rule": "rating benchmarks first; no promotion if total gain absent or one benchmark materially regresses"
+}

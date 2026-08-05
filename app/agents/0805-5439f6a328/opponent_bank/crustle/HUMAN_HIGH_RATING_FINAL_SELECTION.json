@@ -1,0 +1,14 @@
+{
+  "bundle_version": "human_highrating_continual_20260804",
+  "agent": "crustle_kangaskhan_v23_hybrid_replay_fixed",
+  "source_directory": "crustle_kangaskhan_v23_hybrid_replay_fixed",
+  "selection": "retained",
+  "reason": "Candidate high-rated 28/48->27/48.",
+  "human_replay": "20260804_074137_e48988f2",
+  "benchmarks": [
+    "legacy high-rated Dragapult",
+    "Mega Lucario Dudunsparce 784",
+    "Marnie Grimmsnarl v5"
+  ],
+  "continual_learning": "performed between completed games; candidate must pass champion regression gate"
+}
