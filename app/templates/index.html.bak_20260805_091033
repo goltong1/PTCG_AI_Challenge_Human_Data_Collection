@@ -20,8 +20,6 @@
       </button>
       <nav class="header-actions" aria-label="게임 도구">
         <button id="open-replay-btn" class="button quiet replay-open-button" type="button">리플레이 불러오기</button>
-        <!-- PTCG_FEEDBACK_LINK_V1 -->
-        <a id="feedback-link" class="button quiet feedback-link" href="https://open.kakao.com/o/sm2LagHi" target="_blank" rel="noopener noreferrer" aria-label="버그 보고 및 피드백 카카오 오픈채팅 열기">버그 보고 및 피드백 ↗</a>
         <button id="new-game-btn" class="button quiet" type="button">새 게임</button>
         <a id="viewer-btn" class="button quiet disabled" href="#" target="_blank" rel="noopener">공식 리플레이</a>
         <a id="official-json-btn" class="button quiet disabled" href="/api/game/official.json">공식 JSON</a>
@@ -257,15 +255,6 @@
               </div>
             </section>
 
-            <!-- PTCG_UI_PRIZE_CHECK_V1 -->
-            <section id="prize-check-panel" class="panel prize-check-panel hidden">
-              <div class="prize-check-panel-copy">
-                <span class="kicker">PRIZE CHECK</span>
-                <strong id="prize-check-status">서치 기록 없음</strong>
-                <small id="prize-check-summary">덱을 서치하면 프라이즈 체크 기록이 생성됩니다.</small>
-              </div>
-              <button id="prize-check-open" class="button quiet" type="button">프라이즈 체크</button>
-            </section>
             <section id="result-submit-panel" class="panel result-submit-panel hidden">
               <div>
                 <span class="kicker">BATTLE RESULT</span>
@@ -374,29 +363,6 @@
     </div>
   </dialog>
 
-  <dialog id="prize-check-dialog" class="prize-check-dialog">
-    <div class="prize-check-shell">
-      <header class="prize-check-header">
-        <div>
-          <span class="kicker">DECK SEARCH SNAPSHOT</span>
-          <h2>프라이즈 체크</h2>
-          <p id="prize-check-dialog-status"></p>
-        </div>
-        <button id="prize-check-close" class="modal-close static-close" type="button" aria-label="닫기">×</button>
-      </header>
-      <div class="prize-check-note">
-        본인이 덱 전체를 서치할 수 있는 선택이 열린 순간에만 생성됩니다. 서치 종료 후에도 마지막 기록을 다시 볼 수 있습니다.
-      </div>
-      <section class="prize-check-section prize-section">
-        <div class="prize-check-section-heading"><h3>추정 프라이즈</h3><strong id="prize-check-prize-count">0장</strong></div>
-        <div id="prize-check-prize-grid" class="prize-check-grid"></div>
-      </section>
-      <section class="prize-check-section">
-        <div class="prize-check-section-heading"><h3>서치 시점의 덱</h3><strong id="prize-check-deck-count">0장</strong></div>
-        <div id="prize-check-deck-grid" class="prize-check-grid"></div>
-      </section>
-    </div>
-  </dialog>
   <dialog id="card-modal" class="card-modal">
     <button id="card-modal-close" class="modal-close" type="button" aria-label="닫기">×</button>
     <div id="card-modal-content"></div>

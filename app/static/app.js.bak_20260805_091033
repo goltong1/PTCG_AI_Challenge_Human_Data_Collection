@@ -27,9 +27,6 @@ let replayBusy = false;
 let replayRequestGeneration = 0;
 let resultSubmitting = false;
 const submittedGameIds = new Set();
-// PTCG_UI_PRIZE_CHECK_V1
-let prizeCheckSnapshot = null;
-let prizeCheckGameId = null;
 let matchmakingTimer = null;
 let matchmakingBusy = false;
 let matchmakingState = { status: 'idle' };
@@ -967,7 +964,7 @@ function attachmentPanel(card) {
   </div>`;
 }
 
-function cardHtml(card, { pokemon = false, compact = false, hidden = false, location = '', identifier = '' } = {}) {
+function cardHtml(card, { pokemon = false, compact = false, hidden = false } = {}) {
   if (hidden) {
     return `<div class="card-shell hidden-card"><div class="card-back-mark">CABT</div></div>`;
   }
@@ -980,12 +977,10 @@ function cardHtml(card, { pokemon = false, compact = false, hidden = false, loca
     ? Object.entries(card.conditions || {}).filter(([, value]) => value).map(([condition]) => condition)
     : [];
   const shell = `<button class="card-shell card-click ${pokemon ? 'pokemon' : ''} ${compact ? 'compact-card' : ''}"
-      type="button" data-card-key="${key}" title="${esc(location ? `${location} · ${card.name}` : card.name)} 자세히 보기">
-    ${pokemon && identifier ? `<span class="board-card-id">${esc(identifier)}</span>` : ''}
+      type="button" data-card-key="${key}" title="${esc(card.name)} 자세히 보기">
     ${imageHtml(card)}
     ${pokemon ? `<div class="pokemon-overlay">
       <div class="pokemon-name"><span>${esc(card.name)}</span><b>${card.hp_current}/${card.hp_max}</b></div>
-      ${location ? `<div class="pokemon-location">${esc(location)}</div>` : ''}
       <div class="hp-bar"><span style="width:${hpPercent}%"></span></div>
       ${conditions.length ? `<div class="condition-row">${conditions.map((condition) => `<span>${esc(condition)}</span>`).join('')}</div>` : ''}
     </div>` : `<div class="card-caption">${esc(card.name)}</div>`}
@@ -996,10 +991,10 @@ function cardHtml(card, { pokemon = false, compact = false, hidden = false, loca
 
 function renderPlayerSide(target, player, revealHand, name, seatToken = 'YOU') {
   const active = player.active?.length
-    ? cardHtml(player.active[0], { pokemon: true, location: '액티브', identifier: 'A' })
+    ? cardHtml(player.active[0], { pokemon: true })
     : '<div class="empty-slot active-empty">배틀 포켓몬 없음</div>';
   const bench = player.bench?.length
-    ? player.bench.map((card, index) => cardHtml(card, { pokemon: true, compact: true, location: `벤치 ${index + 1}`, identifier: `B${index + 1}` })).join('')
+    ? player.bench.map((card) => cardHtml(card, { pokemon: true, compact: true })).join('')
     : '<div class="empty-slot">벤치 없음</div>';
   const handVisible = revealHand && player.hand !== null;
   const hand = handVisible
@@ -1213,84 +1208,14 @@ function renderTimeline(history) {
   }
 }
 
-function groupedPrizeCards(cards) {
-  const groups = new Map();
-  (cards || []).forEach((card) => {
-    const key = `${card.id}:${card.name}`;
-    const row = groups.get(key) || { card, count: 0 };
-    row.count += 1;
-    groups.set(key, row);
-  });
-  return [...groups.values()].sort((a, b) => a.card.name.localeCompare(b.card.name, 'ko'));
-}
-function prizeCheckCardsHtml(cards, emptyText) {
-  const groups = groupedPrizeCards(cards);
-  if (!groups.length) return `<div class="prize-check-empty">${esc(emptyText)}</div>`;
-  return groups.map(({ card, count }) => {
-    const key = registerCard(card);
-    return `<button class="prize-check-card card-click" type="button" data-card-key="${key}">
-      <span class="prize-check-art">${imageHtml(card, 'prize-check-image')}</span>
-      <span><b>${esc(card.name)}</b><small>Card ID ${card.id}</small></span>
-      <strong>×${count}</strong>
-    </button>`;
-  }).join('');
-}
-function capturePrizeCheck(data) {
-  if (!data?.active || data.mode === 'replay') {
-    prizeCheckSnapshot = null;
-    prizeCheckGameId = null;
-    return;
-  }
-  if (prizeCheckGameId !== data.game_id) {
-    prizeCheckSnapshot = null;
-    prizeCheckGameId = data.game_id;
-  }
-  if (data.prize_check) {
-    prizeCheckSnapshot = {
-      ...data.prize_check,
-      game_id: data.game_id,
-      captured_at: Date.now(),
-    };
-  }
-}
-function renderPrizeCheck(data) {
-  const panel = $('#prize-check-panel');
-  if (!panel) return;
-  const available = Boolean(data?.active && data.mode !== 'replay' && prizeCheckSnapshot);
-  panel.classList.toggle('hidden', !available);
-  if (!available) return;
-  const live = Boolean(data.prize_check);
-  $('#prize-check-status').textContent = live
-    ? `지금 덱을 확인 중 · Turn ${prizeCheckSnapshot.turn}`
-    : `마지막 체크 · Turn ${prizeCheckSnapshot.turn}`;
-  $('#prize-check-summary').textContent = live
-    ? `덱 ${prizeCheckSnapshot.deck_count}장과 프라이즈 ${prizeCheckSnapshot.prize_count}장을 확인할 수 있습니다.`
-    : `서치할 때 저장한 덱·프라이즈 기록입니다. 이후 프라이즈를 가져갔다면 실제 남은 장수와 비교하세요.`;
-  $('#prize-check-open').textContent = live ? '지금 프라이즈 체크' : '체크 기록 다시 보기';
-}
-function openPrizeCheckDialog() {
-  if (!prizeCheckSnapshot) return;
-  const dialog = $('#prize-check-dialog');
-  const live = Boolean(state?.prize_check);
-  $('#prize-check-dialog-status').textContent = live
-    ? `Turn ${prizeCheckSnapshot.turn} · 현재 서치 화면`
-    : `Turn ${prizeCheckSnapshot.turn} · 저장된 서치 스냅샷`;
-  $('#prize-check-deck-count').textContent = `${prizeCheckSnapshot.deck_count}장`;
-  $('#prize-check-prize-count').textContent = `${prizeCheckSnapshot.prize_count}장`;
-  $('#prize-check-deck-grid').innerHTML = prizeCheckCardsHtml(prizeCheckSnapshot.deck, '확인 가능한 덱 카드가 없습니다.');
-  $('#prize-check-prize-grid').innerHTML = prizeCheckCardsHtml(prizeCheckSnapshot.prizes, '남은 프라이즈가 없습니다.');
-  dialog.showModal();
-}
 function render(data) {
   state = data;
-  capturePrizeCheck(data);
   cardRegistry.clear();
   cardCounter = 0;
   if (!data.active) {
     stopReplayPlayback();
     $('#lobby').classList.remove('hidden');
     $('#game').classList.add('hidden');
-    $('#prize-check-panel')?.classList.add('hidden');
     return;
   }
 
@@ -1387,7 +1312,6 @@ function render(data) {
   result.textContent = data.result_text || '';
   result.classList.toggle('hidden', data.result === -1);
   renderOptions(data.selection);
-  renderPrizeCheck(data);
   renderActionStage(data.last_action);
   renderTimeline(data.action_history);
   $('#logs').innerHTML = data.logs?.length
@@ -1935,11 +1859,6 @@ $('#speed-select').addEventListener('change', () => {
 $('#timeline-bottom-btn').addEventListener('click', () => {
   const timeline = $('#timeline');
   timeline.scrollTop = timeline.scrollHeight;
-});
-$('#prize-check-open').addEventListener('click', openPrizeCheckDialog);
-$('#prize-check-close').addEventListener('click', () => $('#prize-check-dialog').close());
-$('#prize-check-dialog').addEventListener('click', (event) => {
-  if (event.target === $('#prize-check-dialog')) $('#prize-check-dialog').close();
 });
 $('#card-modal-close').addEventListener('click', () => $('#card-modal').close());
 $('#card-modal').addEventListener('click', (event) => {

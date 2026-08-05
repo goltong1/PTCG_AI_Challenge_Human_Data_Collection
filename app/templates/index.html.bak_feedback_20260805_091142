@@ -20,8 +20,6 @@
       </button>
       <nav class="header-actions" aria-label="게임 도구">
         <button id="open-replay-btn" class="button quiet replay-open-button" type="button">리플레이 불러오기</button>
-        <!-- PTCG_FEEDBACK_LINK_V1 -->
-        <a id="feedback-link" class="button quiet feedback-link" href="https://open.kakao.com/o/sm2LagHi" target="_blank" rel="noopener noreferrer" aria-label="버그 보고 및 피드백 카카오 오픈채팅 열기">버그 보고 및 피드백 ↗</a>
         <button id="new-game-btn" class="button quiet" type="button">새 게임</button>
         <a id="viewer-btn" class="button quiet disabled" href="#" target="_blank" rel="noopener">공식 리플레이</a>
         <a id="official-json-btn" class="button quiet disabled" href="/api/game/official.json">공식 JSON</a>

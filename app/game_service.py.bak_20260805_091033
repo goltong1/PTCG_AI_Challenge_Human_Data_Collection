@@ -784,13 +784,6 @@ class GameManager:
                 "looking": [
                     self._serialize_card(card) if card else None for card in current.get("looking") or []
                 ],
-                "prize_check": self._prize_check_payload(
-                    select,
-                    players[self.human_seat],
-                    actor,
-                    self.human_seat,
-                    int(current.get("turn", 0)),
-                ),
                 "flags": {
                     "supporter_played": bool(current.get("supporterPlayed", False)),
                     "stadium_played": bool(current.get("stadiumPlayed", False)),
@@ -889,13 +882,6 @@ class GameManager:
                 "looking": [
                     self._serialize_card(card) if card else None for card in current.get("looking") or []
                 ],
-                "prize_check": self._prize_check_payload(
-                    select,
-                    players[viewer_seat],
-                    actor,
-                    viewer_seat,
-                    int(current.get("turn", 0)),
-                ),
                 "flags": {
                     "supporter_played": bool(current.get("supporterPlayed", False)),
                     "stadium_played": bool(current.get("stadiumPlayed", False)),
@@ -923,37 +909,6 @@ class GameManager:
                 "last_error": self.last_error,
                 "record_available": self.record_dir is not None,
             }
-
-    def _prize_check_payload(
-        self,
-        select: dict[str, Any] | None,
-        player: dict[str, Any],
-        actor: int,
-        viewer_seat: int,
-        turn: int,
-    ) -> dict[str, Any] | None:
-        # Only expose a player's own hidden information while that player is
-        # legally looking through their deck. The browser retains the snapshot
-        # after the search so the user can finish a normal prize check.
-        if not select or actor != viewer_seat or select.get("deck") is None:
-            return None
-        deck_cards = [
-            self._serialize_card(card)
-            for card in (select.get("deck") or [])
-            if card
-        ]
-        prize_cards = [
-            self._serialize_card(card)
-            for card in (player.get("prize") or [])
-            if card
-        ]
-        return {
-            "turn": int(turn),
-            "deck": deck_cards,
-            "deck_count": len(deck_cards),
-            "prizes": prize_cards,
-            "prize_count": len(prize_cards),
-        }
 
     def _serialize_player(self, player: dict[str, Any], reveal_hand: bool) -> dict[str, Any]:
         hand = player.get("hand") if reveal_hand else None
@@ -1069,27 +1024,6 @@ class GameManager:
             }
         return None
 
-    # PTCG_UI_PRIZE_CHECK_V1
-    @staticmethod
-    def _area_position_text(area: int, index: int) -> str:
-        if area == 4:
-            return "액티브"
-        if area == 5:
-            return f"벤치 {index + 1}"
-        if area == 2:
-            return f"패 {index + 1}"
-        if area == 3:
-            return f"트래시 {index + 1}"
-        if area == 1:
-            return f"덱 {index + 1}"
-        if area == 6:
-            return f"프라이즈 {index + 1}"
-        if area == 7:
-            return "스타디움"
-        if area == 12:
-            return f"확인 중 {index + 1}"
-        return AREA_NAMES.get(area, "")
-
     def _target_text(
         self,
         obs: dict[str, Any],
@@ -1106,9 +1040,7 @@ class GameManager:
         target_area = int(option.get("inPlayArea", 4))
         target_index = int(option.get("inPlayIndex", 0))
         target = self._card_from_area(obs, select, actor, target_area, target_index)
-        target_name = self.catalog.card_name(target.get("id")) if target else AREA_NAMES.get(target_area, "대상")
-        target_location = self._area_position_text(target_area, target_index)
-        return f"{target_location} · {target_name}" if target_location else target_name
+        return self.catalog.card_name(target.get("id")) if target else AREA_NAMES.get(target_area, "대상")
 
     def _enrich_option(
         self,
@@ -1127,11 +1059,6 @@ class GameManager:
         if serialized:
             label = serialized["name"]
             detail = OPTION_NAMES.get(option_type, "선택")
-            source_area = int(option.get("area", 2 if option_type == 7 else -1))
-            source_index = int(option.get("index", -1))
-            source_location = self._area_position_text(source_area, source_index)
-            if source_location:
-                detail = f"{source_location} · {detail}"
             target = self._target_text(obs, select, option)
             if target:
                 detail += f" → {target}"
