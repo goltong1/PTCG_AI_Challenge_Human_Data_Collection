@@ -1,0 +1,41 @@
+{
+  "candidate": "v67_drag_attackfinish",
+  "opponent": "archaludon",
+  "games": 400,
+  "wins": 194,
+  "losses": 206,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.485,
+  "seats": {
+    "p0": {
+      "games": 200,
+      "wins": 101,
+      "win_rate": 0.505
+    },
+    "p1": {
+      "games": 200,
+      "wins": 93,
+      "win_rate": 0.465
+    }
+  },
+  "result_reasons": {
+    "1": 289,
+    "3": 111
+  },
+  "error_samples": [],
+  "elapsed_sec": 55.655,
+  "controller_stats": {
+    "searches": 6815,
+    "overrides": 0,
+    "recognized": {
+      "spidops": 759,
+      "archaludon": 34456
+    },
+    "opponent_turns": 0,
+    "opponent_actions": 0,
+    "opponent_errors": 0,
+    "native_root_calls": 2772,
+    "hybrid_searches": 35215
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "baseline": "v66_recovered",
+  "challenger": "v67_drag_attackfinish",
+  "opponent": "crustle",
+  "games": 40,
+  "decisions": 4105,
+  "divergences": 0,
+  "identity_rate": 1.0,
+  "baseline_path_results": {
+    "wins": 27,
+    "losses": 13,
+    "draws": 0
+  },
+  "errors": 0,
+  "step_limits": 0,
+  "samples": [],
+  "elapsed_sec": 10.693
+}

@@ -1,0 +1,62 @@
+{
+  "baseline": "v66_recovered",
+  "challenger": "v67_drag_attackfinish",
+  "opponent": "dragapult_0805",
+  "games_each": 400,
+  "results": {
+    "baseline": {
+      "games": 400,
+      "wins": 293,
+      "losses": 107,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 200,
+          "wins": 152,
+          "win_rate": 0.76
+        },
+        "p1": {
+          "games": 200,
+          "wins": 141,
+          "win_rate": 0.705
+        }
+      },
+      "reasons": {
+        "1": 332,
+        "3": 68
+      },
+      "step_limits": 0,
+      "error_samples": [],
+      "win_rate": 0.7325
+    },
+    "challenger": {
+      "games": 400,
+      "wins": 303,
+      "losses": 97,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 200,
+          "wins": 163,
+          "win_rate": 0.815
+        },
+        "p1": {
+          "games": 200,
+          "wins": 140,
+          "win_rate": 0.7
+        }
+      },
+      "reasons": {
+        "1": 334,
+        "3": 66
+      },
+      "step_limits": 0,
+      "error_samples": [],
+      "win_rate": 0.7575
+    }
+  },
+  "delta_pp": 2.5,
+  "elapsed_sec": 281.922
+}

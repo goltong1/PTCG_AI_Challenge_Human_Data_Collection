@@ -1,0 +1,136 @@
+{
+  "version": "marnie_multiturn_hand_value_focus_v1",
+  "focus_agent": "Marnie Grimmsnarl only",
+  "model": {
+    "samples": 201,
+    "games": 32,
+    "features": 109,
+    "targets": [
+      "t1_board",
+      "t2_board",
+      "t3_board",
+      "win"
+    ],
+    "holdout_mae": [
+      0.5132926613999823,
+      0.5971692913890038,
+      0.5258939107840465,
+      0.5533752476563103
+    ],
+    "horizons": "next own turn, two-turn backup line, three-turn disruption recovery, terminal result",
+    "state_inputs": [
+      "card-level hand counts",
+      "board/discard/remaining-deck counts",
+      "prize state",
+      "ready Grimmsnarl count",
+      "Rare Candy and Morgrem routes",
+      "Froslass route",
+      "Munkidori + Darkness route",
+      "backup attacker count",
+      "search/energy density",
+      "duplicate/dead-card burden",
+      "opponent family"
+    ]
+  },
+  "decision_scope": {
+    "evaluated_actions": [
+      "Lillie",
+      "search/cycling cards",
+      "End versus productive continuation"
+    ],
+    "not_hard_banned": true,
+    "search_target_override_disabled_in_final_challenger": true,
+    "discard_bundle_override_disabled_in_final_challenger": true,
+    "multi_turn_discount": [
+      1.0,
+      0.72,
+      0.5,
+      0.35
+    ]
+  },
+  "training_findings": [
+    "Global hand-value reranking overrode too many correct existing actions and regressed.",
+    "Opponent-specific Dragapult-only gating reduced regressions but did not beat the champion reliably.",
+    "Medium threshold scored 6/8 versus baseline 7/8.",
+    "Strict threshold scored 12/20 versus baseline 13/20 with zero errors.",
+    "The model is retained as a challenger/research component, not promoted into the champion policy."
+  ],
+  "screen_results": {
+    "balanced__dragapult": {
+      "candidate": 3,
+      "baseline": 4,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "balanced__lucario": {
+      "candidate": 3,
+      "baseline": 5,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "balanced__marnie": {
+      "candidate": 1,
+      "baseline": 3,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "conservative__dragapult": {
+      "candidate": 5,
+      "baseline": 6,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "conservative__lucario": {
+      "candidate": 3,
+      "baseline": 2,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "conservative__marnie": {
+      "candidate": 2,
+      "baseline": 3,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "lillie_only__dragapult": {
+      "candidate": 5,
+      "baseline": 3,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "lillie_only__lucario": {
+      "candidate": 0,
+      "baseline": 3,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    },
+    "lillie_only__marnie": {
+      "candidate": 3,
+      "baseline": 3,
+      "candidate_errors": 0,
+      "baseline_errors": 0,
+      "games": 6
+    }
+  },
+  "strict_dragapult_gate": {
+    "games_each": 20,
+    "candidate_wins": 12,
+    "baseline_wins": 13,
+    "candidate_errors": 0,
+    "baseline_errors": 0
+  },
+  "promotion": false,
+  "champion_decision": "Retain original v48 runtime policy. Do not activate the learned hand-value override until further replay/self-play data improves the gate.",
+  "files": {
+    "champion": "runtime-identical base plus reports only",
+    "challenger": "three-turn hand value enabled only after Dragapult recognition with strict confidence threshold"
+  }
+}

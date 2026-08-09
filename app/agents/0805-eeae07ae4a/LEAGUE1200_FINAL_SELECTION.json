@@ -1,9 +1,0 @@
-{
-  "agent": "archaludon",
-  "baseline_dir": "archaludon_v6_hybrid_replay_fixed",
-  "selected_variant": "base",
-  "training_games_per_opponent": 100,
-  "total_training_games": 1200,
-  "selection_basis": "7,800-game full league plus paired high-rating A/B",
-  "source": "/mnt/data/league500_work/champions/archaludon_v6_hybrid_replay_fixed"
-}

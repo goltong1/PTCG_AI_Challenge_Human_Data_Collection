@@ -1,0 +1,46 @@
+{
+  "candidate": "v68_verified_matchup_adaptation",
+  "opponent": "lucario",
+  "games": 400,
+  "wins": 184,
+  "losses": 216,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.46,
+  "seats": {
+    "p0": {
+      "games": 200,
+      "wins": 105,
+      "win_rate": 0.525
+    },
+    "p1": {
+      "games": 200,
+      "wins": 79,
+      "win_rate": 0.395
+    }
+  },
+  "result_reasons": {
+    "1": 349,
+    "3": 51
+  },
+  "error_samples": [],
+  "elapsed_sec": 127.864,
+  "controller_stats": {
+    "searches": 5155,
+    "overrides": 0,
+    "recognized": {
+      "spidops": 921,
+      "okidogi": 1974,
+      "lucario": 23432,
+      "lopunny": 2789,
+      "alakazam": 42,
+      "cynthia": 13,
+      "marnie": 1
+    },
+    "opponent_turns": 8,
+    "opponent_actions": 29,
+    "opponent_errors": 0,
+    "native_root_calls": 2429,
+    "hybrid_searches": 29171
+  }
+}

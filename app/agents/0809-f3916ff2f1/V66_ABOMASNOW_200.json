@@ -1,0 +1,17 @@
+{
+  "candidate": "v66_crustle_counter_accel",
+  "opponent": "mega_abomasnow_replay_style",
+  "route": "default",
+  "games": 200,
+  "wins": 158,
+  "losses": 42,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.79,
+  "avg_steps": 82.45,
+  "result_reasons": {
+    "3": 151,
+    "1": 49
+  },
+  "elapsed_sec": 11.793
+}

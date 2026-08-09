@@ -1,6 +1,0 @@
-{
-  "name": "dragapult_universal_v39_rating_retained",
-  "source": "/mnt/data/five_core_highrating_final_bundle/champions/dragapult_universal_v39_human_dusk_ultrasafe",
-  "probabilistic_hidden_state": false,
-  "selection_rule": "high-rating aggregate first; internal league only safety gate"
-}

@@ -1,0 +1,11 @@
+{
+  "deck_count": 60,
+  "cornerstone_ogerpon_count": 1,
+  "dudunsparce_ex_count": 1,
+  "python_compile": true,
+  "raw_exec_no_file": true,
+  "zip_root_required": ["main.py", "deck.csv", "cg"],
+  "league_games": 410,
+  "league_policy_errors": 0,
+  "status": "compile, raw-exec, deck, league, and archive structure validation passed"
+}

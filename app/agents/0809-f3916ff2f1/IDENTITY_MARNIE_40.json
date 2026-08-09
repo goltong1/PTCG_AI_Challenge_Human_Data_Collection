@@ -1,0 +1,18 @@
+{
+  "baseline": "v66_recovered",
+  "challenger": "v67_drag_attackfinish",
+  "opponent": "marnie_internal",
+  "games": 40,
+  "decisions": 3730,
+  "divergences": 0,
+  "identity_rate": 1.0,
+  "baseline_path_results": {
+    "wins": 19,
+    "losses": 21,
+    "draws": 0
+  },
+  "errors": 0,
+  "step_limits": 0,
+  "samples": [],
+  "elapsed_sec": 11.347
+}

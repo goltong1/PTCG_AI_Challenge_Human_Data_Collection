@@ -1,0 +1,28 @@
+{
+  "candidate": "v66_recovered",
+  "opponent": "dragapult_0805",
+  "games": 400,
+  "wins": 295,
+  "losses": 105,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.7375,
+  "seats": {
+    "p0": {
+      "games": 200,
+      "wins": 154,
+      "win_rate": 0.77
+    },
+    "p1": {
+      "games": 200,
+      "wins": 141,
+      "win_rate": 0.705
+    }
+  },
+  "result_reasons": {
+    "1": 324,
+    "3": 76
+  },
+  "error_samples": [],
+  "elapsed_sec": 140.459
+}

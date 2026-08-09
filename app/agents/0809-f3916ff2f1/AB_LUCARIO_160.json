@@ -1,0 +1,51 @@
+{
+  "method": "interleaved A/B; A-p0, B-p0, A-p1, B-p1 cycle",
+  "opponent": "lucario",
+  "games_each": 160,
+  "results": [
+    {
+      "candidate": "v63_final",
+      "games": 160,
+      "wins": 74,
+      "losses": 86,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 80,
+          "wins": 39,
+          "win_rate": 0.4875
+        },
+        "p1": {
+          "games": 80,
+          "wins": 35,
+          "win_rate": 0.4375
+        }
+      },
+      "win_rate": 0.4625
+    },
+    {
+      "candidate": "v65_targeted_guard",
+      "games": 160,
+      "wins": 79,
+      "losses": 81,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 80,
+          "wins": 43,
+          "win_rate": 0.5375
+        },
+        "p1": {
+          "games": 80,
+          "wins": 36,
+          "win_rate": 0.45
+        }
+      },
+      "win_rate": 0.49375
+    }
+  ],
+  "challenger_gain_points": 0.03125,
+  "elapsed_sec": 82.26
+}

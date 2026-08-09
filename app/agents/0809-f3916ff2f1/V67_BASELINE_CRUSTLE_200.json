@@ -1,0 +1,28 @@
+{
+  "candidate": "v67_drag_attackfinish",
+  "opponent": "crustle",
+  "games": 200,
+  "wins": 136,
+  "losses": 64,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.68,
+  "seats": {
+    "p0": {
+      "games": 100,
+      "wins": 70,
+      "win_rate": 0.7
+    },
+    "p1": {
+      "games": 100,
+      "wins": 66,
+      "win_rate": 0.66
+    }
+  },
+  "result_reasons": {
+    "3": 132,
+    "1": 68
+  },
+  "error_samples": [],
+  "elapsed_sec": 33.607
+}

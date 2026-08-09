@@ -1,0 +1,649 @@
+{
+  "submission": "v65_final",
+  "replays": [
+    {
+      "replay": "91097501.json",
+      "player": 1,
+      "decisions": 94,
+      "exact_matches": 72,
+      "differences": 22,
+      "errors": 0,
+      "changed_rows": [
+        {
+          "step": 17,
+          "turn": 2,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 0,
+              "type": 8,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ],
+          "proposed": [
+            {
+              "index": 6,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ]
+        },
+        {
+          "step": 60,
+          "turn": 8,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 3,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 7,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ]
+        },
+        {
+          "step": 67,
+          "turn": 10,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 1,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 0,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 74,
+          "turn": 12,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 2,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 77,
+          "turn": 14,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 3,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 81,
+          "turn": 16,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 3,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 90,
+          "turn": 18,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 3,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 101,
+          "turn": 20,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 1,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 0,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 106,
+          "turn": 22,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 8,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 113,
+          "turn": 24,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 8,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 118,
+          "turn": 26,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 8,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 123,
+          "turn": 28,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 7,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 0,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 126,
+          "turn": 30,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 8,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 129,
+          "turn": 32,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 9,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 132,
+          "turn": 34,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 9,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 135,
+          "turn": 36,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 9,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 138,
+          "turn": 38,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 9,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 141,
+          "turn": 40,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 10,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 1,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 144,
+          "turn": 42,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 11,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 10,
+              "type": 7,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ]
+        },
+        {
+          "step": 147,
+          "turn": 44,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 11,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 10,
+              "type": 7,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ]
+        },
+        {
+          "step": 150,
+          "turn": 46,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 11,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 10,
+              "type": 7,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ]
+        },
+        {
+          "step": 152,
+          "turn": 48,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 12,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 10,
+              "type": 7,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "replay": "91098392.json",
+      "player": 1,
+      "decisions": 24,
+      "exact_matches": 22,
+      "differences": 2,
+      "errors": 0,
+      "changed_rows": [
+        {
+          "step": 20,
+          "turn": 4,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 2,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 0,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        },
+        {
+          "step": 38,
+          "turn": 8,
+          "context": 0,
+          "source": null,
+          "recorded": [
+            {
+              "index": 2,
+              "type": 14,
+              "cardId": null,
+              "attackId": null,
+              "area": null,
+              "inPlayArea": null
+            }
+          ],
+          "proposed": [
+            {
+              "index": 0,
+              "type": 9,
+              "cardId": null,
+              "attackId": null,
+              "area": 2,
+              "inPlayArea": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

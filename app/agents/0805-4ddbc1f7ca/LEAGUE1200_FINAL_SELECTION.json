@@ -1,9 +1,0 @@
-{
-  "agent": "dragapult",
-  "baseline_dir": "dragapult_universal_v39_human_dusk_ultrasafe",
-  "selected_variant": "base",
-  "training_games_per_opponent": 100,
-  "total_training_games": 1200,
-  "selection_basis": "7,800-game full league plus paired high-rating A/B",
-  "source": "/mnt/data/league500_work/champions/dragapult_universal_v39_human_dusk_ultrasafe"
-}

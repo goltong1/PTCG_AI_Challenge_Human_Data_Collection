@@ -1,6 +1,0 @@
-{
-  "base": "mega_lopunny_v4_hybrid_replay_fixed",
-  "candidate": "mega_lopunny_v5_human_highrating_safe_candidate",
-  "mode": "safe residual; lucario teacher all; dragapult teacher only marnie/dusk",
-  "human_weight": 0
-}

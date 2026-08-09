@@ -1,8 +1,0 @@
-{
-  "agent": "lucario",
-  "final_name": "mega_lucario_v4_actual_replay_learned",
-  "selected_variant": "small",
-  "source": "/mnt/data/new_replay_train/human_training/candidates/lucario__small",
-  "actual_replay_games": 135,
-  "selection_rule": "rating benchmarks first; no promotion if total gain absent or one benchmark materially regresses"
-}

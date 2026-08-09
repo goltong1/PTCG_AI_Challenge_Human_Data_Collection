@@ -1,0 +1,51 @@
+{
+  "method": "interleaved A/B; A-p0, B-p0, A-p1, B-p1 cycle",
+  "opponent": "archaludon",
+  "games_each": 160,
+  "results": [
+    {
+      "candidate": "v63_final",
+      "games": 160,
+      "wins": 93,
+      "losses": 67,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 80,
+          "wins": 47,
+          "win_rate": 0.5875
+        },
+        "p1": {
+          "games": 80,
+          "wins": 46,
+          "win_rate": 0.575
+        }
+      },
+      "win_rate": 0.58125
+    },
+    {
+      "candidate": "v65_targeted_guard",
+      "games": 160,
+      "wins": 81,
+      "losses": 79,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 80,
+          "wins": 40,
+          "win_rate": 0.5
+        },
+        "p1": {
+          "games": 80,
+          "wins": 41,
+          "win_rate": 0.5125
+        }
+      },
+      "win_rate": 0.50625
+    }
+  ],
+  "challenger_gain_points": -0.07500000000000007,
+  "elapsed_sec": 49.547
+}

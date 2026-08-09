@@ -1,0 +1,43 @@
+{
+  "candidate": "v67_drag_attackfinish",
+  "opponent": "crustle",
+  "games": 400,
+  "wins": 237,
+  "losses": 163,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.5925,
+  "seats": {
+    "p0": {
+      "games": 200,
+      "wins": 125,
+      "win_rate": 0.625
+    },
+    "p1": {
+      "games": 200,
+      "wins": 112,
+      "win_rate": 0.56
+    }
+  },
+  "result_reasons": {
+    "3": 222,
+    "1": 172,
+    "2": 6
+  },
+  "error_samples": [],
+  "elapsed_sec": 69.225,
+  "controller_stats": {
+    "searches": 6030,
+    "overrides": 0,
+    "recognized": {
+      "spidops": 763,
+      "crustle": 36942,
+      "lopunny": 1
+    },
+    "opponent_turns": 0,
+    "opponent_actions": 0,
+    "opponent_errors": 0,
+    "native_root_calls": 3377,
+    "hybrid_searches": 37706
+  }
+}

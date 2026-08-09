@@ -1,0 +1,77 @@
+{
+  "version": "v65",
+  "policy_name": "competitive temporal sequence guard",
+  "deck_hash_sha256": "92da74a49b9cc9389d6e6fba0e0c2936c38f9b82115b29947236f1b601c46968",
+  "promotion_status": "aggregate improvement accepted; universal 70 percent gate failed",
+  "method_transfer": {
+    "source": "Replay908 temporal-specialist checkpoint",
+    "used": [
+      "one-to-three-turn progress invariants",
+      "matchup-local sequence intervention",
+      "loss-replay no-op detection"
+    ],
+    "rejected": [
+      "global linear temporal critic",
+      "raw replay imitation",
+      "unvalidated forced retreat and forced search"
+    ]
+  },
+  "accepted_changes": [
+    "Against confirmed Mega Lucario, reserve Bench and evolution tempo for a second Grimmsnarl instead of an early Froslass.",
+    "Against Mega Lucario and Alakazam, prevent END when a productive attack or evolution remains and protect short escape sequences.",
+    "Against Mega Abomasnow replay states, replace only unproductive END choices with legal attack/evolution progress; do not force search or retreat.",
+    "Require Riolu or Mega Lucario to be revealed before using the Lucario specialist, preventing Lunatone/Solrock decks from being misclassified."
+  ],
+  "final_exact_five_1000": {
+    "seat_policy": "alternating candidate P0/P1",
+    "games_per_matchup": 200,
+    "matchups": {
+      "mega_lucario": {"wins": 83, "losses": 117, "draws": 0, "errors": 0, "win_rate": 0.415, "gate_0_70": false},
+      "marnie_v49": {"wins": 112, "losses": 88, "draws": 0, "errors": 0, "win_rate": 0.56, "gate_0_70": false},
+      "archaludon": {"wins": 108, "losses": 92, "draws": 0, "errors": 0, "win_rate": 0.54, "gate_0_70": false},
+      "crustle": {"wins": 38, "losses": 161, "draws": 1, "errors": 0, "win_rate": 0.19, "gate_0_70": false},
+      "alakazam": {"wins": 136, "losses": 64, "draws": 0, "errors": 0, "win_rate": 0.68, "gate_0_70": false}
+    },
+    "aggregate": {"wins": 477, "losses": 522, "draws": 1, "errors": 0, "games": 1000, "win_rate": 0.477},
+    "v63_reference_aggregate": {"wins": 456, "games": 1000, "win_rate": 0.456},
+    "aggregate_gain_points": 0.021
+  },
+  "interleaved_promotion_ab": {
+    "method": "same evaluator, interleaved A/B with alternating seats, 200 games per candidate",
+    "mega_lucario": {"v63": 0.46, "v65": 0.525, "gain_points": 0.065},
+    "alakazam": {"v63": 0.65, "v65": 0.695, "gain_points": 0.045},
+    "mega_abomasnow": {"v63": 0.765, "v65": 0.82, "gain_points": 0.055}
+  },
+  "replay_regression_audit": {
+    "91098392": {
+      "recorded_decisions": 24,
+      "v63_changed": 0,
+      "v65_changed": 2,
+      "corrections": "turns 4 and 8: END replaced by Froslass evolution"
+    },
+    "91097501": {
+      "recorded_decisions": 94,
+      "v63_changed": 6,
+      "v65_changed": 22,
+      "corrections": "repeated mid/late-game END choices replaced by legal evolution or other progress"
+    },
+    "errors": 0
+  },
+  "non_target_identity": {
+    "games_per_opponent": 10,
+    "zero_difference_matchups": ["archaludon", "crustle-bank", "dragapult", "dusk", "grass_ogerpon", "okidogi"],
+    "zero_difference_decisions": 5286,
+    "errors": 0
+  },
+  "rejected_competitors": [
+    "raw Replay908 critic",
+    "loose Replay908 critic",
+    "Chi-Yu wall breaker",
+    "Psychic-energy Munkidori attacker",
+    "energy-dense list",
+    "four-Rare-Candy list",
+    "four-Grimmsnarl list",
+    "Yveltal wall breaker"
+  ],
+  "gate_conclusion": "The requested 70 percent floor is not achieved. Mega Abomasnow passed at 82 percent in the extra 200-game retention test; none of the five core matchups passed. Crustle remains the structural blocker."
+}

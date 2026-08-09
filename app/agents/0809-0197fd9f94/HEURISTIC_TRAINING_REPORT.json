@@ -1,0 +1,120 @@
+{
+  "version": "dragapult_v57_phantom_reserve_champion",
+  "method": "IRL replay audit; fixed-deck loss replay analysis; targeted causal replay; bidirectional black-box A/B",
+  "fixed_deck_cards": 60,
+  "target_plan": {
+    "turn_1": "establish two Dreepy lines and attach the first Fire/Psychic Energy to the primary line",
+    "turn_2": "evolve to Drakloak, use Recon Directive before evolving that body, and assemble distinct Fire/Psychic Energy",
+    "turn_3": "use Phantom Dive while retaining at least one backup evolution line",
+    "energy_reserve": "before Phantom Dive is ready, never spend Fire/Psychic on an active support retreat unless it immediately releases a ready benched Dragapult",
+    "midgame": "convert damage counters into multi-Prize deadlines or evolution-engine denial",
+    "recovery": "time Fezandipiti ex, Unfair Stamp and Night Stretcher after a KO"
+  },
+  "irl_replay_audit": {
+    "dragapult_samples": 148,
+    "wins": 99,
+    "losses": 49,
+    "win_rate": 0.6689189189,
+    "note": "The IRL deck differs from the fixed submission deck, so these rows were used for causal hypotheses rather than direct strength claims.",
+    "win_rates": {
+      "t3_ready_dragapult": 0.6263,
+      "phantom_by_t3": 0.4949,
+      "support_attack_energy_before_first_phantom": 0.1515,
+      "target_plan": 0.4949
+    },
+    "loss_rates": {
+      "t3_ready_dragapult": 0.4490,
+      "phantom_by_t3": 0.2857,
+      "support_attack_energy_before_first_phantom": 0.3061,
+      "target_plan": 0.2653
+    }
+  },
+  "fixed_deck_replay_audit": {
+    "v56_losses_analyzed": 143,
+    "v56_wins_compared": 50,
+    "v56_loss_t3_no_ready_dragapult_rate": 0.6503,
+    "v56_loss_no_phantom_by_t3_rate": 0.7972,
+    "v56_win_target_plan_rate": 0.6000,
+    "v56_loss_target_plan_rate": 0.1888,
+    "v57_fresh_capture": {
+      "games_saved": 124,
+      "wins": 49,
+      "losses": 75,
+      "t3_no_ready_dragapult_rate": 0.3952,
+      "no_phantom_by_t3_rate": 0.6371,
+      "target_plan_rate": 0.3468,
+      "note": "Fresh capture is descriptive only because it is not the same hidden-state sample as the v56 corpus."
+    }
+  },
+  "selected_change": {
+    "name": "Phantom Dive attack-Energy reserve",
+    "behavior": "Fire/Psychic is redirected from stranded active support Pokemon to the primary Dreepy evolution line; the immediate-ready-bench retreat exception is preserved.",
+    "targeted_counterfactual": {
+      "states": 13,
+      "rollouts_each": 12,
+      "baseline_wins": 46,
+      "candidate_wins": 43,
+      "delta": -3,
+      "interpretation": "Near-neutral single-decision result; retained only after the larger full-game bidirectional gate was positive, indicating cumulative sequencing value rather than a uniformly better isolated branch."
+    }
+  },
+  "bidirectional_ab": {
+    "total_matches_executed": 7200,
+    "games_per_policy": 3600,
+    "candidate": {
+      "wins": 2194,
+      "win_rate": 0.6094444444,
+      "errors": 0,
+      "mean_agent_ms_per_call": 1.4764881486
+    },
+    "v56_baseline": {
+      "wins": 2140,
+      "win_rate": 0.5944444444,
+      "errors": 0,
+      "mean_agent_ms_per_call": 1.4721326702
+    },
+    "candidate_delta_wins": 54,
+    "candidate_delta_percentage_points": 1.5,
+    "core_five": {
+      "games_per_policy": 2000,
+      "candidate_wins": 898,
+      "baseline_wins": 885,
+      "candidate_win_rate": 0.449,
+      "baseline_win_rate": 0.4425,
+      "matchups": {
+        "marnie": {"games_per_policy": 400, "candidate_wins": 129, "baseline_wins": 120, "delta": 9},
+        "lucario": {"games_per_policy": 400, "candidate_wins": 173, "baseline_wins": 167, "delta": 6},
+        "archaludon": {"games_per_policy": 400, "candidate_wins": 137, "baseline_wins": 138, "delta": -1},
+        "crustle": {"games_per_policy": 400, "candidate_wins": 207, "baseline_wins": 205, "delta": 2},
+        "alakazam": {"games_per_policy": 400, "candidate_wins": 252, "baseline_wins": 255, "delta": -3}
+      }
+    },
+    "secondary_eight": {
+      "games_per_policy": 1600,
+      "candidate_wins": 1296,
+      "baseline_wins": 1255,
+      "candidate_win_rate": 0.81,
+      "baseline_win_rate": 0.784375,
+      "matchups": {
+        "cynthia": {"games_per_policy": 200, "candidate_wins": 183, "baseline_wins": 188, "delta": -5},
+        "dipplin": {"games_per_policy": 200, "candidate_wins": 196, "baseline_wins": 191, "delta": 5},
+        "dusk": {"games_per_policy": 200, "candidate_wins": 115, "baseline_wins": 110, "delta": 5},
+        "grass_ogerpon": {"games_per_policy": 200, "candidate_wins": 164, "baseline_wins": 153, "delta": 11},
+        "lopunny": {"games_per_policy": 200, "candidate_wins": 194, "baseline_wins": 196, "delta": -2},
+        "okidogi": {"games_per_policy": 200, "candidate_wins": 155, "baseline_wins": 142, "delta": 13},
+        "spidops": {"games_per_policy": 200, "candidate_wins": 195, "baseline_wins": 196, "delta": -1},
+        "teacher_lucario": {"games_per_policy": 200, "candidate_wins": 94, "baseline_wins": 79, "delta": 15}
+      }
+    }
+  },
+  "rejected_changes": [
+    {"name": "broad Poffin-first two-line opener", "games_per_policy": 600, "win_delta": -8},
+    {"name": "matchup-limited Poffin-first override", "games_per_policy": 600, "win_delta": -6},
+    {"name": "turn-six cutoff for Energy reserve", "games_per_policy": 800, "win_delta": -33},
+    {"name": "universal Phantom Dive action deadline", "games_per_policy": 1000, "win_delta": -44},
+    {"name": "first-player Dreepy active over Budew", "games_per_policy": 1000, "win_delta": -12},
+    {"name": "Lucario early Crispin over Munkidori", "games_per_policy": 2000, "win_delta": -26},
+    {"name": "generic play expected-value residual", "games_per_policy": 1500, "win_delta": -27}
+  ],
+  "claim": "No 70 percent claim: v57 measured 60.94 percent over its 3,600 balanced A/B games; the paired v56 baseline measured 59.44 percent."
+}

@@ -1,0 +1,28 @@
+{
+  "candidate": "v67_drag_attackfinish",
+  "opponent": "dragapult_0805",
+  "games": 20,
+  "wins": 11,
+  "losses": 9,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.55,
+  "seats": {
+    "p0": {
+      "games": 10,
+      "wins": 7,
+      "win_rate": 0.7
+    },
+    "p1": {
+      "games": 10,
+      "wins": 4,
+      "win_rate": 0.4
+    }
+  },
+  "result_reasons": {
+    "1": 17,
+    "3": 3
+  },
+  "error_samples": [],
+  "elapsed_sec": 7.491
+}

@@ -1,0 +1,276 @@
+{
+  "candidate": "v63_final",
+  "games_per_opponent": 10,
+  "seat_policy": "alternating candidate P0/P1",
+  "opponents": {
+    "lucario": {
+      "opponent": "lucario",
+      "route_override": null,
+      "games": 10,
+      "wins": 2,
+      "losses": 8,
+      "draws": 0,
+      "errors": 0,
+      "win_rate": 0.2,
+      "seats": {
+        "candidate_p0": {
+          "games": 5,
+          "wins": 1,
+          "losses": 4,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.2
+        },
+        "candidate_p1": {
+          "games": 5,
+          "wins": 1,
+          "losses": 4,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.2
+        }
+      },
+      "avg_steps": 159.7,
+      "result_reasons": {
+        "1": 9,
+        "3": 1
+      },
+      "error_samples": [],
+      "audit": {
+        "candidate_decisions": 702,
+        "main_decisions": 346,
+        "chosen_types": {
+          "7": 150,
+          "10": 55,
+          "8": 32,
+          "14": 38,
+          "9": 40,
+          "12": 4,
+          "13": 27
+        },
+        "end_with_attack_available": 1,
+        "end_with_evolution_available": 8,
+        "end_with_attachment_available": 3,
+        "attacks_chosen": 27
+      },
+      "elapsed_sec": 2.923
+    },
+    "marnie_v49": {
+      "opponent": "marnie_v49",
+      "route_override": null,
+      "games": 10,
+      "wins": 7,
+      "losses": 3,
+      "draws": 0,
+      "errors": 0,
+      "win_rate": 0.7,
+      "seats": {
+        "candidate_p0": {
+          "games": 5,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.6
+        },
+        "candidate_p1": {
+          "games": 5,
+          "wins": 4,
+          "losses": 1,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.8
+        }
+      },
+      "avg_steps": 197.4,
+      "result_reasons": {
+        "1": 9,
+        "2": 1
+      },
+      "error_samples": [],
+      "audit": {
+        "candidate_decisions": 1039,
+        "main_decisions": 477,
+        "chosen_types": {
+          "8": 39,
+          "7": 172,
+          "14": 47,
+          "9": 32,
+          "10": 143,
+          "13": 41,
+          "12": 3
+        },
+        "end_with_attack_available": 0,
+        "end_with_evolution_available": 16,
+        "end_with_attachment_available": 20,
+        "attacks_chosen": 41
+      },
+      "elapsed_sec": 2.662
+    },
+    "archaludon": {
+      "opponent": "archaludon",
+      "route_override": null,
+      "games": 10,
+      "wins": 4,
+      "losses": 6,
+      "draws": 0,
+      "errors": 0,
+      "win_rate": 0.4,
+      "seats": {
+        "candidate_p0": {
+          "games": 5,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.6
+        },
+        "candidate_p1": {
+          "games": 5,
+          "wins": 1,
+          "losses": 4,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.2
+        }
+      },
+      "avg_steps": 150.5,
+      "result_reasons": {
+        "3": 5,
+        "1": 5
+      },
+      "error_samples": [],
+      "audit": {
+        "candidate_decisions": 940,
+        "main_decisions": 433,
+        "chosen_types": {
+          "7": 175,
+          "14": 30,
+          "9": 49,
+          "8": 35,
+          "10": 101,
+          "12": 4,
+          "13": 39
+        },
+        "end_with_attack_available": 1,
+        "end_with_evolution_available": 4,
+        "end_with_attachment_available": 2,
+        "attacks_chosen": 39
+      },
+      "elapsed_sec": 1.549
+    },
+    "crustle": {
+      "opponent": "crustle",
+      "route_override": null,
+      "games": 10,
+      "wins": 5,
+      "losses": 5,
+      "draws": 0,
+      "errors": 0,
+      "win_rate": 0.5,
+      "seats": {
+        "candidate_p0": {
+          "games": 5,
+          "wins": 2,
+          "losses": 3,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.4
+        },
+        "candidate_p1": {
+          "games": 5,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.6
+        }
+      },
+      "avg_steps": 182.6,
+      "result_reasons": {
+        "1": 6,
+        "3": 4
+      },
+      "error_samples": [],
+      "audit": {
+        "candidate_decisions": 1284,
+        "main_decisions": 582,
+        "chosen_types": {
+          "7": 209,
+          "8": 45,
+          "14": 32,
+          "9": 43,
+          "13": 75,
+          "10": 175,
+          "12": 3
+        },
+        "end_with_attack_available": 0,
+        "end_with_evolution_available": 0,
+        "end_with_attachment_available": 2,
+        "attacks_chosen": 75
+      },
+      "elapsed_sec": 2.219
+    },
+    "alakazam": {
+      "opponent": "alakazam",
+      "route_override": null,
+      "games": 10,
+      "wins": 6,
+      "losses": 4,
+      "draws": 0,
+      "errors": 0,
+      "win_rate": 0.6,
+      "seats": {
+        "candidate_p0": {
+          "games": 5,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.6
+        },
+        "candidate_p1": {
+          "games": 5,
+          "wins": 3,
+          "losses": 2,
+          "draws": 0,
+          "errors": 0,
+          "win_rate": 0.6
+        }
+      },
+      "avg_steps": 152.2,
+      "result_reasons": {
+        "3": 1,
+        "1": 9
+      },
+      "error_samples": [],
+      "audit": {
+        "candidate_decisions": 822,
+        "main_decisions": 383,
+        "chosen_types": {
+          "7": 177,
+          "10": 68,
+          "8": 27,
+          "14": 31,
+          "12": 4,
+          "13": 36,
+          "9": 40
+        },
+        "end_with_attack_available": 0,
+        "end_with_evolution_available": 6,
+        "end_with_attachment_available": 0,
+        "attacks_chosen": 36
+      },
+      "elapsed_sec": 2.03
+    }
+  },
+  "aggregate": {
+    "games": 50,
+    "wins": 24,
+    "losses": 26,
+    "draws": 0,
+    "errors": 0,
+    "win_rate": 0.48
+  },
+  "elapsed_sec": 12.962
+}

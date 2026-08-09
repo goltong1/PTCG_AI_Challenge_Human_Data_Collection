@@ -1,0 +1,75 @@
+{
+  "version": "marnie_grimmsnarl_v63_competitive_multiturn_champion",
+  "promotion_basis": "seat-balanced competition against the five attached complete agents",
+  "deck_sha256": "92da74a49b9cc9389d6e6fba0e0c2936c38f9b82115b29947236f1b601c46968",
+  "exact_five_agent_league": {
+    "games_per_opponent": 200,
+    "seat_policy": "alternating candidate P0/P1",
+    "baseline_v62": {
+      "games": 1000,
+      "wins": 306,
+      "losses": 694,
+      "draws": 0,
+      "errors": 0,
+      "win_rate": 0.306
+    },
+    "promoted_v63": {
+      "games": 1000,
+      "wins": 456,
+      "losses": 543,
+      "draws": 1,
+      "errors": 0,
+      "win_rate": 0.456
+    },
+    "aggregate_gain": {
+      "additional_wins": 150,
+      "win_rate_points": 0.15
+    },
+    "by_opponent": {
+      "mega_lucario_v4": {"v62": 0.235, "v63": 0.42, "gain_points": 0.185},
+      "marnie_grimmsnarl_v49": {"v62": 0.325, "v63": 0.5, "gain_points": 0.175},
+      "archaludon_v13": {"v62": 0.29, "v63": 0.525, "gain_points": 0.235},
+      "crustle_v170": {"v62": 0.175, "v63": 0.245, "gain_points": 0.07},
+      "alakazam_v13": {"v62": 0.505, "v63": 0.59, "gain_points": 0.085}
+    }
+  },
+  "abomasnow_retention": {
+    "games_each": 200,
+    "v62": {"wins": 119, "losses": 81, "errors": 0, "win_rate": 0.595},
+    "v63": {"wins": 157, "losses": 43, "errors": 0, "win_rate": 0.785},
+    "gain_points": 0.19
+  },
+  "strategic_stack": {
+    "deck_consistency": "4 Impidimp / 3 Morgrem / 3 Grimmsnarl ex / 3 Rare Candy with Dawn",
+    "learned_state_model": "1007 samples from 160 recovered replays with game-level split",
+    "multi_turn_targets": [
+      "two-turn board-quality delta",
+      "attack conversion within two own turns",
+      "backup Grimmsnarl increase",
+      "recovery and resilience value",
+      "terminal reward"
+    ],
+    "runtime": [
+      "persistent finite-state planning",
+      "public-board forecasting",
+      "opponent-archetype recognition",
+      "matchup and phase residuals",
+      "loop and action validation safeguards",
+      "submission-root-safe policy loading"
+    ]
+  },
+  "rejected_candidates": {
+    "repaired_simulator_lookahead": "Lucario regressed; Archaludon reached 51.0% over 200 games and did not beat the promoted base",
+    "plan_core_reranker": "Lucario 61/200 (30.5%), rejected",
+    "end_to_attack_safety": "249/500 (49.8%), below reference screen, rejected",
+    "yveltal_tech": "223/500 (44.6%), rejected",
+    "chi_yu_tech": "57/200 across Lucario and Crustle (28.5%), rejected"
+  },
+  "promotion": true,
+  "known_weakest_matchup": "crustle_v170 at 24.5%; improved from v62's 17.5% but remains below target",
+  "artifacts": [
+    "MARNIE_V63_FINAL_EXACT5_1000.json",
+    "V63_ABOMASNOW_RETENTION_200.json",
+    "README_V63_KO.txt"
+  ]
+}

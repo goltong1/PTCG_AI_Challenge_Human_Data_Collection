@@ -1,0 +1,43 @@
+{
+  "candidate": "v68_verified_matchup_adaptation",
+  "opponent": "archaludon",
+  "games": 400,
+  "wins": 202,
+  "losses": 198,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.505,
+  "seats": {
+    "p0": {
+      "games": 200,
+      "wins": 101,
+      "win_rate": 0.505
+    },
+    "p1": {
+      "games": 200,
+      "wins": 101,
+      "win_rate": 0.505
+    }
+  },
+  "result_reasons": {
+    "3": 122,
+    "1": 277,
+    "2": 1
+  },
+  "error_samples": [],
+  "elapsed_sec": 68.644,
+  "controller_stats": {
+    "searches": 6765,
+    "overrides": 0,
+    "recognized": {
+      "spidops": 748,
+      "archaludon": 34121,
+      "crustle": 1
+    },
+    "opponent_turns": 0,
+    "opponent_actions": 0,
+    "opponent_errors": 0,
+    "native_root_calls": 2739,
+    "hybrid_searches": 34870
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "agent": "marnie",
+  "final_name": "marnie_grimmsnarl_v46_actual_replay_gated",
+  "selected_variant": "base",
+  "source": "/mnt/data/new_replay_train/base/champions/marnie_grimmsnarl_v42_league_continual",
+  "actual_replay_games": 135,
+  "selection_rule": "rating benchmarks first; no promotion if total gain absent or one benchmark materially regresses"
+}

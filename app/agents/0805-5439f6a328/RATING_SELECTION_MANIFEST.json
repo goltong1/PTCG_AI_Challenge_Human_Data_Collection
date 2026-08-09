@@ -1,6 +1,0 @@
-{
-  "name": "mega_lucario_v1_rating784_retained",
-  "source": "/mnt/data/five_core_highrating_final_bundle/champions/mega_lucario_v1_rating784_hybrid",
-  "probabilistic_hidden_state": false,
-  "selection_rule": "high-rating aggregate first; internal league only safety gate"
-}

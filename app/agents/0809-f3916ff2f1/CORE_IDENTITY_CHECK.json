@@ -1,0 +1,48 @@
+{
+  "core_files": [
+    {
+      "file": "main.py",
+      "identical": true,
+      "sha256": "71df53abab07b8f470d0e54686843bb2aab7be8e30b9c779d0b9d109e12988a5"
+    },
+    {
+      "file": "deck_policy.py",
+      "identical": true,
+      "sha256": "e896fc9f92ea7263e73eeed430a0a9ee1675758c64943dc48a1dcb3896ed2d12"
+    },
+    {
+      "file": "unified_core.py",
+      "identical": true,
+      "sha256": "dff4528d9cf9296baf840711bbb0676995e705acae529b26c40576d0c310d8c5"
+    },
+    {
+      "file": "unified_config.json",
+      "identical": true,
+      "sha256": "80cd6923d1d91b9674ae8456b3e9a613245dd378a251e8a232cfd8be6667c69a"
+    },
+    {
+      "file": "deck.csv",
+      "identical": true,
+      "sha256": "92da74a49b9cc9389d6e6fba0e0c2936c38f9b82115b29947236f1b601c46968"
+    },
+    {
+      "file": "double_agent_bank.py",
+      "identical": true,
+      "sha256": "e9a9a806018f41b9cce773ccc4c326c88e88d54205ad5d9aa7ffd285d1264a73"
+    },
+    {
+      "file": "deck_catalog.json",
+      "identical": true,
+      "sha256": "0d63f8182eaee645ee25ec2a1671a27e6d1430268fac090e8c13330e957221c6"
+    }
+  ],
+  "replay_prior_changed": true,
+  "changed_matchup_tables": [
+    "lucario",
+    "marnie"
+  ],
+  "expected_changed_matchups": [
+    "lucario",
+    "marnie"
+  ]
+}

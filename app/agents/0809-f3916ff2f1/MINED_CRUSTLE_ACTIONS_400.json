@@ -1,0 +1,2593 @@
+{
+  "candidate": "v67_drag_attackfinish",
+  "opponent": "crustle",
+  "games": 400,
+  "wins": 252,
+  "losses": 148,
+  "errors": 0,
+  "signature_fields": [
+    "phase",
+    "context",
+    "source",
+    "type",
+    "subject",
+    "target"
+  ],
+  "note": "Outcome association only; candidates require intervention and A/B validation.",
+  "actions": [
+    {
+      "signature": [
+        2,
+        4,
+        0,
+        3,
+        648,
+        0
+      ],
+      "support_games": 233,
+      "win_games": 102,
+      "loss_games": 131,
+      "win_prevalence": 0.40551,
+      "loss_prevalence": 0.88,
+      "lift_pp": -47.449,
+      "win_count": 142,
+      "loss_count": 272
+    },
+    {
+      "signature": [
+        2,
+        7,
+        0,
+        3,
+        0,
+        0
+      ],
+      "support_games": 271,
+      "win_games": 202,
+      "loss_games": 69,
+      "win_prevalence": 0.79921,
+      "loss_prevalence": 0.46667,
+      "lift_pp": 33.255,
+      "win_count": 393,
+      "loss_count": 91
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        112,
+        0
+      ],
+      "support_games": 287,
+      "win_games": 154,
+      "loss_games": 133,
+      "win_prevalence": 0.61024,
+      "loss_prevalence": 0.89333,
+      "lift_pp": -28.31,
+      "win_count": 250,
+      "loss_count": 277
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1086,
+        0
+      ],
+      "support_games": 135,
+      "win_games": 59,
+      "loss_games": 76,
+      "win_prevalence": 0.23622,
+      "loss_prevalence": 0.51333,
+      "lift_pp": -27.711,
+      "win_count": 76,
+      "loss_count": 112
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        14,
+        0,
+        0
+      ],
+      "support_games": 136,
+      "win_games": 64,
+      "loss_games": 72,
+      "win_prevalence": 0.25591,
+      "loss_prevalence": 0.48667,
+      "lift_pp": -23.076,
+      "win_count": 201,
+      "loss_count": 219
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        646,
+        0
+      ],
+      "support_games": 100,
+      "win_games": 42,
+      "loss_games": 58,
+      "win_prevalence": 0.16929,
+      "loss_prevalence": 0.39333,
+      "lift_pp": -22.404,
+      "win_count": 45,
+      "loss_count": 70
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        9,
+        104,
+        860
+      ],
+      "support_games": 198,
+      "win_games": 104,
+      "loss_games": 94,
+      "win_prevalence": 0.41339,
+      "loss_prevalence": 0.63333,
+      "lift_pp": -21.995,
+      "win_count": 116,
+      "loss_count": 110
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1097,
+        3,
+        104,
+        0
+      ],
+      "support_games": 83,
+      "win_games": 32,
+      "loss_games": 51,
+      "win_prevalence": 0.12992,
+      "loss_prevalence": 0.34667,
+      "lift_pp": -21.675,
+      "win_count": 34,
+      "loss_count": 54
+    },
+    {
+      "signature": [
+        2,
+        43,
+        648,
+        1,
+        0,
+        0
+      ],
+      "support_games": 193,
+      "win_games": 103,
+      "loss_games": 90,
+      "win_prevalence": 0.40945,
+      "loss_prevalence": 0.60667,
+      "lift_pp": -19.722,
+      "win_count": 130,
+      "loss_count": 117
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1097,
+        0
+      ],
+      "support_games": 259,
+      "win_games": 145,
+      "loss_games": 114,
+      "win_prevalence": 0.5748,
+      "loss_prevalence": 0.76667,
+      "lift_pp": -19.186,
+      "win_count": 225,
+      "loss_count": 197
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        10,
+        112,
+        0
+      ],
+      "support_games": 218,
+      "win_games": 155,
+      "loss_games": 63,
+      "win_prevalence": 0.61417,
+      "loss_prevalence": 0.42667,
+      "lift_pp": 18.751,
+      "win_count": 324,
+      "loss_count": 101
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1152,
+        3,
+        0,
+        0
+      ],
+      "support_games": 276,
+      "win_games": 157,
+      "loss_games": 119,
+      "win_prevalence": 0.62205,
+      "loss_prevalence": 0.8,
+      "lift_pp": -17.795,
+      "win_count": 265,
+      "loss_count": 219
+    },
+    {
+      "signature": [
+        2,
+        4,
+        0,
+        3,
+        112,
+        0
+      ],
+      "support_games": 51,
+      "win_games": 16,
+      "loss_games": 35,
+      "win_prevalence": 0.06693,
+      "loss_prevalence": 0.24,
+      "lift_pp": -17.307,
+      "win_count": 20,
+      "loss_count": 48
+    },
+    {
+      "signature": [
+        2,
+        40,
+        112,
+        0,
+        0,
+        0
+      ],
+      "support_games": 125,
+      "win_games": 95,
+      "loss_games": 30,
+      "win_prevalence": 0.37795,
+      "loss_prevalence": 0.20667,
+      "lift_pp": 17.129,
+      "win_count": 287,
+      "loss_count": 68
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        860,
+        0
+      ],
+      "support_games": 95,
+      "win_games": 44,
+      "loss_games": 51,
+      "win_prevalence": 0.17717,
+      "loss_prevalence": 0.34667,
+      "lift_pp": -16.95,
+      "win_count": 46,
+      "loss_count": 55
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1152,
+        0
+      ],
+      "support_games": 281,
+      "win_games": 161,
+      "loss_games": 120,
+      "win_prevalence": 0.6378,
+      "loss_prevalence": 0.80667,
+      "lift_pp": -16.887,
+      "win_count": 286,
+      "loss_count": 235
+    },
+    {
+      "signature": [
+        1,
+        40,
+        648,
+        0,
+        0,
+        0
+      ],
+      "support_games": 119,
+      "win_games": 91,
+      "loss_games": 28,
+      "win_prevalence": 0.3622,
+      "loss_prevalence": 0.19333,
+      "lift_pp": 16.887,
+      "win_count": 113,
+      "loss_count": 33
+    },
+    {
+      "signature": [
+        1,
+        16,
+        112,
+        3,
+        648,
+        0
+      ],
+      "support_games": 127,
+      "win_games": 96,
+      "loss_games": 31,
+      "win_prevalence": 0.38189,
+      "loss_prevalence": 0.21333,
+      "lift_pp": 16.856,
+      "win_count": 121,
+      "loss_count": 37
+    },
+    {
+      "signature": [
+        2,
+        15,
+        648,
+        3,
+        756,
+        0
+      ],
+      "support_games": 126,
+      "win_games": 65,
+      "loss_games": 61,
+      "win_prevalence": 0.25984,
+      "loss_prevalence": 0.41333,
+      "lift_pp": -15.349,
+      "win_count": 139,
+      "loss_count": 180
+    },
+    {
+      "signature": [
+        1,
+        4,
+        0,
+        3,
+        648,
+        0
+      ],
+      "support_games": 137,
+      "win_games": 72,
+      "loss_games": 65,
+      "win_prevalence": 0.2874,
+      "loss_prevalence": 0.44,
+      "lift_pp": -15.26,
+      "win_count": 79,
+      "loss_count": 77
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        9,
+        647,
+        646
+      ],
+      "support_games": 135,
+      "win_games": 71,
+      "loss_games": 64,
+      "win_prevalence": 0.28346,
+      "loss_prevalence": 0.43333,
+      "lift_pp": -14.987,
+      "win_count": 81,
+      "loss_count": 80
+    },
+    {
+      "signature": [
+        1,
+        40,
+        112,
+        0,
+        0,
+        0
+      ],
+      "support_games": 141,
+      "win_games": 103,
+      "loss_games": 38,
+      "win_prevalence": 0.40945,
+      "loss_prevalence": 0.26,
+      "lift_pp": 14.945,
+      "win_count": 192,
+      "loss_count": 59
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1097,
+        3,
+        112,
+        0
+      ],
+      "support_games": 133,
+      "win_games": 70,
+      "loss_games": 63,
+      "win_prevalence": 0.27953,
+      "loss_prevalence": 0.42667,
+      "lift_pp": -14.714,
+      "win_count": 84,
+      "loss_count": 79
+    },
+    {
+      "signature": [
+        1,
+        16,
+        112,
+        3,
+        112,
+        0
+      ],
+      "support_games": 144,
+      "win_games": 104,
+      "loss_games": 40,
+      "win_prevalence": 0.41339,
+      "loss_prevalence": 0.27333,
+      "lift_pp": 14.005,
+      "win_count": 203,
+      "loss_count": 63
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        13,
+        937,
+        0
+      ],
+      "support_games": 345,
+      "win_games": 204,
+      "loss_games": 141,
+      "win_prevalence": 0.80709,
+      "loss_prevalence": 0.94667,
+      "lift_pp": -13.958,
+      "win_count": 676,
+      "loss_count": 668
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1152,
+        0
+      ],
+      "support_games": 254,
+      "win_games": 173,
+      "loss_games": 81,
+      "win_prevalence": 0.68504,
+      "loss_prevalence": 0.54667,
+      "lift_pp": 13.837,
+      "win_count": 231,
+      "loss_count": 109
+    },
+    {
+      "signature": [
+        0,
+        7,
+        1152,
+        3,
+        0,
+        0
+      ],
+      "support_games": 254,
+      "win_games": 173,
+      "loss_games": 81,
+      "win_prevalence": 0.68504,
+      "loss_prevalence": 0.54667,
+      "lift_pp": 13.837,
+      "win_count": 231,
+      "loss_count": 109
+    },
+    {
+      "signature": [
+        0,
+        38,
+        0,
+        0,
+        0,
+        0
+      ],
+      "support_games": 146,
+      "win_games": 105,
+      "loss_games": 41,
+      "win_prevalence": 0.41732,
+      "loss_prevalence": 0.28,
+      "lift_pp": 13.732,
+      "win_count": 105,
+      "loss_count": 41
+    },
+    {
+      "signature": [
+        2,
+        21,
+        7,
+        3,
+        648,
+        0
+      ],
+      "support_games": 168,
+      "win_games": 93,
+      "loss_games": 75,
+      "win_prevalence": 0.37008,
+      "loss_prevalence": 0.50667,
+      "lift_pp": -13.659,
+      "win_count": 169,
+      "loss_count": 147
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1219,
+        3,
+        0,
+        0
+      ],
+      "support_games": 257,
+      "win_games": 149,
+      "loss_games": 108,
+      "win_prevalence": 0.59055,
+      "loss_prevalence": 0.72667,
+      "lift_pp": -13.612,
+      "win_count": 226,
+      "loss_count": 204
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1219,
+        0
+      ],
+      "support_games": 257,
+      "win_games": 149,
+      "loss_games": 108,
+      "win_prevalence": 0.59055,
+      "loss_prevalence": 0.72667,
+      "lift_pp": -13.612,
+      "win_count": 226,
+      "loss_count": 205
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1231,
+        0
+      ],
+      "support_games": 96,
+      "win_games": 48,
+      "loss_games": 48,
+      "win_prevalence": 0.19291,
+      "loss_prevalence": 0.32667,
+      "lift_pp": -13.375,
+      "win_count": 48,
+      "loss_count": 48
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        646
+      ],
+      "support_games": 117,
+      "win_games": 62,
+      "loss_games": 55,
+      "win_prevalence": 0.24803,
+      "loss_prevalence": 0.37333,
+      "lift_pp": -12.53,
+      "win_count": 68,
+      "loss_count": 61
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        112,
+        0
+      ],
+      "support_games": 221,
+      "win_games": 151,
+      "loss_games": 70,
+      "win_prevalence": 0.59843,
+      "loss_prevalence": 0.47333,
+      "lift_pp": 12.509,
+      "win_count": 183,
+      "loss_count": 80
+    },
+    {
+      "signature": [
+        2,
+        13,
+        112,
+        3,
+        756,
+        0
+      ],
+      "support_games": 59,
+      "win_games": 49,
+      "loss_games": 10,
+      "win_prevalence": 0.19685,
+      "loss_prevalence": 0.07333,
+      "lift_pp": 12.352,
+      "win_count": 96,
+      "loss_count": 16
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        112
+      ],
+      "support_games": 266,
+      "win_games": 179,
+      "loss_games": 87,
+      "win_prevalence": 0.70866,
+      "loss_prevalence": 0.58667,
+      "lift_pp": 12.199,
+      "win_count": 229,
+      "loss_count": 108
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1227,
+        0
+      ],
+      "support_games": 242,
+      "win_games": 141,
+      "loss_games": 101,
+      "win_prevalence": 0.55906,
+      "loss_prevalence": 0.68,
+      "lift_pp": -12.094,
+      "win_count": 203,
+      "loss_count": 170
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        9,
+        648,
+        647
+      ],
+      "support_games": 210,
+      "win_games": 121,
+      "loss_games": 89,
+      "win_prevalence": 0.48031,
+      "loss_prevalence": 0.6,
+      "lift_pp": -11.969,
+      "win_count": 144,
+      "loss_count": 110
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1259,
+        3,
+        0,
+        0
+      ],
+      "support_games": 302,
+      "win_games": 179,
+      "loss_games": 123,
+      "win_prevalence": 0.70866,
+      "loss_prevalence": 0.82667,
+      "lift_pp": -11.801,
+      "win_count": 444,
+      "loss_count": 386
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        10,
+        1259,
+        0
+      ],
+      "support_games": 238,
+      "win_games": 161,
+      "loss_games": 77,
+      "win_prevalence": 0.6378,
+      "loss_prevalence": 0.52,
+      "lift_pp": 11.78,
+      "win_count": 266,
+      "loss_count": 135
+    },
+    {
+      "signature": [
+        0,
+        7,
+        1259,
+        3,
+        0,
+        0
+      ],
+      "support_games": 238,
+      "win_games": 161,
+      "loss_games": 77,
+      "win_prevalence": 0.6378,
+      "loss_prevalence": 0.52,
+      "lift_pp": 11.78,
+      "win_count": 266,
+      "loss_count": 135
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1259,
+        0
+      ],
+      "support_games": 238,
+      "win_games": 161,
+      "loss_games": 77,
+      "win_prevalence": 0.6378,
+      "loss_prevalence": 0.52,
+      "lift_pp": 11.78,
+      "win_count": 170,
+      "loss_count": 80
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1231,
+        3,
+        0,
+        0
+      ],
+      "support_games": 92,
+      "win_games": 47,
+      "loss_games": 45,
+      "win_prevalence": 0.18898,
+      "loss_prevalence": 0.30667,
+      "lift_pp": -11.769,
+      "win_count": 109,
+      "loss_count": 107
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        860,
+        0
+      ],
+      "support_games": 178,
+      "win_games": 123,
+      "loss_games": 55,
+      "win_prevalence": 0.48819,
+      "loss_prevalence": 0.37333,
+      "lift_pp": 11.486,
+      "win_count": 150,
+      "loss_count": 67
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1079,
+        0
+      ],
+      "support_games": 85,
+      "win_games": 43,
+      "loss_games": 42,
+      "win_prevalence": 0.17323,
+      "loss_prevalence": 0.28667,
+      "lift_pp": -11.344,
+      "win_count": 47,
+      "loss_count": 45
+    },
+    {
+      "signature": [
+        2,
+        37,
+        1079,
+        9,
+        648,
+        646
+      ],
+      "support_games": 85,
+      "win_games": 43,
+      "loss_games": 42,
+      "win_prevalence": 0.17323,
+      "loss_prevalence": 0.28667,
+      "lift_pp": -11.344,
+      "win_count": 47,
+      "loss_count": 45
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        14,
+        0,
+        0
+      ],
+      "support_games": 166,
+      "win_games": 94,
+      "loss_games": 72,
+      "win_prevalence": 0.37402,
+      "loss_prevalence": 0.48667,
+      "lift_pp": -11.265,
+      "win_count": 157,
+      "loss_count": 127
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1122,
+        0
+      ],
+      "support_games": 91,
+      "win_games": 47,
+      "loss_games": 44,
+      "win_prevalence": 0.18898,
+      "loss_prevalence": 0.3,
+      "lift_pp": -11.102,
+      "win_count": 47,
+      "loss_count": 44
+    },
+    {
+      "signature": [
+        2,
+        3,
+        1182,
+        3,
+        756,
+        0
+      ],
+      "support_games": 62,
+      "win_games": 29,
+      "loss_games": 33,
+      "win_prevalence": 0.11811,
+      "loss_prevalence": 0.22667,
+      "lift_pp": -10.856,
+      "win_count": 29,
+      "loss_count": 33
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        8,
+        7,
+        112
+      ],
+      "support_games": 259,
+      "win_games": 153,
+      "loss_games": 106,
+      "win_prevalence": 0.6063,
+      "loss_prevalence": 0.71333,
+      "lift_pp": -10.703,
+      "win_count": 239,
+      "loss_count": 154
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1097,
+        0
+      ],
+      "support_games": 79,
+      "win_games": 40,
+      "loss_games": 39,
+      "win_prevalence": 0.16142,
+      "loss_prevalence": 0.26667,
+      "lift_pp": -10.525,
+      "win_count": 45,
+      "loss_count": 43
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1219,
+        0
+      ],
+      "support_games": 120,
+      "win_games": 66,
+      "loss_games": 54,
+      "win_prevalence": 0.26378,
+      "loss_prevalence": 0.36667,
+      "lift_pp": -10.289,
+      "win_count": 66,
+      "loss_count": 54
+    },
+    {
+      "signature": [
+        0,
+        7,
+        1219,
+        3,
+        0,
+        0
+      ],
+      "support_games": 120,
+      "win_games": 66,
+      "loss_games": 54,
+      "win_prevalence": 0.26378,
+      "loss_prevalence": 0.36667,
+      "lift_pp": -10.289,
+      "win_count": 66,
+      "loss_count": 54
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        112,
+        0
+      ],
+      "support_games": 177,
+      "win_games": 102,
+      "loss_games": 75,
+      "win_prevalence": 0.40551,
+      "loss_prevalence": 0.50667,
+      "lift_pp": -10.115,
+      "win_count": 121,
+      "loss_count": 97
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        10,
+        1259,
+        0
+      ],
+      "support_games": 326,
+      "win_games": 196,
+      "loss_games": 130,
+      "win_prevalence": 0.77559,
+      "loss_prevalence": 0.87333,
+      "lift_pp": -9.774,
+      "win_count": 674,
+      "loss_count": 690
+    },
+    {
+      "signature": [
+        1,
+        13,
+        112,
+        3,
+        345,
+        0
+      ],
+      "support_games": 184,
+      "win_games": 125,
+      "loss_games": 59,
+      "win_prevalence": 0.49606,
+      "loss_prevalence": 0.4,
+      "lift_pp": 9.606,
+      "win_count": 266,
+      "loss_count": 89
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1259,
+        0
+      ],
+      "support_games": 165,
+      "win_games": 95,
+      "loss_games": 70,
+      "win_prevalence": 0.37795,
+      "loss_prevalence": 0.47333,
+      "lift_pp": -9.538,
+      "win_count": 115,
+      "loss_count": 85
+    },
+    {
+      "signature": [
+        0,
+        1,
+        0,
+        3,
+        860,
+        0
+      ],
+      "support_games": 80,
+      "win_games": 42,
+      "loss_games": 38,
+      "win_prevalence": 0.16929,
+      "loss_prevalence": 0.26,
+      "lift_pp": -9.071,
+      "win_count": 42,
+      "loss_count": 38
+    },
+    {
+      "signature": [
+        2,
+        16,
+        112,
+        3,
+        112,
+        0
+      ],
+      "support_games": 142,
+      "win_games": 98,
+      "loss_games": 44,
+      "win_prevalence": 0.38976,
+      "loss_prevalence": 0.3,
+      "lift_pp": 8.976,
+      "win_count": 300,
+      "loss_count": 95
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1080,
+        0
+      ],
+      "support_games": 60,
+      "win_games": 30,
+      "loss_games": 30,
+      "win_prevalence": 0.12205,
+      "loss_prevalence": 0.20667,
+      "lift_pp": -8.462,
+      "win_count": 30,
+      "loss_count": 30
+    },
+    {
+      "signature": [
+        1,
+        43,
+        648,
+        2,
+        0,
+        0
+      ],
+      "support_games": 63,
+      "win_games": 32,
+      "loss_games": 31,
+      "win_prevalence": 0.12992,
+      "loss_prevalence": 0.21333,
+      "lift_pp": -8.341,
+      "win_count": 32,
+      "loss_count": 33
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1227,
+        0
+      ],
+      "support_games": 132,
+      "win_games": 91,
+      "loss_games": 41,
+      "win_prevalence": 0.3622,
+      "loss_prevalence": 0.28,
+      "lift_pp": 8.22,
+      "win_count": 91,
+      "loss_count": 41
+    },
+    {
+      "signature": [
+        2,
+        15,
+        648,
+        3,
+        345,
+        0
+      ],
+      "support_games": 129,
+      "win_games": 74,
+      "loss_games": 55,
+      "win_prevalence": 0.29528,
+      "loss_prevalence": 0.37333,
+      "lift_pp": -7.806,
+      "win_count": 129,
+      "loss_count": 135
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        9,
+        104,
+        860
+      ],
+      "support_games": 148,
+      "win_games": 100,
+      "loss_games": 48,
+      "win_prevalence": 0.39764,
+      "loss_prevalence": 0.32667,
+      "lift_pp": 7.097,
+      "win_count": 104,
+      "loss_count": 48
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        13,
+        937,
+        0
+      ],
+      "support_games": 253,
+      "win_games": 166,
+      "loss_games": 87,
+      "win_prevalence": 0.65748,
+      "loss_prevalence": 0.58667,
+      "lift_pp": 7.081,
+      "win_count": 287,
+      "loss_count": 157
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        8,
+        16,
+        112
+      ],
+      "support_games": 97,
+      "win_games": 55,
+      "loss_games": 42,
+      "win_prevalence": 0.22047,
+      "loss_prevalence": 0.28667,
+      "lift_pp": -6.619,
+      "win_count": 55,
+      "loss_count": 42
+    },
+    {
+      "signature": [
+        1,
+        37,
+        1079,
+        9,
+        648,
+        646
+      ],
+      "support_games": 62,
+      "win_games": 33,
+      "loss_games": 29,
+      "win_prevalence": 0.13386,
+      "loss_prevalence": 0.2,
+      "lift_pp": -6.614,
+      "win_count": 33,
+      "loss_count": 30
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1079,
+        0
+      ],
+      "support_games": 62,
+      "win_games": 33,
+      "loss_games": 29,
+      "win_prevalence": 0.13386,
+      "loss_prevalence": 0.2,
+      "lift_pp": -6.614,
+      "win_count": 33,
+      "loss_count": 30
+    },
+    {
+      "signature": [
+        1,
+        7,
+        1152,
+        3,
+        0,
+        0
+      ],
+      "support_games": 222,
+      "win_games": 146,
+      "loss_games": 76,
+      "win_prevalence": 0.57874,
+      "loss_prevalence": 0.51333,
+      "lift_pp": 6.541,
+      "win_count": 197,
+      "loss_count": 107
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1152,
+        0
+      ],
+      "support_games": 222,
+      "win_games": 146,
+      "loss_games": 76,
+      "win_prevalence": 0.57874,
+      "loss_prevalence": 0.51333,
+      "lift_pp": 6.541,
+      "win_count": 197,
+      "loss_count": 107
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        8,
+        7,
+        112
+      ],
+      "support_games": 168,
+      "win_games": 112,
+      "loss_games": 56,
+      "win_prevalence": 0.44488,
+      "loss_prevalence": 0.38,
+      "lift_pp": 6.488,
+      "win_count": 129,
+      "loss_count": 66
+    },
+    {
+      "signature": [
+        1,
+        22,
+        648,
+        3,
+        0,
+        0
+      ],
+      "support_games": 49,
+      "win_games": 25,
+      "loss_games": 24,
+      "win_prevalence": 0.10236,
+      "loss_prevalence": 0.16667,
+      "lift_pp": -6.43,
+      "win_count": 28,
+      "loss_count": 24
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        9,
+        104,
+        860
+      ],
+      "support_games": 165,
+      "win_games": 110,
+      "loss_games": 55,
+      "win_prevalence": 0.43701,
+      "loss_prevalence": 0.37333,
+      "lift_pp": 6.367,
+      "win_count": 117,
+      "loss_count": 63
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1097,
+        3,
+        7,
+        0
+      ],
+      "support_games": 56,
+      "win_games": 41,
+      "loss_games": 15,
+      "win_prevalence": 0.16535,
+      "loss_prevalence": 0.10667,
+      "lift_pp": 5.869,
+      "win_count": 45,
+      "loss_count": 15
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1219,
+        0
+      ],
+      "support_games": 185,
+      "win_games": 122,
+      "loss_games": 63,
+      "win_prevalence": 0.48425,
+      "loss_prevalence": 0.42667,
+      "lift_pp": 5.759,
+      "win_count": 144,
+      "loss_count": 74
+    },
+    {
+      "signature": [
+        1,
+        7,
+        1219,
+        3,
+        0,
+        0
+      ],
+      "support_games": 185,
+      "win_games": 122,
+      "loss_games": 63,
+      "win_prevalence": 0.48425,
+      "loss_prevalence": 0.42667,
+      "lift_pp": 5.759,
+      "win_count": 144,
+      "loss_count": 74
+    },
+    {
+      "signature": [
+        2,
+        3,
+        0,
+        3,
+        648,
+        0
+      ],
+      "support_games": 42,
+      "win_games": 32,
+      "loss_games": 10,
+      "win_prevalence": 0.12992,
+      "loss_prevalence": 0.07333,
+      "lift_pp": 5.659,
+      "win_count": 33,
+      "loss_count": 12
+    },
+    {
+      "signature": [
+        0,
+        1,
+        0,
+        3,
+        112,
+        0
+      ],
+      "support_games": 109,
+      "win_games": 74,
+      "loss_games": 35,
+      "win_prevalence": 0.29528,
+      "loss_prevalence": 0.24,
+      "lift_pp": 5.528,
+      "win_count": 74,
+      "loss_count": 35
+    },
+    {
+      "signature": [
+        2,
+        22,
+        648,
+        3,
+        0,
+        0
+      ],
+      "support_games": 65,
+      "win_games": 36,
+      "loss_games": 29,
+      "win_prevalence": 0.14567,
+      "loss_prevalence": 0.2,
+      "lift_pp": -5.433,
+      "win_count": 37,
+      "loss_count": 29
+    },
+    {
+      "signature": [
+        2,
+        3,
+        1182,
+        3,
+        344,
+        0
+      ],
+      "support_games": 46,
+      "win_games": 34,
+      "loss_games": 12,
+      "win_prevalence": 0.1378,
+      "loss_prevalence": 0.08667,
+      "lift_pp": 5.113,
+      "win_count": 36,
+      "loss_count": 12
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1086,
+        0
+      ],
+      "support_games": 82,
+      "win_games": 47,
+      "loss_games": 35,
+      "win_prevalence": 0.18898,
+      "loss_prevalence": 0.24,
+      "lift_pp": -5.102,
+      "win_count": 56,
+      "loss_count": 37
+    },
+    {
+      "signature": [
+        0,
+        21,
+        7,
+        3,
+        646,
+        0
+      ],
+      "support_games": 42,
+      "win_games": 22,
+      "loss_games": 20,
+      "win_prevalence": 0.09055,
+      "loss_prevalence": 0.14,
+      "lift_pp": -4.945,
+      "win_count": 62,
+      "loss_count": 46
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        12,
+        0,
+        0
+      ],
+      "support_games": 64,
+      "win_games": 45,
+      "loss_games": 19,
+      "win_prevalence": 0.1811,
+      "loss_prevalence": 0.13333,
+      "lift_pp": 4.777,
+      "win_count": 52,
+      "loss_count": 24
+    },
+    {
+      "signature": [
+        1,
+        7,
+        0,
+        3,
+        0,
+        0
+      ],
+      "support_games": 45,
+      "win_games": 33,
+      "loss_games": 12,
+      "win_prevalence": 0.13386,
+      "loss_prevalence": 0.08667,
+      "lift_pp": 4.719,
+      "win_count": 35,
+      "loss_count": 13
+    },
+    {
+      "signature": [
+        2,
+        13,
+        112,
+        3,
+        344,
+        0
+      ],
+      "support_games": 61,
+      "win_games": 43,
+      "loss_games": 18,
+      "win_prevalence": 0.17323,
+      "loss_prevalence": 0.12667,
+      "lift_pp": 4.656,
+      "win_count": 84,
+      "loss_count": 23
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        13,
+        937,
+        0
+      ],
+      "support_games": 69,
+      "win_games": 48,
+      "loss_games": 21,
+      "win_prevalence": 0.19291,
+      "loss_prevalence": 0.14667,
+      "lift_pp": 4.625,
+      "win_count": 48,
+      "loss_count": 21
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1080,
+        0
+      ],
+      "support_games": 121,
+      "win_games": 72,
+      "loss_games": 49,
+      "win_prevalence": 0.2874,
+      "loss_prevalence": 0.33333,
+      "lift_pp": -4.593,
+      "win_count": 72,
+      "loss_count": 49
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1097,
+        3,
+        648,
+        0
+      ],
+      "support_games": 51,
+      "win_games": 28,
+      "loss_games": 23,
+      "win_prevalence": 0.11417,
+      "loss_prevalence": 0.16,
+      "lift_pp": -4.583,
+      "win_count": 32,
+      "loss_count": 24
+    },
+    {
+      "signature": [
+        2,
+        30,
+        0,
+        6,
+        112,
+        0
+      ],
+      "support_games": 50,
+      "win_games": 36,
+      "loss_games": 14,
+      "win_prevalence": 0.14567,
+      "loss_prevalence": 0.1,
+      "lift_pp": 4.567,
+      "win_count": 40,
+      "loss_count": 16
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        860,
+        0
+      ],
+      "support_games": 97,
+      "win_games": 57,
+      "loss_games": 40,
+      "win_prevalence": 0.22835,
+      "loss_prevalence": 0.27333,
+      "lift_pp": -4.499,
+      "win_count": 63,
+      "loss_count": 46
+    },
+    {
+      "signature": [
+        1,
+        21,
+        7,
+        3,
+        648,
+        0
+      ],
+      "support_games": 241,
+      "win_games": 156,
+      "loss_games": 85,
+      "win_prevalence": 0.61811,
+      "loss_prevalence": 0.57333,
+      "lift_pp": 4.478,
+      "win_count": 333,
+      "loss_count": 145
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1086,
+        0
+      ],
+      "support_games": 214,
+      "win_games": 131,
+      "loss_games": 83,
+      "win_prevalence": 0.51969,
+      "loss_prevalence": 0.56,
+      "lift_pp": -4.031,
+      "win_count": 166,
+      "loss_count": 109
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1122,
+        0
+      ],
+      "support_games": 54,
+      "win_games": 38,
+      "loss_games": 16,
+      "win_prevalence": 0.15354,
+      "loss_prevalence": 0.11333,
+      "lift_pp": 4.021,
+      "win_count": 38,
+      "loss_count": 16
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1231,
+        0
+      ],
+      "support_games": 72,
+      "win_games": 49,
+      "loss_games": 23,
+      "win_prevalence": 0.19685,
+      "loss_prevalence": 0.16,
+      "lift_pp": 3.685,
+      "win_count": 49,
+      "loss_count": 23
+    },
+    {
+      "signature": [
+        0,
+        7,
+        1231,
+        3,
+        0,
+        0
+      ],
+      "support_games": 72,
+      "win_games": 49,
+      "loss_games": 23,
+      "win_prevalence": 0.19685,
+      "loss_prevalence": 0.16,
+      "lift_pp": 3.685,
+      "win_count": 145,
+      "loss_count": 68
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1227,
+        0
+      ],
+      "support_games": 177,
+      "win_games": 115,
+      "loss_games": 62,
+      "win_prevalence": 0.45669,
+      "loss_prevalence": 0.42,
+      "lift_pp": 3.669,
+      "win_count": 135,
+      "loss_count": 73
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1122,
+        0
+      ],
+      "support_games": 45,
+      "win_games": 32,
+      "loss_games": 13,
+      "win_prevalence": 0.12992,
+      "loss_prevalence": 0.09333,
+      "lift_pp": 3.659,
+      "win_count": 32,
+      "loss_count": 13
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        8,
+        7,
+        646
+      ],
+      "support_games": 40,
+      "win_games": 22,
+      "loss_games": 18,
+      "win_prevalence": 0.09055,
+      "loss_prevalence": 0.12667,
+      "lift_pp": -3.612,
+      "win_count": 25,
+      "loss_count": 18
+    },
+    {
+      "signature": [
+        1,
+        7,
+        1097,
+        3,
+        7,
+        0
+      ],
+      "support_games": 40,
+      "win_games": 22,
+      "loss_games": 18,
+      "win_prevalence": 0.09055,
+      "loss_prevalence": 0.12667,
+      "lift_pp": -3.612,
+      "win_count": 23,
+      "loss_count": 18
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        9,
+        647,
+        646
+      ],
+      "support_games": 244,
+      "win_games": 157,
+      "loss_games": 87,
+      "win_prevalence": 0.62205,
+      "loss_prevalence": 0.58667,
+      "lift_pp": 3.538,
+      "win_count": 188,
+      "loss_count": 98
+    },
+    {
+      "signature": [
+        1,
+        43,
+        648,
+        1,
+        0,
+        0
+      ],
+      "support_games": 257,
+      "win_games": 165,
+      "loss_games": 92,
+      "win_prevalence": 0.65354,
+      "loss_prevalence": 0.62,
+      "lift_pp": 3.354,
+      "win_count": 210,
+      "loss_count": 109
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        8,
+        7,
+        647
+      ],
+      "support_games": 38,
+      "win_games": 21,
+      "loss_games": 17,
+      "win_prevalence": 0.08661,
+      "loss_prevalence": 0.12,
+      "lift_pp": -3.339,
+      "win_count": 21,
+      "loss_count": 17
+    },
+    {
+      "signature": [
+        0,
+        1,
+        0,
+        3,
+        646,
+        0
+      ],
+      "support_games": 211,
+      "win_games": 136,
+      "loss_games": 75,
+      "win_prevalence": 0.53937,
+      "loss_prevalence": 0.50667,
+      "lift_pp": 3.27,
+      "win_count": 136,
+      "loss_count": 75
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        646,
+        0
+      ],
+      "support_games": 70,
+      "win_games": 47,
+      "loss_games": 23,
+      "win_prevalence": 0.18898,
+      "loss_prevalence": 0.16,
+      "lift_pp": 2.898,
+      "win_count": 51,
+      "loss_count": 26
+    },
+    {
+      "signature": [
+        1,
+        7,
+        1259,
+        3,
+        0,
+        0
+      ],
+      "support_games": 245,
+      "win_games": 157,
+      "loss_games": 88,
+      "win_prevalence": 0.62205,
+      "loss_prevalence": 0.59333,
+      "lift_pp": 2.871,
+      "win_count": 264,
+      "loss_count": 142
+    },
+    {
+      "signature": [
+        2,
+        40,
+        648,
+        0,
+        0,
+        0
+      ],
+      "support_games": 315,
+      "win_games": 201,
+      "loss_games": 114,
+      "win_prevalence": 0.79528,
+      "loss_prevalence": 0.76667,
+      "lift_pp": 2.861,
+      "win_count": 911,
+      "loss_count": 477
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1231,
+        0
+      ],
+      "support_games": 59,
+      "win_games": 40,
+      "loss_games": 19,
+      "win_prevalence": 0.16142,
+      "loss_prevalence": 0.13333,
+      "lift_pp": 2.808,
+      "win_count": 40,
+      "loss_count": 19
+    },
+    {
+      "signature": [
+        1,
+        7,
+        1231,
+        3,
+        0,
+        0
+      ],
+      "support_games": 59,
+      "win_games": 40,
+      "loss_games": 19,
+      "win_prevalence": 0.16142,
+      "loss_prevalence": 0.13333,
+      "lift_pp": 2.808,
+      "win_count": 113,
+      "loss_count": 57
+    },
+    {
+      "signature": [
+        2,
+        13,
+        112,
+        3,
+        345,
+        0
+      ],
+      "support_games": 317,
+      "win_games": 197,
+      "loss_games": 120,
+      "win_prevalence": 0.77953,
+      "loss_prevalence": 0.80667,
+      "lift_pp": -2.714,
+      "win_count": 1084,
+      "loss_count": 575
+    },
+    {
+      "signature": [
+        1,
+        4,
+        0,
+        3,
+        112,
+        0
+      ],
+      "support_games": 37,
+      "win_games": 21,
+      "loss_games": 16,
+      "win_prevalence": 0.08661,
+      "loss_prevalence": 0.11333,
+      "lift_pp": -2.672,
+      "win_count": 25,
+      "loss_count": 20
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        10,
+        1259,
+        0
+      ],
+      "support_games": 247,
+      "win_games": 158,
+      "loss_games": 89,
+      "win_prevalence": 0.62598,
+      "loss_prevalence": 0.6,
+      "lift_pp": 2.598,
+      "win_count": 273,
+      "loss_count": 148
+    },
+    {
+      "signature": [
+        2,
+        16,
+        112,
+        3,
+        648,
+        0
+      ],
+      "support_games": 317,
+      "win_games": 202,
+      "loss_games": 115,
+      "win_prevalence": 0.79921,
+      "loss_prevalence": 0.77333,
+      "lift_pp": 2.588,
+      "win_count": 960,
+      "loss_count": 517
+    },
+    {
+      "signature": [
+        0,
+        2,
+        0,
+        3,
+        112,
+        0
+      ],
+      "support_games": 83,
+      "win_games": 50,
+      "loss_games": 33,
+      "win_prevalence": 0.20079,
+      "loss_prevalence": 0.22667,
+      "lift_pp": -2.588,
+      "win_count": 50,
+      "loss_count": 33
+    },
+    {
+      "signature": [
+        1,
+        5,
+        1086,
+        3,
+        0,
+        0
+      ],
+      "support_games": 40,
+      "win_games": 23,
+      "loss_games": 17,
+      "win_prevalence": 0.09449,
+      "loss_prevalence": 0.12,
+      "lift_pp": -2.551,
+      "win_count": 23,
+      "loss_count": 17
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        10,
+        112,
+        0
+      ],
+      "support_games": 333,
+      "win_games": 212,
+      "loss_games": 121,
+      "win_prevalence": 0.83858,
+      "loss_prevalence": 0.81333,
+      "lift_pp": 2.525,
+      "win_count": 1264,
+      "loss_count": 614
+    },
+    {
+      "signature": [
+        1,
+        15,
+        648,
+        3,
+        344,
+        0
+      ],
+      "support_games": 86,
+      "win_games": 52,
+      "loss_games": 34,
+      "win_prevalence": 0.20866,
+      "loss_prevalence": 0.23333,
+      "lift_pp": -2.467,
+      "win_count": 70,
+      "loss_count": 50
+    },
+    {
+      "signature": [
+        1,
+        15,
+        648,
+        3,
+        345,
+        0
+      ],
+      "support_games": 51,
+      "win_games": 30,
+      "loss_games": 21,
+      "win_prevalence": 0.12205,
+      "loss_prevalence": 0.14667,
+      "lift_pp": -2.462,
+      "win_count": 41,
+      "loss_count": 28
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1182,
+        0
+      ],
+      "support_games": 113,
+      "win_games": 69,
+      "loss_games": 44,
+      "win_prevalence": 0.27559,
+      "loss_prevalence": 0.3,
+      "lift_pp": -2.441,
+      "win_count": 74,
+      "loss_count": 48
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        1079,
+        0
+      ],
+      "support_games": 97,
+      "win_games": 59,
+      "loss_games": 38,
+      "win_prevalence": 0.23622,
+      "loss_prevalence": 0.26,
+      "lift_pp": -2.378,
+      "win_count": 61,
+      "loss_count": 40
+    },
+    {
+      "signature": [
+        0,
+        21,
+        7,
+        3,
+        648,
+        0
+      ],
+      "support_games": 97,
+      "win_games": 59,
+      "loss_games": 38,
+      "win_prevalence": 0.23622,
+      "loss_prevalence": 0.26,
+      "lift_pp": -2.378,
+      "win_count": 107,
+      "loss_count": 65
+    },
+    {
+      "signature": [
+        0,
+        37,
+        1079,
+        9,
+        648,
+        646
+      ],
+      "support_games": 97,
+      "win_games": 59,
+      "loss_games": 38,
+      "win_prevalence": 0.23622,
+      "loss_prevalence": 0.26,
+      "lift_pp": -2.378,
+      "win_count": 61,
+      "loss_count": 40
+    },
+    {
+      "signature": [
+        0,
+        43,
+        648,
+        1,
+        0,
+        0
+      ],
+      "support_games": 97,
+      "win_games": 59,
+      "loss_games": 38,
+      "win_prevalence": 0.23622,
+      "loss_prevalence": 0.26,
+      "lift_pp": -2.378,
+      "win_count": 60,
+      "loss_count": 38
+    },
+    {
+      "signature": [
+        0,
+        41,
+        0,
+        1,
+        0,
+        0
+      ],
+      "support_games": 200,
+      "win_games": 128,
+      "loss_games": 72,
+      "win_prevalence": 0.50787,
+      "loss_prevalence": 0.48667,
+      "lift_pp": 2.121,
+      "win_count": 128,
+      "loss_count": 72
+    },
+    {
+      "signature": [
+        2,
+        5,
+        1086,
+        3,
+        0,
+        0
+      ],
+      "support_games": 36,
+      "win_games": 21,
+      "loss_games": 15,
+      "win_prevalence": 0.08661,
+      "loss_prevalence": 0.10667,
+      "lift_pp": -2.005,
+      "win_count": 21,
+      "loss_count": 16
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        9,
+        647,
+        646
+      ],
+      "support_games": 213,
+      "win_games": 136,
+      "loss_games": 77,
+      "win_prevalence": 0.53937,
+      "loss_prevalence": 0.52,
+      "lift_pp": 1.937,
+      "win_count": 154,
+      "loss_count": 90
+    },
+    {
+      "signature": [
+        1,
+        21,
+        7,
+        3,
+        646,
+        0
+      ],
+      "support_games": 109,
+      "win_games": 67,
+      "loss_games": 42,
+      "win_prevalence": 0.26772,
+      "loss_prevalence": 0.28667,
+      "lift_pp": -1.895,
+      "win_count": 147,
+      "loss_count": 82
+    },
+    {
+      "signature": [
+        2,
+        7,
+        1122,
+        3,
+        1227,
+        0
+      ],
+      "support_games": 43,
+      "win_games": 26,
+      "loss_games": 17,
+      "win_prevalence": 0.1063,
+      "loss_prevalence": 0.12,
+      "lift_pp": -1.37,
+      "win_count": 26,
+      "loss_count": 17
+    },
+    {
+      "signature": [
+        2,
+        27,
+        1137,
+        4,
+        345,
+        0
+      ],
+      "support_games": 54,
+      "win_games": 33,
+      "loss_games": 21,
+      "win_prevalence": 0.13386,
+      "loss_prevalence": 0.14667,
+      "lift_pp": -1.281,
+      "win_count": 33,
+      "loss_count": 21
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        7,
+        646,
+        0
+      ],
+      "support_games": 149,
+      "win_games": 95,
+      "loss_games": 54,
+      "win_prevalence": 0.37795,
+      "loss_prevalence": 0.36667,
+      "lift_pp": 1.129,
+      "win_count": 105,
+      "loss_count": 64
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1259,
+        0
+      ],
+      "support_games": 122,
+      "win_games": 76,
+      "loss_games": 46,
+      "win_prevalence": 0.30315,
+      "loss_prevalence": 0.31333,
+      "lift_pp": -1.018,
+      "win_count": 79,
+      "loss_count": 47
+    },
+    {
+      "signature": [
+        2,
+        15,
+        648,
+        3,
+        344,
+        0
+      ],
+      "support_games": 76,
+      "win_games": 49,
+      "loss_games": 27,
+      "win_prevalence": 0.19685,
+      "loss_prevalence": 0.18667,
+      "lift_pp": 1.018,
+      "win_count": 77,
+      "loss_count": 47
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        9,
+        648,
+        647
+      ],
+      "support_games": 254,
+      "win_games": 159,
+      "loss_games": 95,
+      "win_prevalence": 0.62992,
+      "loss_prevalence": 0.64,
+      "lift_pp": -1.008,
+      "win_count": 209,
+      "loss_count": 112
+    },
+    {
+      "signature": [
+        1,
+        15,
+        648,
+        3,
+        756,
+        0
+      ],
+      "support_games": 79,
+      "win_games": 49,
+      "loss_games": 30,
+      "win_prevalence": 0.19685,
+      "loss_prevalence": 0.20667,
+      "lift_pp": -0.982,
+      "win_count": 85,
+      "loss_count": 52
+    },
+    {
+      "signature": [
+        1,
+        3,
+        0,
+        3,
+        648,
+        0
+      ],
+      "support_games": 54,
+      "win_games": 35,
+      "loss_games": 19,
+      "win_prevalence": 0.14173,
+      "loss_prevalence": 0.13333,
+      "lift_pp": 0.84,
+      "win_count": 35,
+      "loss_count": 19
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        8,
+        7,
+        648
+      ],
+      "support_games": 93,
+      "win_games": 58,
+      "loss_games": 35,
+      "win_prevalence": 0.23228,
+      "loss_prevalence": 0.24,
+      "lift_pp": -0.772,
+      "win_count": 64,
+      "loss_count": 46
+    },
+    {
+      "signature": [
+        0,
+        5,
+        1086,
+        3,
+        0,
+        0
+      ],
+      "support_games": 48,
+      "win_games": 31,
+      "loss_games": 17,
+      "win_prevalence": 0.12598,
+      "loss_prevalence": 0.12,
+      "lift_pp": 0.598,
+      "win_count": 31,
+      "loss_count": 17
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        7,
+        1137,
+        0
+      ],
+      "support_games": 45,
+      "win_games": 28,
+      "loss_games": 17,
+      "win_prevalence": 0.11417,
+      "loss_prevalence": 0.12,
+      "lift_pp": -0.583,
+      "win_count": 28,
+      "loss_count": 17
+    },
+    {
+      "signature": [
+        1,
+        30,
+        0,
+        6,
+        112,
+        0
+      ],
+      "support_games": 56,
+      "win_games": 36,
+      "loss_games": 20,
+      "win_prevalence": 0.14567,
+      "loss_prevalence": 0.14,
+      "lift_pp": 0.567,
+      "win_count": 36,
+      "loss_count": 20
+    },
+    {
+      "signature": [
+        2,
+        0,
+        0,
+        7,
+        1137,
+        0
+      ],
+      "support_games": 72,
+      "win_games": 45,
+      "loss_games": 27,
+      "win_prevalence": 0.1811,
+      "loss_prevalence": 0.18667,
+      "lift_pp": -0.556,
+      "win_count": 45,
+      "loss_count": 27
+    },
+    {
+      "signature": [
+        0,
+        0,
+        0,
+        14,
+        0,
+        0
+      ],
+      "support_games": 400,
+      "win_games": 252,
+      "loss_games": 148,
+      "win_prevalence": 0.99606,
+      "loss_prevalence": 0.99333,
+      "lift_pp": 0.273,
+      "win_count": 436,
+      "loss_count": 268
+    },
+    {
+      "signature": [
+        1,
+        0,
+        0,
+        12,
+        0,
+        0
+      ],
+      "support_games": 62,
+      "win_games": 39,
+      "loss_games": 23,
+      "win_prevalence": 0.15748,
+      "loss_prevalence": 0.16,
+      "lift_pp": -0.252,
+      "win_count": 39,
+      "loss_count": 23
+    },
+    {
+      "signature": [
+        2,
+        43,
+        648,
+        2,
+        0,
+        0
+      ],
+      "support_games": 89,
+      "win_games": 56,
+      "loss_games": 33,
+      "win_prevalence": 0.22441,
+      "loss_prevalence": 0.22667,
+      "lift_pp": -0.226,
+      "win_count": 61,
+      "loss_count": 38
+    },
+    {
+      "signature": [
+        2,
+        21,
+        7,
+        3,
+        646,
+        0
+      ],
+      "support_games": 38,
+      "win_games": 24,
+      "loss_games": 14,
+      "win_prevalence": 0.09843,
+      "loss_prevalence": 0.1,
+      "lift_pp": -0.157,
+      "win_count": 40,
+      "loss_count": 33
+    }
+  ]
+}

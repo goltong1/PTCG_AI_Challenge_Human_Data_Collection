@@ -1,0 +1,51 @@
+{
+  "method": "interleaved A/B; A-p0, B-p0, A-p1, B-p1 cycle",
+  "opponent": "crustle",
+  "games_each": 200,
+  "results": [
+    {
+      "candidate": "v63_final",
+      "games": 200,
+      "wins": 48,
+      "losses": 151,
+      "draws": 1,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 100,
+          "wins": 26,
+          "win_rate": 0.26
+        },
+        "p1": {
+          "games": 100,
+          "wins": 22,
+          "win_rate": 0.22
+        }
+      },
+      "win_rate": 0.24
+    },
+    {
+      "candidate": "v65_final",
+      "games": 200,
+      "wins": 32,
+      "losses": 168,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 100,
+          "wins": 17,
+          "win_rate": 0.17
+        },
+        "p1": {
+          "games": 100,
+          "wins": 15,
+          "win_rate": 0.15
+        }
+      },
+      "win_rate": 0.16
+    }
+  ],
+  "challenger_gain_points": -0.07999999999999999,
+  "elapsed_sec": 70.029
+}

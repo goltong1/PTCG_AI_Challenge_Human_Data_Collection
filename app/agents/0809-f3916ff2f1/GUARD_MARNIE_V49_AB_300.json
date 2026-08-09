@@ -1,0 +1,51 @@
+{
+  "method": "interleaved A/B; A-p0, B-p0, A-p1, B-p1 cycle",
+  "opponent": "marnie_v49",
+  "games_each": 150,
+  "results": [
+    {
+      "candidate": "v63_final",
+      "games": 150,
+      "wins": 82,
+      "losses": 68,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 75,
+          "wins": 44,
+          "win_rate": 0.5866666666666667
+        },
+        "p1": {
+          "games": 75,
+          "wins": 38,
+          "win_rate": 0.5066666666666667
+        }
+      },
+      "win_rate": 0.5466666666666666
+    },
+    {
+      "candidate": "v65_sequence_guard",
+      "games": 150,
+      "wins": 75,
+      "losses": 75,
+      "draws": 0,
+      "errors": 0,
+      "seats": {
+        "p0": {
+          "games": 75,
+          "wins": 40,
+          "win_rate": 0.5333333333333333
+        },
+        "p1": {
+          "games": 75,
+          "wins": 35,
+          "win_rate": 0.4666666666666667
+        }
+      },
+      "win_rate": 0.5
+    }
+  ],
+  "challenger_gain_points": -0.046666666666666634,
+  "elapsed_sec": 83.93
+}

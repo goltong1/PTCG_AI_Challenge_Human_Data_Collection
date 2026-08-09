@@ -1,0 +1,17 @@
+{
+  "candidate": "v63_final",
+  "opponent": "mega_abomasnow_replay_style",
+  "route": "default",
+  "games": 200,
+  "wins": 157,
+  "losses": 43,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.785,
+  "avg_steps": 81.255,
+  "result_reasons": {
+    "3": 148,
+    "1": 52
+  },
+  "elapsed_sec": 14.346
+}

@@ -1,0 +1,43 @@
+{
+  "candidate": "v68_verified_matchup_adaptation",
+  "opponent": "marnie_internal",
+  "games": 400,
+  "wins": 196,
+  "losses": 204,
+  "draws": 0,
+  "errors": 0,
+  "win_rate": 0.49,
+  "seats": {
+    "p0": {
+      "games": 200,
+      "wins": 106,
+      "win_rate": 0.53
+    },
+    "p1": {
+      "games": 200,
+      "wins": 90,
+      "win_rate": 0.45
+    }
+  },
+  "result_reasons": {
+    "1": 374,
+    "2": 19,
+    "3": 7
+  },
+  "error_samples": [],
+  "elapsed_sec": 136.667,
+  "controller_stats": {
+    "searches": 0,
+    "overrides": 0,
+    "recognized": {
+      "spidops": 749,
+      "okidogi": 391,
+      "marnie": 35822
+    },
+    "opponent_turns": 0,
+    "opponent_actions": 0,
+    "opponent_errors": 0,
+    "native_root_calls": 63,
+    "hybrid_searches": 1140
+  }
+}

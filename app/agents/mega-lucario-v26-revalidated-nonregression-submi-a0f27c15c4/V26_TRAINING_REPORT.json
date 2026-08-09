@@ -1,0 +1,27 @@
+{
+  "version": "mega_lucario_v26_cornerstone_ogerpon_terabox_tail",
+  "base": "mega_lucario_v15_mirror_value_champion",
+  "deck_change": "-1 Hilda, +1 Cornerstone Mask Ogerpon ex; Dudunsparce ex retained",
+  "selected_policy_changes": [
+    "public-information Archaludon/Cinderace recognition before Ogerpon specialization",
+    "three-energy Ogerpon charge value with fourth-energy waste penalty",
+    "Cornerstone wall promotion and Demolish attack planning",
+    "exact Lucario KO retained over slower Demolish lines",
+    "Premium Power Pro conservation while Ogerpon attacks",
+    "public-information Tera-box recognition",
+    "Dudunsparce ex Tenacious Tail route when at least three opposing Pokemon ex are in play"
+  ],
+  "rejected_methods": [
+    "Ogerpon replacing Dudunsparce ex: destroyed the Crustle bypass route",
+    "one-ply learned rollout: regressed Marnie, Dragapult and Alakazam because it ignored opponent response",
+    "broad exact-KO override: attacked before necessary setup and regressed Alakazam/Crustle",
+    "Dudunsparce ex primary attacker against Alakazam: too slow, 14/36",
+    "forced second-player selection: regressed all five core matchups",
+    "aggressive two-ply overrides: opponent model was valid but frequent overrides regressed the base policy"
+  ],
+  "selection_rule": "maximize the independent large-batch minimum matchup rate, then core aggregate rate; never promote from a small screen alone",
+  "limitations": [
+    "The local engine does not expose a formal shuffle seed, so seats were alternated but games are not exact paired-shuffle trials.",
+    "The 70% target was achieved against Archaludon and Tera-box only, not universally."
+  ]
+}

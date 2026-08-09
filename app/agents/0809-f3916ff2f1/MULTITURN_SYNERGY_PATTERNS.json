@@ -1,0 +1,8 @@
+{
+  "games": 160,
+  "patterns": {
+    "repeat_search_no_progress": 286,
+    "end_with_productive": 305,
+    "search_then_lillie_no_progress": 39
+  }
+}
