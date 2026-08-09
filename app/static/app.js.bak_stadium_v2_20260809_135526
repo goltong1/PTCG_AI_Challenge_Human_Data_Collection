@@ -998,26 +998,6 @@ function cardHtml(card, { pokemon = false, compact = false, hidden = false, loca
   return `<div class="pokemon-stack ${compact ? 'compact-stack' : ''}">${shell}${attachmentPanel(card)}</div>`;
 }
 
-
-// PTCG_STADIUM_IMAGE_PATCH_V2
-function stadiumZoneHtmlV2(card) {
-  if (!card) {
-    return `<div class="stadium-zone-empty-v2">
-      <span>STADIUM</span>
-      <strong>비어 있음</strong>
-    </div>`;
-  }
-  const key = registerCard(card);
-  return `<button class="stadium-zone-card-v2 card-click" type="button"
-      data-card-key="${key}" title="${esc(card.name)} 자세히 보기">
-    <span class="stadium-zone-thumb-v2">${imageHtml(card, 'stadium-zone-art-v2')}</span>
-    <span class="stadium-zone-copy-v2">
-      <small>STADIUM</small>
-      <strong>${esc(card.name)}</strong>
-    </span>
-  </button>`;
-}
-
 function renderPlayerSide(target, player, revealHand, name, seatToken = 'YOU') {
   const active = player.active?.length
     ? cardHtml(player.active[0], { pokemon: true, location: '액티브', identifier: 'A' })
@@ -1447,7 +1427,9 @@ function render(data) {
     bottomName,
     (replayMode || pvpMode) ? `P${data.human_seat}` : 'YOU',
   );
-  $('#stadium-zone').innerHTML = stadiumZoneHtmlV2(data.stadium?.[0] || null);
+  $('#stadium-zone').innerHTML = data.stadium?.length
+    ? `STADIUM · <b>${esc(data.stadium[0].name)}</b>`
+    : 'STADIUM · 비어 있음';
   const result = $('#battle-result');
   result.textContent = data.result_text || '';
   result.classList.toggle('hidden', data.result === -1);
