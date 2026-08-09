@@ -1285,7 +1285,6 @@ function capturePrizeCheck(data) {
   prizeCheckWasLive = false;
 }
 
-// PTCG_PRIZE_BUTTON_ONLY_V1
 function renderPrizeCheck(data) {
   const panel = $('#prize-check-panel');
   if (!panel) return;
@@ -1304,10 +1303,25 @@ function renderPrizeCheck(data) {
   $('#prize-check-status').textContent = `${prizeInferenceStatusText(prizeCheckSnapshot)} · Turn ${prizeCheckSnapshot.turn}`;
   $('#prize-check-summary').textContent =
     `덱 서치가 끝난 뒤 계산된 프라이즈 ${prizeCheckSnapshot.prize_count}장입니다.`;
-  $('#prize-check-open').textContent = '프라이즈 목록 보기';
+  $('#prize-check-open').textContent = '프라이즈 목록 다시 보기';
 
+  if (!prizeCheckAutoOpenPending) return;
   prizeCheckAutoOpenPending = false;
 
+  const snapshotKey = [
+    prizeCheckSnapshot.game_id,
+    prizeCheckSnapshot.turn,
+    prizeCheckSnapshot.captured_at,
+  ].join(':');
+
+  if (prizeCheckLastShownKey === snapshotKey) return;
+  prizeCheckLastShownKey = snapshotKey;
+
+  window.setTimeout(() => {
+    if (!state?.active || state.mode === 'replay' || state.prize_check) return;
+    if (!prizeCheckSnapshot || prizeCheckSnapshot.game_id !== state.game_id) return;
+    openPrizeCheckDialog();
+  }, 80);
 }
 
 function openPrizeCheckDialog() {

@@ -924,120 +924,6 @@ class GameManager:
                 "record_available": self.record_dir is not None,
             }
 
-    def _deck_for_seat(self, seat: int) -> list[int]:
-        if int(seat) == int(self.human_seat):
-            return list(self.human_deck)
-        if int(seat) == int(self.ai_seat):
-            return list(self.ai_deck)
-        return []
-
-    @staticmethod
-    def _card_id_for_prize_inference(card: dict[str, Any] | None) -> int | None:
-        if not card:
-            return None
-        try:
-            card_id = int(card.get("id", 0))
-        except (TypeError, ValueError):
-            return None
-        return card_id if card_id > 0 else None
-
-    def _infer_prize_cards_from_search(
-        self,
-        select: dict[str, Any],
-        player: dict[str, Any],
-        viewer_seat: int,
-    ) -> tuple[list[int], int, bool, dict[str, Any]]:
-        source_deck = self._deck_for_seat(viewer_seat)
-        source_counts = Counter(int(card_id) for card_id in source_deck)
-        known_counts: Counter[int] = Counter()
-        seen_serials: set[int] = set()
-
-        def add_card(card: dict[str, Any] | None) -> None:
-            card_id = self._card_id_for_prize_inference(card)
-            if card_id is None or not card:
-                return
-            try:
-                owner = int(card.get("playerIndex", -1))
-            except (TypeError, ValueError):
-                owner = -1
-            if owner not in (-1, int(viewer_seat)):
-                return
-            try:
-                serial = int(card.get("serial", -1))
-            except (TypeError, ValueError):
-                serial = -1
-            if serial >= 0:
-                if serial in seen_serials:
-                    return
-                seen_serials.add(serial)
-            known_counts[card_id] += 1
-
-        for card in select.get("deck") or []:
-            add_card(card)
-        for card in player.get("hand") or []:
-            add_card(card)
-        for card in player.get("discard") or []:
-            add_card(card)
-
-        for pokemon in list(player.get("active") or []) + list(player.get("bench") or []):
-            if not pokemon:
-                continue
-            add_card(pokemon)
-            for card in pokemon.get("preEvolution") or []:
-                add_card(card)
-            for card in pokemon.get("energyCards") or []:
-                add_card(card)
-            for card in pokemon.get("tools") or []:
-                add_card(card)
-
-        current = (self.observation or {}).get("current") or {}
-        for card in current.get("stadium") or []:
-            if not card:
-                continue
-            try:
-                owner = int(card.get("playerIndex", -1))
-            except (TypeError, ValueError):
-                owner = -1
-            if owner == int(viewer_seat):
-                add_card(card)
-
-        for card in current.get("looking") or []:
-            if not card:
-                continue
-            try:
-                owner = int(card.get("playerIndex", -1))
-            except (TypeError, ValueError):
-                owner = -1
-            if owner in (-1, int(viewer_seat)):
-                add_card(card)
-
-        add_card(select.get("contextCard"))
-        add_card(select.get("effect"))
-
-        inferred_ids: list[int] = []
-        over_subtracted: dict[int, int] = {}
-        for card_id, original_count in source_counts.items():
-            remaining = int(original_count) - int(known_counts.get(card_id, 0))
-            if remaining < 0:
-                over_subtracted[card_id] = -remaining
-                remaining = 0
-            inferred_ids.extend([int(card_id)] * remaining)
-
-        expected_prize_count = len(player.get("prize") or [])
-        complete = (
-            len(source_deck) == 60
-            and not over_subtracted
-            and len(inferred_ids) == expected_prize_count
-        )
-        diagnostics = {
-            "source_deck_count": len(source_deck),
-            "known_non_prize_count": sum(known_counts.values()),
-            "expected_prize_count": expected_prize_count,
-            "inferred_prize_count": len(inferred_ids),
-            "over_subtracted": {str(k): v for k, v in sorted(over_subtracted.items())},
-        }
-        return inferred_ids, expected_prize_count, complete, diagnostics
-
     def _prize_check_payload(
         self,
         select: dict[str, Any] | None,
@@ -1046,21 +932,20 @@ class GameManager:
         viewer_seat: int,
         turn: int,
     ) -> dict[str, Any] | None:
-        # Only infer Prize cards while this viewer is legally searching their own deck.
+        # Only expose a player's own hidden information while that player is
+        # legally looking through their deck. The browser retains the snapshot
+        # after the search so the user can finish a normal prize check.
         if not select or actor != viewer_seat or select.get("deck") is None:
             return None
-
         deck_cards = [
             self._serialize_card(card)
             for card in (select.get("deck") or [])
             if card
         ]
-        inferred_ids, expected_count, complete, diagnostics = (
-            self._infer_prize_cards_from_search(select, player, viewer_seat)
-        )
         prize_cards = [
-            self._serialize_card({"id": card_id, "serial": -1, "playerIndex": viewer_seat})
-            for card_id in inferred_ids
+            self._serialize_card(card)
+            for card in (player.get("prize") or [])
+            if card
         ]
         return {
             "turn": int(turn),
@@ -1068,10 +953,6 @@ class GameManager:
             "deck_count": len(deck_cards),
             "prizes": prize_cards,
             "prize_count": len(prize_cards),
-            "expected_prize_count": expected_count,
-            "inference_complete": complete,
-            "inference_method": "deck_multiset_reverse",
-            "diagnostics": diagnostics,
         }
 
     def _serialize_player(self, player: dict[str, Any], reveal_hand: bool) -> dict[str, Any]:

@@ -1217,16 +1217,6 @@ function renderTimeline(history) {
   }
 }
 
-
-// PTCG_PRIZE_REVERSE_INFERENCE_UI_V1
-function prizeInferenceStatusText(snapshot) {
-  if (!snapshot) return '';
-  if (snapshot.inference_complete === false) {
-    return `프라이즈 역추적 확인 필요 · 추정 ${Number(snapshot.prize_count || 0)}장 / 실제 남은 장수 ${Number(snapshot.expected_prize_count || 0)}장`;
-  }
-  return `프라이즈 역추적 완료 · ${Number(snapshot.prize_count || 0)}장`;
-}
-
 function groupedPrizeCards(cards) {
   const groups = new Map();
   (cards || []).forEach((card) => {
@@ -1285,7 +1275,6 @@ function capturePrizeCheck(data) {
   prizeCheckWasLive = false;
 }
 
-// PTCG_PRIZE_BUTTON_ONLY_V1
 function renderPrizeCheck(data) {
   const panel = $('#prize-check-panel');
   if (!panel) return;
@@ -1301,13 +1290,28 @@ function renderPrizeCheck(data) {
   panel.classList.toggle('hidden', !available);
   if (!available) return;
 
-  $('#prize-check-status').textContent = `${prizeInferenceStatusText(prizeCheckSnapshot)} · Turn ${prizeCheckSnapshot.turn}`;
+  $('#prize-check-status').textContent = `프라이즈 체크 완료 · Turn ${prizeCheckSnapshot.turn}`;
   $('#prize-check-summary').textContent =
     `덱 서치가 끝난 뒤 계산된 프라이즈 ${prizeCheckSnapshot.prize_count}장입니다.`;
-  $('#prize-check-open').textContent = '프라이즈 목록 보기';
+  $('#prize-check-open').textContent = '프라이즈 목록 다시 보기';
 
+  if (!prizeCheckAutoOpenPending) return;
   prizeCheckAutoOpenPending = false;
 
+  const snapshotKey = [
+    prizeCheckSnapshot.game_id,
+    prizeCheckSnapshot.turn,
+    prizeCheckSnapshot.captured_at,
+  ].join(':');
+
+  if (prizeCheckLastShownKey === snapshotKey) return;
+  prizeCheckLastShownKey = snapshotKey;
+
+  window.setTimeout(() => {
+    if (!state?.active || state.mode === 'replay' || state.prize_check) return;
+    if (!prizeCheckSnapshot || prizeCheckSnapshot.game_id !== state.game_id) return;
+    openPrizeCheckDialog();
+  }, 80);
 }
 
 function openPrizeCheckDialog() {
@@ -1315,7 +1319,7 @@ function openPrizeCheckDialog() {
 
   const dialog = $('#prize-check-dialog');
   $('#prize-check-dialog-status').textContent =
-    `Turn ${prizeCheckSnapshot.turn} · ${prizeInferenceStatusText(prizeCheckSnapshot)}`;
+    `Turn ${prizeCheckSnapshot.turn} · 덱 서치 종료 후 계산 결과`;
   $('#prize-check-prize-count').textContent = `${prizeCheckSnapshot.prize_count}장`;
   $('#prize-check-prize-grid').innerHTML = prizeCheckCardsHtml(
     prizeCheckSnapshot.prizes,
