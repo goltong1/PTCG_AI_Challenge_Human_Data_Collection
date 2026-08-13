@@ -1,0 +1,7 @@
+{
+  "cornerstone_immunity_guard": true,
+  "energy_switch_guard": true,
+  "marnie_cornerstone_plan": false,
+  "crustle_cornerstone_plan": true,
+  "no_state_change_loop_guard": true
+}

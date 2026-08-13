@@ -1,0 +1,1348 @@
+{
+  "schema": "tera_box_public_state_memory_v19",
+  "profiles": {
+    "dragapult": {
+      "games": {
+        "win": 60,
+        "loss": 140
+      },
+      "frames": {
+        "win": 1653,
+        "loss": 4425
+      },
+      "states": 40,
+      "memory": {
+        "E|l|A|H|96|121|96,96,108,184,756,1071|112,121|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|756|119|||Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "E|e|0|H|756|119|||Attach,End,Play": {
+          "action": "Play:1121:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "E|e|0|h|756|119|||Attach,End,Play": {
+          "action": "Play:184:0:0",
+          "support": 5,
+          "wins": 4,
+          "losses": 1,
+          "confidence": 0.714286
+        },
+        "E|m|0|H|756|235|96,96,184,272|112,120|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|756|121|96,96,184,756|112|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|756|121|96,96,184|112,140|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|B|l|272|121|31,96,96,96,108,184|235|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|H|96|119||119|Attach,End,Play": {
+          "action": "Play:1121:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|96|119||119|Attach,End,Play": {
+          "action": "Play:756:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|119|96,96,96,108,1071|119|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "E|m|0|H|756|112|96,96,184|119,120|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|96|121|96,184,756,1071||Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|B|H|756|121|96,96,96,140,184,272,756|112,121,140|Ability,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|m|0|l|756|112|96,96,96,184,272|120,120|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|H|756|119|96,96,184,1071|112|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|235|96,96,108,184|119,120|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|b|H|756|121|96,96,108,184|119,119|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "C|l|A|96|119|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|96|120|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 7,
+          "wins": 6,
+          "losses": 1,
+          "confidence": 0.777778
+        },
+        "C|e|0|756|112|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 14,
+          "wins": 12,
+          "losses": 2,
+          "confidence": 0.8125
+        },
+        "C|e|0|756|112|End,Play,Retreat": {
+          "action": "Play:96:0:0",
+          "support": 6,
+          "wins": 6,
+          "losses": 0,
+          "confidence": 0.875
+        },
+        "C|l|A|756|120|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:1092",
+          "support": 7,
+          "wins": 6,
+          "losses": 1,
+          "confidence": 0.777778
+        },
+        "C|l|A|756|119|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:1092",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|A|756|112|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:1092",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|A|96|140|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 7,
+          "wins": 6,
+          "losses": 1,
+          "confidence": 0.777778
+        },
+        "C|l|A|96|121|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 9,
+          "wins": 7,
+          "losses": 2,
+          "confidence": 0.727273
+        },
+        "C|l|A|756|121|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 11,
+          "wins": 10,
+          "losses": 1,
+          "confidence": 0.846154
+        },
+        "C|m|0|756|112|Ability,Attach,End,Play,Retreat": {
+          "action": "Play:1094:0:0",
+          "support": 6,
+          "wins": 6,
+          "losses": 0,
+          "confidence": 0.875
+        },
+        "C|m|0|756|112|Attach,End,Play,Retreat": {
+          "action": "Attach:0:0:0",
+          "support": 10,
+          "wins": 8,
+          "losses": 2,
+          "confidence": 0.75
+        },
+        "C|l|A|756|121|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 7,
+          "wins": 6,
+          "losses": 1,
+          "confidence": 0.777778
+        },
+        "C|l|A|756|235|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:1092",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "C|m|0|756|119|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|m|a|756|119|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:1092",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|e|0|756|112|Ability,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "L|e|0|756|112": {
+          "action": "Play:1116:0:0",
+          "support": 15,
+          "wins": 12,
+          "losses": 3,
+          "confidence": 0.764706
+        },
+        "L|l|A|756|120": {
+          "action": "Attack:0:0:1092",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        },
+        "L|l|A|756|112": {
+          "action": "Attack:0:0:1092",
+          "support": 10,
+          "wins": 10,
+          "losses": 0,
+          "confidence": 0.916667
+        },
+        "L|l|A|756|121": {
+          "action": "Ability:0:0:0",
+          "support": 20,
+          "wins": 17,
+          "losses": 3,
+          "confidence": 0.818182
+        },
+        "L|m|0|756|112": {
+          "action": "Play:1094:0:0",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        }
+      }
+    },
+    "lucario": {
+      "games": {
+        "win": 59,
+        "skipped": 2,
+        "loss": 108
+      },
+      "frames": {
+        "win": 2103,
+        "loss": 3420
+      },
+      "states": 46,
+      "memory": {
+        "E|l|A|L|756|306|96,96,184,756,1071|305,675,676,678,678|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|756|306|96,96,96,184,756,1071,1071|675,677,678|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|a|H|756|306|96,96,96,184|305,333,333|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|l|B|L|272|306|96,96,96,184,756|305,333,333,676|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|96|675|96,96,184,756,756|676,678,678,678|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|96|305|||Ability,Attach,End,Play": {
+          "action": "Play:1094:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|a|H|756|678|96,96,96,184|305,306,333,333,676|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|H|756|676|96,96,96,1071|305,333,675,677|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|m|0|H|756|678|96,96,96,184,272,756|675,676,678|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|305|96,96,272|675,678|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|96|306|96,96,140,184,756,756,1071||Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|e|0|h|756|676||305|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|e|0|H|756|676||305|Attach,End,Play": {
+          "action": "Play:184:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|B|L|756|678|96,96,96,184|305,305,333,676|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|b|H|96|678|96,96,184,756|305,305,306,676,678|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|96|305|96,96,756|305|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|a|H|96|676|96,184,1071|66,305,675,678,678|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|B|L|96|675|31,96,96,184|305,305,676,678,678|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|a|H|756|678|96,96,184,756,1071||Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|a|H|756|676|96,96,96,184,1071|306,333,675|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|m|0|H|756|678|96,96,272,756|305,306,675,676,678|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|H|184|678|96,96,96,1071|305,305,333,675,676|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "C|m|0|756|305|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|272|676|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:371",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|e|0|756|676|Attach,End,Play": {
+          "action": "Play:1116:0:0",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        },
+        "C|e|0|756|676|Attach,End,Play,Retreat": {
+          "action": "Attach:0:0:0",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        },
+        "C|e|0|756|676|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 20,
+          "wins": 18,
+          "losses": 2,
+          "confidence": 0.863636
+        },
+        "C|m|0|756|676|End,Play,Retreat": {
+          "action": "Play:96:0:0",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|A|272|305|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:371",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|e|0|756|675|Attach,End,Play": {
+          "action": "Attach:0:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "C|m|0|756|675|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 12,
+          "wins": 10,
+          "losses": 2,
+          "confidence": 0.785714
+        },
+        "C|e|0|96|305|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 6,
+          "losses": 0,
+          "confidence": 0.875
+        },
+        "C|l|a|756|678|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 8,
+          "wins": 8,
+          "losses": 0,
+          "confidence": 0.9
+        },
+        "C|l|a|96|676|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "C|e|0|756|333|End,Play,Retreat": {
+          "action": "Play:1116:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|96|306|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 9,
+          "wins": 8,
+          "losses": 1,
+          "confidence": 0.818182
+        },
+        "C|e|0|756|675|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 10,
+          "wins": 8,
+          "losses": 2,
+          "confidence": 0.75
+        },
+        "C|l|A|272|675|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:371",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|96|306|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "L|m|0|756|676": {
+          "action": "Play:96:0:0",
+          "support": 9,
+          "wins": 8,
+          "losses": 1,
+          "confidence": 0.818182
+        },
+        "L|l|A|272|676": {
+          "action": "Attack:0:0:371",
+          "support": 10,
+          "wins": 10,
+          "losses": 0,
+          "confidence": 0.916667
+        },
+        "L|l|A|96|306": {
+          "action": "Ability:0:0:0",
+          "support": 11,
+          "wins": 11,
+          "losses": 0,
+          "confidence": 0.923077
+        },
+        "L|l|A|756|306": {
+          "action": "Ability:0:0:0",
+          "support": 8,
+          "wins": 8,
+          "losses": 0,
+          "confidence": 0.9
+        },
+        "L|m|0|756|675": {
+          "action": "Play:1116:0:0",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        },
+        "L|l|a|756|678": {
+          "action": "Ability:0:0:0",
+          "support": 14,
+          "wins": 12,
+          "losses": 2,
+          "confidence": 0.8125
+        },
+        "L|l|A|272|675": {
+          "action": "Attack:0:0:371",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        }
+      }
+    },
+    "alakazam": {
+      "games": {
+        "win": 59,
+        "skipped": 3,
+        "loss": 128
+      },
+      "frames": {
+        "win": 2173,
+        "loss": 4369
+      },
+      "states": 40,
+      "memory": {
+        "E|m|0|H|756|741|31,96,96,117,184,756,1071|66,305,741,741|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|184|741|96,96,96|66,66,741,741|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|0|756|741|96,96||Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|e|0|h|756|741|96,96||Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "E|e|0|l|756|741|96,96,184||Attach,End,Play,Retreat": {
+          "action": "Attach:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|L|184|305|96,96,96,756||Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|742|96,96,96,184,1071|272,305,741,741,741|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|a|H|756|743|96,96,96,184|272,305,741|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|L|108|272|184|66,245,743,743,743|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:135",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|B|L|756|743|96,96,108,117,184|245,305,305,742,743|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|L|756|743|96,96,756,1071,1071|305,742,743|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|L|756|743|96,96,96,756,1071|272,305,741,743,743|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|L|756|743|96,96,184|272,305,742|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|66|96,96,96,184,1071|741,741|Ability,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|L|756|741|31,96,96,117,184|140,305,741|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "C|m|a|96|741|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|A|96|743|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 9,
+          "wins": 9,
+          "losses": 0,
+          "confidence": 0.909091
+        },
+        "C|l|A|96|272|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|A|96|743|Attach,Attack,End,Play,Retreat": {
+          "action": "Attach:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|96|741|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 6,
+          "losses": 0,
+          "confidence": 0.875
+        },
+        "C|l|A|96|741|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|A|96|66|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|m|A|96|743|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|96|743|Attack,End,Play,Retreat": {
+          "action": "Play:1227:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|m|a|756|743|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 9,
+          "wins": 8,
+          "losses": 1,
+          "confidence": 0.818182
+        },
+        "C|m|a|96|742|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 9,
+          "wins": 7,
+          "losses": 2,
+          "confidence": 0.727273
+        },
+        "C|m|0|184|741|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|m|0|756|66|Ability,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|A|96|305|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 6,
+          "wins": 6,
+          "losses": 0,
+          "confidence": 0.875
+        },
+        "C|l|a|96|66|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:120",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "L|m|A|96|741": {
+          "action": "Attack:0:0:120",
+          "support": 10,
+          "wins": 9,
+          "losses": 1,
+          "confidence": 0.833333
+        },
+        "L|l|A|96|743": {
+          "action": "Ability:0:0:0",
+          "support": 11,
+          "wins": 11,
+          "losses": 0,
+          "confidence": 0.923077
+        },
+        "L|l|A|96|272": {
+          "action": "Attack:0:0:120",
+          "support": 10,
+          "wins": 10,
+          "losses": 0,
+          "confidence": 0.916667
+        },
+        "L|l|A|96|742": {
+          "action": "Attack:0:0:120",
+          "support": 12,
+          "wins": 12,
+          "losses": 0,
+          "confidence": 0.928571
+        },
+        "L|l|A|96|741": {
+          "action": "Attack:0:0:120",
+          "support": 12,
+          "wins": 12,
+          "losses": 0,
+          "confidence": 0.928571
+        },
+        "L|l|A|96|66": {
+          "action": "Attack:0:0:120",
+          "support": 12,
+          "wins": 12,
+          "losses": 0,
+          "confidence": 0.928571
+        },
+        "L|e|0|756|741": {
+          "action": "Play:1094:0:0",
+          "support": 24,
+          "wins": 19,
+          "losses": 5,
+          "confidence": 0.769231
+        },
+        "L|m|a|756|743": {
+          "action": "Ability:0:0:0",
+          "support": 13,
+          "wins": 11,
+          "losses": 2,
+          "confidence": 0.8
+        },
+        "L|l|A|96|305": {
+          "action": "Attack:0:0:120",
+          "support": 11,
+          "wins": 11,
+          "losses": 0,
+          "confidence": 0.923077
+        },
+        "L|l|a|96|66": {
+          "action": "Attack:0:0:120",
+          "support": 10,
+          "wins": 9,
+          "losses": 1,
+          "confidence": 0.833333
+        }
+      }
+    },
+    "crustle": {
+      "games": {
+        "win": 60,
+        "loss": 118,
+        "skipped": 2
+      },
+      "frames": {
+        "win": 2299,
+        "loss": 6628
+      },
+      "states": 58,
+      "memory": {
+        "E|l|0|H|31|117|96,96,184,230,756|345,345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|H|31|117|96,96,184,230,756|345,345|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|b|H|31|345|96,96,184,230,756|117|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|756|344|||Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 8,
+          "wins": 7,
+          "losses": 1,
+          "confidence": 0.8
+        },
+        "E|e|0|H|756|344|||Attach,End,Play": {
+          "action": "Play:96:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "E|e|0|h|756|344|96||Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|756|344|96||Attach,End,Play": {
+          "action": "Play:117:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|h|96|344|||Attach,End,Play": {
+          "action": "Play:117:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|l|A|H|756|345|31,96,96,117,184,230|117,345|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|756|117|31,96,96,117,184,230|344,345|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|B|0|756|345|31,96,96,184,230|117,345|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|H|31|117|96,96,184,230,756|344,344|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|117|117|96,96,184,756,1071|345|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|a|H|96|117|96,117,184,230,756||Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|l|A|H|31|345|96,96,184|344|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "E|l|b|H|756|345|96,96,117,184,230,1071|344|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|31|117|96,96,117,184,756|345|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|l|A|H|31|117|96,96,117,184,756|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|117|96,96,184|345,345|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|756|345|96,96,117,184,1071,1071|344|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|e|0|0|756|344|96,117||Attach,End,Play": {
+          "action": "Attach:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|117|117|96,96,184,756|345|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|H|756|117|96,96,184,756,1071|117,344,344|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|117|345|96,96,108,184,756|117|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|h|117|117|31,96,96,184,230,756|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|756|117|31,96,96,117,184,230,1071|343,344|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|117|345|96,96,756|345|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|117|117|96,184,756|117|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 4,
+          "wins": 4,
+          "losses": 0,
+          "confidence": 0.833333
+        },
+        "E|l|a|H|117|117|96,96,184,230,756|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|m|0|H|96|345|96,117,184,272|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|0|H|184|117|117,230|345,345|End,Play,Retreat": {
+          "action": "End:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|31|117|96,96,184,1071||Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "E|l|A|H|31|117|96,96,184,1071||Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 3,
+          "wins": 3,
+          "losses": 0,
+          "confidence": 0.8
+        },
+        "C|e|0|96|344|Attach,End,Play": {
+          "action": "Play:184:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "C|l|0|31|117|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 9,
+          "wins": 7,
+          "losses": 2,
+          "confidence": 0.727273
+        },
+        "C|l|b|31|345|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 8,
+          "wins": 8,
+          "losses": 0,
+          "confidence": 0.9
+        },
+        "C|e|0|756|344|Attach,End,Play": {
+          "action": "Play:117:0:0",
+          "support": 9,
+          "wins": 7,
+          "losses": 2,
+          "confidence": 0.727273
+        },
+        "C|e|0|756|345|Ability,Attach,End,Play": {
+          "action": "Ability:0:0:0",
+          "support": 15,
+          "wins": 13,
+          "losses": 2,
+          "confidence": 0.823529
+        },
+        "C|l|a|117|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 13,
+          "wins": 10,
+          "losses": 3,
+          "confidence": 0.733333
+        },
+        "C|l|a|117|345|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 20,
+          "wins": 16,
+          "losses": 4,
+          "confidence": 0.772727
+        },
+        "C|l|A|117|117|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 49,
+          "wins": 45,
+          "losses": 4,
+          "confidence": 0.901961
+        },
+        "C|l|A|117|117|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 29,
+          "wins": 23,
+          "losses": 6,
+          "confidence": 0.774194
+        },
+        "C|l|A|117|345|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 73,
+          "wins": 65,
+          "losses": 8,
+          "confidence": 0.88
+        },
+        "C|l|A|756|117|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 10,
+          "wins": 9,
+          "losses": 1,
+          "confidence": 0.833333
+        },
+        "C|l|A|31|345|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:20",
+          "support": 7,
+          "wins": 7,
+          "losses": 0,
+          "confidence": 0.888889
+        },
+        "C|l|a|756|345|Ability,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "C|l|A|117|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 43,
+          "wins": 40,
+          "losses": 3,
+          "confidence": 0.911111
+        },
+        "C|l|A|117|343|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|l|a|117|345|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 14,
+          "wins": 12,
+          "losses": 2,
+          "confidence": 0.8125
+        },
+        "C|e|0|756|343|Ability,Attach,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 6,
+          "wins": 6,
+          "losses": 0,
+          "confidence": 0.875
+        },
+        "C|m|0|117|117|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 10,
+          "wins": 8,
+          "losses": 2,
+          "confidence": 0.75
+        },
+        "C|l|A|31|345|Ability,Attach,Attack,End,Play,Retreat": {
+          "action": "Ability:0:0:0",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "C|m|0|117|117|Attach,Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 6,
+          "wins": 5,
+          "losses": 1,
+          "confidence": 0.75
+        },
+        "C|l|A|117|344|Attack,End,Play,Retreat": {
+          "action": "Attack:0:0:148",
+          "support": 5,
+          "wins": 5,
+          "losses": 0,
+          "confidence": 0.857143
+        },
+        "L|l|a|117|345": {
+          "action": "Attack:0:0:148",
+          "support": 36,
+          "wins": 30,
+          "losses": 6,
+          "confidence": 0.815789
+        },
+        "L|l|A|117|117": {
+          "action": "Play:1094:0:0",
+          "support": 10,
+          "wins": 9,
+          "losses": 1,
+          "confidence": 0.833333
+        },
+        "L|l|A|117|345": {
+          "action": "Ability:0:0:0",
+          "support": 45,
+          "wins": 40,
+          "losses": 5,
+          "confidence": 0.87234
+        },
+        "L|l|A|117|344": {
+          "action": "Attack:0:0:148",
+          "support": 9,
+          "wins": 9,
+          "losses": 0,
+          "confidence": 0.909091
+        }
+      }
+    }
+  }
+}
