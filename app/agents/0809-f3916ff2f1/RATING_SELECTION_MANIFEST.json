@@ -1,6 +1,0 @@
-{
-  "name": "marnie_grimmsnarl_v44_rating_bayesian",
-  "source": "/mnt/data/rating_probability_work/evidence_candidates/marnie_grimmsnarl_v42_league_continual__evidence_strong",
-  "probabilistic_hidden_state": true,
-  "selection_rule": "high-rating aggregate first; internal league only safety gate"
-}
