@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "mode": "offline_card_text_reasoning",
+  "description": "LLM-distilled compositional parser over CABT CardData skill and attack text",
+  "stadium_harm_threshold": -30.0,
+  "stadium_replace_margin": 24.0,
+  "hand_threat_reduction": 120,
+  "max_pre_attack_actions": 14,
+  "future_tera_tax_penalty": 46.0,
+  "taxed_attack_min_impact": 150,
+  "enable_semantic_empty_search_override": false,
+  "enable_efficiency_commit": false,
+  "enable_attack_over_pass": true
+}
