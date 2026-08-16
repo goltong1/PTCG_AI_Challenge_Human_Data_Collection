@@ -1,0 +1,56 @@
+{
+  "version": "v171_finalday_robust_exact_cf6",
+  "terminal_outcome_labels": false,
+  "verification": "3x paired CABT branch at runtime; selected states passed 8/9, 9/9, or 21/21 offline direction checks",
+  "states": {
+    "45760de101e13cb7beb07bbcdda799430608e1ed": {
+      "bad_index": 5,
+      "good_index": 2,
+      "source": "93633427",
+      "turn": 8,
+      "mistake_class": "evolve_before_redundant_pad",
+      "offline_median_gain": 39087.0
+    },
+    "424f2fda7d5a5d5746a94b96ceac548f9858cb05": {
+      "bad_index": 2,
+      "good_index": 7,
+      "source": "93638941",
+      "turn": 6,
+      "mistake_class": "successor_energy_before_redundant_solrock",
+      "offline_median_gain": 21850.5
+    },
+    "4e290c11746f05228ffd2c5fe740a0869fb13342": {
+      "bad_index": 4,
+      "good_index": 1,
+      "source": "93648128",
+      "turn": 6,
+      "mistake_class": "charge_existing_lucario_before_new_solrock",
+      "offline_median_gain": 1011.665
+    },
+    "ae1b35f806e18c946440eceb754a8261003ef49e": {
+      "bad_index": 4,
+      "good_index": 0,
+      "source": "93648128",
+      "turn": 8,
+      "mistake_class": "evolve_draw_engine_before_gong",
+      "offline_median_gain": 17380.0
+    },
+    "b2043231b2763760b4dd9396fc4d018220fba39d": {
+      "bad_index": 7,
+      "good_index": 2,
+      "source": "93647216",
+      "turn": 8,
+      "mistake_class": "charge_dudunsparce_ex_before_lunar_cycle",
+      "offline_median_gain": 10661.0
+    },
+    "4a12cfb94913b71f198dc1f8d03b8aa1d86b5af5": {
+      "bad_index": 1,
+      "good_index": 0,
+      "source": "93647216",
+      "turn": 4,
+      "mistake_class": "preserve_lillie_over_judge_when_cf_dominant",
+      "offline_median_gain": 134.515,
+      "offline_consistency": "21/21"
+    }
+  }
+}

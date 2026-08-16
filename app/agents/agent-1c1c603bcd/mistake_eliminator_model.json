@@ -1,0 +1,5506 @@
+{
+  "version": "v171_finalday_clean_preexisting_mistakes_plus_robust_proof",
+  "exact_context": "intent112_plus_legal_action_signatures",
+  "terminal_outcome_used_as_mistake_label": false,
+  "source_states": 462,
+  "known_mistakes": 214,
+  "exact_mistake_memory": {
+    "09861a02271e0c06c029b5a7f692648897a73b8e": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 17,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "7:305:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:305:0"
+      ],
+      "regret": 300.015,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "alakazam|g8|seat0|1786883423581",
+      "decision_index": 54
+    },
+    "1863bb8005ae6b6747c939c1a1bd6608ce4c8148": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:6:117:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 11995.5,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "archaludon|g2|seat0|1786883434790",
+      "decision_index": 19
+    },
+    "eb4297d51879549644c7a2968201be6a25e2f4f0": {
+      "family": "archaludon",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "8:1174:117:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1174:0",
+      "good": [
+        "8:1174:675:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:1174:0"
+      ],
+      "regret": 1029.5,
+      "mistake_class": "energy_target",
+      "severity": "catastrophic",
+      "game_id": "archaludon|g3|seat1|1786883435456",
+      "decision_index": 20
+    },
+    "483963d66e7973d602d05bd5e3addb2855f42fed": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 9,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "7:305:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:305:0"
+      ],
+      "regret": 273.0,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "archaludon|g5|seat1|1786883436361",
+      "decision_index": 19
+    },
+    "92841da5fba122cc62ea44543a704cbf94fe0138": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 15,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1843.5,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "archaludon|g6|seat0|1786883437041",
+      "decision_index": 17
+    },
+    "dd6c4eff2e6f9bcf9906e40cd199c52e4436ca65": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 25,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "7:1152:0:0:-1:-1:-1:-1:-1",
+        "7:1152:0:0:-1:-1:-1:-1:-1",
+        "7:1152:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1152:0",
+        "7:1152:0",
+        "7:1152:0"
+      ],
+      "regret": 132.0,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "clefairy19|g2|seat0|1786883557143",
+      "decision_index": 43
+    },
+    "fb11c9a8af446e34c22e4cb265e661c32bda8af0": {
+      "family": "clefairy",
+      "phase": "early",
+      "turn": 3,
+      "bad": "8:20:675:0:-1:4:0:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 441.35,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "clefairy19|g5|seat1|1786883557890",
+      "decision_index": 2
+    },
+    "6318c0bcb90cdb2f440449d8f443aed173344db9": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:677:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:677:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 376.5,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "clefairy19|g7|seat1|1786883558998",
+      "decision_index": 17
+    },
+    "4457806eda11da78990bc0df02bd58f29664341a": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "7:1142:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1142:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 2036.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "clefairy19|g8|seat0|1786883559443",
+      "decision_index": 11
+    },
+    "e79638e575bf244f7142aea0e1c209836a058e76": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 13,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "8:1174:676:0:-1:5:1:2:-1"
+      ],
+      "good_coarse": [
+        "8:1174:0"
+      ],
+      "regret": 80.3,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "clefairy19|g9|seat1|1786883560085",
+      "decision_index": 27
+    },
+    "c1cc67c5a909da320dd770463f9a7c708cb2b353": {
+      "family": "clefairy",
+      "phase": "early",
+      "turn": 3,
+      "bad": "9:678:677:0:-1:4:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:981:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:981"
+      ],
+      "regret": 2019.985,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "clefairy19_focus|g1|seat1|1786883652355",
+      "decision_index": 6
+    },
+    "3255684e93d095e73a5e9001b3149fca5cfbcf04": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "7:1152:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1152:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 1016.5,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "clefairy19_focus|g1|seat1|1786883652355",
+      "decision_index": 16
+    },
+    "bdc7c07bf3c066a490dcce2f264a8a77c87d3466": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "7:1142:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1142:0"
+      ],
+      "regret": 132.0,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "clefairy19_focus|g2|seat0|1786883652758",
+      "decision_index": 11
+    },
+    "ac2274764f61a69e8eb97bff1bb786aaef73160e": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 9,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "7:333:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:333:0"
+      ],
+      "regret": 340.0,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "clefairy19_focus|g2|seat0|1786883652758",
+      "decision_index": 12
+    },
+    "730140bba12315e1e53d3f524a0a826b4d1dd604": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 9,
+      "bad": "9:306:305:0:-1:5:0:2:-1",
+      "bad_coarse": "9:306:0",
+      "good": [
+        "8:6:677:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 1022350.65,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "clefairy19_focus|g3|seat1|1786883653284",
+      "decision_index": 20
+    },
+    "fc003bf36c73b8fe5553140f016d516770c78725": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:6:306:0:-1:5:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:677:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 1022299.65,
+      "mistake_class": "energy_target",
+      "severity": "catastrophic",
+      "game_id": "clefairy19_focus|g3|seat1|1786883653284",
+      "decision_index": 21
+    },
+    "eaa9146c8070a93c661200b3b9f3853fa1e95090": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "8:20:678:0:-1:5:1:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "8:20:117:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 133.385,
+      "mistake_class": "energy_target",
+      "severity": "moderate",
+      "game_id": "clefairy19_focus|g4|seat0|1786883654071",
+      "decision_index": 12
+    },
+    "d2e62d9034588bacf3f1cb7fa332a3b57105539c": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 13,
+      "bad": "7:676:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:676:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 604.5,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "clefairy19_focus|g4|seat0|1786883654071",
+      "decision_index": 26
+    },
+    "b638dd482929647a72cbaee2ea6e806504112611": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "10:675:0:0:-1:-1:-1:5:3",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "8:6:676:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 2875.65,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "clefairy19_focus|g5|seat1|1786883654742",
+      "decision_index": 14
+    },
+    "a7bd53ffcb8f1d7b7e87f786c59f7dcf73728093": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "9:306:305:0:-1:5:0:2:-1",
+      "bad_coarse": "9:306:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 936.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "clefairy19_focus|g5|seat1|1786883654742",
+      "decision_index": 25
+    },
+    "e3deb63704fd27a5df61d42ed3fe1217ae16ab05": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 37,
+      "bad": "13:0:0:426:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:426",
+      "good": [
+        "7:1211:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1211:0"
+      ],
+      "regret": 162.985,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "crustle|g2|seat0|1786883446956",
+      "decision_index": 64
+    },
+    "29a57e6b00446a91ce51db8cf30640f0226779a2": {
+      "family": "crustle",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "12:0:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "12:0:0",
+      "good": [
+        "10:675:0:0:-1:-1:-1:5:0"
+      ],
+      "good_coarse": [
+        "10:675:0"
+      ],
+      "regret": 450.015,
+      "mistake_class": "retreat_error",
+      "severity": "major",
+      "game_id": "crustle|g4|seat0|1786883447542",
+      "decision_index": 24
+    },
+    "09cc1c2ba0165ef01f5f563215e49d5017cfbe77": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 21,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "8:1159:678:0:-1:4:0:2:-1",
+        "8:1159:678:0:-1:5:1:2:-1",
+        "8:1159:678:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "8:1159:0",
+        "8:1159:0",
+        "8:1159:0"
+      ],
+      "regret": 201.5,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "crustle|g7|seat1|1786883448516",
+      "decision_index": 42
+    },
+    "69baedcdf159f5290dc0b17e3aad65f36fb9693d": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 13,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "7:333:0:0:-1:-1:-1:-1:-1",
+        "7:1141:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:333:0",
+        "7:1141:0"
+      ],
+      "regret": 243.485,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "crustle|g9|seat1|1786883449136",
+      "decision_index": 39
+    },
+    "520162277562a75e02645c37efc98d00317953e1": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 15,
+      "bad": "9:306:305:0:-1:5:1:2:-1",
+      "bad_coarse": "9:306:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 861.485,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "drag31|g0|seat0|1786883477582",
+      "decision_index": 51
+    },
+    "d8fc94e78a870944990d8994920fdb29a8eb96af": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 10,
+      "bad": "10:66:0:0:-1:-1:-1:5:4",
+      "bad_coarse": "10:66:0",
+      "good": [
+        "7:1141:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1141:0"
+      ],
+      "regret": 2743.0,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "drag31|g3|seat1|1786883481257",
+      "decision_index": 35
+    },
+    "d689b7c1f50731279ca98d5900875f990ef3e8e2": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 776.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "drag31|g6|seat0|1786883484555",
+      "decision_index": 20
+    },
+    "5e3ff4c1673f5dab14ef3af09467ebc092dd642e": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0",
+        "7:1182:0",
+        "12:0:0"
+      ],
+      "regret": 1026743.985,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "drag31|g8|seat0|1786883486476",
+      "decision_index": 29
+    },
+    "6a3aabc499993b1d2d71ef2bd2e84e52a6e9b94c": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0",
+        "7:1182:0"
+      ],
+      "regret": 1027092.5,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "drag33|g2|seat0|1786883498550",
+      "decision_index": 36
+    },
+    "64708c4a997d427d5e3e1172cd4459c161320306": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:676:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:676:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 486.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "drag33|g7|seat1|1786883504041",
+      "decision_index": 20
+    },
+    "e76c2bf2bf5397189dd8db8b3616d3b221aa0a0e": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 17,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "9:66:305:0:-1:5:3:2:-1",
+        "9:66:305:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0",
+        "9:66:0"
+      ],
+      "regret": 118.5,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "drag33|g8|seat0|1786883505295",
+      "decision_index": 36
+    },
+    "b8bac49452b8fa7554127b326effcb8602685c0e": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "8:1174:676:0:-1:5:2:2:-1",
+      "bad_coarse": "8:1174:0",
+      "good": [
+        "8:1174:305:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "8:1174:0"
+      ],
+      "regret": 139.685,
+      "mistake_class": "energy_target",
+      "severity": "moderate",
+      "game_id": "grass5|g0|seat0|1786883537087",
+      "decision_index": 23
+    },
+    "5c29d22be6c3d6ab1dde89d106604c57ac319566": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "7:1142:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1142:0"
+      ],
+      "regret": 102.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "grass5|g4|seat0|1786883541239",
+      "decision_index": 29
+    },
+    "7dade5307470ca4b4b1aab9a2011e8a44d4d4022": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 18,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "8:20:678:0:-1:5:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 329.265,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "grass5|g5|seat1|1786883542855",
+      "decision_index": 42
+    },
+    "0aabd0dc15c8c0cf96f3e05219f87640368d0758": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 15,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "7:1086:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1086:0"
+      ],
+      "regret": 150.015,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "grass5|g6|seat0|1786883544298",
+      "decision_index": 39
+    },
+    "b9e8dddb81ccb61e1a972e26c5b7840ea3018192": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:677:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:677:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 976.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "grass5|g9|seat1|1786883547908",
+      "decision_index": 18
+    },
+    "40f9c440172fa2e43edc5d2d8204f63a2a6025f8": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1197:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1197:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 682.5,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario165|g0|seat0|1786883587528",
+      "decision_index": 30
+    },
+    "1e81bd1a2021e2b5596775dba2ea92e410c39ad9": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 335.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "lucario165|g1|seat1|1786883588999",
+      "decision_index": 35
+    },
+    "39d2bf4ff05293f4a4e1666d3af99152e6cd27ba": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 335.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "lucario165|g5|seat1|1786883594669",
+      "decision_index": 44
+    },
+    "7d1d659a0049e4f70f95de63a10e836837cc458d": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "9:678:333:0:-1:4:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 1771.47,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario165|g6|seat0|1786883595297",
+      "decision_index": 17
+    },
+    "fdfae61d23949e9e96ed59d90f8b9d84127c5aea": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "7:1225:0:0:-1:-1:-1:-1:-1",
+        "7:1225:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1225:0",
+        "7:1225:0"
+      ],
+      "regret": 290.39,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario165|g7|seat1|1786883597157",
+      "decision_index": 50
+    },
+    "9ce8cb685dfee55ae29f3980cd39dbabdd0ae127": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:333:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:333:0"
+      ],
+      "regret": 295.5,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "lucario165|g8|seat0|1786883598655",
+      "decision_index": 44
+    },
+    "95f56c3959b4714e501c81e23b647156aee99ca8": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "8:1159:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 492.0,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "lucario165|g9|seat1|1786883599978",
+      "decision_index": 44
+    },
+    "cf854ab71d1fba7cca1bab569d8a1c4bdf65f154": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:1174:676:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1174:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 395.0,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "lucario166|g4|seat0|1786883572590",
+      "decision_index": 38
+    },
+    "9b0f10d752e640627ee37aa800c28c85d75e772a": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "9:66:305:0:-1:5:1:2:-1",
+      "bad_coarse": "9:66:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 62380.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g5|seat1|1786883573731",
+      "decision_index": 27
+    },
+    "55b7f536d425173dbcfe963a7c43ea84b9d9bf17": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 137.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "moderate",
+      "game_id": "lucario166|g6|seat0|1786883574959",
+      "decision_index": 43
+    },
+    "ab21dbd96d7ec2aa16b5bb33e7fd72ae9102d4fa": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "7:675:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:675:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 470.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario166|g7|seat1|1786883575564",
+      "decision_index": 10
+    },
+    "eacc8731e6aed0b098f0610de91ca7d06bce0052": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1211:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1211:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0"
+      ],
+      "regret": 170.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "lucario166|g8|seat0|1786883577093",
+      "decision_index": 52
+    },
+    "6a6b1a2268ac22f0c096a2baed9b6605d6dbbe14": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "9:678:333:0:-1:5:1:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1755.0,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g9|seat1|1786883577892",
+      "decision_index": 18
+    },
+    "6570379d34e616dfd14b26e577565235ac07ef00": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 206.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "moderate",
+      "game_id": "lucario166_focus|g0|seat0|1786883636030",
+      "decision_index": 24
+    },
+    "393832e3e27b5d9dd6180da8fd2195ac49298ed1": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 530.0,
+      "mistake_class": "ability_timing",
+      "severity": "major",
+      "game_id": "lucario166_focus|g0|seat0|1786883636030",
+      "decision_index": 34
+    },
+    "c982b11f035ef56a162221f82eb7067428e65fa2": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 6,
+      "bad": "9:66:305:0:-1:4:0:2:-1",
+      "bad_coarse": "9:66:0",
+      "good": [
+        "13:0:0:423:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:423"
+      ],
+      "regret": 14183.485,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166_focus|g5|seat1|1786883641405",
+      "decision_index": 7
+    },
+    "0119b27977a10dc390a7a4aaff16cc108b79fbc5": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0",
+        "7:1182:0"
+      ],
+      "regret": 770.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario166_focus|g6|seat0|1786883643032",
+      "decision_index": 34
+    },
+    "3001f9c4d4a529735b628b41222ac58b7ebe5e85": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0",
+        "7:1182:0"
+      ],
+      "regret": 723.485,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario166_focus|g6|seat0|1786883643032",
+      "decision_index": 35
+    },
+    "13f32c3d9e593cfc1d0d079f262085b86fc47299": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "7:1213:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1213:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1040.86,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "lucario166_focus|g7|seat1|1786883644579",
+      "decision_index": 42
+    },
+    "5bfa3f66ae3811505ddca7eebcef055dffa097cf": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "9:66:305:0:-1:5:1:2:-1",
+      "bad_coarse": "9:66:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 465.0,
+      "mistake_class": "evolve_timing",
+      "severity": "major",
+      "game_id": "lucario166_focus|g7|seat1|1786883644579",
+      "decision_index": 43
+    },
+    "c2a4b4780c410466dd40b5f759a0bdaeeb8e5996": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 10,
+      "bad": "9:66:305:0:-1:5:3:2:-1",
+      "bad_coarse": "9:66:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 861.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "marnie|g1|seat1|1786883458199",
+      "decision_index": 39
+    },
+    "009d7d7d4d087accd7c8f9ce38ffbbef90ff53ea": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 10,
+      "bad": "10:1259:0:0:-1:-1:-1:7:-1",
+      "bad_coarse": "10:1259:0",
+      "good": [
+        "13:0:0:426:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:426"
+      ],
+      "regret": 1458.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "marnie|g3|seat1|1786883459987",
+      "decision_index": 33
+    },
+    "dc8eb3cd5e2767a6f298fd5419f36557df0065f0": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "7:1213:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1213:0"
+      ],
+      "regret": 260.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "marnie|g4|seat0|1786883461129",
+      "decision_index": 46
+    },
+    "54d3ad752bcfcb4355ea9c5e76e6d519f975e354": {
+      "family": "marnie",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "8:20:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "7:1141:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1141:0"
+      ],
+      "regret": 124.085,
+      "mistake_class": "other",
+      "severity": "moderate",
+      "game_id": "marnie|g6|seat0|1786883463329",
+      "decision_index": 21
+    },
+    "94d3131791abe1f857dbde6414288f0720c0add3": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 12,
+      "bad": "9:306:305:0:-1:5:1:2:-1",
+      "bad_coarse": "9:306:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 1281.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "marnie|g9|seat1|1786883467486",
+      "decision_index": 43
+    },
+    "ca02080756a5af15e0ab7c8b1532dbbe6ca66410": {
+      "family": "marnie",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "9:678:333:0:-1:5:1:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 1771.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "marnie_focus|g0|seat0|1786883613564",
+      "decision_index": 14
+    },
+    "b874c8872f4413e9f09fff88c0a5eee3e69d5c82": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 16,
+      "bad": "8:6:333:0:-1:5:4:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1980.0,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "marnie_focus|g1|seat1|1786883614746",
+      "decision_index": 27
+    },
+    "fed80a0582b93ebfa450edf32d561ebe38b1cea2": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 10,
+      "bad": "7:333:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:333:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 206.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "moderate",
+      "game_id": "marnie_focus|g3|seat1|1786883615832",
+      "decision_index": 23
+    },
+    "f9d2a7997f7f558cef076698d4538f8804fa199f": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 15,
+      "bad": "10:1259:0:0:-1:-1:-1:7:-1",
+      "bad_coarse": "10:1259:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1870.985,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "marnie_focus|g4|seat0|1786883617177",
+      "decision_index": 47
+    },
+    "f625fe4d1c0803e91b3e7ab59c50b24debff5fd5": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 8,
+      "bad": "8:1159:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 328.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "marnie_focus|g5|seat1|1786883618284",
+      "decision_index": 31
+    },
+    "6de9fbf1ce0cacbc07ce49f66099eeabec6bcd71": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 10,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "9:678:333:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0"
+      ],
+      "regret": 1166.5,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "marnie_focus|g5|seat1|1786883618284",
+      "decision_index": 34
+    },
+    "feaf000291cd8587e7fe136fca80c9c6e0a89211": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:1159:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "8:1159:306:0:-1:5:2:2:-1",
+        "8:1159:675:0:-1:5:3:2:-1",
+        "8:1159:676:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "8:1159:0",
+        "8:1159:0",
+        "8:1159:0"
+      ],
+      "regret": 257.0,
+      "mistake_class": "energy_target",
+      "severity": "major",
+      "game_id": "marnie_focus|g6|seat0|1786883619646",
+      "decision_index": 34
+    },
+    "47a3f8757fb9212d832bc054e5152f83a42bc034": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 8,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 356.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "marnie_focus|g7|seat1|1786883621196",
+      "decision_index": 40
+    },
+    "eecfa403a339ff1295019afd8f4d8ba59573ff4e": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 16,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "7:1086:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1086:0"
+      ],
+      "regret": 150.015,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "nzoroark6|g1|seat1|1786883518530",
+      "decision_index": 48
+    },
+    "8a00a01290a0aaae8618d97c851fc93a9fec1a84": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 17,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "8:6:333:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 486.5,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "nzoroark6|g2|seat0|1786883519698",
+      "decision_index": 29
+    },
+    "02b472a53a9f8ad079db208185872740a893efee": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:676:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:676:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 486.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "nzoroark6|g4|seat0|1786883521498",
+      "decision_index": 16
+    },
+    "30a4f8e73445c86fd6e5b4bb9d297412d032c0c8": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 1368.125,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "nzoroark6|g8|seat0|1786883526531",
+      "decision_index": 22
+    },
+    "3ff59a2f44964860642ce44d3f87022850ccfdd3": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 16,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "7:1213:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1213:0"
+      ],
+      "regret": 1002727.61,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "nzoroark6|g9|seat1|1786883528268",
+      "decision_index": 46
+    },
+    "a076a6f9e569ddbe86ec5aeecd8c571f3e18ca82": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 1985.515,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g0|seat0|1786884191851",
+      "decision_index": 40
+    },
+    "dd93824798123d012306be6605751a80deb9f188": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 15,
+      "bad": "10:66:0:0:-1:-1:-1:5:1",
+      "bad_coarse": "10:66:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 35482.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g2|seat0|1786884196558",
+      "decision_index": 34
+    },
+    "862eef0c4a8f31a9a774647061db6c7406f49bba": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 15,
+      "bad": "9:678:333:0:-1:5:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 1139.985,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g2|seat0|1786884196558",
+      "decision_index": 35
+    },
+    "53845e446741199055eeef20452c4da78fbde01d": {
+      "family": "archaludon",
+      "phase": "early",
+      "turn": 3,
+      "bad": "8:6:117:0:-1:5:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:20:117:0:-1:5:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 2387.0,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "archaludon|g0|seat0|1786884198291",
+      "decision_index": 3
+    },
+    "e4d0e2db4dfa13b50dba13324151399b8c738b4c": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:6:117:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 552.5,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "archaludon|g1|seat1|1786884198900",
+      "decision_index": 11
+    },
+    "267e882bc64e46063a0495a4269724bce6f3e79a": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1142:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1142:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 636.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "archaludon|g2|seat0|1786884199836",
+      "decision_index": 27
+    },
+    "0124375b825fb27a0e2d2156d30abcb7d0c6eeb2": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 100.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "clefairy19|g0|seat0|1786884234869",
+      "decision_index": 31
+    },
+    "af53a5da905ee4933a238f400d430541abfcb871": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 340.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "clefairy19|g2|seat0|1786884235636",
+      "decision_index": 14
+    },
+    "6b624163537d5988ca32d6e21c9022d48ebe964b": {
+      "family": "crustle",
+      "phase": "early",
+      "turn": 3,
+      "bad": "9:678:333:0:-1:4:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 294.97,
+      "mistake_class": "evolve_timing",
+      "severity": "major",
+      "game_id": "crustle|g0|seat0|1786884201146",
+      "decision_index": 5
+    },
+    "b411b093a60e19db08b886b3d8490fa43a381912": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:6:305:0:-1:5:1:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:305:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 13262.0,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "drag31|g0|seat0|1786884209048",
+      "decision_index": 29
+    },
+    "8d356e55be0b347b68d18480dea887ccb7cc161b": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "9:306:305:0:-1:5:1:2:-1"
+      ],
+      "good_coarse": [
+        "9:306:0"
+      ],
+      "regret": 12199.015,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "drag31|g0|seat0|1786884209048",
+      "decision_index": 31
+    },
+    "8797c543d22ce48dbdab1db5868d8697a103f70f": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "13:0:0:426:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:426",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 1614.0,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "drag33|g0|seat0|1786884212934",
+      "decision_index": 23
+    },
+    "bd422850e50d5a3e4f83758e0147fe3d0981b5c5": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 16,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "8:20:678:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 262.165,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "drag33|g1|seat1|1786884214334",
+      "decision_index": 45
+    },
+    "9dd754162fadbc9f236a6a2a16b716ca6fade45c": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 935.5,
+      "mistake_class": "ability_timing",
+      "severity": "major",
+      "game_id": "grass5|g0|seat0|1786884220991",
+      "decision_index": 13
+    },
+    "98cbe4bc1200db16aaa92311c171f7007417272c": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 3840.0,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "grass5|g2|seat0|1786884223161",
+      "decision_index": 21
+    },
+    "498c35abccb1ca88a34a7b43ea32933f753f8b32": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "9:678:677:0:-1:5:1:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1684.985,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "grass5|g2|seat0|1786884223161",
+      "decision_index": 25
+    },
+    "920a82c4a7bde0dddd68b0246796f146dd0edc3a": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1361.0,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g0|seat0|1786884237972",
+      "decision_index": 35
+    },
+    "82496a5f51c77261131469870c92ae8d6700282b": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "9:66:305:0:-1:5:4:2:-1",
+        "9:66:305:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0",
+        "9:66:0"
+      ],
+      "regret": 203.0,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "lucario166|g2|seat0|1786884240733",
+      "decision_index": 36
+    },
+    "50050970289b572233570b81afee351c16f28837": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 15,
+      "bad": "13:0:0:426:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:426",
+      "good": [
+        "9:678:677:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0"
+      ],
+      "regret": 597.515,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "marnie|g0|seat0|1786884204872",
+      "decision_index": 55
+    },
+    "1dfc8521ec12a43a649feb148d9b584b09eb6e63": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 9,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "9:66:305:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0"
+      ],
+      "regret": 451.485,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "nzoroark6|g0|seat0|1786884216481",
+      "decision_index": 29
+    },
+    "5ee3951be08f2bc7649b3261af9d7db87688ec24": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "9:678:333:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0"
+      ],
+      "regret": 673.0,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "nzoroark6|g2|seat0|1786884219180",
+      "decision_index": 35
+    },
+    "e738f07404a95a19ed1cfcd79e18fce5f744bc0c": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 9,
+      "bad": "9:66:305:0:-1:5:1:2:-1",
+      "bad_coarse": "9:66:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 371.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "alakazam|g0|seat0|1786884348930",
+      "decision_index": 23
+    },
+    "747ecdf1dbdedfca52550b402941739e305337f8": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 8,
+      "bad": "8:20:333:0:-1:5:0:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1280.0,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g1|seat1|1786884350544",
+      "decision_index": 16
+    },
+    "c413bfaf7e5d8039d41f6577f26e54a5e6de6de7": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 11,
+      "bad": "8:6:676:0:-1:5:3:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:678:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 599.115,
+      "mistake_class": "energy_target",
+      "severity": "major",
+      "game_id": "alakazam|g2|seat0|1786884352666",
+      "decision_index": 49
+    },
+    "6c02a08966179c788d9d498b0243a46c6a40be18": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 25,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "7:1142:0:0:-1:-1:-1:-1:-1",
+        "7:1086:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1142:0",
+        "7:1086:0"
+      ],
+      "regret": 123.0,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "archaludon|g0|seat0|1786884354565",
+      "decision_index": 28
+    },
+    "a618c7a7012b7ac20c270a5b0b67f5fa8e85252a": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 27,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "7:1152:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1152:0"
+      ],
+      "regret": 2658.0,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "archaludon|g0|seat0|1786884354565",
+      "decision_index": 29
+    },
+    "b7f328ba0460a1fbef9299bac3037fdf00f565f4": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 13,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "9:66:305:0:-1:5:0:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0"
+      ],
+      "regret": 462.985,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "archaludon|g2|seat0|1786884355677",
+      "decision_index": 13
+    },
+    "6fb70ed3c198bc3794391d2d36e75d2e9bb7624e": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 2628.125,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "clefairy19|g0|seat0|1786884391204",
+      "decision_index": 17
+    },
+    "7ed8b4d405821aa5d65880b1d9143b067697b049": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1152:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1152:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 130.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "clefairy19|g1|seat1|1786884391558",
+      "decision_index": 8
+    },
+    "0ed5eca445d26641b969e46e81208595fc6da839": {
+      "family": "grass",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "9:66:305:0:-1:5:0:2:-1",
+        "9:66:305:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0",
+        "9:66:0"
+      ],
+      "regret": 566.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "clefairy19|g2|seat0|1786884392128",
+      "decision_index": 21
+    },
+    "071fe03e12aafc5ed48dd96166dedd116a8d788d": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 19,
+      "bad": "9:678:677:0:-1:5:2:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1",
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0",
+        "7:1227:0"
+      ],
+      "regret": 34982.5,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "crustle|g0|seat0|1786884357296",
+      "decision_index": 31
+    },
+    "679bf277ef68baa0baf653b0a63b88656c11b6ba": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 13,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1130.985,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "crustle|g1|seat1|1786884357667",
+      "decision_index": 34
+    },
+    "a3cf5f80a8c8bac6f2b46c9f8e3468ef3a4328bf": {
+      "family": "crustle",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "13:0:0:980:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:980",
+      "good": [
+        "10:675:0:0:-1:-1:-1:5:0"
+      ],
+      "good_coarse": [
+        "10:675:0"
+      ],
+      "regret": 444.0,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "crustle|g2|seat0|1786884357889",
+      "decision_index": 21
+    },
+    "6cf577ed74025a3673877f008d05803aa7d94cc1": {
+      "family": "dragapult",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 433.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "drag31|g0|seat0|1786884364548",
+      "decision_index": 28
+    },
+    "89329c9834da5d1857abde94b2eb923a6e7d87a1": {
+      "family": "dragapult",
+      "phase": "mid",
+      "turn": 4,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 93.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "moderate",
+      "game_id": "drag31|g1|seat1|1786884365077",
+      "decision_index": 18
+    },
+    "c3905422330cca8700ce7e4560ab8dd2c5936e42": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 13,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "9:678:677:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0"
+      ],
+      "regret": 585.015,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "drag33|g0|seat0|1786884377481",
+      "decision_index": 20
+    },
+    "0268b57e30dabc8f41aca79767bfd3bbf64524c3": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 13,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "9:678:677:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0"
+      ],
+      "regret": 596.015,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "drag33|g0|seat0|1786884377481",
+      "decision_index": 21
+    },
+    "aef1017b979ee83f798bf27300d6443b9c780160": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "7:1211:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1211:0"
+      ],
+      "regret": 110.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "drag33|g1|seat1|1786884378678",
+      "decision_index": 45
+    },
+    "9e20d95b19224b3cc517e178415759595789cd34": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 14,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1152:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1152:0"
+      ],
+      "regret": 115.5,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "drag33|g1|seat1|1786884378678",
+      "decision_index": 50
+    },
+    "620a45007f52bef5b7b192de8c9cd1fa240724b8": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 13,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 616.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "grass5|g0|seat0|1786884387198",
+      "decision_index": 25
+    },
+    "8ebb4e1d1bc2c7eabf21712c0128bddec090e3e8": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "7:1252:0:0:-1:-1:-1:-1:-1",
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1252:0",
+        "12:0:0"
+      ],
+      "regret": 441.61,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario166|g0|seat0|1786884394692",
+      "decision_index": 22
+    },
+    "63020e56d0f5a3d9ca311e1a5aa499bbc4d921bf": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0",
+        "7:1182:0"
+      ],
+      "regret": 123.485,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "lucario166|g0|seat0|1786884394692",
+      "decision_index": 40
+    },
+    "f41b592cc7973cdf6a38253d9fee518ea18b7442": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 1888.125,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g1|seat1|1786884395663",
+      "decision_index": 30
+    },
+    "7326cd245aacdbde14c25d456618128e956c84d3": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "9:678:333:0:-1:5:1:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 1771.485,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g1|seat1|1786884395663",
+      "decision_index": 31
+    },
+    "da58fbe2c751241373ae5759495f56ab09c6df24": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "8:6:678:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 441.515,
+      "mistake_class": "ability_timing",
+      "severity": "major",
+      "game_id": "lucario166|g2|seat0|1786884396767",
+      "decision_index": 38
+    },
+    "974047befa8c5db970ac45477511a7eeb949803e": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "8:20:678:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 591.515,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "lucario166|g2|seat0|1786884396767",
+      "decision_index": 41
+    },
+    "7e8adf61f5cd595c458222a036bac302e0864e41": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1152:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1152:0",
+      "good": [
+        "8:20:676:0:-1:5:1:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 184.3,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "marnie|g0|seat0|1786884359900",
+      "decision_index": 21
+    },
+    "0b149ee3b2eaf5c9684df7d89f3d77491d8f8342": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 16,
+      "bad": "9:678:333:0:-1:5:3:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 480.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "marnie|g1|seat1|1786884361254",
+      "decision_index": 39
+    },
+    "7bb3821a487d6837146d0acd34bae8d241e9162f": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 13,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1474.985,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "marnie|g2|seat0|1786884362392",
+      "decision_index": 40
+    },
+    "25c1488dfd5f4552ba75817b1d95c0fa92d98161": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "10:675:0:0:-1:-1:-1:5:1"
+      ],
+      "good_coarse": [
+        "10:675:0"
+      ],
+      "regret": 459.5,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "nzoroark6|g0|seat0|1786884381832",
+      "decision_index": 49
+    },
+    "2b67b6d489867c8439bfaae2bc4dd9a13118f8df": {
+      "family": "alakazam",
+      "phase": "mid",
+      "turn": 4,
+      "bad": "8:6:305:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1002526.85,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g1001|seat1|1786885468551",
+      "decision_index": 3
+    },
+    "c6920d0353621a951e1f21ea8a2d13a7a39ad124": {
+      "family": "alakazam",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1225:0:0:-1:-1:-1:-1:-1",
+        "7:1225:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1225:0",
+        "7:1225:0"
+      ],
+      "regret": 514.485,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "alakazam|g1004|seat0|1786885473725",
+      "decision_index": 16
+    },
+    "793356782080511e7754f73fe81a0b8a25a6b4d0": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 10,
+      "bad": "8:20:678:0:-1:5:1:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "8:20:306:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 168.635,
+      "mistake_class": "energy_target",
+      "severity": "moderate",
+      "game_id": "alakazam|g1005|seat1|1786885475145",
+      "decision_index": 37
+    },
+    "a114be49e280db9e1d5133480616c39cb16ccc5a": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 21,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1142:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1142:0"
+      ],
+      "regret": 115.5,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "alakazam|g1006|seat0|1786885476943",
+      "decision_index": 64
+    },
+    "798633819e9fdaa340c5c25cb1c0f9dadc92c741": {
+      "family": "archaludon",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "9:678:677:0:-1:5:2:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:423:-1:-1:-1:-1:-1",
+        "13:0:0:424:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:423",
+        "13:0:424"
+      ],
+      "regret": 861.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "archaludon|g1003|seat1|1786885492778",
+      "decision_index": 15
+    },
+    "9338ac00135d57fce8f415ffb82acf68276e8091": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1152:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1152:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 620.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "archaludon|g1004|seat0|1786885493171",
+      "decision_index": 12
+    },
+    "25322dd52ebfa220bd93bb2bd0d986f28415b6bd": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 9,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "7:305:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:305:0"
+      ],
+      "regret": 273.0,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "archaludon|g1006|seat0|1786885494339",
+      "decision_index": 12
+    },
+    "9a821df0b51c8b31210f9ce462c3952bb1462159": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "9:66:305:0:-1:5:0:2:-1",
+        "9:66:305:0:-1:5:1:2:-1",
+        "9:66:305:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0",
+        "9:66:0",
+        "9:66:0"
+      ],
+      "regret": 210.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "archaludon|g1009|seat1|1786885495404",
+      "decision_index": 21
+    },
+    "2abf5cfef4d55d8f60edc50612ca08b68b9e1dcc": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "8:6:678:0:-1:5:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 363.515,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "clefairy19|g1001|seat1|1786885583124",
+      "decision_index": 14
+    },
+    "374ff10f08c45d656974b23c33f34a0b4101d064": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "8:1159:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "13:0:0:983:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:983"
+      ],
+      "regret": 178.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "moderate",
+      "game_id": "clefairy19|g1003|seat1|1786885584444",
+      "decision_index": 25
+    },
+    "856251bacaae7a43df9ee9242fa3d3193711d432": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1227:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1227:0",
+      "good": [
+        "7:1211:0:0:-1:-1:-1:-1:-1",
+        "7:1141:0:0:-1:-1:-1:-1:-1",
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1211:0",
+        "7:1141:0",
+        "12:0:0"
+      ],
+      "regret": 443.485,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "clefairy19|g1006|seat0|1786885586145",
+      "decision_index": 22
+    },
+    "04c059526d0b491bd3542d017f70d8c9951ae149": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 11,
+      "bad": "8:1159:678:0:-1:5:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 348.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "clefairy19|g1007|seat1|1786885586926",
+      "decision_index": 32
+    },
+    "eb75c264bb0a45a60b97d242ae3202e2b81f5bfe": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 21,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "9:66:305:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0"
+      ],
+      "regret": 345.5,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "crustle|g1003|seat1|1786885314051",
+      "decision_index": 55
+    },
+    "200b98db14bb10f491a42d89af6dd4704811c33f": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 15,
+      "bad": "13:0:0:426:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:426",
+      "good": [
+        "7:1141:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1141:0"
+      ],
+      "regret": 980.985,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "crustle|g1004|seat0|1786885317666",
+      "decision_index": 36
+    },
+    "6f1a78c0e8f399362d3e6192c7d6458a22683b98": {
+      "family": "dragapult",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "8:1159:678:0:-1:5:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 592.0,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "drag31|g1000|seat0|1786885519141",
+      "decision_index": 32
+    },
+    "087bd4e162e936cec0b397e485bc803bc002314e": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 10,
+      "bad": "8:6:676:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "7:1213:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1213:0"
+      ],
+      "regret": 193.535,
+      "mistake_class": "other",
+      "severity": "moderate",
+      "game_id": "drag31|g1001|seat1|1786885520143",
+      "decision_index": 18
+    },
+    "77c813206f4d515350df655ef0a4692f1e9b7f17": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "8:1159:678:0:-1:5:2:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "7:1141:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1141:0"
+      ],
+      "regret": 1096.0,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "drag31|g1002|seat0|1786885521078",
+      "decision_index": 25
+    },
+    "40e7bc7bf6cffd094813e5030c7f8f31de7abb3c": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "10:66:0:0:-1:-1:-1:5:2",
+      "bad_coarse": "10:66:0",
+      "good": [
+        "13:0:0:980:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:980"
+      ],
+      "regret": 2295.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "drag31|g1003|seat1|1786885522095",
+      "decision_index": 30
+    },
+    "69d7ee4355733d965e4b23732422eb45fdac0d7f": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:1197:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1197:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1",
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0",
+        "7:1227:0"
+      ],
+      "regret": 129.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "drag31|g1005|seat1|1786885525072",
+      "decision_index": 34
+    },
+    "838d1f469ee4a327f0cae42202ca891b6e7d5b14": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "7:305:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:305:0"
+      ],
+      "regret": 208.0,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "drag31|g1006|seat0|1786885526033",
+      "decision_index": 22
+    },
+    "7035fa4e1b25b4b9c55d1b3250d9ddffc0a03e37": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 10,
+      "bad": "8:6:306:0:-1:5:2:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "7:1141:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1141:0"
+      ],
+      "regret": 1027479.985,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "drag31|g1009|seat1|1786885529723",
+      "decision_index": 34
+    },
+    "de58e4fcad1de0484d4c7a09a8fed09cd953ed39": {
+      "family": "dragapult",
+      "phase": "mid",
+      "turn": 4,
+      "bad": "9:306:305:0:-1:4:0:2:-1",
+      "bad_coarse": "9:306:0",
+      "good": [
+        "7:1213:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1213:0"
+      ],
+      "regret": 1028.985,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "drag33|g1005|seat1|1786885538475",
+      "decision_index": 4
+    },
+    "a074a2c0febcbf233ade23d0e3b0bbf7e4fda75c": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 13,
+      "bad": "8:6:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:305:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 865.085,
+      "mistake_class": "energy_target",
+      "severity": "major",
+      "game_id": "drag33|g1006|seat0|1786885539340",
+      "decision_index": 22
+    },
+    "e091d547609dd0b1c54a2a1de9017ef2887f9b70": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 14,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 103.5,
+      "mistake_class": "attack_choice",
+      "severity": "moderate",
+      "game_id": "drag33|g1007|seat1|1786885540641",
+      "decision_index": 41
+    },
+    "3cded7e3ef268acf6fd618e363a6bd79b8e85240": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "7:1213:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1213:0"
+      ],
+      "regret": 1026037.0,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "grass5|g1001|seat1|1786885567613",
+      "decision_index": 36
+    },
+    "34a8199ba78d3bb63b8c38497be164ac91fd54b8": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 10,
+      "bad": "7:1142:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1142:0",
+      "good": [
+        "7:1152:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1152:0"
+      ],
+      "regret": 862.985,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "grass5|g1005|seat1|1786885570749",
+      "decision_index": 24
+    },
+    "128d59b3dfe0dd76478a5575abd7a41b1df9deb7": {
+      "family": "grass",
+      "phase": "early",
+      "turn": 3,
+      "bad": "9:306:305:0:-1:5:1:2:-1",
+      "bad_coarse": "9:306:0",
+      "good": [
+        "7:117:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:117:0"
+      ],
+      "regret": 1012588.985,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "grass5|g1006|seat0|1786885571053",
+      "decision_index": 6
+    },
+    "4cc69444a31d30b18bf53040702d1d3cb66188ba": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 10,
+      "bad": "8:20:676:0:-1:5:4:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "8:20:678:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 599.115,
+      "mistake_class": "energy_target",
+      "severity": "major",
+      "game_id": "grass5|g1007|seat1|1786885572239",
+      "decision_index": 26
+    },
+    "f926546d3191827ece6485075a73ca746f14c583": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "9:678:333:0:-1:4:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 1837.485,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g1000|seat0|1786885590318",
+      "decision_index": 9
+    },
+    "9ae08b1411ac103f90ee462686c338dc1d3cd428": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 4,
+      "bad": "9:678:333:0:-1:4:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 1881.485,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g1001|seat1|1786885590839",
+      "decision_index": 5
+    },
+    "41fa3b0122ba0935206a8af9aba495e3a31d7dde": {
+      "family": "lucario",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "10:675:0:0:-1:-1:-1:5:2",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 320.0,
+      "mistake_class": "ability_timing",
+      "severity": "major",
+      "game_id": "lucario166|g1002|seat0|1786885591941",
+      "decision_index": 21
+    },
+    "c67f477f3fdd25e6c8c20f35e3920dcf0cce6dfc": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "8:6:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 648.335,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "lucario166|g1004|seat0|1786885593946",
+      "decision_index": 32
+    },
+    "6a83a00a573dfe5c3fb9a62042c973003162892f": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 11,
+      "bad": "9:678:333:0:-1:4:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1755.0,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g1006|seat0|1786885595257",
+      "decision_index": 26
+    },
+    "0eb85404c17b458bbe074b9e0b3f92336b0ee34d": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 8,
+      "bad": "7:1142:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1142:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 1585.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g1007|seat1|1786885596451",
+      "decision_index": 35
+    },
+    "3e1cf318f4085ad94d521c371bc0462567454d10": {
+      "family": "marnie",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "10:1259:0:0:-1:-1:-1:7:-1",
+      "bad_coarse": "10:1259:0",
+      "good": [
+        "13:0:0:979:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:979"
+      ],
+      "regret": 1106.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "marnie|g1002|seat0|1786885498894",
+      "decision_index": 7
+    },
+    "97d1c880c889966c944878405c6622b93078fe2f": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 21,
+      "bad": "8:1174:117:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1174:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 815.0,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "marnie|g1006|seat0|1786885504038",
+      "decision_index": 48
+    },
+    "5df37fc82d4ce317092e0360420dea8d0b9ae4b9": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 8,
+      "bad": "10:1259:0:0:-1:-1:-1:7:-1",
+      "bad_coarse": "10:1259:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 1370.0,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "marnie|g1007|seat1|1786885504559",
+      "decision_index": 11
+    },
+    "0a8334fd442a5710a548b794fc4b3054b6f8b15a": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 17,
+      "bad": "7:1141:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1141:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1",
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0",
+        "7:1182:0"
+      ],
+      "regret": 280.015,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "nzoroark6|g1000|seat0|1786885554086",
+      "decision_index": 45
+    },
+    "59c38ccb46c94c30cbfe352536777fbbdde602ae": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 13,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "7:675:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:675:0"
+      ],
+      "regret": 239.5,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "nzoroark6|g1004|seat0|1786885558361",
+      "decision_index": 30
+    },
+    "c1058ceb7cb45b724b9fad6c99431208e3cbe79e": {
+      "family": "n_zoroark",
+      "phase": "early",
+      "turn": 3,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "8:6:677:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 1011585.65,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "nzoroark6|g1006|seat0|1786885560392",
+      "decision_index": 8
+    },
+    "e5307d40622ed5f98d039d1720bd6fe99bc1cfca": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 18,
+      "bad": "7:675:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:675:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 486.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "nzoroark6|g1009|seat1|1786885563344",
+      "decision_index": 16
+    },
+    "e8791f01d5e7d68ed720d629de73f365f4d5500e": {
+      "family": "alakazam",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1152:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1152:0",
+      "good": [
+        "8:6:675:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 138.65,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "alakazam|g2000|seat0|1786885795748",
+      "decision_index": 30
+    },
+    "18f3cfa38bc64fb8b323d082463d4aa8abaae62b": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 14,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 2002783.0,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g2001|seat1|1786885797977",
+      "decision_index": 43
+    },
+    "5f2374a46b01e8a75dc19e8c6f2181c368ddeea3": {
+      "family": "archaludon",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "10:675:0:0:-1:-1:-1:5:2"
+      ],
+      "good_coarse": [
+        "10:675:0"
+      ],
+      "regret": 423.0,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "archaludon|g2000|seat0|1786885815472",
+      "decision_index": 23
+    },
+    "6b2b1ccc891e74f371c4b32be74ebedb3fd6544e": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "7:1182:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1182:0",
+      "good": [
+        "9:66:305:0:-1:5:1:2:-1",
+        "9:66:305:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0",
+        "9:66:0"
+      ],
+      "regret": 490.0,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "clefairy19|g2001|seat1|1786885923059",
+      "decision_index": 17
+    },
+    "31c343e188ed05049d5c1b422443df2589dd53a4": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 33,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "8:20:677:0:-1:5:4:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 184.25,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "crustle|g2000|seat0|1786885829890",
+      "decision_index": 43
+    },
+    "4c5143449ed93bc8397f39fc43ec15669685ab35": {
+      "family": "dragapult",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "8:6:678:0:-1:5:1:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:675:0:-1:5:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 767.735,
+      "mistake_class": "energy_target",
+      "severity": "major",
+      "game_id": "drag31|g2000|seat0|1786885857355",
+      "decision_index": 19
+    },
+    "2fbbef16cec4dc6ed4919392af9c5d60f0ed7f36": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:1152:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1152:0",
+      "good": [
+        "8:20:676:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 1250.8,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "drag33|g2001|seat1|1786885871398",
+      "decision_index": 25
+    },
+    "f3c20d8431b70c7c799d308564f74ba18e6ddc24": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:1086:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1086:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 26019.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g2000|seat0|1786885929749",
+      "decision_index": 31
+    },
+    "f9c5461d679cd7f7611bef53647083fb01329e76": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 11,
+      "bad": "7:1252:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1252:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0"
+      ],
+      "regret": 227.485,
+      "mistake_class": "play_timing",
+      "severity": "moderate",
+      "game_id": "marnie|g2000|seat0|1786885836437",
+      "decision_index": 43
+    },
+    "fd1afc47f660572330d0c2d1bd2c68b04d417a41": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 21,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0"
+      ],
+      "regret": 326.485,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "nzoroark6|g2000|seat0|1786885891200",
+      "decision_index": 51
+    },
+    "15655194486cdc49870a6120c659d4636b43ee22": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 15,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "8:20:678:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 751.665,
+      "mistake_class": "play_timing",
+      "severity": "major",
+      "game_id": "alakazam|g3000|seat0|1786885977784",
+      "decision_index": 34
+    },
+    "7b66be6bccb818aca458883c22d7575d0cbccbd5": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 12,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1430.985,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "alakazam|g3001|seat1|1786885980047",
+      "decision_index": 39
+    },
+    "a3dcdcdd208bba427d840d5b290a51b817fab42e": {
+      "family": "archaludon",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "9:678:677:0:-1:5:0:2:-1",
+      "bad_coarse": "9:678:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 931.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "archaludon|g3000|seat0|1786885998184",
+      "decision_index": 11
+    },
+    "1b38f226b811b79304dd9fb4075861e49df0fdf2": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 17,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "9:66:305:0:-1:5:1:2:-1"
+      ],
+      "good_coarse": [
+        "9:66:0"
+      ],
+      "regret": 2242.985,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "archaludon|g3001|seat1|1786885998774",
+      "decision_index": 22
+    },
+    "ac97dabff79e252c317c7194e189c76f9c9d711a": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "7:1213:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1213:0"
+      ],
+      "regret": 1793.61,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "clefairy19|g3000|seat0|1786886115568",
+      "decision_index": 20
+    },
+    "0dbe40081aa1de1f0cf9f6b055d5ebb3e9e20b16": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 5,
+      "bad": "7:1225:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1225:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 1368.125,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "clefairy19|g3001|seat1|1786886116002",
+      "decision_index": 12
+    },
+    "f8687fb0a9a27eb567b0805a93f5e976b55623df": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 9,
+      "bad": "12:0:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "12:0:0",
+      "good": [
+        "10:675:0:0:-1:-1:-1:5:0"
+      ],
+      "good_coarse": [
+        "10:675:0"
+      ],
+      "regret": 883.015,
+      "mistake_class": "retreat_error",
+      "severity": "major",
+      "game_id": "crustle|g3000|seat0|1786886009725",
+      "decision_index": 29
+    },
+    "64cde9ebebf8b2ef3235f4712de0e718152eef2c": {
+      "family": "dragapult",
+      "phase": "early",
+      "turn": 3,
+      "bad": "7:676:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:676:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 1012376.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "drag31|g3000|seat0|1786886033934",
+      "decision_index": 6
+    },
+    "c5536d66a5f76d9bd758d22a27e63f2ba43c470d": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "10:675:0:0:-1:-1:-1:5:2"
+      ],
+      "good_coarse": [
+        "10:675:0"
+      ],
+      "regret": 327.5,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "drag31|g3001|seat1|1786886035036",
+      "decision_index": 32
+    },
+    "2868ea2d15c2e038850b85ff91fa0d51368b9161": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 8,
+      "bad": "7:305:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:305:0",
+      "good": [
+        "13:0:0:981:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:981"
+      ],
+      "regret": 206.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "moderate",
+      "game_id": "drag33|g3001|seat1|1786886047193",
+      "decision_index": 22
+    },
+    "7d142f98850ebfb49b1581602484ee5e002f4be1": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 14,
+      "bad": "8:6:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0"
+      ],
+      "regret": 968.32,
+      "mistake_class": "other",
+      "severity": "major",
+      "game_id": "lucario166|g3001|seat1|1786886124627",
+      "decision_index": 41
+    },
+    "be4bb29517e02a5545fce18daf36ca6926103cd0": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 10,
+      "bad": "10:1259:0:0:-1:-1:-1:7:-1",
+      "bad_coarse": "10:1259:0",
+      "good": [
+        "8:6:678:0:-1:5:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 1026224.265,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "marnie|g3001|seat1|1786886016757",
+      "decision_index": 25
+    },
+    "32cfb251a024331668ea7db528bc8e51d237d70e": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "7:1142:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1142:0"
+      ],
+      "regret": 1212.5,
+      "mistake_class": "premature_attack",
+      "severity": "catastrophic",
+      "game_id": "nzoroark6|g3000|seat0|1786886065433",
+      "decision_index": 30
+    },
+    "6fadde7a1040036df39d232891682a43a24a282a": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 8,
+      "bad": "8:1159:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:1159:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 1777.5,
+      "mistake_class": "other",
+      "severity": "catastrophic",
+      "game_id": "nzoroark6|g3001|seat1|1786886067061",
+      "decision_index": 28
+    },
+    "dd25e471a3d3e407c503fa2ed66f658fc182fe63": {
+      "family": "archaludon",
+      "phase": "late",
+      "turn": 23,
+      "bad": "13:0:0:148:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:148",
+      "good": [
+        "9:678:333:0:-1:5:2:2:-1",
+        "9:678:333:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0",
+        "9:678:0"
+      ],
+      "regret": 108.0,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "archaludon|g4001|seat1|1786886192460",
+      "decision_index": 22
+    },
+    "a4401fc5683ae9ff2f3b03bbec42d10b6150164f": {
+      "family": "clefairy",
+      "phase": "early",
+      "turn": 3,
+      "bad": "10:675:0:0:-1:-1:-1:5:0",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "14:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "14:0:0"
+      ],
+      "regret": 950.0,
+      "mistake_class": "ability_timing",
+      "severity": "major",
+      "game_id": "clefairy19|g4000|seat0|1786886304883",
+      "decision_index": 8
+    },
+    "50b456281a55c74bba05c10245ddca82af6cb9d0": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 13,
+      "bad": "9:66:305:0:-1:5:3:2:-1",
+      "bad_coarse": "9:66:0",
+      "good": [
+        "7:1227:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1227:0"
+      ],
+      "regret": 1013197.5,
+      "mistake_class": "evolve_timing",
+      "severity": "catastrophic",
+      "game_id": "crustle|g4000|seat0|1786886207099",
+      "decision_index": 24
+    },
+    "55280e8df5745c7c6f6768470b4966c27d4cde01": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 13,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1182:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1182:0"
+      ],
+      "regret": 746.485,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "drag31|g4000|seat0|1786886237193",
+      "decision_index": 32
+    },
+    "758e0fcc86da658267464723c770348d6a407d94": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "10:675:0:0:-1:-1:-1:5:3",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "7:1211:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1211:0"
+      ],
+      "regret": 1014682.985,
+      "mistake_class": "ability_timing",
+      "severity": "catastrophic",
+      "game_id": "drag31|g4001|seat1|1786886238765",
+      "decision_index": 46
+    },
+    "940ef344c534c88eddda8ad751ef7bf20b641f3f": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:677:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:677:0",
+      "good": [
+        "13:0:0:982:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:982"
+      ],
+      "regret": 556.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "major",
+      "game_id": "drag33|g4000|seat0|1786886254431",
+      "decision_index": 26
+    },
+    "6ec71e73b3359d0ea09d224e64fe228a7b014201": {
+      "family": "grass",
+      "phase": "late",
+      "turn": 12,
+      "bad": "13:0:0:983:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:983",
+      "good": [
+        "7:1152:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1152:0"
+      ],
+      "regret": 135.0,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "grass5|g4001|seat1|1786886287451",
+      "decision_index": 28
+    },
+    "cee520149f138573eb99fbef903e30b1c0a94c8f": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 9,
+      "bad": "7:675:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:675:0",
+      "good": [
+        "13:0:0:464:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "13:0:464"
+      ],
+      "regret": 40324.5,
+      "mistake_class": "attack_abandonment",
+      "severity": "catastrophic",
+      "game_id": "lucario166|g4000|seat0|1786886313259",
+      "decision_index": 20
+    },
+    "0329db8585ec36523e1b64f1215e92c5e022dabb": {
+      "family": "lucario",
+      "phase": "late",
+      "turn": 12,
+      "bad": "8:6:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:677:0:-1:5:2:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 769.835,
+      "mistake_class": "energy_target",
+      "severity": "major",
+      "game_id": "lucario166|g4001|seat1|1786886314381",
+      "decision_index": 36
+    },
+    "2646ad5de908decc18e5ddd9588ecf293cba433e": {
+      "family": "alakazam",
+      "phase": "late",
+      "turn": 20,
+      "bad": "8:6:678:0:-1:5:0:2:-1",
+      "bad_coarse": "8:6:0",
+      "good": [
+        "8:6:675:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 167.885,
+      "mistake_class": "energy_target",
+      "severity": "moderate",
+      "game_id": "alakazam|g5001|seat1|1786886362775",
+      "decision_index": 50
+    },
+    "cd41c35a242209119f808b92eb0879e55f109300": {
+      "family": "clefairy",
+      "phase": "mid",
+      "turn": 7,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "9:678:677:0:-1:5:1:2:-1"
+      ],
+      "good_coarse": [
+        "9:678:0"
+      ],
+      "regret": 594.515,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "clefairy19|g5000|seat0|1786886483568",
+      "decision_index": 13
+    },
+    "03019cc0b8681017f2dea6dabbaedcb039d77be6": {
+      "family": "clefairy",
+      "phase": "late",
+      "turn": 11,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "7:1142:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "7:1142:0"
+      ],
+      "regret": 133.5,
+      "mistake_class": "premature_attack",
+      "severity": "moderate",
+      "game_id": "clefairy19|g5001|seat1|1786886484288",
+      "decision_index": 33
+    },
+    "6122a676c6bfc0dbc1b3f0594723bd4bcfe44ba0": {
+      "family": "crustle",
+      "phase": "late",
+      "turn": 29,
+      "bad": "7:1142:0:0:-1:-1:-1:-1:-1",
+      "bad_coarse": "7:1142:0",
+      "good": [
+        "12:0:0:0:-1:-1:-1:-1:-1"
+      ],
+      "good_coarse": [
+        "12:0:0"
+      ],
+      "regret": 1014809.985,
+      "mistake_class": "play_timing",
+      "severity": "catastrophic",
+      "game_id": "crustle|g5001|seat1|1786886393288",
+      "decision_index": 64
+    },
+    "1cc2ee881ad57d9bc8f46cf433649d3f9712bfe9": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 9,
+      "bad": "10:675:0:0:-1:-1:-1:5:2",
+      "bad_coarse": "10:675:0",
+      "good": [
+        "8:6:677:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 160.75,
+      "mistake_class": "ability_timing",
+      "severity": "moderate",
+      "game_id": "drag31|g5000|seat0|1786886419125",
+      "decision_index": 36
+    },
+    "fe7c14c87dc227ec1e52def5cf8b29a9b76db5f3": {
+      "family": "dragapult",
+      "phase": "late",
+      "turn": 12,
+      "bad": "13:0:0:982:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:982",
+      "good": [
+        "8:20:678:0:-1:4:0:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0"
+      ],
+      "regret": 262.165,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "drag33|g5001|seat1|1786886433236",
+      "decision_index": 22
+    },
+    "f85ee5c1862df6ee4f8ad6f40fae8265235b76a2": {
+      "family": "marnie",
+      "phase": "late",
+      "turn": 11,
+      "bad": "8:20:678:0:-1:4:0:2:-1",
+      "bad_coarse": "8:20:0",
+      "good": [
+        "8:20:305:0:-1:5:2:2:-1",
+        "8:20:333:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "8:20:0",
+        "8:20:0"
+      ],
+      "regret": 108.335,
+      "mistake_class": "energy_target",
+      "severity": "moderate",
+      "game_id": "marnie|g5000|seat0|1786886398481",
+      "decision_index": 34
+    },
+    "20522796917b5815e333a79fb6704bebdcd323ac": {
+      "family": "n_zoroark",
+      "phase": "late",
+      "turn": 16,
+      "bad": "13:0:0:425:-1:-1:-1:-1:-1",
+      "bad_coarse": "13:0:425",
+      "good": [
+        "8:6:678:0:-1:5:3:2:-1"
+      ],
+      "good_coarse": [
+        "8:6:0"
+      ],
+      "regret": 255.265,
+      "mistake_class": "premature_attack",
+      "severity": "major",
+      "game_id": "nzoroark6|g5001|seat1|1786886451624",
+      "decision_index": 58
+    }
+  },
+  "mistake_priors": {
+    "alakazam|late|7:305:0": {
+      "samples": 6,
+      "mistakes": 3,
+      "games": 6,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 668321.883
+    },
+    "alakazam|late|10:66:0": {
+      "samples": 4,
+      "mistakes": 1,
+      "games": 4,
+      "mistake_rate": 0.25,
+      "mean_mistake_regret": 35482.0
+    },
+    "alakazam|mid|8:6:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1002526.85
+    },
+    "alakazam|late|7:1227:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|late|14:0:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|mid|7:1086:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|late|8:20:0": {
+      "samples": 4,
+      "mistakes": 2,
+      "games": 4,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 724.318
+    },
+    "alakazam|late|7:1182:0": {
+      "samples": 3,
+      "mistakes": 2,
+      "games": 3,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 1142.765
+    },
+    "alakazam|late|10:675:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "archaludon|late|7:1141:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 210.0
+    },
+    "archaludon|late|13:0:148": {
+      "samples": 14,
+      "mistakes": 7,
+      "games": 12,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 877.281
+    },
+    "archaludon|late|8:6:0": {
+      "samples": 3,
+      "mistakes": 2,
+      "games": 3,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 6274.0
+    },
+    "archaludon|mid|8:1174:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1029.5
+    },
+    "archaludon|mid|14:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "archaludon|late|7:1227:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1843.5
+    },
+    "archaludon|early|8:6:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 2387.0
+    },
+    "archaludon|late|14:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|mid|13:0:983": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|early|9:306:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|late|13:0:425": {
+      "samples": 4,
+      "mistakes": 3,
+      "games": 4,
+      "mistake_rate": 0.75,
+      "mean_mistake_regret": 184.1
+    },
+    "clefairy|mid|8:6:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|mid|7:1182:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 490.0
+    },
+    "clefairy|early|8:20:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 441.35
+    },
+    "clefairy|late|8:6:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 1022299.65
+    },
+    "clefairy|mid|7:677:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 376.5
+    },
+    "clefairy|mid|7:1142:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 2036.5
+    },
+    "clefairy|late|12:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|late|13:0:983": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|early|9:678:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 2019.985
+    },
+    "clefairy|mid|7:1152:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1016.5
+    },
+    "clefairy|mid|13:0:425": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 247.757
+    },
+    "clefairy|late|9:306:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1022350.65
+    },
+    "clefairy|mid|8:20:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 133.385
+    },
+    "clefairy|late|7:676:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 604.5
+    },
+    "clefairy|mid|10:675:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 2875.65
+    },
+    "clefairy|mid|9:306:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 936.0
+    },
+    "crustle|late|8:20:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|mid|7:305:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|late|13:0:426": {
+      "samples": 3,
+      "mistakes": 2,
+      "games": 3,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 571.985
+    },
+    "crustle|late|8:6:0": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|mid|12:0:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 450.015
+    },
+    "crustle|late|7:676:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|late|13:0:983": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 222.493
+    },
+    "crustle|mid|9:678:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|9:306:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 861.485
+    },
+    "dragapult|late|7:1086:0": {
+      "samples": 3,
+      "mistakes": 2,
+      "games": 3,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 6487.757
+    },
+    "dragapult|late|13:0:983": {
+      "samples": 4,
+      "mistakes": 3,
+      "games": 4,
+      "mistake_rate": 0.75,
+      "mean_mistake_regret": 342481.167
+    },
+    "dragapult|late|10:66:0": {
+      "samples": 4,
+      "mistakes": 2,
+      "games": 4,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 2519.0
+    },
+    "dragapult|early|8:1174:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|7:1152:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 1250.8
+    },
+    "dragapult|mid|9:66:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|10:675:0": {
+      "samples": 4,
+      "mistakes": 2,
+      "games": 4,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 507421.867
+    },
+    "dragapult|late|7:1141:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 110.0
+    },
+    "dragapult|late|7:305:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 206.5
+    },
+    "dragapult|late|13:0:982": {
+      "samples": 9,
+      "mistakes": 7,
+      "games": 9,
+      "mistake_rate": 0.7778,
+      "mean_mistake_regret": 146989.259
+    },
+    "dragapult|late|8:6:0": {
+      "samples": 10,
+      "mistakes": 4,
+      "games": 10,
+      "mistake_rate": 0.4,
+      "mean_mistake_regret": 260450.151
+    },
+    "dragapult|late|7:1142:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|7:676:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 486.5
+    },
+    "dragapult|early|8:6:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|8:1174:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 139.685
+    },
+    "grass|late|7:1227:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|7:1225:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|7:1182:0": {
+      "samples": 4,
+      "mistakes": 3,
+      "games": 4,
+      "mistake_rate": 0.75,
+      "mean_mistake_regret": 117.338
+    },
+    "grass|late|13:0:982": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 329.265
+    },
+    "grass|mid|9:678:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1684.985
+    },
+    "grass|late|7:1152:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|7:677:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 976.5
+    },
+    "lucario|late|7:1197:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 682.5
+    },
+    "lucario|late|10:675:0": {
+      "samples": 7,
+      "mistakes": 4,
+      "games": 7,
+      "mistake_rate": 0.5714,
+      "mean_mistake_regret": 410.379
+    },
+    "lucario|late|9:678:0": {
+      "samples": 6,
+      "mistakes": 4,
+      "games": 6,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 1763.239
+    },
+    "lucario|late|7:1086:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 26019.5
+    },
+    "lucario|late|7:1141:0": {
+      "samples": 5,
+      "mistakes": 2,
+      "games": 4,
+      "mistake_rate": 0.4,
+      "mean_mistake_regret": 530.195
+    },
+    "lucario|late|13:0:982": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 295.5
+    },
+    "lucario|late|8:1159:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 492.0
+    },
+    "lucario|late|7:305:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 591.515
+    },
+    "lucario|mid|8:1159:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|early|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|late|8:1174:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 395.0
+    },
+    "lucario|late|9:66:0": {
+      "samples": 3,
+      "mistakes": 2,
+      "games": 3,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 31422.75
+    },
+    "lucario|late|7:1227:0": {
+      "samples": 3,
+      "mistakes": 3,
+      "games": 3,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 327.99
+    },
+    "lucario|late|7:675:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 20397.25
+    },
+    "lucario|late|7:1211:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 170.0
+    },
+    "lucario|mid|7:305:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 206.5
+    },
+    "lucario|late|10:66:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|mid|7:1182:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|mid|13:0:982": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|early|8:6:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|mid|9:66:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 14183.485
+    },
+    "lucario|late|7:1213:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1040.86
+    },
+    "marnie|late|13:0:983": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|late|9:66:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 861.5
+    },
+    "marnie|late|8:6:0": {
+      "samples": 5,
+      "mistakes": 1,
+      "games": 4,
+      "mistake_rate": 0.2,
+      "mean_mistake_regret": 1980.0
+    },
+    "marnie|late|10:1259:0": {
+      "samples": 7,
+      "mistakes": 4,
+      "games": 7,
+      "mistake_rate": 0.5714,
+      "mean_mistake_regret": 257730.812
+    },
+    "marnie|late|7:1141:0": {
+      "samples": 5,
+      "mistakes": 1,
+      "games": 5,
+      "mistake_rate": 0.2,
+      "mean_mistake_regret": 260.0
+    },
+    "marnie|mid|8:20:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 124.085
+    },
+    "marnie|late|8:20:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 108.335
+    },
+    "marnie|late|7:1252:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 227.485
+    },
+    "marnie|late|9:306:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1281.5
+    },
+    "marnie|mid|9:678:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1771.5
+    },
+    "marnie|mid|12:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|mid|13:0:982": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|late|7:333:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 206.5
+    },
+    "marnie|late|10:675:0": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|late|8:1159:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 292.75
+    },
+    "marnie|late|13:0:982": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1166.5
+    },
+    "marnie|late|7:1086:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 915.743
+    },
+    "n_zoroark|late|13:0:982": {
+      "samples": 5,
+      "mistakes": 4,
+      "games": 5,
+      "mistake_rate": 0.8,
+      "mean_mistake_regret": 430.992
+    },
+    "n_zoroark|late|7:1182:0": {
+      "samples": 5,
+      "mistakes": 1,
+      "games": 5,
+      "mistake_rate": 0.2,
+      "mean_mistake_regret": 150.015
+    },
+    "n_zoroark|late|7:1141:0": {
+      "samples": 4,
+      "mistakes": 1,
+      "games": 4,
+      "mistake_rate": 0.25,
+      "mean_mistake_regret": 280.015
+    },
+    "n_zoroark|late|7:676:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 486.5
+    },
+    "n_zoroark|late|7:1142:0": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|7:1225:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 502047.867
+    },
+    "alakazam|late|7:675:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|late|9:678:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1139.985
+    },
+    "archaludon|mid|13:0:148": {
+      "samples": 5,
+      "mistakes": 1,
+      "games": 4,
+      "mistake_rate": 0.2,
+      "mean_mistake_regret": 423.0
+    },
+    "archaludon|late|7:1142:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 636.5
+    },
+    "unknown|mid|7:677:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "unknown|mid|8:6:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|7:1086:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 2090.0
+    },
+    "grass|late|7:1141:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1026037.0
+    },
+    "crustle|early|7:305:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|early|9:678:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 294.97
+    },
+    "crustle|late|7:1086:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|late|7:1142:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1014809.985
+    },
+    "dragapult|late|7:1197:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 129.0
+    },
+    "dragapult|late|7:1227:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|13:0:426": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1614.0
+    },
+    "unknown|early|10:675:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "unknown|early|8:1174:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|10:675:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 935.5
+    },
+    "grass|mid|7:1227:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|7:1142:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|mid|7:1141:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1361.0
+    },
+    "lucario|mid|7:1227:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|late|13:0:983": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 203.0
+    },
+    "marnie|late|13:0:426": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 597.515
+    },
+    "marnie|late|7:1152:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 184.3
+    },
+    "marnie|late|8:1174:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 815.0
+    },
+    "n_zoroark|late|12:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|13:0:425": {
+      "samples": 3,
+      "mistakes": 3,
+      "games": 3,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 713.588
+    },
+    "alakazam|late|9:66:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 371.5
+    },
+    "alakazam|mid|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|late|8:6:0": {
+      "samples": 4,
+      "mistakes": 2,
+      "games": 4,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 383.5
+    },
+    "grass|mid|7:1225:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 2628.125
+    },
+    "grass|mid|13:0:983": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|7:1152:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 130.0
+    },
+    "grass|mid|7:675:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|7:1182:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 566.0
+    },
+    "crustle|late|9:678:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 34982.5
+    },
+    "crustle|late|7:1152:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|late|7:305:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 1130.985
+    },
+    "crustle|late|10:675:0": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|mid|8:1159:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|mid|13:0:980": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 444.0
+    },
+    "dragapult|mid|10:66:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|mid|7:1227:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 263.25
+    },
+    "dragapult|late|7:1182:0": {
+      "samples": 4,
+      "mistakes": 2,
+      "games": 4,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 396.508
+    },
+    "dragapult|mid|8:1159:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 592.0
+    },
+    "grass|late|8:20:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 599.115
+    },
+    "grass|late|10:675:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 616.5
+    },
+    "grass|late|10:66:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|8:1174:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|early|10:675:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|mid|7:1225:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 441.61
+    },
+    "lucario|late|7:1225:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1888.125
+    },
+    "marnie|late|7:305:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|late|9:678:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 480.0
+    },
+    "n_zoroark|late|7:1227:0": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|9:66:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|early|7:1086:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|late|7:1086:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|late|7:1225:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "alakazam|mid|13:0:982": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 514.485
+    },
+    "alakazam|late|13:0:982": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 115.5
+    },
+    "archaludon|early|8:20:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "archaludon|mid|9:678:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 896.5
+    },
+    "archaludon|late|7:1152:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 620.0
+    },
+    "archaludon|mid|10:675:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "archaludon|mid|9:66:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|late|7:305:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|mid|8:1159:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 178.5
+    },
+    "clefairy|mid|7:1227:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 443.485
+    },
+    "clefairy|late|8:1159:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 348.5
+    },
+    "crustle|late|14:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|mid|7:1086:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|late|13:0:425": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 345.5
+    },
+    "crustle|late|9:66:0": {
+      "samples": 3,
+      "mistakes": 1,
+      "games": 3,
+      "mistake_rate": 0.3333,
+      "mean_mistake_regret": 1013197.5
+    },
+    "crustle|mid|7:1142:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|8:1159:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1096.0
+    },
+    "dragapult|late|7:675:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|mid|7:1252:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|7:677:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 556.5
+    },
+    "dragapult|mid|9:306:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1028.985
+    },
+    "dragapult|mid|7:676:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|mid|8:6:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|early|8:6:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|13:0:425": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|7:1142:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 862.985
+    },
+    "grass|early|9:306:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1012588.985
+    },
+    "lucario|mid|9:678:0": {
+      "samples": 3,
+      "mistakes": 2,
+      "games": 3,
+      "mistake_rate": 0.6667,
+      "mean_mistake_regret": 1859.485
+    },
+    "lucario|mid|10:675:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 320.0
+    },
+    "lucario|late|8:6:0": {
+      "samples": 3,
+      "mistakes": 3,
+      "games": 3,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 795.497
+    },
+    "lucario|late|7:1142:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1585.0
+    },
+    "marnie|late|7:1142:0": {
+      "samples": 2,
+      "mistakes": 0,
+      "games": 2,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|early|8:1174:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|mid|10:1259:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1106.5
+    },
+    "n_zoroark|late|8:6:0": {
+      "samples": 3,
+      "mistakes": 0,
+      "games": 3,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|13:0:983": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 239.5
+    },
+    "n_zoroark|late|10:66:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|early|10:675:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1011585.65
+    },
+    "n_zoroark|mid|8:1159:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|7:675:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 486.5
+    },
+    "alakazam|mid|7:1152:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 138.65
+    },
+    "clefairy|mid|12:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "crustle|late|13:0:982": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 184.25
+    },
+    "dragapult|mid|8:6:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 767.735
+    },
+    "grass|mid|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|early|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|late|8:20:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|mid|7:1225:0": {
+      "samples": 2,
+      "mistakes": 2,
+      "games": 2,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1580.868
+    },
+    "crustle|late|12:0:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 883.015
+    },
+    "dragapult|early|7:676:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 1012376.5
+    },
+    "grass|late|8:6:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "lucario|late|14:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|late|8:1159:0": {
+      "samples": 2,
+      "mistakes": 1,
+      "games": 2,
+      "mistake_rate": 0.5,
+      "mean_mistake_regret": 1777.5
+    },
+    "alakazam|late|13:0:983": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|early|10:675:0": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 950.0
+    },
+    "crustle|late|9:306:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "dragapult|late|9:66:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "grass|late|13:0:983": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 135.0
+    },
+    "marnie|late|7:1227:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "marnie|late|7:1182:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "n_zoroark|mid|8:6:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "archaludon|late|13:0:982": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    },
+    "clefairy|mid|13:0:982": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 594.515
+    },
+    "clefairy|late|13:0:982": {
+      "samples": 1,
+      "mistakes": 1,
+      "games": 1,
+      "mistake_rate": 1.0,
+      "mean_mistake_regret": 133.5
+    },
+    "grass|late|14:0:0": {
+      "samples": 1,
+      "mistakes": 0,
+      "games": 1,
+      "mistake_rate": 0.0,
+      "mean_mistake_regret": 0.0
+    }
+  },
+  "summary": {
+    "classes": {
+      "play_timing": 50,
+      "other": 19,
+      "energy_target": 13,
+      "premature_attack": 48,
+      "attack_abandonment": 50,
+      "evolve_timing": 10,
+      "ability_timing": 13,
+      "retreat_error": 2,
+      "attack_choice": 1
+    },
+    "families": {
+      "alakazam": 16,
+      "archaludon": 18,
+      "clefairy": 25,
+      "crustle": 14,
+      "dragapult": 37,
+      "grass": 19,
+      "lucario": 38,
+      "marnie": 23,
+      "n_zoroark": 16
+    },
+    "phases": {
+      "late": 152,
+      "mid": 46,
+      "early": 8
+    },
+    "severity": {
+      "major": 89,
+      "catastrophic": 72,
+      "moderate": 45
+    },
+    "finalday_added_exact_memories": 8,
+    "exact_mistake_memory": 206,
+    "finalday_single_rollout_memories_removed": 8,
+    "finalday_runtime_proof_source": "final_day_exact_cf_model.json"
+  },
+  "gate": {
+    "max_options": 24,
+    "max_game_overrides": 2,
+    "max_game_search_calls": 3,
+    "exact_search_min_gain": 10.0,
+    "learned_search_min_gain": 35.0,
+    "min_score_margin": 0.12,
+    "min_quality_margin": 0.08,
+    "prior_min_samples": 2,
+    "prior_min_mistake_rate": 0.55,
+    "prior_min_mean_regret": 50.0,
+    "type_prior_min_samples": 5,
+    "allow_crustle_learned": false
+  }
+}

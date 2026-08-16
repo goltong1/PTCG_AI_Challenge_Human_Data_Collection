@@ -1,0 +1,2002 @@
+{
+  "version": "v159_recent38_plus_league",
+  "source_games": 38,
+  "matchups": {
+    "alakazam:L": 6,
+    "lucario:W": 5,
+    "other:W": 4,
+    "lucario:L": 4,
+    "crustle:W": 3,
+    "alakazam:W": 3,
+    "dragapult:W": 1,
+    "crustle:L": 3,
+    "archaludon:W": 2,
+    "cynthia:L": 1,
+    "dragapult:L": 3,
+    "marnie:L": 2,
+    "alakazam": {
+      "new_human_loss_20260816": 1
+    }
+  },
+  "support": {
+    "alakazam|early|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|early|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 6
+    },
+    "alakazam|early|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|early|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "alakazam|early|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|mid|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 4
+    },
+    "alakazam|mid|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|mid|7:1086:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "alakazam|mid|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|8:6:333:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|mid|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|mid|13:0:0:980": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|mid|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|mid|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "alakazam|mid|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 5
+    },
+    "alakazam|late|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "alakazam|late|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "alakazam|late|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|late|13:0:0:982": {
+      "win_games": 3,
+      "loss_games": 1
+    },
+    "alakazam|late|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|late|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "lucario|early|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|7:1152:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|early|8:6:333:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "lucario|early|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|14:0:0:0": {
+      "win_games": 4,
+      "loss_games": 4
+    },
+    "lucario|early|9:678:333:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|early|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|7:1141:0:0": {
+      "win_games": 3,
+      "loss_games": 2
+    },
+    "lucario|early|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|mid|7:1252:0:0": {
+      "win_games": 4,
+      "loss_games": 1
+    },
+    "lucario|mid|13:0:0:983": {
+      "win_games": 3,
+      "loss_games": 2
+    },
+    "lucario|mid|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|late|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|late|7:1182:0:0": {
+      "win_games": 5,
+      "loss_games": 1
+    },
+    "lucario|late|10:66:0:0": {
+      "win_games": 4,
+      "loss_games": 0
+    },
+    "lucario|late|7:1071:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:1197:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|late|13:0:0:983": {
+      "win_games": 4,
+      "loss_games": 2
+    },
+    "lucario|late|13:0:0:980": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|late|7:1213:0:0": {
+      "win_games": 3,
+      "loss_games": 2
+    },
+    "lucario|late|7:1211:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|late|7:1227:0:0": {
+      "win_games": 3,
+      "loss_games": 1
+    },
+    "lucario|late|13:0:0:982": {
+      "win_games": 5,
+      "loss_games": 2
+    },
+    "other|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|14:0:0:0": {
+      "win_games": 4,
+      "loss_games": 0
+    },
+    "other|early|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|8:6:333:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "other|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1252:0:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "other|mid|9:678:333:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "other|mid|14:0:0:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "other|mid|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 0
+    },
+    "other|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|7:1152:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|7:1142:0:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "other|late|8:6:678:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|13:0:0:982": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|7:305:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|7:1086:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "alakazam|early|7:1142:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|early|8:1174:1071:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|early|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|early|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|early|8:1174:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|early|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|early|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|early|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|mid|9:678:677:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|mid|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 4
+    },
+    "alakazam|mid|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 4
+    },
+    "alakazam|late|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|late|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "alakazam|late|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "alakazam|late|7:675:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|late|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|late|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|late|10:66:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "alakazam|late|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "alakazam|late|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|early|8:1174:333:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|early|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|early|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "lucario|mid|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 2
+    },
+    "lucario|mid|10:66:0:0": {
+      "win_games": 3,
+      "loss_games": 1
+    },
+    "lucario|mid|7:1227:0:0": {
+      "win_games": 3,
+      "loss_games": 1
+    },
+    "lucario|mid|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|7:333:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|mid|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|mid|8:6:675:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "lucario|mid|7:305:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|mid|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 1
+    },
+    "lucario|mid|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|mid|13:0:0:982": {
+      "win_games": 2,
+      "loss_games": 2
+    },
+    "lucario|late|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:676:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|late|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:1141:0:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "alakazam|early|8:1174:677:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|8:6:677:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|7:1227:0:0": {
+      "win_games": 2,
+      "loss_games": 3
+    },
+    "alakazam|early|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "alakazam|early|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|8:6:1071:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|mid|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 4
+    },
+    "alakazam|mid|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 2
+    },
+    "alakazam|mid|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|mid|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|mid|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "lucario|early|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|mid|8:20:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "lucario|mid|8:6:678:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "lucario|late|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|late|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|late|12:0:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "alakazam|early|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|8:1174:305:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|mid|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "alakazam|mid|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "alakazam|mid|12:0:0:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "alakazam|mid|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|7:1152:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|early|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|early|12:0:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "crustle|early|14:0:0:0": {
+      "win_games": 3,
+      "loss_games": 2
+    },
+    "crustle|early|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "crustle|early|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|14:0:0:0": {
+      "win_games": 3,
+      "loss_games": 3
+    },
+    "crustle|late|14:0:0:0": {
+      "win_games": 3,
+      "loss_games": 3
+    },
+    "crustle|late|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 3
+    },
+    "crustle|late|9:678:677:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|13:0:0:425": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "crustle|late|13:0:0:426": {
+      "win_games": 2,
+      "loss_games": 2
+    },
+    "crustle|late|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "crustle|late|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|7:1225:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|early|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|12:0:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|early|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|8:20:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1182:0:0": {
+      "win_games": 3,
+      "loss_games": 0
+    },
+    "other|late|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|13:0:0:983": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1227:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|mid|8:6:678:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|mid|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|7:1225:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|10:675:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "other|late|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|early|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|mid|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|mid|8:1159:676:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|8:6:678:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "alakazam|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|late|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "dragapult|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|early|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|early|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "dragapult|early|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|early|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "dragapult|early|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "dragapult|mid|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "dragapult|mid|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "dragapult|mid|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|8:20:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|early|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|early|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|early|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|early|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|mid|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|mid|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|mid|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|mid|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|mid|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|late|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|late|8:20:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|late|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|late|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|late|9:66:305:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "lucario|late|7:305:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "alakazam|early|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|8:1159:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|7:676:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "alakazam|late|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|8:1174:1071:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|8:6:305:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|late|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "lucario|early|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "lucario|early|8:6:66:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|early|7:1152:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "crustle|early|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|early|13:0:0:980": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|mid|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|mid|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|mid|7:1141:0:0": {
+      "win_games": 2,
+      "loss_games": 1
+    },
+    "crustle|mid|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|mid|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 2
+    },
+    "crustle|mid|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|mid|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|mid|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|8:1159:306:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "crustle|late|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 3
+    },
+    "archaludon|early|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|early|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|early|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "archaludon|early|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|early|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|early|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|8:6:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|8:1159:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|7:1141:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "archaludon|late|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|early|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|8:1174:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|late|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|late|12:0:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|early|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|early|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|7:1142:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|8:6:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|9:678:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|8:1174:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|8:1174:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|8:1174:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|mid|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|7:675:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "cynthia|late|14:0:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|early|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|early|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|7:1086:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "dragapult|late|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|late|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|late|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|late|8:1159:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|12:0:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|late|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "dragapult|late|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:675:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|late|14:0:0:0": {
+      "win_games": 0,
+      "loss_games": 3
+    },
+    "dragapult|early|8:6:677:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|early|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|early|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:1142:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "dragapult|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:1225:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|8:6:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|7:1086:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|14:0:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|early|7:1225:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|early|9:678:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|early|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|mid|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|mid|7:1152:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|7:333:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|8:20:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|mid|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|late|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "marnie|late|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|early|8:20:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|9:678:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|7:1225:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|9:306:305:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "alakazam|late|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|early|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|8:20:306:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|8:1159:306:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|7:1141:0:0": {
+      "win_games": 2,
+      "loss_games": 2
+    },
+    "crustle|late|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|8:6:678:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|late|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "marnie|early|7:675:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|14:0:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|mid|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|8:6:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|9:678:333:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|7:1152:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "marnie|late|14:0:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "archaludon|early|7:117:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|early|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|early|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|mid|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "archaludon|late|13:0:0:148": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|early|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|early|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|7:1071:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|mid|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|late|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 1
+    },
+    "crustle|early|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|mid|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|13:0:0:982": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|8:1174:306:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|7:1152:0:0": {
+      "win_games": 0,
+      "loss_games": 2
+    },
+    "crustle|late|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|early|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|mid|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|late|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|early|8:1174:676:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|9:678:333:0": {
+      "win_games": 2,
+      "loss_games": 0
+    },
+    "lucario|mid|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|8:6:678:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|mid|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "lucario|late|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "crustle|mid|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "crustle|late|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|early|7:1142:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|early|8:20:677:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|early|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|mid|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|7:333:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "dragapult|late|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "other|early|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|early|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|mid|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "other|late|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0
+    },
+    "alakazam|early|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|7:333:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    },
+    "alakazam|mid|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 1
+    }
+  },
+  "gate": {
+    "allowed_families": [
+      "crustle",
+      "lucario"
+    ],
+    "min_base_loss_games": 3,
+    "max_base_rate": 0.35,
+    "min_candidate_win_games": 2,
+    "min_candidate_rate": 0.67,
+    "min_rate_gap": 0.4,
+    "max_game_overrides": 1
+  },
+  "v159_update": {
+    "new_human_loss": "20260816_083811_d0d0a8f6",
+    "new_loss_signatures": 16,
+    "crossplay_regression_games": 180,
+    "policy_change": "alakazam early attacker energy + second lucario line last-slot reserve",
+    "broad_residual": "rejected/not enabled"
+  }
+}
