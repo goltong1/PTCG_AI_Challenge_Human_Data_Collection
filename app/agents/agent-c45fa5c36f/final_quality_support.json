@@ -1,0 +1,327 @@
+{
+  "version": "v48_crustle_coloraware_turn1_only_precision",
+  "teacher": "same-hidden-state CABT counterfactual; depth24 repeated direct override audits",
+  "selection_goal": "precision-first; no observed >=50k material-harm final-guard override in the last completed 100-game hard-matchup audit",
+  "min_model_margin": 2.0,
+  "max_game_overrides": 1,
+  "records": {
+    "archaludon|early|pokepad|attach_dunsparce": {
+      "positive": 4,
+      "opportunities": 5,
+      "positive_rate": 0.8,
+      "mean_gain": 75139.80694341971,
+      "median_gain": 89124.33650626878,
+      "sources": {
+        "v37_1000": 4,
+        "new_first2": 1
+      },
+      "min_model_margin": 4.0,
+      "allowed_turns": [
+        1
+      ]
+    },
+    "archaludon|early|play_munkidori|attach_dunsparce": {
+      "positive": 5,
+      "opportunities": 6,
+      "positive_rate": 0.8333333333333334,
+      "mean_gain": 84525.08674629369,
+      "median_gain": 99925.6484174337,
+      "sources": {
+        "v37_1000": 2,
+        "new_first2": 4
+      },
+      "min_model_margin": 6.0,
+      "allowed_turns": [
+        1,
+        3
+      ]
+    },
+    "archaludon|early|ultraball|attach_dunsparce": {
+      "positive": 7,
+      "opportunities": 9,
+      "positive_rate": 0.7777777777777778,
+      "mean_gain": 79789.45384132519,
+      "median_gain": 110726.96032859856,
+      "sources": {
+        "v37_1000": 8,
+        "new_first2": 1
+      },
+      "min_model_margin": 6.0,
+      "allowed_turns": [
+        1
+      ]
+    },
+    "archaludon|early|play_dreepy|attach_dunsparce": {
+      "positive": 6,
+      "opportunities": 8,
+      "positive_rate": 0.75,
+      "mean_gain": 77093.3074508578,
+      "median_gain": 99925.64841743367,
+      "sources": {
+        "v37_1000": 7,
+        "new_first2": 1
+      },
+      "min_model_margin": 4.0,
+      "allowed_turns": [
+        1
+      ]
+    },
+    "lucario|early|ultraball|attach_dunsparce": {
+      "positive": 7,
+      "opportunities": 9,
+      "positive_rate": 0.7777777777777778,
+      "mean_gain": 83900.20297933502,
+      "median_gain": 110758.44943165802,
+      "sources": {
+        "v37_1000": 6,
+        "new_first2": 3
+      },
+      "min_model_margin": 6.8,
+      "allowed_turns": [
+        1,
+        2,
+        3
+      ]
+    },
+    "marnie|early|pokepad|attach_dunsparce": {
+      "positive": 8,
+      "opportunities": 9,
+      "positive_rate": 0.8888888888888888,
+      "mean_gain": 75043.22597896792,
+      "median_gain": 89049.99944842752,
+      "sources": {
+        "v37_1000": 4,
+        "new_first2": 5
+      },
+      "min_model_margin": 2.9,
+      "allowed_turns": [
+        1,
+        2
+      ]
+    },
+    "marnie|early|ultraball|attach_dunsparce": {
+      "positive": 8,
+      "opportunities": 9,
+      "positive_rate": 0.8888888888888888,
+      "mean_gain": 88581.56421628519,
+      "median_gain": 110758.449431658,
+      "sources": {
+        "v37_1000": 5,
+        "new_first2": 4
+      },
+      "min_model_margin": 2.7,
+      "allowed_turns": [
+        1
+      ]
+    },
+    "crustle|early|pokepad|attach_dunsparce": {
+      "positive": 9,
+      "opportunities": 17,
+      "positive_rate": 0.5294117647058824,
+      "material_positive": 9,
+      "near_tie": 8,
+      "material_harm": 0,
+      "mean_gain": 47329.708361769204,
+      "median_gain": 89018.5103453681,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 0.8,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|poffin|attach_dunsparce": {
+      "positive": 8,
+      "opportunities": 14,
+      "positive_rate": 0.5714285714285714,
+      "material_positive": 8,
+      "near_tie": 6,
+      "material_harm": 0,
+      "mean_gain": 51504.359434377984,
+      "median_gain": 89124.33650626877,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 1.2,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|play_dreepy|attach_dunsparce": {
+      "positive": 7,
+      "opportunities": 13,
+      "positive_rate": 0.5384615384615384,
+      "material_positive": 7,
+      "near_tie": 6,
+      "material_harm": 0,
+      "mean_gain": 48591.13713465749,
+      "median_gain": 89124.33650626877,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 0.6,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|ultraball|attach_dunsparce": {
+      "positive": 10,
+      "opportunities": 12,
+      "positive_rate": 0.8333333333333334,
+      "material_positive": 10,
+      "near_tie": 2,
+      "material_harm": 0,
+      "mean_gain": 86092.73797485829,
+      "median_gain": 108220.38109936428,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 3.0,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|play_munkidori|attach_dunsparce": {
+      "positive": 4,
+      "opportunities": 8,
+      "positive_rate": 0.5,
+      "material_positive": 4,
+      "near_tie": 4,
+      "material_harm": 0,
+      "mean_gain": 51358.601748432935,
+      "median_gain": 43398.8692169018,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 1.8,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|end|attach_dunsparce": {
+      "positive": 4,
+      "opportunities": 4,
+      "positive_rate": 1.0,
+      "material_positive": 4,
+      "near_tie": 0,
+      "material_harm": 0,
+      "mean_gain": 110806.3299492741,
+      "median_gain": 110832.78648949927,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 10.0,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|play_meowth|attach_dunsparce": {
+      "positive": 3,
+      "opportunities": 4,
+      "positive_rate": 0.75,
+      "material_positive": 3,
+      "near_tie": 1,
+      "material_harm": 0,
+      "mean_gain": 68010.8601377603,
+      "median_gain": 82297.75687150695,
+      "sources": {
+        "v44_crustle_cf100": 1,
+        "v45_crustle_cf100x3": 3
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 3,
+      "min_opportunities": 4,
+      "min_mean_gain": 40000,
+      "min_model_margin": 1.4,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|attach_dreepy_fire|attach_dunsparce": {
+      "positive": 6,
+      "opportunities": 6,
+      "positive_rate": 1.0,
+      "material_positive": 6,
+      "near_tie": 0,
+      "material_harm": 0,
+      "mean_gain": 89053.785732335,
+      "median_gain": 89018.51034536812,
+      "sources": {
+        "pooled_crustle_1250_cf": 6
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 4,
+      "min_opportunities": 5,
+      "min_mean_gain": 60000,
+      "min_model_margin": 3.0,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true
+    },
+    "crustle|early|attach_dreepy_fire|attach_dreepy_psychic": {
+      "positive": 5,
+      "opportunities": 5,
+      "positive_rate": 1.0,
+      "material_positive": 5,
+      "near_tie": 0,
+      "material_harm": 0,
+      "mean_gain": 92191.7,
+      "median_gain": 92403.4,
+      "sources": {
+        "pooled_crustle_1250_cf": 5
+      },
+      "precision_mode": "material_safe",
+      "min_material_positive": 4,
+      "min_opportunities": 5,
+      "min_mean_gain": 60000,
+      "min_model_margin": 2.8,
+      "allowed_turns": [
+        1
+      ],
+      "allow_same_turn": true,
+      "same_target_required": true
+    }
+  },
+  "max_game_overrides_by_matchup": {
+    "crustle": 2
+  }
+}

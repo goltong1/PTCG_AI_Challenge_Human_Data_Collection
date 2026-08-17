@@ -1,0 +1,7614 @@
+{
+  "version": "lucario_v160_intent_sidecar_d64_l2_ctx72",
+  "enabled": true,
+  "vocab_size": 8192,
+  "max_context": 72,
+  "max_action": 40,
+  "max_len": 112,
+  "d_model": 64,
+  "heads": 4,
+  "ff": 160,
+  "layers": 2,
+  "parameter_count": 607042,
+  "gate": {
+    "allowed_families": [
+      "dragapult",
+      "alakazam",
+      "marnie",
+      "lucario",
+      "unknown"
+    ],
+    "allowed_types": [
+      7,
+      8
+    ],
+    "alpha": 0.55,
+    "max_game_overrides": 1,
+    "min_policy_delta": 0.0003,
+    "min_value_margin": 0.001,
+    "min_candidate_win_games": 8,
+    "min_candidate_rate": 0.6,
+    "min_support_rate_gap": 0.1,
+    "search_min_gain": 30.0,
+    "max_options": 24,
+    "unknown_min_turn": 4
+  },
+  "support": {
+    "crustle|late|14:0:0:0": {
+      "win_games": 20,
+      "loss_games": 29,
+      "games": 49
+    },
+    "marnie|early|8:1159:677:0": {
+      "win_games": 3,
+      "loss_games": 5,
+      "games": 8
+    },
+    "crustle|late|13:0:0:982": {
+      "win_games": 27,
+      "loss_games": 20,
+      "games": 47
+    },
+    "dragapult|mid|8:6:678:0": {
+      "win_games": 79,
+      "loss_games": 56,
+      "games": 135
+    },
+    "marnie|late|8:20:333:0": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "terabox|early|14:0:0:0": {
+      "win_games": 31,
+      "loss_games": 6,
+      "games": 37
+    },
+    "marnie|early|13:0:0:982": {
+      "win_games": 11,
+      "loss_games": 8,
+      "games": 19
+    },
+    "dragapult|late|7:1141:0:0": {
+      "win_games": 41,
+      "loss_games": 58,
+      "games": 99
+    },
+    "archaludon|late|13:0:0:148": {
+      "win_games": 76,
+      "loss_games": 9,
+      "games": 85
+    },
+    "dragapult|mid|9:678:333:0": {
+      "win_games": 53,
+      "loss_games": 64,
+      "games": 117
+    },
+    "dragapult|late|8:1159:678:0": {
+      "win_games": 23,
+      "loss_games": 11,
+      "games": 34
+    },
+    "dragapult|mid|7:676:0:0": {
+      "win_games": 12,
+      "loss_games": 17,
+      "games": 29
+    },
+    "dragapult|early|8:6:678:0": {
+      "win_games": 27,
+      "loss_games": 8,
+      "games": 35
+    },
+    "crustle|late|13:0:0:425": {
+      "win_games": 22,
+      "loss_games": 6,
+      "games": 28
+    },
+    "archaludon|late|8:1159:678:0": {
+      "win_games": 6,
+      "loss_games": 0,
+      "games": 6
+    },
+    "archaludon|early|8:6:678:0": {
+      "win_games": 4,
+      "loss_games": 5,
+      "games": 9
+    },
+    "unknown|early|8:6:305:0": {
+      "win_games": 6,
+      "loss_games": 6,
+      "games": 12
+    },
+    "crustle|late|7:1213:0:0": {
+      "win_games": 3,
+      "loss_games": 5,
+      "games": 8
+    },
+    "dragapult|early|7:1225:0:0": {
+      "win_games": 22,
+      "loss_games": 15,
+      "games": 37
+    },
+    "unknown|early|7:675:0:0": {
+      "win_games": 23,
+      "loss_games": 12,
+      "games": 35
+    },
+    "dragapult|late|13:0:0:982": {
+      "win_games": 119,
+      "loss_games": 81,
+      "games": 200
+    },
+    "hydrapple|late|7:305:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "archaludon|early|8:6:305:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "dragapult|mid|9:66:305:0": {
+      "win_games": 35,
+      "loss_games": 37,
+      "games": 72
+    },
+    "unknown|late|8:20:678:0": {
+      "win_games": 14,
+      "loss_games": 1,
+      "games": 15
+    },
+    "unknown|mid|10:675:0:0": {
+      "win_games": 13,
+      "loss_games": 4,
+      "games": 17
+    },
+    "unknown|late|8:1174:678:0": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "dragapult|early|13:0:0:983": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "dragapult|early|14:0:0:0": {
+      "win_games": 110,
+      "loss_games": 87,
+      "games": 197
+    },
+    "archaludon|early|8:6:117:0": {
+      "win_games": 36,
+      "loss_games": 3,
+      "games": 39
+    },
+    "unknown|mid|9:678:333:0": {
+      "win_games": 7,
+      "loss_games": 10,
+      "games": 17
+    },
+    "terabox|early|8:6:676:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "crustle|late|13:0:0:426": {
+      "win_games": 62,
+      "loss_games": 11,
+      "games": 73
+    },
+    "marnie|late|7:1227:0:0": {
+      "win_games": 17,
+      "loss_games": 10,
+      "games": 27
+    },
+    "hydrapple|late|7:675:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "terabox|early|7:1086:0:0": {
+      "win_games": 10,
+      "loss_games": 1,
+      "games": 11
+    },
+    "hydrapple|late|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 7,
+      "games": 9
+    },
+    "marnie|late|8:6:678:0": {
+      "win_games": 28,
+      "loss_games": 12,
+      "games": 40
+    },
+    "alakazam|late|13:0:0:983": {
+      "win_games": 21,
+      "loss_games": 4,
+      "games": 25
+    },
+    "crustle|mid|8:1159:678:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "unknown|late|9:306:305:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "crustle|late|13:0:0:980": {
+      "win_games": 13,
+      "loss_games": 10,
+      "games": 23
+    },
+    "dragapult|early|7:1152:0:0": {
+      "win_games": 84,
+      "loss_games": 64,
+      "games": 148
+    },
+    "dragapult|early|7:1227:0:0": {
+      "win_games": 44,
+      "loss_games": 33,
+      "games": 77
+    },
+    "dragapult|late|7:1152:0:0": {
+      "win_games": 18,
+      "loss_games": 39,
+      "games": 57
+    },
+    "dragapult|late|9:66:305:0": {
+      "win_games": 31,
+      "loss_games": 41,
+      "games": 72
+    },
+    "marnie|mid|10:1259:0:0": {
+      "win_games": 10,
+      "loss_games": 23,
+      "games": 33
+    },
+    "marnie|early|14:0:0:0": {
+      "win_games": 34,
+      "loss_games": 30,
+      "games": 64
+    },
+    "hydrapple|mid|13:0:0:982": {
+      "win_games": 18,
+      "loss_games": 3,
+      "games": 21
+    },
+    "dragapult|mid|7:1141:0:0": {
+      "win_games": 19,
+      "loss_games": 34,
+      "games": 53
+    },
+    "dragapult|late|13:0:0:983": {
+      "win_games": 111,
+      "loss_games": 59,
+      "games": 170
+    },
+    "unknown|late|13:0:0:982": {
+      "win_games": 53,
+      "loss_games": 5,
+      "games": 58
+    },
+    "dragapult|early|8:6:305:0": {
+      "win_games": 13,
+      "loss_games": 18,
+      "games": 31
+    },
+    "dragapult|early|8:1159:677:0": {
+      "win_games": 13,
+      "loss_games": 8,
+      "games": 21
+    },
+    "terabox|mid|8:20:678:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "dragapult|early|7:676:0:0": {
+      "win_games": 51,
+      "loss_games": 44,
+      "games": 95
+    },
+    "marnie|late|13:0:0:148": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "unknown|early|7:676:0:0": {
+      "win_games": 17,
+      "loss_games": 4,
+      "games": 21
+    },
+    "hydrapple|late|8:6:678:0": {
+      "win_games": 14,
+      "loss_games": 4,
+      "games": 18
+    },
+    "dragapult|mid|7:1152:0:0": {
+      "win_games": 22,
+      "loss_games": 27,
+      "games": 49
+    },
+    "archaludon|early|7:1142:0:0": {
+      "win_games": 17,
+      "loss_games": 10,
+      "games": 27
+    },
+    "alakazam|late|7:1182:0:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "crustle|mid|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "dragapult|late|9:306:305:0": {
+      "win_games": 16,
+      "loss_games": 14,
+      "games": 30
+    },
+    "hydrapple|late|13:0:0:980": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "hydrapple|late|7:1227:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "unknown|early|14:0:0:0": {
+      "win_games": 56,
+      "loss_games": 24,
+      "games": 80
+    },
+    "dragapult|mid|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 5,
+      "games": 6
+    },
+    "dragapult|mid|13:0:0:982": {
+      "win_games": 112,
+      "loss_games": 50,
+      "games": 162
+    },
+    "unknown|mid|13:0:0:983": {
+      "win_games": 35,
+      "loss_games": 9,
+      "games": 44
+    },
+    "terabox|late|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "hydrapple|late|13:0:0:983": {
+      "win_games": 23,
+      "loss_games": 4,
+      "games": 27
+    },
+    "dragapult|late|10:675:0:0": {
+      "win_games": 62,
+      "loss_games": 48,
+      "games": 110
+    },
+    "archaludon|early|7:1152:0:0": {
+      "win_games": 22,
+      "loss_games": 18,
+      "games": 40
+    },
+    "dragapult|early|7:675:0:0": {
+      "win_games": 66,
+      "loss_games": 48,
+      "games": 114
+    },
+    "dragapult|late|7:1227:0:0": {
+      "win_games": 40,
+      "loss_games": 28,
+      "games": 68
+    },
+    "unknown|early|8:1174:676:0": {
+      "win_games": 7,
+      "loss_games": 0,
+      "games": 7
+    },
+    "marnie|late|7:1141:0:0": {
+      "win_games": 23,
+      "loss_games": 10,
+      "games": 33
+    },
+    "dragapult|late|7:305:0:0": {
+      "win_games": 37,
+      "loss_games": 47,
+      "games": 84
+    },
+    "unknown|early|13:0:0:983": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "dragapult|early|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "unknown|early|13:0:0:982": {
+      "win_games": 21,
+      "loss_games": 1,
+      "games": 22
+    },
+    "hydrapple|late|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 7,
+      "games": 8
+    },
+    "archaludon|mid|7:117:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "hydrapple|early|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "cynthia|late|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "terabox|early|8:1159:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|early|8:6:333:0": {
+      "win_games": 8,
+      "loss_games": 2,
+      "games": 10
+    },
+    "marnie|mid|14:0:0:0": {
+      "win_games": 10,
+      "loss_games": 20,
+      "games": 30
+    },
+    "unknown|late|8:20:305:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "marnie|early|13:0:0:983": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|mid|7:1141:0:0": {
+      "win_games": 8,
+      "loss_games": 16,
+      "games": 24
+    },
+    "dragapult|early|7:677:0:0": {
+      "win_games": 24,
+      "loss_games": 16,
+      "games": 40
+    },
+    "dragapult|early|7:1142:0:0": {
+      "win_games": 79,
+      "loss_games": 75,
+      "games": 154
+    },
+    "archaludon|late|9:678:677:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "crustle|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|early|8:20:677:0": {
+      "win_games": 9,
+      "loss_games": 3,
+      "games": 12
+    },
+    "crustle|mid|13:0:0:983": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "dragapult|late|9:678:333:0": {
+      "win_games": 27,
+      "loss_games": 28,
+      "games": 55
+    },
+    "alakazam|late|14:0:0:0": {
+      "win_games": 11,
+      "loss_games": 8,
+      "games": 19
+    },
+    "marnie|late|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "marnie|late|7:1182:0:0": {
+      "win_games": 12,
+      "loss_games": 8,
+      "games": 20
+    },
+    "dragapult|early|8:20:333:0": {
+      "win_games": 28,
+      "loss_games": 27,
+      "games": 55
+    },
+    "unknown|mid|8:1174:676:0": {
+      "win_games": 7,
+      "loss_games": 1,
+      "games": 8
+    },
+    "terabox|early|8:6:677:0": {
+      "win_games": 8,
+      "loss_games": 2,
+      "games": 10
+    },
+    "hydrapple|mid|13:0:0:983": {
+      "win_games": 16,
+      "loss_games": 3,
+      "games": 19
+    },
+    "hydrapple|early|7:1086:0:0": {
+      "win_games": 5,
+      "loss_games": 5,
+      "games": 10
+    },
+    "dragapult|early|13:0:0:423": {
+      "win_games": 6,
+      "loss_games": 10,
+      "games": 16
+    },
+    "dragapult|mid|8:1174:678:0": {
+      "win_games": 12,
+      "loss_games": 6,
+      "games": 18
+    },
+    "hydrapple|late|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "hydrapple|early|7:1152:0:0": {
+      "win_games": 12,
+      "loss_games": 4,
+      "games": 16
+    },
+    "marnie|late|10:1259:0:0": {
+      "win_games": 14,
+      "loss_games": 21,
+      "games": 35
+    },
+    "unknown|late|7:1152:0:0": {
+      "win_games": 8,
+      "loss_games": 5,
+      "games": 13
+    },
+    "crustle|late|7:1252:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "marnie|late|13:0:0:982": {
+      "win_games": 49,
+      "loss_games": 30,
+      "games": 79
+    },
+    "dragapult|early|8:20:677:0": {
+      "win_games": 18,
+      "loss_games": 10,
+      "games": 28
+    },
+    "alakazam|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "terabox|early|8:20:306:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "alakazam|mid|10:675:0:0": {
+      "win_games": 9,
+      "loss_games": 0,
+      "games": 9
+    },
+    "unknown|early|7:1142:0:0": {
+      "win_games": 37,
+      "loss_games": 16,
+      "games": 53
+    },
+    "marnie|late|13:0:0:983": {
+      "win_games": 57,
+      "loss_games": 20,
+      "games": 77
+    },
+    "unknown|late|13:0:0:425": {
+      "win_games": 14,
+      "loss_games": 0,
+      "games": 14
+    },
+    "crustle|early|7:1227:0:0": {
+      "win_games": 11,
+      "loss_games": 6,
+      "games": 17
+    },
+    "hydrapple|late|8:1159:306:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|early|7:1142:0:0": {
+      "win_games": 25,
+      "loss_games": 13,
+      "games": 38
+    },
+    "marnie|early|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "archaludon|mid|7:1142:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "archaludon|late|8:20:117:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "dragapult|early|8:20:676:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "dragapult|early|13:0:0:981": {
+      "win_games": 10,
+      "loss_games": 3,
+      "games": 13
+    },
+    "marnie|early|8:6:677:0": {
+      "win_games": 11,
+      "loss_games": 9,
+      "games": 20
+    },
+    "marnie|early|7:675:0:0": {
+      "win_games": 17,
+      "loss_games": 7,
+      "games": 24
+    },
+    "dragapult|early|13:0:0:980": {
+      "win_games": 22,
+      "loss_games": 13,
+      "games": 35
+    },
+    "dragapult|late|14:0:0:0": {
+      "win_games": 14,
+      "loss_games": 37,
+      "games": 51
+    },
+    "dragapult|late|7:333:0:0": {
+      "win_games": 3,
+      "loss_games": 22,
+      "games": 25
+    },
+    "hydrapple|early|7:1227:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "unknown|late|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "archaludon|mid|7:1141:0:0": {
+      "win_games": 3,
+      "loss_games": 6,
+      "games": 9
+    },
+    "crustle|early|13:0:0:981": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "dragapult|early|10:66:0:0": {
+      "win_games": 13,
+      "loss_games": 12,
+      "games": 25
+    },
+    "dragapult|mid|7:1227:0:0": {
+      "win_games": 39,
+      "loss_games": 31,
+      "games": 70
+    },
+    "cynthia|mid|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|early|7:333:0:0": {
+      "win_games": 12,
+      "loss_games": 8,
+      "games": 20
+    },
+    "terabox|late|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "dragapult|mid|8:1174:676:0": {
+      "win_games": 15,
+      "loss_games": 11,
+      "games": 26
+    },
+    "dragapult|late|7:676:0:0": {
+      "win_games": 13,
+      "loss_games": 20,
+      "games": 33
+    },
+    "marnie|early|8:6:678:0": {
+      "win_games": 13,
+      "loss_games": 6,
+      "games": 19
+    },
+    "archaludon|mid|13:0:0:982": {
+      "win_games": 10,
+      "loss_games": 8,
+      "games": 18
+    },
+    "dragapult|mid|7:1142:0:0": {
+      "win_games": 37,
+      "loss_games": 33,
+      "games": 70
+    },
+    "dragapult|early|9:66:305:0": {
+      "win_games": 13,
+      "loss_games": 14,
+      "games": 27
+    },
+    "marnie|late|13:0:0:425": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "marnie|mid|8:6:678:0": {
+      "win_games": 29,
+      "loss_games": 12,
+      "games": 41
+    },
+    "hydrapple|mid|8:6:678:0": {
+      "win_games": 14,
+      "loss_games": 2,
+      "games": 16
+    },
+    "crustle|late|9:678:333:0": {
+      "win_games": 7,
+      "loss_games": 9,
+      "games": 16
+    },
+    "terabox|early|7:1142:0:0": {
+      "win_games": 15,
+      "loss_games": 4,
+      "games": 19
+    },
+    "archaludon|early|7:1227:0:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "unknown|late|13:0:0:983": {
+      "win_games": 46,
+      "loss_games": 5,
+      "games": 51
+    },
+    "unknown|late|7:1225:0:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "unknown|late|13:0:0:980": {
+      "win_games": 11,
+      "loss_games": 3,
+      "games": 14
+    },
+    "dragapult|mid|10:66:0:0": {
+      "win_games": 35,
+      "loss_games": 31,
+      "games": 66
+    },
+    "dragapult|mid|7:1182:0:0": {
+      "win_games": 5,
+      "loss_games": 6,
+      "games": 11
+    },
+    "dragapult|mid|7:305:0:0": {
+      "win_games": 25,
+      "loss_games": 22,
+      "games": 47
+    },
+    "archaludon|mid|13:0:0:148": {
+      "win_games": 31,
+      "loss_games": 3,
+      "games": 34
+    },
+    "unknown|early|10:675:0:0": {
+      "win_games": 16,
+      "loss_games": 6,
+      "games": 22
+    },
+    "unknown|mid|13:0:0:982": {
+      "win_games": 45,
+      "loss_games": 9,
+      "games": 54
+    },
+    "hydrapple|mid|13:0:0:425": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "archaludon|mid|14:0:0:0": {
+      "win_games": 37,
+      "loss_games": 12,
+      "games": 49
+    },
+    "unknown|early|13:0:0:980": {
+      "win_games": 12,
+      "loss_games": 4,
+      "games": 16
+    },
+    "terabox|mid|8:6:678:0": {
+      "win_games": 12,
+      "loss_games": 0,
+      "games": 12
+    },
+    "terabox|early|7:1227:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "archaludon|early|14:0:0:0": {
+      "win_games": 58,
+      "loss_games": 17,
+      "games": 75
+    },
+    "alakazam|early|14:0:0:0": {
+      "win_games": 23,
+      "loss_games": 13,
+      "games": 36
+    },
+    "unknown|mid|8:6:305:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "dragapult|early|10:675:0:0": {
+      "win_games": 52,
+      "loss_games": 48,
+      "games": 100
+    },
+    "marnie|early|12:0:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "crustle|early|8:6:333:0": {
+      "win_games": 17,
+      "loss_games": 8,
+      "games": 25
+    },
+    "hydrapple|late|7:1211:0:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "crustle|mid|14:0:0:0": {
+      "win_games": 19,
+      "loss_games": 19,
+      "games": 38
+    },
+    "dragapult|mid|9:306:305:0": {
+      "win_games": 15,
+      "loss_games": 21,
+      "games": 36
+    },
+    "lucario|early|7:1141:0:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "marnie|mid|7:675:0:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "unknown|late|14:0:0:0": {
+      "win_games": 6,
+      "loss_games": 9,
+      "games": 15
+    },
+    "dragapult|mid|7:1197:0:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "marnie|late|7:305:0:0": {
+      "win_games": 13,
+      "loss_games": 9,
+      "games": 22
+    },
+    "crustle|late|8:6:306:0": {
+      "win_games": 24,
+      "loss_games": 14,
+      "games": 38
+    },
+    "hydrapple|early|8:6:676:0": {
+      "win_games": 12,
+      "loss_games": 2,
+      "games": 14
+    },
+    "crustle|mid|8:1159:306:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "archaludon|early|8:1159:333:0": {
+      "win_games": 9,
+      "loss_games": 0,
+      "games": 9
+    },
+    "dragapult|late|12:0:0:0": {
+      "win_games": 27,
+      "loss_games": 9,
+      "games": 36
+    },
+    "unknown|late|8:1159:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|8:20:678:0": {
+      "win_games": 12,
+      "loss_games": 0,
+      "games": 12
+    },
+    "alakazam|mid|7:333:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "crustle|late|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "archaludon|late|8:6:117:0": {
+      "win_games": 13,
+      "loss_games": 1,
+      "games": 14
+    },
+    "dragapult|early|8:6:333:0": {
+      "win_games": 30,
+      "loss_games": 22,
+      "games": 52
+    },
+    "terabox|early|7:305:0:0": {
+      "win_games": 6,
+      "loss_games": 0,
+      "games": 6
+    },
+    "unknown|early|8:1159:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|late|7:1182:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "dragapult|mid|14:0:0:0": {
+      "win_games": 37,
+      "loss_games": 67,
+      "games": 104
+    },
+    "alakazam|late|8:20:678:0": {
+      "win_games": 15,
+      "loss_games": 1,
+      "games": 16
+    },
+    "hydrapple|early|8:1174:333:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "terabox|early|8:1174:676:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "crustle|early|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "unknown|late|8:6:333:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "hydrapple|early|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "archaludon|early|13:0:0:981": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "cynthia|early|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|late|7:1142:0:0": {
+      "win_games": 44,
+      "loss_games": 51,
+      "games": 95
+    },
+    "cynthia|early|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|early|8:6:678:0": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "unknown|late|8:6:678:0": {
+      "win_games": 27,
+      "loss_games": 4,
+      "games": 31
+    },
+    "dragapult|late|8:6:305:0": {
+      "win_games": 11,
+      "loss_games": 3,
+      "games": 14
+    },
+    "hydrapple|late|7:1141:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "alakazam|late|13:0:0:982": {
+      "win_games": 24,
+      "loss_games": 7,
+      "games": 31
+    },
+    "alakazam|early|7:333:0:0": {
+      "win_games": 8,
+      "loss_games": 5,
+      "games": 13
+    },
+    "dragapult|late|10:66:0:0": {
+      "win_games": 43,
+      "loss_games": 45,
+      "games": 88
+    },
+    "dragapult|mid|8:6:676:0": {
+      "win_games": 19,
+      "loss_games": 9,
+      "games": 28
+    },
+    "marnie|early|7:1086:0:0": {
+      "win_games": 14,
+      "loss_games": 9,
+      "games": 23
+    },
+    "dragapult|late|8:6:678:0": {
+      "win_games": 67,
+      "loss_games": 50,
+      "games": 117
+    },
+    "dragapult|mid|7:1086:0:0": {
+      "win_games": 31,
+      "loss_games": 29,
+      "games": 60
+    },
+    "crustle|early|14:0:0:0": {
+      "win_games": 59,
+      "loss_games": 26,
+      "games": 85
+    },
+    "alakazam|mid|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 5,
+      "games": 6
+    },
+    "archaludon|late|14:0:0:0": {
+      "win_games": 19,
+      "loss_games": 11,
+      "games": 30
+    },
+    "dragapult|late|8:6:676:0": {
+      "win_games": 18,
+      "loss_games": 13,
+      "games": 31
+    },
+    "archaludon|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "hydrapple|mid|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|7:1152:0:0": {
+      "win_games": 8,
+      "loss_games": 2,
+      "games": 10
+    },
+    "crustle|mid|8:20:306:0": {
+      "win_games": 13,
+      "loss_games": 3,
+      "games": 16
+    },
+    "archaludon|early|7:675:0:0": {
+      "win_games": 9,
+      "loss_games": 8,
+      "games": 17
+    },
+    "marnie|mid|13:0:0:983": {
+      "win_games": 22,
+      "loss_games": 16,
+      "games": 38
+    },
+    "terabox|late|7:1182:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "marnie|mid|13:0:0:982": {
+      "win_games": 39,
+      "loss_games": 21,
+      "games": 60
+    },
+    "terabox|mid|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "hydrapple|early|10:675:0:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "archaludon|early|7:1086:0:0": {
+      "win_games": 11,
+      "loss_games": 10,
+      "games": 21
+    },
+    "alakazam|early|13:0:0:981": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "alakazam|early|8:6:333:0": {
+      "win_games": 14,
+      "loss_games": 3,
+      "games": 17
+    },
+    "unknown|early|8:6:678:0": {
+      "win_games": 19,
+      "loss_games": 2,
+      "games": 21
+    },
+    "marnie|early|8:6:305:0": {
+      "win_games": 10,
+      "loss_games": 3,
+      "games": 13
+    },
+    "unknown|early|8:1159:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "terabox|mid|14:0:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "crustle|early|8:6:677:0": {
+      "win_games": 7,
+      "loss_games": 1,
+      "games": 8
+    },
+    "terabox|early|7:1152:0:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "dragapult|late|7:1225:0:0": {
+      "win_games": 29,
+      "loss_games": 21,
+      "games": 50
+    },
+    "dragapult|early|7:333:0:0": {
+      "win_games": 44,
+      "loss_games": 46,
+      "games": 90
+    },
+    "marnie|late|8:6:117:0": {
+      "win_games": 0,
+      "loss_games": 5,
+      "games": 5
+    },
+    "dragapult|late|7:1121:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|mid|8:1159:678:0": {
+      "win_games": 12,
+      "loss_games": 2,
+      "games": 14
+    },
+    "marnie|mid|13:0:0:980": {
+      "win_games": 5,
+      "loss_games": 6,
+      "games": 11
+    },
+    "dragapult|late|8:6:677:0": {
+      "win_games": 4,
+      "loss_games": 8,
+      "games": 12
+    },
+    "dragapult|early|7:305:0:0": {
+      "win_games": 28,
+      "loss_games": 30,
+      "games": 58
+    },
+    "unknown|mid|7:1227:0:0": {
+      "win_games": 9,
+      "loss_games": 8,
+      "games": 17
+    },
+    "unknown|early|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|mid|8:6:306:0": {
+      "win_games": 7,
+      "loss_games": 3,
+      "games": 10
+    },
+    "hydrapple|late|13:0:0:425": {
+      "win_games": 13,
+      "loss_games": 3,
+      "games": 16
+    },
+    "hydrapple|early|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|late|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "crustle|mid|7:1227:0:0": {
+      "win_games": 12,
+      "loss_games": 3,
+      "games": 15
+    },
+    "unknown|mid|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|late|8:6:676:0": {
+      "win_games": 9,
+      "loss_games": 2,
+      "games": 11
+    },
+    "marnie|mid|8:1159:678:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "alakazam|late|7:1086:0:0": {
+      "win_games": 9,
+      "loss_games": 5,
+      "games": 14
+    },
+    "dragapult|mid|8:20:678:0": {
+      "win_games": 74,
+      "loss_games": 43,
+      "games": 117
+    },
+    "terabox|early|7:675:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "terabox|early|8:6:306:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "archaludon|mid|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 6,
+      "games": 6
+    },
+    "alakazam|mid|14:0:0:0": {
+      "win_games": 10,
+      "loss_games": 9,
+      "games": 19
+    },
+    "crustle|late|8:6:678:0": {
+      "win_games": 18,
+      "loss_games": 12,
+      "games": 30
+    },
+    "archaludon|mid|8:6:678:0": {
+      "win_games": 6,
+      "loss_games": 6,
+      "games": 12
+    },
+    "crustle|mid|9:678:333:0": {
+      "win_games": 8,
+      "loss_games": 5,
+      "games": 13
+    },
+    "dragapult|late|7:1197:0:0": {
+      "win_games": 15,
+      "loss_games": 20,
+      "games": 35
+    },
+    "unknown|early|9:678:333:0": {
+      "win_games": 13,
+      "loss_games": 3,
+      "games": 16
+    },
+    "terabox|early|7:1141:0:0": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "marnie|late|12:0:0:0": {
+      "win_games": 17,
+      "loss_games": 5,
+      "games": 22
+    },
+    "unknown|early|7:1152:0:0": {
+      "win_games": 27,
+      "loss_games": 21,
+      "games": 48
+    },
+    "marnie|late|7:1142:0:0": {
+      "win_games": 11,
+      "loss_games": 12,
+      "games": 23
+    },
+    "dragapult|mid|7:1225:0:0": {
+      "win_games": 28,
+      "loss_games": 30,
+      "games": 58
+    },
+    "marnie|mid|8:20:678:0": {
+      "win_games": 21,
+      "loss_games": 12,
+      "games": 33
+    },
+    "terabox|early|10:675:0:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "dragapult|mid|8:1159:677:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "dragapult|late|8:20:678:0": {
+      "win_games": 56,
+      "loss_games": 35,
+      "games": 91
+    },
+    "marnie|early|8:6:333:0": {
+      "win_games": 11,
+      "loss_games": 9,
+      "games": 20
+    },
+    "unknown|early|8:6:333:0": {
+      "win_games": 20,
+      "loss_games": 3,
+      "games": 23
+    },
+    "dragapult|late|8:1174:675:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "alakazam|late|13:0:0:980": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "dragapult|late|8:1174:678:0": {
+      "win_games": 3,
+      "loss_games": 6,
+      "games": 9
+    },
+    "terabox|late|13:0:0:982": {
+      "win_games": 16,
+      "loss_games": 2,
+      "games": 18
+    },
+    "terabox|mid|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "hydrapple|mid|7:1152:0:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "unknown|mid|13:0:0:425": {
+      "win_games": 6,
+      "loss_games": 0,
+      "games": 6
+    },
+    "hydrapple|early|14:0:0:0": {
+      "win_games": 16,
+      "loss_games": 10,
+      "games": 26
+    },
+    "unknown|mid|7:1142:0:0": {
+      "win_games": 9,
+      "loss_games": 7,
+      "games": 16
+    },
+    "terabox|early|7:676:0:0": {
+      "win_games": 8,
+      "loss_games": 1,
+      "games": 9
+    },
+    "marnie|mid|8:6:675:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "crustle|early|8:1159:333:0": {
+      "win_games": 8,
+      "loss_games": 4,
+      "games": 12
+    },
+    "archaludon|mid|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "hydrapple|late|13:0:0:982": {
+      "win_games": 18,
+      "loss_games": 8,
+      "games": 26
+    },
+    "archaludon|late|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|early|8:1174:675:0": {
+      "win_games": 3,
+      "loss_games": 7,
+      "games": 10
+    },
+    "dragapult|mid|13:0:0:980": {
+      "win_games": 20,
+      "loss_games": 9,
+      "games": 29
+    },
+    "unknown|mid|13:0:0:980": {
+      "win_games": 11,
+      "loss_games": 3,
+      "games": 14
+    },
+    "crustle|mid|7:1142:0:0": {
+      "win_games": 9,
+      "loss_games": 4,
+      "games": 13
+    },
+    "cynthia|early|8:6:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|mid|8:20:117:0": {
+      "win_games": 11,
+      "loss_games": 0,
+      "games": 11
+    },
+    "crustle|mid|8:6:306:0": {
+      "win_games": 33,
+      "loss_games": 1,
+      "games": 34
+    },
+    "alakazam|mid|13:0:0:982": {
+      "win_games": 18,
+      "loss_games": 6,
+      "games": 24
+    },
+    "dragapult|mid|12:0:0:0": {
+      "win_games": 24,
+      "loss_games": 14,
+      "games": 38
+    },
+    "unknown|late|12:0:0:0": {
+      "win_games": 18,
+      "loss_games": 4,
+      "games": 22
+    },
+    "hydrapple|mid|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "dragapult|late|7:1086:0:0": {
+      "win_games": 39,
+      "loss_games": 48,
+      "games": 87
+    },
+    "alakazam|early|7:1142:0:0": {
+      "win_games": 15,
+      "loss_games": 5,
+      "games": 20
+    },
+    "marnie|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "unknown|early|8:6:677:0": {
+      "win_games": 16,
+      "loss_games": 6,
+      "games": 22
+    },
+    "unknown|early|7:677:0:0": {
+      "win_games": 10,
+      "loss_games": 6,
+      "games": 16
+    },
+    "marnie|early|8:20:333:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "marnie|early|13:0:0:981": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "unknown|early|13:0:0:423": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "marnie|early|9:678:333:0": {
+      "win_games": 9,
+      "loss_games": 5,
+      "games": 14
+    },
+    "hydrapple|early|9:678:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "terabox|late|8:20:306:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "terabox|early|8:6:333:0": {
+      "win_games": 13,
+      "loss_games": 2,
+      "games": 15
+    },
+    "marnie|early|10:66:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "unknown|early|8:20:678:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "dragapult|late|8:1174:676:0": {
+      "win_games": 16,
+      "loss_games": 12,
+      "games": 28
+    },
+    "archaludon|early|8:1159:305:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "terabox|early|13:0:0:425": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "unknown|late|9:678:333:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "lucario|early|14:0:0:0": {
+      "win_games": 17,
+      "loss_games": 11,
+      "games": 28
+    },
+    "hydrapple|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|early|7:1227:0:0": {
+      "win_games": 11,
+      "loss_games": 3,
+      "games": 14
+    },
+    "terabox|mid|13:0:0:425": {
+      "win_games": 11,
+      "loss_games": 1,
+      "games": 12
+    },
+    "archaludon|late|7:1225:0:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "alakazam|mid|7:1227:0:0": {
+      "win_games": 9,
+      "loss_games": 6,
+      "games": 15
+    },
+    "archaludon|mid|8:6:117:0": {
+      "win_games": 38,
+      "loss_games": 8,
+      "games": 46
+    },
+    "marnie|early|10:1259:0:0": {
+      "win_games": 14,
+      "loss_games": 14,
+      "games": 28
+    },
+    "dragapult|mid|10:675:0:0": {
+      "win_games": 51,
+      "loss_games": 50,
+      "games": 101
+    },
+    "archaludon|late|7:1141:0:0": {
+      "win_games": 2,
+      "loss_games": 6,
+      "games": 8
+    },
+    "marnie|early|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|7:1142:0:0": {
+      "win_games": 11,
+      "loss_games": 15,
+      "games": 26
+    },
+    "unknown|early|7:1086:0:0": {
+      "win_games": 27,
+      "loss_games": 6,
+      "games": 33
+    },
+    "hydrapple|mid|12:0:0:0": {
+      "win_games": 13,
+      "loss_games": 3,
+      "games": 16
+    },
+    "crustle|late|8:20:676:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "alakazam|mid|13:0:0:983": {
+      "win_games": 13,
+      "loss_games": 2,
+      "games": 15
+    },
+    "hydrapple|early|8:1159:333:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "terabox|mid|12:0:0:0": {
+      "win_games": 8,
+      "loss_games": 0,
+      "games": 8
+    },
+    "unknown|early|8:6:676:0": {
+      "win_games": 18,
+      "loss_games": 8,
+      "games": 26
+    },
+    "unknown|early|13:0:0:464": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "dragapult|early|7:1086:0:0": {
+      "win_games": 66,
+      "loss_games": 48,
+      "games": 114
+    },
+    "lucario|mid|9:678:677:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "alakazam|early|7:305:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "lucario|mid|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 7,
+      "games": 9
+    },
+    "archaludon|late|8:6:678:0": {
+      "win_games": 9,
+      "loss_games": 5,
+      "games": 14
+    },
+    "archaludon|late|13:0:0:982": {
+      "win_games": 3,
+      "loss_games": 9,
+      "games": 12
+    },
+    "terabox|late|10:675:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "crustle|mid|8:1174:676:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "dragapult|mid|13:0:0:983": {
+      "win_games": 42,
+      "loss_games": 37,
+      "games": 79
+    },
+    "dragapult|early|8:6:676:0": {
+      "win_games": 40,
+      "loss_games": 26,
+      "games": 66
+    },
+    "unknown|mid|8:1159:306:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "crustle|early|7:1086:0:0": {
+      "win_games": 12,
+      "loss_games": 11,
+      "games": 23
+    },
+    "archaludon|early|8:20:117:0": {
+      "win_games": 13,
+      "loss_games": 3,
+      "games": 16
+    },
+    "crustle|late|13:0:0:148": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|mid|8:1159:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|late|7:1182:0:0": {
+      "win_games": 26,
+      "loss_games": 21,
+      "games": 47
+    },
+    "dragapult|mid|8:6:677:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "cynthia|early|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|mid|7:1227:0:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "terabox|late|8:6:678:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|mid|10:66:0:0": {
+      "win_games": 13,
+      "loss_games": 12,
+      "games": 25
+    },
+    "marnie|mid|9:66:305:0": {
+      "win_games": 11,
+      "loss_games": 12,
+      "games": 23
+    },
+    "marnie|mid|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "marnie|mid|9:306:305:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "marnie|mid|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "dragapult|mid|9:678:677:0": {
+      "win_games": 19,
+      "loss_games": 17,
+      "games": 36
+    },
+    "marnie|late|7:676:0:0": {
+      "win_games": 6,
+      "loss_games": 10,
+      "games": 16
+    },
+    "archaludon|late|10:675:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "terabox|late|13:0:0:983": {
+      "win_games": 12,
+      "loss_games": 0,
+      "games": 12
+    },
+    "terabox|early|8:20:677:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "alakazam|early|7:1086:0:0": {
+      "win_games": 11,
+      "loss_games": 1,
+      "games": 12
+    },
+    "unknown|mid|7:1225:0:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "marnie|late|7:1197:0:0": {
+      "win_games": 2,
+      "loss_games": 6,
+      "games": 8
+    },
+    "marnie|mid|12:0:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "hydrapple|mid|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "hydrapple|late|8:20:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|early|7:333:0:0": {
+      "win_games": 16,
+      "loss_games": 10,
+      "games": 26
+    },
+    "terabox|early|8:1174:675:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|early|8:6:677:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "dragapult|mid|8:20:333:0": {
+      "win_games": 18,
+      "loss_games": 11,
+      "games": 29
+    },
+    "dragapult|early|9:678:333:0": {
+      "win_games": 25,
+      "loss_games": 18,
+      "games": 43
+    },
+    "lucario|mid|7:1141:0:0": {
+      "win_games": 13,
+      "loss_games": 7,
+      "games": 20
+    },
+    "alakazam|mid|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|early|8:6:305:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "dragapult|mid|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 7,
+      "games": 7
+    },
+    "marnie|mid|7:305:0:0": {
+      "win_games": 10,
+      "loss_games": 8,
+      "games": 18
+    },
+    "archaludon|late|7:1142:0:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "hydrapple|mid|9:678:333:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "alakazam|early|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|mid|8:1174:675:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "unknown|mid|8:20:306:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "unknown|mid|8:20:678:0": {
+      "win_games": 20,
+      "loss_games": 4,
+      "games": 24
+    },
+    "archaludon|late|7:1227:0:0": {
+      "win_games": 5,
+      "loss_games": 7,
+      "games": 12
+    },
+    "unknown|late|8:20:306:0": {
+      "win_games": 7,
+      "loss_games": 0,
+      "games": 7
+    },
+    "marnie|late|14:0:0:0": {
+      "win_games": 3,
+      "loss_games": 16,
+      "games": 19
+    },
+    "crustle|late|8:1159:678:0": {
+      "win_games": 7,
+      "loss_games": 8,
+      "games": 15
+    },
+    "hydrapple|early|7:675:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "terabox|late|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "marnie|late|8:20:676:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "alakazam|early|7:1152:0:0": {
+      "win_games": 12,
+      "loss_games": 9,
+      "games": 21
+    },
+    "crustle|early|7:333:0:0": {
+      "win_games": 20,
+      "loss_games": 13,
+      "games": 33
+    },
+    "alakazam|late|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "terabox|late|12:0:0:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "terabox|late|13:0:0:425": {
+      "win_games": 10,
+      "loss_games": 1,
+      "games": 11
+    },
+    "crustle|late|8:1174:306:0": {
+      "win_games": 10,
+      "loss_games": 4,
+      "games": 14
+    },
+    "alakazam|early|13:0:0:982": {
+      "win_games": 9,
+      "loss_games": 3,
+      "games": 12
+    },
+    "marnie|late|8:6:306:0": {
+      "win_games": 10,
+      "loss_games": 4,
+      "games": 14
+    },
+    "alakazam|early|8:20:333:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "archaludon|early|9:678:333:0": {
+      "win_games": 8,
+      "loss_games": 11,
+      "games": 19
+    },
+    "hydrapple|mid|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|early|13:0:0:982": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "dragapult|late|7:1252:0:0": {
+      "win_games": 21,
+      "loss_games": 11,
+      "games": 32
+    },
+    "dragapult|early|13:0:0:464": {
+      "win_games": 17,
+      "loss_games": 15,
+      "games": 32
+    },
+    "hydrapple|late|12:0:0:0": {
+      "win_games": 9,
+      "loss_games": 3,
+      "games": 12
+    },
+    "lucario|mid|13:0:0:982": {
+      "win_games": 14,
+      "loss_games": 11,
+      "games": 25
+    },
+    "dragapult|mid|8:6:333:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "unknown|late|10:675:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "alakazam|late|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "archaludon|mid|7:1152:0:0": {
+      "win_games": 4,
+      "loss_games": 10,
+      "games": 14
+    },
+    "marnie|late|9:66:305:0": {
+      "win_games": 14,
+      "loss_games": 13,
+      "games": 27
+    },
+    "hydrapple|early|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|mid|7:1141:0:0": {
+      "win_games": 6,
+      "loss_games": 7,
+      "games": 13
+    },
+    "hydrapple|late|7:1225:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "unknown|early|7:1225:0:0": {
+      "win_games": 5,
+      "loss_games": 4,
+      "games": 9
+    },
+    "dragapult|early|9:678:677:0": {
+      "win_games": 14,
+      "loss_games": 9,
+      "games": 23
+    },
+    "crustle|late|7:1152:0:0": {
+      "win_games": 12,
+      "loss_games": 15,
+      "games": 27
+    },
+    "crustle|early|8:6:678:0": {
+      "win_games": 9,
+      "loss_games": 8,
+      "games": 17
+    },
+    "archaludon|mid|7:1225:0:0": {
+      "win_games": 4,
+      "loss_games": 6,
+      "games": 10
+    },
+    "marnie|early|8:6:676:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "marnie|late|10:675:0:0": {
+      "win_games": 18,
+      "loss_games": 6,
+      "games": 24
+    },
+    "crustle|early|7:675:0:0": {
+      "win_games": 12,
+      "loss_games": 10,
+      "games": 22
+    },
+    "crustle|mid|7:1152:0:0": {
+      "win_games": 11,
+      "loss_games": 5,
+      "games": 16
+    },
+    "terabox|mid|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "terabox|mid|7:1152:0:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "crustle|early|7:1152:0:0": {
+      "win_games": 21,
+      "loss_games": 18,
+      "games": 39
+    },
+    "archaludon|early|7:676:0:0": {
+      "win_games": 4,
+      "loss_games": 8,
+      "games": 12
+    },
+    "marnie|late|8:6:333:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "terabox|late|7:675:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "crustle|late|7:1225:0:0": {
+      "win_games": 8,
+      "loss_games": 10,
+      "games": 18
+    },
+    "alakazam|early|9:66:305:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "crustle|mid|13:0:0:980": {
+      "win_games": 11,
+      "loss_games": 4,
+      "games": 15
+    },
+    "unknown|early|8:1174:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|mid|8:20:306:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "marnie|mid|7:1227:0:0": {
+      "win_games": 9,
+      "loss_games": 7,
+      "games": 16
+    },
+    "terabox|early|7:677:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "crustle|late|7:1227:0:0": {
+      "win_games": 9,
+      "loss_games": 9,
+      "games": 18
+    },
+    "crustle|early|12:0:0:0": {
+      "win_games": 10,
+      "loss_games": 5,
+      "games": 15
+    },
+    "hydrapple|early|13:0:0:464": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "crustle|early|8:6:117:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "alakazam|late|7:1141:0:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "terabox|late|9:678:333:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "unknown|early|8:1174:677:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "archaludon|early|10:675:0:0": {
+      "win_games": 5,
+      "loss_games": 5,
+      "games": 10
+    },
+    "archaludon|early|13:0:0:982": {
+      "win_games": 5,
+      "loss_games": 5,
+      "games": 10
+    },
+    "archaludon|early|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "alakazam|early|7:1225:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "unknown|early|13:0:0:425": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "unknown|late|8:1174:676:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "terabox|early|8:1174:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "crustle|early|13:0:0:982": {
+      "win_games": 13,
+      "loss_games": 5,
+      "games": 18
+    },
+    "marnie|early|7:1152:0:0": {
+      "win_games": 14,
+      "loss_games": 22,
+      "games": 36
+    },
+    "unknown|early|8:20:333:0": {
+      "win_games": 8,
+      "loss_games": 4,
+      "games": 12
+    },
+    "dragapult|early|7:1141:0:0": {
+      "win_games": 21,
+      "loss_games": 20,
+      "games": 41
+    },
+    "terabox|early|8:6:675:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "hydrapple|mid|14:0:0:0": {
+      "win_games": 10,
+      "loss_games": 7,
+      "games": 17
+    },
+    "lucario|late|13:0:0:980": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "crustle|late|7:675:0:0": {
+      "win_games": 3,
+      "loss_games": 7,
+      "games": 10
+    },
+    "crustle|early|7:1142:0:0": {
+      "win_games": 20,
+      "loss_games": 14,
+      "games": 34
+    },
+    "archaludon|early|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "crustle|late|12:0:0:0": {
+      "win_games": 39,
+      "loss_games": 13,
+      "games": 52
+    },
+    "unknown|mid|8:6:306:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "dragapult|early|8:1174:676:0": {
+      "win_games": 23,
+      "loss_games": 10,
+      "games": 33
+    },
+    "crustle|mid|13:0:0:425": {
+      "win_games": 7,
+      "loss_games": 3,
+      "games": 10
+    },
+    "hydrapple|early|7:305:0:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "dragapult|late|8:20:333:0": {
+      "win_games": 9,
+      "loss_games": 9,
+      "games": 18
+    },
+    "dragapult|mid|8:1159:678:0": {
+      "win_games": 21,
+      "loss_games": 15,
+      "games": 36
+    },
+    "unknown|mid|7:305:0:0": {
+      "win_games": 5,
+      "loss_games": 6,
+      "games": 11
+    },
+    "lucario|mid|12:0:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "marnie|late|9:678:333:0": {
+      "win_games": 10,
+      "loss_games": 9,
+      "games": 19
+    },
+    "marnie|late|7:1225:0:0": {
+      "win_games": 11,
+      "loss_games": 8,
+      "games": 19
+    },
+    "marnie|late|9:306:305:0": {
+      "win_games": 12,
+      "loss_games": 5,
+      "games": 17
+    },
+    "crustle|late|8:20:678:0": {
+      "win_games": 25,
+      "loss_games": 12,
+      "games": 37
+    },
+    "dragapult|late|7:1211:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "alakazam|late|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "dragapult|late|7:675:0:0": {
+      "win_games": 13,
+      "loss_games": 42,
+      "games": 55
+    },
+    "crustle|late|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 6,
+      "games": 8
+    },
+    "hydrapple|early|7:1142:0:0": {
+      "win_games": 11,
+      "loss_games": 9,
+      "games": 20
+    },
+    "marnie|early|8:1159:678:0": {
+      "win_games": 6,
+      "loss_games": 0,
+      "games": 6
+    },
+    "marnie|late|7:333:0:0": {
+      "win_games": 7,
+      "loss_games": 5,
+      "games": 12
+    },
+    "hydrapple|mid|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "unknown|late|8:6:306:0": {
+      "win_games": 11,
+      "loss_games": 1,
+      "games": 12
+    },
+    "unknown|late|9:66:305:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "marnie|early|8:1174:677:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "dragapult|mid|7:675:0:0": {
+      "win_games": 9,
+      "loss_games": 18,
+      "games": 27
+    },
+    "terabox|mid|8:6:306:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "marnie|early|9:678:677:0": {
+      "win_games": 5,
+      "loss_games": 4,
+      "games": 9
+    },
+    "lucario|late|9:678:333:0": {
+      "win_games": 7,
+      "loss_games": 5,
+      "games": 12
+    },
+    "dragapult|late|9:678:677:0": {
+      "win_games": 8,
+      "loss_games": 5,
+      "games": 13
+    },
+    "hydrapple|mid|7:1227:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "alakazam|late|8:1159:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|early|13:0:0:982": {
+      "win_games": 42,
+      "loss_games": 5,
+      "games": 47
+    },
+    "hydrapple|late|8:20:678:0": {
+      "win_games": 13,
+      "loss_games": 3,
+      "games": 16
+    },
+    "crustle|mid|8:6:678:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "crustle|early|10:66:0:0": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "crustle|early|9:678:677:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "crustle|early|8:6:306:0": {
+      "win_games": 10,
+      "loss_games": 4,
+      "games": 14
+    },
+    "crustle|early|7:1225:0:0": {
+      "win_games": 5,
+      "loss_games": 4,
+      "games": 9
+    },
+    "crustle|early|9:306:305:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "crustle|early|9:66:305:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "terabox|early|13:0:0:982": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "dragapult|mid|8:20:677:0": {
+      "win_games": 8,
+      "loss_games": 10,
+      "games": 18
+    },
+    "dragapult|mid|8:20:676:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "hydrapple|early|7:333:0:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "archaludon|late|7:1152:0:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "hydrapple|late|7:1142:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "marnie|late|8:20:678:0": {
+      "win_games": 13,
+      "loss_games": 8,
+      "games": 21
+    },
+    "dragapult|mid|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 7,
+      "games": 8
+    },
+    "alakazam|mid|8:20:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|early|7:677:0:0": {
+      "win_games": 9,
+      "loss_games": 16,
+      "games": 25
+    },
+    "hydrapple|early|7:676:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "alakazam|mid|7:1252:0:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "hydrapple|mid|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "unknown|mid|8:6:678:0": {
+      "win_games": 34,
+      "loss_games": 8,
+      "games": 42
+    },
+    "hydrapple|mid|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|late|7:1141:0:0": {
+      "win_games": 14,
+      "loss_games": 0,
+      "games": 14
+    },
+    "terabox|late|8:20:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "marnie|late|8:6:305:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "marnie|early|13:0:0:464": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "dragapult|mid|13:0:0:981": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "archaludon|late|8:6:305:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "alakazam|late|7:1227:0:0": {
+      "win_games": 9,
+      "loss_games": 3,
+      "games": 12
+    },
+    "crustle|late|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 7,
+      "games": 8
+    },
+    "hydrapple|mid|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|early|8:6:676:0": {
+      "win_games": 16,
+      "loss_games": 9,
+      "games": 25
+    },
+    "archaludon|late|9:678:333:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "hydrapple|mid|8:6:676:0": {
+      "win_games": 5,
+      "loss_games": 4,
+      "games": 9
+    },
+    "hydrapple|early|8:6:305:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "terabox|mid|8:6:677:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "terabox|mid|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "marnie|early|9:66:305:0": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "alakazam|late|7:1152:0:0": {
+      "win_games": 8,
+      "loss_games": 2,
+      "games": 10
+    },
+    "archaludon|early|8:1159:678:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "crustle|mid|8:6:676:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "alakazam|early|8:6:676:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "terabox|mid|13:0:0:983": {
+      "win_games": 15,
+      "loss_games": 0,
+      "games": 15
+    },
+    "hydrapple|late|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|late|8:6:676:0": {
+      "win_games": 7,
+      "loss_games": 2,
+      "games": 9
+    },
+    "unknown|late|7:1086:0:0": {
+      "win_games": 4,
+      "loss_games": 6,
+      "games": 10
+    },
+    "dragapult|early|8:20:678:0": {
+      "win_games": 17,
+      "loss_games": 5,
+      "games": 22
+    },
+    "marnie|late|7:1211:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "dragapult|late|8:20:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|late|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "hydrapple|early|8:6:678:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "unknown|early|12:0:0:0": {
+      "win_games": 13,
+      "loss_games": 1,
+      "games": 14
+    },
+    "lucario|late|8:6:678:0": {
+      "win_games": 6,
+      "loss_games": 6,
+      "games": 12
+    },
+    "lucario|early|13:0:0:982": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "crustle|early|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|early|8:1159:678:0": {
+      "win_games": 5,
+      "loss_games": 4,
+      "games": 9
+    },
+    "marnie|mid|10:675:0:0": {
+      "win_games": 14,
+      "loss_games": 5,
+      "games": 19
+    },
+    "dragapult|mid|7:1252:0:0": {
+      "win_games": 13,
+      "loss_games": 22,
+      "games": 35
+    },
+    "hydrapple|mid|8:1159:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|early|7:1141:0:0": {
+      "win_games": 9,
+      "loss_games": 8,
+      "games": 17
+    },
+    "marnie|late|8:20:117:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|late|8:1174:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|late|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "unknown|late|13:0:0:426": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "crustle|late|8:1159:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|mid|7:1142:0:0": {
+      "win_games": 12,
+      "loss_games": 7,
+      "games": 19
+    },
+    "archaludon|late|7:305:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "hydrapple|mid|8:20:678:0": {
+      "win_games": 7,
+      "loss_games": 1,
+      "games": 8
+    },
+    "alakazam|early|8:20:677:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|early|13:0:0:980": {
+      "win_games": 8,
+      "loss_games": 1,
+      "games": 9
+    },
+    "archaludon|early|7:1141:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "archaludon|mid|9:678:333:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "alakazam|mid|7:675:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "archaludon|early|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "marnie|late|8:20:306:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "marnie|late|8:1174:676:0": {
+      "win_games": 7,
+      "loss_games": 2,
+      "games": 9
+    },
+    "alakazam|late|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|mid|13:0:0:982": {
+      "win_games": 11,
+      "loss_games": 1,
+      "games": 12
+    },
+    "marnie|mid|7:333:0:0": {
+      "win_games": 4,
+      "loss_games": 5,
+      "games": 9
+    },
+    "unknown|early|8:20:676:0": {
+      "win_games": 11,
+      "loss_games": 2,
+      "games": 13
+    },
+    "archaludon|early|13:0:0:980": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "marnie|early|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|early|13:0:0:423": {
+      "win_games": 6,
+      "loss_games": 0,
+      "games": 6
+    },
+    "dragapult|mid|7:333:0:0": {
+      "win_games": 7,
+      "loss_games": 11,
+      "games": 18
+    },
+    "dragapult|mid|8:6:305:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "archaludon|early|8:6:677:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "alakazam|mid|8:1159:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|mid|8:1174:678:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "lucario|late|13:0:0:983": {
+      "win_games": 15,
+      "loss_games": 10,
+      "games": 25
+    },
+    "hydrapple|early|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|late|13:0:0:980": {
+      "win_games": 10,
+      "loss_games": 13,
+      "games": 23
+    },
+    "terabox|mid|7:1142:0:0": {
+      "win_games": 8,
+      "loss_games": 0,
+      "games": 8
+    },
+    "unknown|mid|9:66:305:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "marnie|mid|9:678:677:0": {
+      "win_games": 5,
+      "loss_games": 8,
+      "games": 13
+    },
+    "dragapult|early|8:6:677:0": {
+      "win_games": 27,
+      "loss_games": 13,
+      "games": 40
+    },
+    "crustle|late|10:66:0:0": {
+      "win_games": 11,
+      "loss_games": 9,
+      "games": 20
+    },
+    "hydrapple|early|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "hydrapple|late|7:1252:0:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "terabox|early|8:1174:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|mid|8:20:677:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "archaludon|early|8:6:676:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "terabox|mid|8:20:676:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "crustle|mid|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "crustle|late|13:0:0:983": {
+      "win_games": 21,
+      "loss_games": 5,
+      "games": 26
+    },
+    "unknown|early|8:1159:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|mid|7:1141:0:0": {
+      "win_games": 5,
+      "loss_games": 5,
+      "games": 10
+    },
+    "alakazam|late|7:1252:0:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "terabox|early|7:1225:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "unknown|mid|7:1086:0:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "unknown|early|9:678:677:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "hydrapple|mid|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|early|7:676:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "unknown|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "crustle|late|9:66:305:0": {
+      "win_games": 10,
+      "loss_games": 10,
+      "games": 20
+    },
+    "terabox|mid|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "lucario|mid|7:1182:0:0": {
+      "win_games": 4,
+      "loss_games": 5,
+      "games": 9
+    },
+    "terabox|early|8:6:678:0": {
+      "win_games": 8,
+      "loss_games": 1,
+      "games": 9
+    },
+    "crustle|early|8:1174:306:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|late|9:678:333:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "archaludon|early|8:20:677:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "unknown|mid|14:0:0:0": {
+      "win_games": 10,
+      "loss_games": 11,
+      "games": 21
+    },
+    "alakazam|early|7:1141:0:0": {
+      "win_games": 6,
+      "loss_games": 6,
+      "games": 12
+    },
+    "terabox|late|8:6:676:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|mid|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "marnie|late|8:1174:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|late|8:6:306:0": {
+      "win_games": 12,
+      "loss_games": 10,
+      "games": 22
+    },
+    "alakazam|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|late|9:678:677:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "alakazam|late|9:678:333:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "marnie|early|7:1225:0:0": {
+      "win_games": 8,
+      "loss_games": 8,
+      "games": 16
+    },
+    "terabox|late|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "marnie|early|8:1174:117:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "terabox|mid|8:1159:678:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "terabox|late|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|8:6:305:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|mid|7:1182:0:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "unknown|late|7:305:0:0": {
+      "win_games": 8,
+      "loss_games": 1,
+      "games": 9
+    },
+    "archaludon|mid|7:305:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|early|13:0:0:464": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "lucario|early|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "marnie|mid|8:6:677:0": {
+      "win_games": 2,
+      "loss_games": 6,
+      "games": 8
+    },
+    "marnie|late|13:0:0:426": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "crustle|mid|13:0:0:982": {
+      "win_games": 23,
+      "loss_games": 9,
+      "games": 32
+    },
+    "hydrapple|early|13:0:0:979": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|mid|13:0:0:980": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "terabox|mid|10:675:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "hydrapple|late|7:1152:0:0": {
+      "win_games": 2,
+      "loss_games": 6,
+      "games": 8
+    },
+    "terabox|early|8:20:333:0": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "archaludon|early|13:0:0:424": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|late|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|mid|12:0:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "alakazam|mid|8:20:333:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "alakazam|mid|7:1225:0:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "unknown|mid|8:6:677:0": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "marnie|early|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|early|7:677:0:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "crustle|mid|7:675:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "unknown|mid|9:306:305:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "crustle|early|7:676:0:0": {
+      "win_games": 11,
+      "loss_games": 2,
+      "games": 13
+    },
+    "hydrapple|mid|8:6:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "terabox|late|8:20:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|late|7:305:0:0": {
+      "win_games": 8,
+      "loss_games": 12,
+      "games": 20
+    },
+    "hydrapple|early|8:6:677:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "alakazam|mid|7:676:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "terabox|early|7:333:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "archaludon|mid|10:675:0:0": {
+      "win_games": 3,
+      "loss_games": 8,
+      "games": 11
+    },
+    "alakazam|mid|9:678:333:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "terabox|late|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|mid|7:1152:0:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "terabox|mid|8:1174:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "unknown|late|8:6:305:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "unknown|late|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|8:6:675:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "terabox|mid|13:0:0:980": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|late|9:66:305:0": {
+      "win_games": 8,
+      "loss_games": 4,
+      "games": 12
+    },
+    "unknown|early|8:1159:677:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "terabox|late|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "terabox|late|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "hydrapple|late|9:306:305:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "lucario|early|7:675:0:0": {
+      "win_games": 7,
+      "loss_games": 9,
+      "games": 16
+    },
+    "unknown|mid|10:66:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "dragapult|early|7:1213:0:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "archaludon|early|8:1174:117:0": {
+      "win_games": 9,
+      "loss_games": 0,
+      "games": 9
+    },
+    "archaludon|mid|13:0:0:983": {
+      "win_games": 6,
+      "loss_games": 5,
+      "games": 11
+    },
+    "hydrapple|early|13:0:0:980": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "hydrapple|early|8:20:678:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "unknown|early|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "alakazam|early|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|early|9:306:305:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "dragapult|late|8:6:333:0": {
+      "win_games": 12,
+      "loss_games": 2,
+      "games": 14
+    },
+    "archaludon|late|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "archaludon|late|13:0:0:464": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "marnie|late|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|early|13:0:0:425": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "cynthia|mid|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "archaludon|late|7:333:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "alakazam|late|10:66:0:0": {
+      "win_games": 12,
+      "loss_games": 5,
+      "games": 17
+    },
+    "lucario|mid|10:66:0:0": {
+      "win_games": 15,
+      "loss_games": 9,
+      "games": 24
+    },
+    "marnie|mid|8:6:333:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "unknown|mid|8:20:676:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|late|7:1142:0:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "archaludon|early|8:1174:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|mid|9:66:305:0": {
+      "win_games": 9,
+      "loss_games": 1,
+      "games": 10
+    },
+    "crustle|mid|10:66:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "crustle|mid|10:675:0:0": {
+      "win_games": 14,
+      "loss_games": 0,
+      "games": 14
+    },
+    "crustle|mid|7:1086:0:0": {
+      "win_games": 7,
+      "loss_games": 3,
+      "games": 10
+    },
+    "marnie|late|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "unknown|late|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|late|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|early|7:1182:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "crustle|early|8:20:333:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "terabox|early|13:0:0:980": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "unknown|late|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|late|7:333:0:0": {
+      "win_games": 0,
+      "loss_games": 4,
+      "games": 4
+    },
+    "archaludon|mid|12:0:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "terabox|late|7:1152:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "unknown|early|8:6:675:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "lucario|late|7:1227:0:0": {
+      "win_games": 10,
+      "loss_games": 9,
+      "games": 19
+    },
+    "unknown|mid|13:0:0:981": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "dragapult|late|13:0:0:425": {
+      "win_games": 0,
+      "loss_games": 9,
+      "games": 9
+    },
+    "archaludon|late|8:20:678:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "lucario|mid|7:1123:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|late|7:676:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|mid|8:20:676:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "hydrapple|mid|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "unknown|late|7:1227:0:0": {
+      "win_games": 8,
+      "loss_games": 2,
+      "games": 10
+    },
+    "dragapult|late|8:1159:306:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|mid|8:1174:117:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "hydrapple|late|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|10:675:0:0": {
+      "win_games": 10,
+      "loss_games": 3,
+      "games": 13
+    },
+    "marnie|early|8:20:678:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "cynthia|mid|8:6:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|mid|7:677:0:0": {
+      "win_games": 11,
+      "loss_games": 9,
+      "games": 20
+    },
+    "hydrapple|early|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "lucario|mid|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|early|12:0:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "hydrapple|mid|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|12:0:0:0": {
+      "win_games": 9,
+      "loss_games": 2,
+      "games": 11
+    },
+    "hydrapple|late|8:6:676:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|mid|8:1159:678:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "hydrapple|late|13:0:0:426": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|mid|8:1174:678:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "marnie|mid|7:1152:0:0": {
+      "win_games": 7,
+      "loss_games": 7,
+      "games": 14
+    },
+    "terabox|early|12:0:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "marnie|late|10:66:0:0": {
+      "win_games": 14,
+      "loss_games": 14,
+      "games": 28
+    },
+    "marnie|late|8:20:305:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "crustle|early|9:678:333:0": {
+      "win_games": 11,
+      "loss_games": 8,
+      "games": 19
+    },
+    "crustle|early|8:1159:677:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|late|7:1197:0:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "lucario|early|7:1227:0:0": {
+      "win_games": 8,
+      "loss_games": 5,
+      "games": 13
+    },
+    "hydrapple|late|10:675:0:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "marnie|late|8:6:676:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "terabox|early|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|late|7:333:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "archaludon|late|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "terabox|mid|7:676:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "crustle|late|8:20:306:0": {
+      "win_games": 11,
+      "loss_games": 6,
+      "games": 17
+    },
+    "terabox|mid|7:1086:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|late|8:1159:678:0": {
+      "win_games": 12,
+      "loss_games": 2,
+      "games": 14
+    },
+    "marnie|late|9:678:677:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "terabox|late|7:1227:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "marnie|late|8:20:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|mid|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "archaludon|early|7:333:0:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "marnie|late|7:1152:0:0": {
+      "win_games": 7,
+      "loss_games": 13,
+      "games": 20
+    },
+    "marnie|early|10:675:0:0": {
+      "win_games": 16,
+      "loss_games": 5,
+      "games": 21
+    },
+    "alakazam|mid|8:6:678:0": {
+      "win_games": 14,
+      "loss_games": 4,
+      "games": 18
+    },
+    "hydrapple|early|8:20:676:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|early|8:1174:676:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "archaludon|early|7:677:0:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "dragapult|early|12:0:0:0": {
+      "win_games": 10,
+      "loss_games": 1,
+      "games": 11
+    },
+    "dragapult|early|9:306:305:0": {
+      "win_games": 9,
+      "loss_games": 4,
+      "games": 13
+    },
+    "archaludon|late|7:675:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|early|7:1192:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|early|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|early|9:678:333:0": {
+      "win_games": 9,
+      "loss_games": 1,
+      "games": 10
+    },
+    "hydrapple|mid|8:6:677:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "terabox|early|9:678:677:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "archaludon|mid|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "lucario|mid|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|mid|7:1182:0:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "lucario|mid|9:674:673:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "archaludon|early|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|mid|8:20:678:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "alakazam|mid|8:1174:676:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|mid|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "dragapult|late|13:0:0:981": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "hydrapple|mid|7:1197:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "terabox|mid|8:20:306:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "alakazam|late|8:20:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "dragapult|early|8:6:306:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|early|8:1159:677:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "terabox|early|13:0:0:983": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "unknown|late|8:1159:306:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|early|8:20:676:0": {
+      "win_games": 7,
+      "loss_games": 3,
+      "games": 10
+    },
+    "marnie|mid|7:676:0:0": {
+      "win_games": 5,
+      "loss_games": 5,
+      "games": 10
+    },
+    "terabox|late|8:20:678:0": {
+      "win_games": 7,
+      "loss_games": 0,
+      "games": 7
+    },
+    "unknown|late|10:66:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "unknown|early|10:66:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "lucario|late|13:0:0:982": {
+      "win_games": 15,
+      "loss_games": 9,
+      "games": 24
+    },
+    "unknown|mid|8:1159:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "dragapult|late|7:677:0:0": {
+      "win_games": 2,
+      "loss_games": 13,
+      "games": 15
+    },
+    "marnie|mid|8:1174:676:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "lucario|mid|7:1227:0:0": {
+      "win_games": 13,
+      "loss_games": 5,
+      "games": 18
+    },
+    "crustle|early|13:0:0:980": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "archaludon|early|7:117:0:0": {
+      "win_games": 18,
+      "loss_games": 5,
+      "games": 23
+    },
+    "unknown|mid|8:1174:306:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "hydrapple|mid|8:1174:676:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "archaludon|mid|8:1159:678:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "crustle|mid|13:0:0:426": {
+      "win_games": 11,
+      "loss_games": 0,
+      "games": 11
+    },
+    "hydrapple|mid|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "marnie|early|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|early|8:20:677:0": {
+      "win_games": 7,
+      "loss_games": 7,
+      "games": 14
+    },
+    "unknown|late|8:1159:678:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|mid|7:1086:0:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "unknown|mid|12:0:0:0": {
+      "win_games": 9,
+      "loss_games": 5,
+      "games": 14
+    },
+    "dragapult|early|8:1159:305:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "dragapult|late|7:1213:0:0": {
+      "win_games": 5,
+      "loss_games": 17,
+      "games": 22
+    },
+    "marnie|early|8:1159:676:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|mid|13:0:0:983": {
+      "win_games": 11,
+      "loss_games": 7,
+      "games": 18
+    },
+    "terabox|early|8:1159:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|late|8:6:678:0": {
+      "win_games": 13,
+      "loss_games": 4,
+      "games": 17
+    },
+    "terabox|late|7:1142:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "alakazam|mid|8:1159:678:0": {
+      "win_games": 7,
+      "loss_games": 1,
+      "games": 8
+    },
+    "crustle|early|8:1159:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|mid|8:1159:306:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|mid|8:20:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|early|7:1225:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "hydrapple|late|8:20:306:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "unknown|late|7:1182:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "dragapult|early|8:1174:677:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "marnie|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "hydrapple|late|8:6:117:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "crustle|late|8:6:117:0": {
+      "win_games": 0,
+      "loss_games": 5,
+      "games": 5
+    },
+    "lucario|late|8:6:676:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "unknown|late|8:6:677:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "unknown|early|13:0:0:981": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "marnie|mid|7:1182:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "unknown|late|8:20:333:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "unknown|mid|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "dragapult|early|8:1159:333:0": {
+      "win_games": 16,
+      "loss_games": 13,
+      "games": 29
+    },
+    "alakazam|late|7:1225:0:0": {
+      "win_games": 8,
+      "loss_games": 4,
+      "games": 12
+    },
+    "crustle|mid|12:0:0:0": {
+      "win_games": 18,
+      "loss_games": 7,
+      "games": 25
+    },
+    "dragapult|late|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|early|8:20:677:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "hydrapple|mid|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|early|8:1174:676:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "lucario|early|7:1152:0:0": {
+      "win_games": 12,
+      "loss_games": 5,
+      "games": 17
+    },
+    "crustle|late|8:6:677:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "crustle|late|10:675:0:0": {
+      "win_games": 11,
+      "loss_games": 5,
+      "games": 16
+    },
+    "dragapult|late|8:1174:306:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "terabox|mid|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|late|7:676:0:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "archaludon|late|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "marnie|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|early|8:1159:333:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "unknown|early|7:305:0:0": {
+      "win_games": 9,
+      "loss_games": 9,
+      "games": 18
+    },
+    "alakazam|early|8:1174:677:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|late|8:1174:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|mid|7:1213:0:0": {
+      "win_games": 3,
+      "loss_games": 7,
+      "games": 10
+    },
+    "unknown|mid|8:6:676:0": {
+      "win_games": 10,
+      "loss_games": 2,
+      "games": 12
+    },
+    "unknown|mid|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "archaludon|late|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|late|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "archaludon|late|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 5,
+      "games": 6
+    },
+    "terabox|late|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|9:306:305:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "hydrapple|mid|7:1086:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|early|8:20:333:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "alakazam|mid|9:306:305:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "hydrapple|late|8:6:306:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "archaludon|late|12:0:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "archaludon|mid|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 4,
+      "games": 5
+    },
+    "dragapult|early|8:1159:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|early|8:6:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|early|9:678:333:0": {
+      "win_games": 5,
+      "loss_games": 1,
+      "games": 6
+    },
+    "marnie|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|13:0:0:464": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "terabox|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "archaludon|early|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "crustle|late|7:677:0:0": {
+      "win_games": 2,
+      "loss_games": 7,
+      "games": 9
+    },
+    "alakazam|early|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|mid|8:1174:678:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|late|7:1141:0:0": {
+      "win_games": 11,
+      "loss_games": 4,
+      "games": 15
+    },
+    "dragapult|early|8:20:305:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "terabox|mid|7:305:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "archaludon|mid|13:0:0:424": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|early|8:1159:677:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "marnie|early|8:1159:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|early|8:1159:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|mid|7:1142:0:0": {
+      "win_games": 11,
+      "loss_games": 3,
+      "games": 14
+    },
+    "cynthia|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|early|12:0:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "crustle|late|13:0:0:981": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "archaludon|early|8:1159:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|early|8:1159:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|early|9:678:677:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|early|7:675:0:0": {
+      "win_games": 9,
+      "loss_games": 3,
+      "games": 12
+    },
+    "terabox|early|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|mid|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "crustle|late|7:1141:0:0": {
+      "win_games": 3,
+      "loss_games": 7,
+      "games": 10
+    },
+    "terabox|mid|8:6:676:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "unknown|early|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "alakazam|mid|7:305:0:0": {
+      "win_games": 7,
+      "loss_games": 3,
+      "games": 10
+    },
+    "unknown|mid|9:678:677:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "crustle|early|8:1174:676:0": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "cynthia|early|14:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|early|8:20:306:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "archaludon|early|7:305:0:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "lucario|late|12:0:0:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "marnie|early|8:20:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|late|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|late|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|mid|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "cynthia|mid|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|late|8:1159:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|early|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "marnie|early|7:676:0:0": {
+      "win_games": 8,
+      "loss_games": 1,
+      "games": 9
+    },
+    "alakazam|early|8:20:306:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|mid|8:6:333:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "archaludon|mid|8:1174:675:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|early|8:1174:675:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|late|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|early|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|late|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|mid|8:1174:675:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "archaludon|late|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|7:1123:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "archaludon|late|13:0:0:983": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "marnie|early|7:305:0:0": {
+      "win_games": 7,
+      "loss_games": 2,
+      "games": 9
+    },
+    "hydrapple|early|8:20:117:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|late|7:1182:0:0": {
+      "win_games": 10,
+      "loss_games": 2,
+      "games": 12
+    },
+    "alakazam|late|8:1174:676:0": {
+      "win_games": 7,
+      "loss_games": 1,
+      "games": 8
+    },
+    "unknown|early|8:1159:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|7:1142:0:0": {
+      "win_games": 11,
+      "loss_games": 7,
+      "games": 18
+    },
+    "hydrapple|early|8:1174:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|late|8:1174:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|late|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|late|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "lucario|late|9:674:673:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|mid|7:305:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "crustle|early|8:20:678:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|mid|7:1252:0:0": {
+      "win_games": 3,
+      "loss_games": 5,
+      "games": 8
+    },
+    "crustle|early|8:20:677:0": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "unknown|late|7:675:0:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "marnie|early|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|early|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|early|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|mid|7:1225:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "terabox|mid|9:678:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|mid|8:6:117:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "archaludon|mid|8:1174:678:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "terabox|late|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|early|7:305:0:0": {
+      "win_games": 9,
+      "loss_games": 8,
+      "games": 17
+    },
+    "marnie|late|8:1174:306:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "lucario|late|8:1159:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|early|7:1227:0:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "marnie|late|7:1252:0:0": {
+      "win_games": 11,
+      "loss_games": 3,
+      "games": 14
+    },
+    "archaludon|mid|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "unknown|mid|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "crustle|mid|8:1174:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "lucario|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "archaludon|early|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "lucario|early|8:6:675:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "terabox|mid|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|7:1102:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "cynthia|late|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|late|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|mid|8:1174:306:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "unknown|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|mid|13:0:0:464": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "alakazam|early|13:0:0:464": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "unknown|early|9:66:305:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "hydrapple|mid|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "marnie|mid|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|early|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|7:1197:0:0": {
+      "win_games": 3,
+      "loss_games": 6,
+      "games": 9
+    },
+    "hydrapple|early|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "archaludon|early|13:0:0:423": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "alakazam|mid|7:1086:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "lucario|early|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "unknown|mid|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|early|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "terabox|early|8:20:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|early|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "marnie|mid|8:20:306:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "unknown|late|8:20:676:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "dragapult|early|7:1121:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|late|8:1174:676:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "hydrapple|late|7:333:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|early|7:1227:0:0": {
+      "win_games": 6,
+      "loss_games": 7,
+      "games": 13
+    },
+    "terabox|mid|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|mid|8:6:117:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "unknown|late|7:1142:0:0": {
+      "win_games": 7,
+      "loss_games": 5,
+      "games": 12
+    },
+    "terabox|early|9:306:305:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "hydrapple|mid|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|early|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|late|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "terabox|mid|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "terabox|early|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|late|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|early|10:675:0:0": {
+      "win_games": 7,
+      "loss_games": 0,
+      "games": 7
+    },
+    "archaludon|mid|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|8:1174:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|mid|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|7:1086:0:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "marnie|early|8:1174:333:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "archaludon|early|7:1213:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "crustle|mid|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "dragapult|late|8:20:677:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "marnie|early|8:20:305:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "hydrapple|late|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|13:0:0:425": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|early|10:675:0:0": {
+      "win_games": 10,
+      "loss_games": 5,
+      "games": 15
+    },
+    "unknown|late|7:676:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|early|10:66:0:0": {
+      "win_games": 2,
+      "loss_games": 4,
+      "games": 6
+    },
+    "crustle|mid|13:0:0:148": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "unknown|mid|8:20:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "archaludon|early|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|mid|8:20:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "dragapult|early|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|early|7:677:0:0": {
+      "win_games": 6,
+      "loss_games": 2,
+      "games": 8
+    },
+    "archaludon|early|12:0:0:0": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "hydrapple|early|8:1174:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|late|7:1086:0:0": {
+      "win_games": 8,
+      "loss_games": 6,
+      "games": 14
+    },
+    "crustle|early|13:0:0:983": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "dragapult|mid|8:1159:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|8:20:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|late|8:1174:306:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|early|8:1158:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|8:6:333:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "marnie|early|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 5,
+      "games": 5
+    },
+    "archaludon|late|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|early|8:1174:333:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "lucario|early|8:6:677:0": {
+      "win_games": 3,
+      "loss_games": 4,
+      "games": 7
+    },
+    "crustle|late|9:678:677:0": {
+      "win_games": 4,
+      "loss_games": 4,
+      "games": 8
+    },
+    "terabox|mid|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|mid|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|early|13:0:0:979": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|mid|8:20:306:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|late|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|mid|7:1225:0:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "crustle|mid|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|mid|8:20:117:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "terabox|early|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|early|7:1197:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "marnie|mid|8:20:677:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "terabox|late|8:1159:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|mid|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "terabox|mid|8:1174:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|mid|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|late|8:1159:678:0": {
+      "win_games": 9,
+      "loss_games": 0,
+      "games": 9
+    },
+    "alakazam|late|8:1174:675:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|early|8:1159:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|mid|13:0:0:464": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "alakazam|late|7:1213:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "crustle|early|13:0:0:464": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "unknown|late|8:20:677:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "marnie|mid|9:678:333:0": {
+      "win_games": 8,
+      "loss_games": 5,
+      "games": 13
+    },
+    "lucario|mid|7:305:0:0": {
+      "win_games": 11,
+      "loss_games": 5,
+      "games": 16
+    },
+    "alakazam|late|8:6:677:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|mid|8:1174:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|mid|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|early|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "terabox|early|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|10:66:0:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "marnie|mid|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|early|8:1174:676:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "marnie|mid|7:1225:0:0": {
+      "win_games": 4,
+      "loss_games": 5,
+      "games": 9
+    },
+    "crustle|mid|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "hydrapple|early|13:0:0:981": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "unknown|early|8:20:306:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|late|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "terabox|late|8:1174:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|mid|13:0:0:979": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|late|7:1086:0:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "dragapult|early|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|8:1159:678:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "marnie|late|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "dragapult|early|8:1159:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|late|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "archaludon|mid|8:20:678:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "archaludon|mid|8:6:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "terabox|early|8:1159:677:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|late|10:66:0:0": {
+      "win_games": 10,
+      "loss_games": 8,
+      "games": 18
+    },
+    "marnie|mid|7:117:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|mid|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "unknown|late|13:0:0:424": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|mid|8:1174:306:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "dragapult|late|8:20:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|8:20:676:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "marnie|early|8:1159:333:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "hydrapple|mid|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "unknown|mid|8:1174:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|late|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|late|7:676:0:0": {
+      "win_games": 3,
+      "loss_games": 9,
+      "games": 12
+    },
+    "terabox|late|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|early|8:20:675:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|early|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|mid|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|7:1197:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "marnie|late|8:1159:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|late|8:1174:675:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "archaludon|mid|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "archaludon|mid|7:676:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "unknown|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|mid|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "marnie|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "crustle|early|8:1174:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|mid|8:1159:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|mid|8:1159:675:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "hydrapple|early|8:1159:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|early|12:0:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "dragapult|early|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|early|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "unknown|mid|7:675:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "hydrapple|mid|9:306:305:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|mid|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 3,
+      "games": 4
+    },
+    "marnie|late|8:1159:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|early|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "terabox|late|7:1225:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|mid|8:1159:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "unknown|early|8:20:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "crustle|early|7:117:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|8:6:305:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "crustle|early|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|early|8:1159:675:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "cynthia|late|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|early|8:20:676:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "crustle|mid|7:1141:0:0": {
+      "win_games": 10,
+      "loss_games": 3,
+      "games": 13
+    },
+    "unknown|late|13:0:0:979": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|early|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|9:66:305:0": {
+      "win_games": 8,
+      "loss_games": 9,
+      "games": 17
+    },
+    "alakazam|mid|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "unknown|early|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|early|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|late|8:20:676:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "crustle|mid|7:1182:0:0": {
+      "win_games": 3,
+      "loss_games": 3,
+      "games": 6
+    },
+    "hydrapple|mid|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "crustle|late|7:1086:0:0": {
+      "win_games": 5,
+      "loss_games": 6,
+      "games": 11
+    },
+    "hydrapple|early|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|early|8:20:306:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|mid|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|late|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|late|13:0:0:980": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 7,
+      "games": 7
+    },
+    "dragapult|mid|8:6:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|mid|8:1174:675:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "dragapult|early|8:1159:675:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "marnie|late|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "terabox|late|7:305:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|early|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|mid|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "crustle|early|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "marnie|mid|8:20:333:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "archaludon|late|8:20:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|7:1225:0:0": {
+      "win_games": 5,
+      "loss_games": 8,
+      "games": 13
+    },
+    "dragapult|late|7:1185:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|late|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|mid|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|mid|8:1174:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "unknown|early|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|7:117:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "dragapult|early|13:0:0:979": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "terabox|late|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|late|8:1174:678:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|7:1211:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "dragapult|late|8:1159:676:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|late|9:306:305:0": {
+      "win_games": 6,
+      "loss_games": 0,
+      "games": 6
+    },
+    "marnie|late|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|8:1159:306:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "archaludon|late|13:0:0:424": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|early|9:66:305:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "archaludon|mid|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|late|7:1211:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "hydrapple|early|8:1174:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|8:6:676:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "crustle|late|8:1159:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|8:6:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|late|8:1159:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|late|7:305:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "archaludon|late|8:20:305:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "terabox|late|8:1174:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|late|13:0:0:979": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|mid|13:0:0:980": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "terabox|mid|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|early|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|late|7:117:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "dragapult|late|13:0:0:426": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|early|8:20:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|mid|8:1159:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|7:1123:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|late|8:1174:117:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|late|7:1252:0:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "marnie|early|8:6:117:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "marnie|early|7:1252:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "unknown|early|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "terabox|mid|8:6:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|7:1252:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "hydrapple|early|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|late|8:1159:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|8:20:678:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "archaludon|mid|7:1182:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|7:1211:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "hydrapple|early|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|early|8:1159:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|7:1102:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|early|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|late|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|9:66:305:0": {
+      "win_games": 6,
+      "loss_games": 4,
+      "games": 10
+    },
+    "archaludon|mid|8:20:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "terabox|mid|7:117:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|early|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "hydrapple|mid|8:20:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|early|8:1159:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|early|8:20:676:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "dragapult|mid|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|early|8:1159:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "hydrapple|late|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|8:20:677:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "cynthia|late|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "cynthia|mid|7:1225:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "terabox|early|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|early|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|early|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "alakazam|late|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|8:6:676:0": {
+      "win_games": 7,
+      "loss_games": 0,
+      "games": 7
+    },
+    "lucario|early|8:6:333:0": {
+      "win_games": 8,
+      "loss_games": 1,
+      "games": 9
+    },
+    "lucario|early|9:678:333:0": {
+      "win_games": 7,
+      "loss_games": 3,
+      "games": 10
+    },
+    "lucario|early|7:1225:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|early|13:0:0:980": {
+      "win_games": 5,
+      "loss_games": 0,
+      "games": 5
+    },
+    "lucario|early|7:1086:0:0": {
+      "win_games": 10,
+      "loss_games": 6,
+      "games": 16
+    },
+    "lucario|late|7:333:0:0": {
+      "win_games": 2,
+      "loss_games": 5,
+      "games": 7
+    },
+    "lucario|late|7:1142:0:0": {
+      "win_games": 8,
+      "loss_games": 7,
+      "games": 15
+    },
+    "lucario|late|7:1071:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|7:1213:0:0": {
+      "win_games": 4,
+      "loss_games": 3,
+      "games": 7
+    },
+    "other|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|14:0:0:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "other|early|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|8:6:333:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "other|mid|13:0:0:464": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|9:66:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1252:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "other|mid|9:678:333:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "other|mid|14:0:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "other|mid|7:1141:0:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "other|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|7:1152:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|14:0:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|7:1142:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "other|late|8:6:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|13:0:0:982": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|7:305:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|7:1227:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|7:1086:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|7:1213:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "alakazam|early|8:1174:1071:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "alakazam|early|8:6:305:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "alakazam|early|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|9:678:677:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "lucario|early|8:1174:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|mid|7:1152:0:0": {
+      "win_games": 11,
+      "loss_games": 6,
+      "games": 17
+    },
+    "lucario|mid|7:333:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "lucario|mid|7:1142:0:0": {
+      "win_games": 10,
+      "loss_games": 6,
+      "games": 16
+    },
+    "lucario|mid|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|mid|8:20:678:0": {
+      "win_games": 6,
+      "loss_games": 3,
+      "games": 9
+    },
+    "lucario|late|7:676:0:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "lucario|late|10:675:0:0": {
+      "win_games": 9,
+      "loss_games": 7,
+      "games": 16
+    },
+    "alakazam|early|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|8:6:1071:0": {
+      "win_games": 0,
+      "loss_games": 3,
+      "games": 3
+    },
+    "lucario|early|7:333:0:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "lucario|mid|8:20:676:0": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "lucario|mid|8:6:678:0": {
+      "win_games": 12,
+      "loss_games": 10,
+      "games": 22
+    },
+    "lucario|late|8:1174:678:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "alakazam|early|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|early|8:1174:305:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "crustle|late|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "other|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|8:6:333:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|early|8:1174:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|12:0:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|early|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|7:1086:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|8:20:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|13:0:0:982": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1182:0:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "other|late|7:1141:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|13:0:0:983": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|9:306:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|7:1152:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|10:66:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|7:676:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1227:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|mid|8:6:678:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|mid|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|7:1225:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|13:0:0:425": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|10:675:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|7:1182:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "other|late|7:333:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|7:677:0:0": {
+      "win_games": 4,
+      "loss_games": 1,
+      "games": 5
+    },
+    "alakazam|mid|8:1159:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|8:20:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|9:66:305:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "lucario|early|8:6:678:0": {
+      "win_games": 4,
+      "loss_games": 2,
+      "games": 6
+    },
+    "lucario|early|7:305:0:0": {
+      "win_games": 5,
+      "loss_games": 3,
+      "games": 8
+    },
+    "lucario|mid|8:1159:678:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|mid|9:66:305:0": {
+      "win_games": 12,
+      "loss_games": 8,
+      "games": 20
+    },
+    "lucario|mid|7:675:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "lucario|mid|7:676:0:0": {
+      "win_games": 5,
+      "loss_games": 4,
+      "games": 9
+    },
+    "lucario|late|7:675:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "lucario|late|8:20:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|late|8:6:675:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "lucario|late|7:305:0:0": {
+      "win_games": 7,
+      "loss_games": 9,
+      "games": 16
+    },
+    "alakazam|early|13:0:0:423": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|late|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|early|8:1174:1071:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|7:1225:0:0": {
+      "win_games": 3,
+      "loss_games": 2,
+      "games": 5
+    },
+    "lucario|early|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|8:6:66:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|mid|9:678:677:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "crustle|mid|7:1211:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "archaludon|mid|8:1159:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "cynthia|early|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|early|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|10:66:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|7:1142:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|8:6:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|9:678:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|8:1174:678:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|8:1174:676:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|8:1174:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|7:1141:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|mid|7:677:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|8:20:678:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|7:1182:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|7:305:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|13:0:0:983": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|9:66:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|8:6:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|8:6:678:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|7:675:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "cynthia|late|14:0:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|late|7:117:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|early|8:20:305:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "crustle|late|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 5,
+      "games": 6
+    },
+    "marnie|mid|7:1213:0:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "marnie|mid|8:20:675:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "marnie|late|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|mid|7:1071:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|late|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|8:1174:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|9:678:333:0": {
+      "win_games": 11,
+      "loss_games": 7,
+      "games": 18
+    },
+    "lucario|late|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|7:1152:0:0": {
+      "win_games": 7,
+      "loss_games": 4,
+      "games": 11
+    },
+    "dragapult|late|13:0:0:423": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "other|early|8:6:676:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|early|8:6:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|13:0:0:980": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|10:675:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|8:1174:305:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|mid|7:1142:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "other|late|12:0:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|mid|9:306:305:0": {
+      "win_games": 11,
+      "loss_games": 2,
+      "games": 13
+    },
+    "crustle|early|7:1197:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|mid|8:20:676:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "crustle|mid|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "crustle|mid|7:677:0:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "crustle|mid|7:333:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "crustle|mid|7:676:0:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "crustle|early|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "alakazam|mid|8:1159:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|late|8:1174:66:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|early|13:0:0:425": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "alakazam|mid|8:20:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "alakazam|mid|13:0:0:426": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|mid|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|early|8:1159:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|mid|7:1252:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|mid|13:0:0:981": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "archaludon|late|8:20:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|early|8:1174:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|mid|8:20:305:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "marnie|mid|7:677:0:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "marnie|mid|8:1159:677:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|late|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|mid|8:6:306:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|late|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "marnie|mid|8:1174:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "unknown|late|9:678:677:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "unknown|mid|7:1213:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|mid|7:1211:0:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|8:1174:678:0": {
+      "win_games": 4,
+      "loss_games": 0,
+      "games": 4
+    },
+    "lucario|early|10:675:0:0": {
+      "win_games": 8,
+      "loss_games": 3,
+      "games": 11
+    },
+    "lucario|early|7:677:0:0": {
+      "win_games": 6,
+      "loss_games": 1,
+      "games": 7
+    },
+    "lucario|mid|10:675:0:0": {
+      "win_games": 11,
+      "loss_games": 5,
+      "games": 16
+    },
+    "lucario|mid|13:0:0:980": {
+      "win_games": 3,
+      "loss_games": 1,
+      "games": 4
+    },
+    "lucario|early|8:20:677:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|early|9:678:677:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|mid|8:1174:676:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "lucario|early|10:66:0:0": {
+      "win_games": 2,
+      "loss_games": 2,
+      "games": 4
+    },
+    "lucario|early|8:1174:678:0": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "lucario|early|8:1159:333:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "lucario|early|7:676:0:0": {
+      "win_games": 5,
+      "loss_games": 2,
+      "games": 7
+    },
+    "lucario|early|8:1159:678:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|8:20:676:0": {
+      "win_games": 1,
+      "loss_games": 2,
+      "games": 3
+    },
+    "lucario|early|8:6:305:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|8:20:678:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|mid|8:1159:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|7:677:0:0": {
+      "win_games": 2,
+      "loss_games": 3,
+      "games": 5
+    },
+    "lucario|late|9:678:677:0": {
+      "win_games": 2,
+      "loss_games": 1,
+      "games": 3
+    },
+    "crustle|early|8:1159:117:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "crustle|early|8:6:66:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "crustle|early|8:1159:306:0": {
+      "win_games": 2,
+      "loss_games": 0,
+      "games": 2
+    },
+    "lucario|early|8:1159:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|mid|8:20:677:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|early|13:0:0:983": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|early|13:0:0:981": {
+      "win_games": 0,
+      "loss_games": 2,
+      "games": 2
+    },
+    "lucario|late|8:6:333:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|late|13:0:0:464": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|mid|13:0:0:979": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|mid|8:20:333:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|late|13:0:0:979": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "lucario|late|8:1174:676:0": {
+      "win_games": 3,
+      "loss_games": 0,
+      "games": 3
+    },
+    "lucario|late|8:6:677:0": {
+      "win_games": 1,
+      "loss_games": 1,
+      "games": 2
+    },
+    "lucario|early|8:1159:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "lucario|late|8:1174:675:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|early|7:1197:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|early|8:20:117:0": {
+      "win_games": 1,
+      "loss_games": 0,
+      "games": 1
+    },
+    "dragapult|early|7:1252:0:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    },
+    "dragapult|mid|8:1159:117:0": {
+      "win_games": 0,
+      "loss_games": 1,
+      "games": 1
+    }
+  },
+  "training": {
+    "games": 163,
+    "rows": 5885,
+    "before": {
+      "states": 100,
+      "wins": 80,
+      "combo_top1": 0.11,
+      "winning_top1": 0.1,
+      "value_auc": 0.38,
+      "value_logloss": 0.5906996430378358
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 1.1917471813319858,
+        "seconds": 14.262752294540405,
+        "objective": 0.7091881659276829,
+        "states": 150,
+        "wins": 122,
+        "combo_top1": 0.25333333333333335,
+        "winning_top1": 0.2786885245901639,
+        "value_auc": 0.5939695550351289,
+        "value_logloss": 0.5199450386154437
+      },
+      {
+        "epoch": 2,
+        "loss": 1.1702172101206438,
+        "seconds": 13.945502281188965,
+        "objective": 0.6469756607413978,
+        "states": 150,
+        "wins": 122,
+        "combo_top1": 0.18666666666666668,
+        "winning_top1": 0.1885245901639344,
+        "value_auc": 0.5872365339578455,
+        "value_logloss": 0.5337562731480835
+      }
+    ],
+    "selected_epoch": 1,
+    "selected_metrics": {
+      "epoch": 1,
+      "loss": 1.1917471813319858,
+      "seconds": 14.262752294540405,
+      "objective": 0.7091881659276829,
+      "states": 150,
+      "wins": 122,
+      "combo_top1": 0.25333333333333335,
+      "winning_top1": 0.2786885245901639,
+      "value_auc": 0.5939695550351289,
+      "value_logloss": 0.5199450386154437
+    },
+    "round2": {
+      "rows": 6929,
+      "post_rows": 1044,
+      "games": 193,
+      "loss": 1.2279236216605378,
+      "seconds": 20.39325737953186,
+      "before": {
+        "states": 500,
+        "wins": 357,
+        "combo_top1": 0.22,
+        "winning_top1": 0.226890756302521,
+        "value_auc": 0.5623396211631505,
+        "value_logloss": 0.5952997267206397
+      },
+      "after": {
+        "states": 500,
+        "wins": 357,
+        "combo_top1": 0.22,
+        "winning_top1": 0.226890756302521,
+        "value_auc": 0.5652190946308593,
+        "value_logloss": 0.5932924776567053
+      },
+      "focus_before": {
+        "dragapult": {
+          "states": 250,
+          "wins": 204,
+          "combo_top1": 0.272,
+          "winning_top1": 0.27450980392156865,
+          "value_auc": 0.4656862745098039,
+          "value_logloss": 0.5166353011224976
+        },
+        "marnie": {
+          "states": 250,
+          "wins": 132,
+          "combo_top1": 0.188,
+          "winning_top1": 0.16666666666666666,
+          "value_auc": 0.572226502311248,
+          "value_logloss": 0.7419614600493359
+        },
+        "alakazam": {
+          "states": 42,
+          "wins": 42,
+          "combo_top1": 0.21428571428571427,
+          "winning_top1": 0.21428571428571427,
+          "value_auc": 0.5,
+          "value_logloss": 0
+        },
+        "lucario": {
+          "states": 67,
+          "wins": 67,
+          "combo_top1": 0.2537313432835821,
+          "winning_top1": 0.2537313432835821,
+          "value_auc": 0.5,
+          "value_logloss": 0
+        }
+      },
+      "focus_after": {
+        "dragapult": {
+          "states": 250,
+          "wins": 204,
+          "combo_top1": 0.272,
+          "winning_top1": 0.27450980392156865,
+          "value_auc": 0.48124467178175623,
+          "value_logloss": 0.5111403409093745
+        },
+        "marnie": {
+          "states": 250,
+          "wins": 132,
+          "combo_top1": 0.188,
+          "winning_top1": 0.16666666666666666,
+          "value_auc": 0.5710066769388804,
+          "value_logloss": 0.7478666970245851
+        },
+        "alakazam": {
+          "states": 42,
+          "wins": 42,
+          "combo_top1": 0.21428571428571427,
+          "winning_top1": 0.21428571428571427,
+          "value_auc": 0.5,
+          "value_logloss": 0
+        },
+        "lucario": {
+          "states": 67,
+          "wins": 67,
+          "combo_top1": 0.2537313432835821,
+          "winning_top1": 0.2537313432835821,
+          "value_auc": 0.5,
+          "value_logloss": 0
+        }
+      },
+      "objective_before": 0.6987265920687444,
+      "objective_after": 0.7029940211760921,
+      "weights_accepted": true
+    }
+  },
+  "role": "strategic_intent_cardtext_same_type_challenger"
+}

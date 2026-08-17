@@ -1,0 +1,6906 @@
+{
+  "version": "lucario_v170_mistake_tuned_tokencross_quality",
+  "enabled": true,
+  "vocab_size": 8192,
+  "max_context": 112,
+  "max_action": 40,
+  "d_model": 64,
+  "heads": 4,
+  "ff": 160,
+  "ctx_layers": 1,
+  "act_layers": 1,
+  "parameter_count": 659395,
+  "gate": {
+    "allowed_families": [
+      "dragapult",
+      "alakazam",
+      "marnie",
+      "lucario",
+      "archaludon",
+      "hydrapple",
+      "unknown",
+      "grass"
+    ],
+    "allowed_types": [
+      7,
+      8
+    ],
+    "unknown_min_turn": 5,
+    "max_options": 24,
+    "max_game_overrides": 1,
+    "min_quality_prob": 0.65,
+    "min_quality_margin": 0.05,
+    "min_policy_margin": -0.08,
+    "min_support_games": 1,
+    "min_support_good_rate": 0.8,
+    "search_min_gain": 35.0,
+    "strong_veto_margin": 0.8,
+    "strong_veto_candidate_prob": 0.35,
+    "strong_veto_anchor_prob": 0.65,
+    "unknown_min_support_games": 2,
+    "backoff_card_min_games": 2,
+    "backoff_type_min_games": 5,
+    "max_game_search_calls": 4,
+    "unknown_max_game_search_calls": 2
+  },
+  "quality_support": {
+    "unknown|early|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 4,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "unknown|early|7:1152:0:0": {
+      "good_games": 6,
+      "bad_games": 5,
+      "games": 11,
+      "mean_quality": 0.583333,
+      "samples": 12
+    },
+    "unknown|early|14:0:0:0": {
+      "good_games": 17,
+      "bad_games": 11,
+      "games": 29,
+      "mean_quality": 0.601881,
+      "samples": 29
+    },
+    "unknown|mid|8:6:306:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|8:6:678:0": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.666667,
+      "samples": 6
+    },
+    "unknown|mid|8:6:675:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|8:1159:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|8:1159:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|8:1159:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|early|8:6:676:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|9:678:333:0": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.375,
+      "samples": 8
+    },
+    "unknown|mid|13:0:0:980": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.3,
+      "samples": 10
+    },
+    "unknown|mid|14:0:0:0": {
+      "good_games": 12,
+      "bad_games": 9,
+      "games": 22,
+      "mean_quality": 0.557392,
+      "samples": 33
+    },
+    "unknown|mid|8:20:678:0": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 6
+    },
+    "unknown|early|8:20:333:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|early|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 5,
+      "games": 6,
+      "mean_quality": 0.158333,
+      "samples": 6
+    },
+    "unknown|early|8:1174:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|8:6:676:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "unknown|mid|8:6:333:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|mid|13:0:0:425": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|7:1141:0:0": {
+      "good_games": 8,
+      "bad_games": 3,
+      "games": 11,
+      "mean_quality": 0.787848,
+      "samples": 15
+    },
+    "unknown|early|8:1174:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|8:6:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|7:676:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|13:0:0:981": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|early|7:305:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|early|8:6:675:0": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 4,
+      "mean_quality": 0.0,
+      "samples": 4
+    },
+    "unknown|early|7:1142:0:0": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "unknown|mid|7:1152:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|7:1142:0:0": {
+      "good_games": 5,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.857143,
+      "samples": 7
+    },
+    "unknown|mid|9:66:305:0": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 8,
+      "mean_quality": 0.486318,
+      "samples": 10
+    },
+    "unknown|early|7:1086:0:0": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "unknown|late|10:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|late|14:0:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|8:6:306:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|late|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|13:0:0:982": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|early|7:333:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|7:333:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|7:1227:0:0": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.333333,
+      "samples": 9
+    },
+    "crustle|early|8:6:305:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.961818,
+      "samples": 5
+    },
+    "crustle|late|7:1227:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|late|7:1213:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "crustle|late|14:0:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|late|7:305:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|late|7:333:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|7:1142:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|early|7:1152:0:0": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "crustle|early|14:0:0:0": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "crustle|mid|7:1152:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "crustle|mid|7:1182:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|mid|13:0:0:983": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.428571,
+      "samples": 7
+    },
+    "crustle|mid|13:0:0:982": {
+      "good_games": 3,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.428571,
+      "samples": 7
+    },
+    "crustle|mid|14:0:0:0": {
+      "good_games": 7,
+      "bad_games": 6,
+      "games": 13,
+      "mean_quality": 0.414141,
+      "samples": 18
+    },
+    "crustle|early|8:1159:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|early|8:1159:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|8:1159:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|8:6:117:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "crustle|mid|9:66:305:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "crustle|early|8:6:333:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "crustle|mid|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|8:20:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|7:675:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "crustle|mid|7:305:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "alakazam|early|7:1142:0:0": {
+      "good_games": 1,
+      "bad_games": 6,
+      "games": 7,
+      "mean_quality": 0.142857,
+      "samples": 7
+    },
+    "alakazam|early|14:0:0:0": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "alakazam|early|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "alakazam|mid|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "alakazam|mid|14:0:0:0": {
+      "good_games": 2,
+      "bad_games": 9,
+      "games": 11,
+      "mean_quality": 0.143357,
+      "samples": 13
+    },
+    "alakazam|mid|8:1174:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|9:306:305:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "alakazam|early|7:1086:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "alakazam|mid|9:678:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 8
+    },
+    "alakazam|mid|9:66:305:0": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "alakazam|early|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "alakazam|mid|8:20:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|13:0:0:982": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 5,
+      "mean_quality": 0.056818,
+      "samples": 7
+    },
+    "alakazam|mid|13:0:0:983": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "alakazam|mid|7:677:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "archaludon|early|7:1152:0:0": {
+      "good_games": 3,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.571429,
+      "samples": 7
+    },
+    "archaludon|early|7:1142:0:0": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.666667,
+      "samples": 6
+    },
+    "archaludon|early|7:1086:0:0": {
+      "good_games": 4,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "archaludon|mid|13:0:0:148": {
+      "good_games": 5,
+      "bad_games": 0,
+      "games": 5,
+      "mean_quality": 1.0,
+      "samples": 5
+    },
+    "archaludon|mid|14:0:0:0": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 10,
+      "mean_quality": 0.581818,
+      "samples": 15
+    },
+    "archaludon|mid|12:0:0:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.2725,
+      "samples": 6
+    },
+    "archaludon|late|8:20:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|late|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|late|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|early|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|early|8:6:305:0": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "archaludon|early|8:20:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|mid|8:6:117:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "archaludon|mid|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "archaludon|mid|8:6:675:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "archaludon|late|7:1152:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|late|14:0:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.272727,
+      "samples": 2
+    },
+    "archaludon|late|12:0:0:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "archaludon|early|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:1086:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "archaludon|mid|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 4
+    },
+    "archaludon|late|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|late|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|early|14:0:0:0": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.428571,
+      "samples": 7
+    },
+    "grass|early|7:1142:0:0": {
+      "good_games": 3,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.571429,
+      "samples": 7
+    },
+    "grass|early|14:0:0:0": {
+      "good_games": 10,
+      "bad_games": 3,
+      "games": 13,
+      "mean_quality": 0.769231,
+      "samples": 13
+    },
+    "grass|early|8:6:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|8:6:678:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.700091,
+      "samples": 5
+    },
+    "grass|mid|8:6:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|mid|13:0:0:982": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.25,
+      "samples": 8
+    },
+    "grass|late|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|late|7:675:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|7:1213:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|early|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|13:0:0:424": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|mid|14:0:0:0": {
+      "good_games": 6,
+      "bad_games": 7,
+      "games": 13,
+      "mean_quality": 0.403743,
+      "samples": 17
+    },
+    "grass|mid|9:66:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|8:1159:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|early|8:1159:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|early|8:1159:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|mid|12:0:0:0": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.715795,
+      "samples": 4
+    },
+    "grass|mid|8:20:678:0": {
+      "good_games": 4,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 1.0,
+      "samples": 6
+    },
+    "grass|mid|8:20:676:0": {
+      "good_games": 4,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "grass|early|8:1174:117:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|early|8:1174:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|8:20:333:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "grass|mid|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.477273,
+      "samples": 2
+    },
+    "grass|mid|8:20:117:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.277273,
+      "samples": 1
+    },
+    "grass|mid|9:678:333:0": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 6,
+      "mean_quality": 0.7,
+      "samples": 10
+    },
+    "marnie|early|7:677:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:1152:0:0": {
+      "good_games": 4,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.575758,
+      "samples": 7
+    },
+    "marnie|early|14:0:0:0": {
+      "good_games": 5,
+      "bad_games": 6,
+      "games": 11,
+      "mean_quality": 0.454545,
+      "samples": 11
+    },
+    "marnie|mid|10:1259:0:0": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.714286,
+      "samples": 7
+    },
+    "marnie|mid|13:0:0:983": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 4,
+      "mean_quality": 0.058712,
+      "samples": 6
+    },
+    "marnie|mid|13:0:0:982": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 5,
+      "mean_quality": 0.142857,
+      "samples": 7
+    },
+    "marnie|mid|7:1252:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:676:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "marnie|mid|9:678:333:0": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 7,
+      "mean_quality": 0.7,
+      "samples": 10
+    },
+    "marnie|mid|9:66:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.285714,
+      "samples": 7
+    },
+    "marnie|mid|10:675:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "marnie|mid|14:0:0:0": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.651515,
+      "samples": 9
+    },
+    "marnie|mid|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "marnie|early|7:1086:0:0": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "marnie|early|7:1142:0:0": {
+      "good_games": 5,
+      "bad_games": 0,
+      "games": 5,
+      "mean_quality": 1.0,
+      "samples": 7
+    },
+    "marnie|mid|7:305:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|mid|8:20:678:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "marnie|mid|8:20:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:1141:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "marnie|early|7:1227:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:1086:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|mid|8:6:305:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "dragapult|early|7:1142:0:0": {
+      "good_games": 9,
+      "bad_games": 3,
+      "games": 12,
+      "mean_quality": 0.692308,
+      "samples": 13
+    },
+    "dragapult|early|14:0:0:0": {
+      "good_games": 10,
+      "bad_games": 22,
+      "games": 32,
+      "mean_quality": 0.308239,
+      "samples": 32
+    },
+    "dragapult|early|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.416883,
+      "samples": 7
+    },
+    "dragapult|mid|8:20:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:20:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.981364,
+      "samples": 1
+    },
+    "dragapult|mid|8:20:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.926818,
+      "samples": 1
+    },
+    "dragapult|late|7:305:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|late|7:1142:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|late|7:1182:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|13:0:0:464": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|early|12:0:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.621061,
+      "samples": 3
+    },
+    "dragapult|mid|7:1227:0:0": {
+      "good_games": 5,
+      "bad_games": 2,
+      "games": 7,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "dragapult|mid|7:1182:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.372636,
+      "samples": 5
+    },
+    "dragapult|mid|14:0:0:0": {
+      "good_games": 3,
+      "bad_games": 20,
+      "games": 27,
+      "mean_quality": 0.184416,
+      "samples": 35
+    },
+    "dragapult|mid|12:0:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.525844,
+      "samples": 7
+    },
+    "dragapult|mid|7:1141:0:0": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.333333,
+      "samples": 6
+    },
+    "dragapult|early|7:1086:0:0": {
+      "good_games": 11,
+      "bad_games": 2,
+      "games": 13,
+      "mean_quality": 0.785714,
+      "samples": 14
+    },
+    "dragapult|early|7:1152:0:0": {
+      "good_games": 12,
+      "bad_games": 3,
+      "games": 15,
+      "mean_quality": 0.833333,
+      "samples": 18
+    },
+    "dragapult|mid|10:66:0:0": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "dragapult|mid|13:0:0:982": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 9,
+      "mean_quality": 0.416667,
+      "samples": 12
+    },
+    "dragapult|mid|7:1197:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1225:0:0": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.333333,
+      "samples": 6
+    },
+    "dragapult|mid|9:306:305:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "dragapult|mid|9:66:305:0": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 8,
+      "mean_quality": 0.6,
+      "samples": 15
+    },
+    "lucario|early|8:1159:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|8:1159:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|mid|13:0:0:983": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.333333,
+      "samples": 9
+    },
+    "lucario|mid|13:0:0:982": {
+      "good_games": 3,
+      "bad_games": 6,
+      "games": 11,
+      "mean_quality": 0.363636,
+      "samples": 15
+    },
+    "lucario|mid|14:0:0:0": {
+      "good_games": 9,
+      "bad_games": 7,
+      "games": 16,
+      "mean_quality": 0.504785,
+      "samples": 19
+    },
+    "lucario|late|10:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|late|13:0:0:983": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|late|13:0:0:982": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|10:675:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|14:0:0:0": {
+      "good_games": 12,
+      "bad_games": 7,
+      "games": 19,
+      "mean_quality": 0.631579,
+      "samples": 19
+    },
+    "lucario|early|8:6:676:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.231818,
+      "samples": 2
+    },
+    "lucario|mid|8:6:678:0": {
+      "good_games": 5,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "lucario|mid|8:6:677:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "lucario|mid|8:6:333:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "lucario|mid|7:305:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|12:0:0:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "lucario|early|8:1174:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|7:1252:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|7:1142:0:0": {
+      "good_games": 5,
+      "bad_games": 7,
+      "games": 12,
+      "mean_quality": 0.428571,
+      "samples": 14
+    },
+    "lucario|mid|9:678:677:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|mid|9:66:305:0": {
+      "good_games": 6,
+      "bad_games": 3,
+      "games": 9,
+      "mean_quality": 0.733333,
+      "samples": 15
+    },
+    "lucario|mid|10:66:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|7:305:0:0": {
+      "good_games": 6,
+      "bad_games": 0,
+      "games": 6,
+      "mean_quality": 1.0,
+      "samples": 7
+    },
+    "dragapult|mid|13:0:0:464": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|8:1174:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "dragapult|mid|8:6:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:6:305:0": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 7,
+      "mean_quality": 0.636364,
+      "samples": 7
+    },
+    "dragapult|mid|8:6:678:0": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.833333,
+      "samples": 6
+    },
+    "dragapult|mid|7:676:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|mid|13:0:0:983": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "dragapult|early|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.479545,
+      "samples": 4
+    },
+    "dragapult|mid|8:6:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|late|10:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|late|13:0:0:982": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.204545,
+      "samples": 2
+    },
+    "dragapult|late|14:0:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|early|7:1252:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|12:0:0:0": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 5,
+      "mean_quality": 0.143864,
+      "samples": 6
+    },
+    "unknown|mid|9:678:677:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|mid|8:20:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|7:305:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "unknown|early|8:20:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|early|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|13:0:0:982": {
+      "good_games": 1,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.343344,
+      "samples": 14
+    },
+    "unknown|mid|7:1086:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|early|10:675:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|10:675:0:0": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.5,
+      "samples": 6
+    },
+    "unknown|early|7:1141:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 0.833333,
+      "samples": 6
+    },
+    "unknown|early|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.556818,
+      "samples": 1
+    },
+    "unknown|mid|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|13:0:0:983": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 4
+    },
+    "unknown|mid|8:20:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|9:306:305:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "unknown|early|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|mid|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.477159,
+      "samples": 4
+    },
+    "crustle|mid|9:678:333:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "crustle|mid|9:678:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|late|9:678:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|late|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "crustle|early|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|7:1227:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|13:0:0:981": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|8:1174:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|8:1174:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|8:1174:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|early|7:305:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|early|8:6:676:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|9:306:305:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "crustle|early|7:1086:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "crustle|mid|13:0:0:980": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|12:0:0:0": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 5,
+      "mean_quality": 0.477197,
+      "samples": 6
+    },
+    "crustle|late|8:1159:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|late|8:1159:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|late|8:1159:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.909091,
+      "samples": 1
+    },
+    "crustle|early|8:6:675:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "crustle|early|8:1174:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|8:6:675:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "crustle|mid|8:6:305:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.884091,
+      "samples": 2
+    },
+    "crustle|mid|7:1225:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "crustle|late|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|7:333:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "alakazam|mid|7:305:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "alakazam|mid|7:1086:0:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "alakazam|mid|7:1152:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "alakazam|early|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:20:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|9:678:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:6:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.675253,
+      "samples": 3
+    },
+    "alakazam|mid|8:6:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "alakazam|mid|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1225:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|8:20:677:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|early|7:676:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|10:675:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "alakazam|early|7:1152:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "archaludon|early|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "archaludon|mid|9:66:305:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "archaludon|mid|7:1142:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "archaludon|early|8:1174:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|9:678:677:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|9:678:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|13:0:0:982": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "archaludon|mid|8:6:678:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "archaludon|early|8:6:117:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|early|8:20:117:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:1152:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "archaludon|early|7:333:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "archaludon|mid|7:1182:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "archaludon|early|8:20:676:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.463636,
+      "samples": 1
+    },
+    "grass|early|7:305:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|7:1141:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|early|7:1086:0:0": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "grass|mid|7:1086:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 4
+    },
+    "grass|late|7:1252:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|14:0:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|8:20:333:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|13:0:0:983": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|7:1152:0:0": {
+      "good_games": 3,
+      "bad_games": 5,
+      "games": 8,
+      "mean_quality": 0.333333,
+      "samples": 9
+    },
+    "grass|early|8:6:675:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "grass|mid|8:6:305:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.475,
+      "samples": 2
+    },
+    "grass|mid|8:6:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|mid|7:1182:0:0": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "grass|mid|10:675:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "grass|mid|7:1142:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|7:305:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "grass|mid|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "marnie|early|8:20:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|8:20:305:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|8:1174:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|mid|9:678:677:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "marnie|early|8:6:675:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.469697,
+      "samples": 3
+    },
+    "marnie|early|8:20:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|mid|7:1225:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "marnie|mid|8:6:678:0": {
+      "good_games": 5,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.9,
+      "samples": 10
+    },
+    "marnie|mid|8:6:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|10:1259:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|mid|8:6:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "marnie|mid|8:6:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:333:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|10:1259:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|13:0:0:982": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|late|14:0:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.931818,
+      "samples": 2
+    },
+    "dragapult|early|7:1227:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "dragapult|mid|8:6:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|late|9:66:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|9:678:677:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.666667,
+      "samples": 6
+    },
+    "dragapult|mid|9:678:333:0": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.648485,
+      "samples": 5
+    },
+    "dragapult|mid|8:6:677:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|7:675:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|mid|7:1227:0:0": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "lucario|mid|7:1141:0:0": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "lucario|early|7:333:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|early|7:1152:0:0": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.555556,
+      "samples": 9
+    },
+    "lucario|mid|13:0:0:980": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|early|8:6:333:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|7:1227:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|8:20:305:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "lucario|early|8:20:333:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|mid|7:1142:0:0": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 5,
+      "mean_quality": 0.4,
+      "samples": 5
+    },
+    "lucario|mid|7:1152:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.571429,
+      "samples": 7
+    },
+    "lucario|mid|7:676:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|7:676:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|early|7:677:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|8:1174:678:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|8:1174:676:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|mid|8:1174:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|7:333:0:0": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 4,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "dragapult|mid|7:1213:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "dragapult|late|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|late|13:0:0:983": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.454545,
+      "samples": 1
+    },
+    "dragapult|mid|7:1142:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|10:675:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "dragapult|early|10:675:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|8:6:675:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.206818,
+      "samples": 2
+    },
+    "dragapult|early|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|10:66:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|7:676:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|late|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|early|8:1159:305:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|mid|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.518939,
+      "samples": 3
+    },
+    "unknown|early|8:6:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|early|12:0:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|8:1174:676:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|early|8:20:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.706818,
+      "samples": 2
+    },
+    "crustle|early|8:6:677:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|mid|8:20:306:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "crustle|mid|7:1142:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|mid|7:1086:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "crustle|early|8:1174:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|mid|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "grass|mid|7:1152:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "grass|early|7:333:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "marnie|mid|7:1141:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "marnie|late|9:678:677:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|10:675:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|12:0:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.287727,
+      "samples": 3
+    },
+    "marnie|early|7:333:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|early|8:6:676:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|13:0:0:980": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "dragapult|early|7:676:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|mid|7:1086:0:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 8
+    },
+    "dragapult|mid|8:6:333:0": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "dragapult|early|7:677:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|7:675:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|early|9:678:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|7:675:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|early|8:6:675:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.205682,
+      "samples": 4
+    },
+    "lucario|mid|10:675:0:0": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "lucario|mid|7:1086:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "lucario|mid|8:6:675:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "lucario|early|8:1174:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|8:20:675:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "dragapult|mid|7:333:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|early|7:1197:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:20:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:20:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.909091,
+      "samples": 1
+    },
+    "dragapult|mid|8:20:333:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "dragapult|mid|8:6:66:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:1174:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:1174:306:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|8:1174:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|10:675:0:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|8:6:306:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "crustle|mid|8:6:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|7:1227:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|mid|8:20:117:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "archaludon|mid|8:20:333:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "archaludon|mid|8:20:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:1211:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|13:0:0:980": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|late|13:0:0:148": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|7:1182:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.863182,
+      "samples": 2
+    },
+    "unknown|mid|7:1211:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|early|8:20:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|8:20:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1141:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:6:675:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|8:6:306:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|mid|7:1227:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|early|8:20:305:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.386364,
+      "samples": 2
+    },
+    "dragapult|mid|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|mid|7:1225:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "lucario|mid|7:1182:0:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "lucario|mid|7:333:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|9:678:333:0": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "unknown|mid|8:1174:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|early|7:1227:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|8:6:66:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|8:1174:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|early|8:6:117:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1252:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1182:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:6:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:6:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|13:0:0:980": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|12:0:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.863182,
+      "samples": 1
+    },
+    "grass|mid|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|7:1227:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|8:20:306:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "grass|mid|10:66:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|12:0:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:675:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|8:6:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|8:1159:333:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1152:0:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "dragapult|mid|13:0:0:980": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|mid|8:20:66:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|7:1086:0:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "lucario|mid|7:675:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|8:1159:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.95,
+      "samples": 1
+    },
+    "lucario|mid|13:0:0:979": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1211:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|8:1174:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|8:1174:675:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|early|8:20:675:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|7:333:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|late|7:1182:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|13:0:0:982": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|7:675:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|7:1197:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|8:6:305:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "lucario|mid|8:6:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|7:1211:0:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|8:1159:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|8:1174:333:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|9:678:333:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "lucario|mid|7:677:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|8:20:677:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|8:20:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|8:20:675:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|mid|9:306:305:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|7:1225:0:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "dragapult|mid|13:0:0:426": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|13:0:0:425": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|8:6:676:0": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.463636,
+      "samples": 1
+    },
+    "dragapult|mid|8:1174:678:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:1174:676:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    }
+  },
+  "training": {
+    "games": 100,
+    "decision_states": 4495,
+    "counterfactual_states": 378,
+    "loss_games": 28,
+    "loss_games_with_high_local_quality": 11,
+    "terminal_outcome_role": "auxiliary_only",
+    "result": {
+      "params": 659395,
+      "subset_rows": 799,
+      "history": [
+        {
+          "ep": 1,
+          "loss": 1.4215773846652058,
+          "sec": 1.274381160736084,
+          "obj": 0.8709514391108383,
+          "quality_n": 143,
+          "quality_auc": 0.6215387658227849,
+          "policy_quality_auc": 0.5904865506329114,
+          "quality_sign_acc": 0.44755244755244755,
+          "outcome_n": 626,
+          "outcome_auc_aux": 0.5091189547228019
+        },
+        {
+          "ep": 2,
+          "loss": 1.3421611483032638,
+          "sec": 1.1013648509979248,
+          "obj": 0.9320035128233477,
+          "quality_n": 143,
+          "quality_auc": 0.666435917721519,
+          "policy_quality_auc": 0.6290545886075949,
+          "quality_sign_acc": 0.5034965034965035,
+          "outcome_n": 626,
+          "outcome_auc_aux": 0.5055915978586335
+        },
+        {
+          "ep": 3,
+          "loss": 1.3192917276073146,
+          "sec": 1.1863369941711426,
+          "obj": 0.9383048266254737,
+          "quality_n": 143,
+          "quality_auc": 0.6717761075949367,
+          "policy_quality_auc": 0.6355814873417722,
+          "quality_sign_acc": 0.4755244755244755,
+          "outcome_n": 626,
+          "outcome_auc_aux": 0.5074743671173215
+        }
+      ],
+      "final": {
+        "quality_n": 143,
+        "quality_auc": 0.6717761075949367,
+        "policy_quality_auc": 0.6355814873417722,
+        "quality_sign_acc": 0.4755244755244755,
+        "outcome_n": 626,
+        "outcome_auc_aux": 0.5074743671173215
+      },
+      "batch8_ms": 6.792904459998681
+    },
+    "round2": {
+      "rows": 4495,
+      "games": 60,
+      "counterfactual_states": 378,
+      "subset_rows": 882,
+      "train_items": 1320,
+      "val_items": 1042,
+      "before": {
+        "quality_n": 205,
+        "quality_auc": 0.6272123893805309,
+        "policy_quality_auc": 0.5876779530588688,
+        "quality_sign_acc": 0.4682926829268293,
+        "outcome_n": 907,
+        "outcome_auc_aux": 0.5061433994546329
+      },
+      "after": {
+        "quality_n": 205,
+        "quality_auc": 0.6335609849942285,
+        "policy_quality_auc": 0.5952770296267794,
+        "quality_sign_acc": 0.4926829268292683,
+        "outcome_n": 907,
+        "outcome_auc_aux": 0.5063840025664332
+      },
+      "focus_before": {
+        "dragapult": {
+          "quality_n": 78,
+          "quality_auc": 0.725,
+          "policy_quality_auc": 0.7065789473684211,
+          "quality_sign_acc": 0.5,
+          "outcome_n": 286,
+          "outcome_auc_aux": 0.49586983729662076
+        },
+        "marnie": {
+          "quality_n": 9,
+          "quality_auc": 0.6111111111111112,
+          "policy_quality_auc": 0.7222222222222223,
+          "quality_sign_acc": 0.3333333333333333,
+          "outcome_n": 28,
+          "outcome_auc_aux": 0.5
+        },
+        "crustle": {
+          "quality_n": 52,
+          "quality_auc": 0.6409090909090909,
+          "policy_quality_auc": 0.5409090909090909,
+          "quality_sign_acc": 0.4807692307692308,
+          "outcome_n": 326,
+          "outcome_auc_aux": 0.5525572139303483
+        },
+        "lucario": {
+          "quality_n": 42,
+          "quality_auc": 0.4693181818181818,
+          "policy_quality_auc": 0.4193181818181818,
+          "quality_sign_acc": 0.47619047619047616,
+          "outcome_n": 176,
+          "outcome_auc_aux": 0.447851966873706
+        },
+        "grass": {},
+        "unknown": {
+          "quality_n": 24,
+          "quality_auc": 0.48888888888888893,
+          "policy_quality_auc": 0.41481481481481486,
+          "quality_sign_acc": 0.375,
+          "outcome_n": 91,
+          "outcome_auc_aux": 0.5103199174406605
+        }
+      },
+      "focus_after": {
+        "dragapult": {
+          "quality_n": 78,
+          "quality_auc": 0.7493421052631579,
+          "policy_quality_auc": 0.7243421052631579,
+          "quality_sign_acc": 0.5256410256410257,
+          "outcome_n": 286,
+          "outcome_auc_aux": 0.4856904463913224
+        },
+        "marnie": {
+          "quality_n": 9,
+          "quality_auc": 0.888888888888889,
+          "policy_quality_auc": 0.888888888888889,
+          "quality_sign_acc": 0.3333333333333333,
+          "outcome_n": 28,
+          "outcome_auc_aux": 0.5
+        },
+        "crustle": {
+          "quality_n": 52,
+          "quality_auc": 0.6106060606060606,
+          "policy_quality_auc": 0.5227272727272727,
+          "quality_sign_acc": 0.4807692307692308,
+          "outcome_n": 326,
+          "outcome_auc_aux": 0.5484179104477612
+        },
+        "lucario": {
+          "quality_n": 42,
+          "quality_auc": 0.46704545454545454,
+          "policy_quality_auc": 0.44886363636363635,
+          "quality_sign_acc": 0.47619047619047616,
+          "outcome_n": 176,
+          "outcome_auc_aux": 0.47243788819875776
+        },
+        "grass": {},
+        "unknown": {
+          "quality_n": 24,
+          "quality_auc": 0.4962962962962963,
+          "policy_quality_auc": 0.43703703703703706,
+          "quality_sign_acc": 0.5,
+          "outcome_n": 91,
+          "outcome_auc_aux": 0.5098039215686275
+        }
+      },
+      "history": [
+        {
+          "epoch": 1,
+          "loss": 1.3446842540394177,
+          "sec": 2.0244174003601074,
+          "objective": 0.7790789282427564,
+          "global": {
+            "quality_n": 205,
+            "quality_auc": 0.6287514428626395,
+            "policy_quality_auc": 0.5921027318199308,
+            "quality_sign_acc": 0.5121951219512195,
+            "outcome_n": 907,
+            "outcome_auc_aux": 0.5060471582099129
+          },
+          "focus": {
+            "dragapult": {
+              "quality_n": 78,
+              "quality_auc": 0.7342105263157894,
+              "policy_quality_auc": 0.7151315789473685,
+              "quality_sign_acc": 0.5512820512820513,
+              "outcome_n": 286,
+              "outcome_auc_aux": 0.48977889027951604
+            },
+            "marnie": {
+              "quality_n": 9,
+              "quality_auc": 0.7777777777777778,
+              "policy_quality_auc": 0.888888888888889,
+              "quality_sign_acc": 0.4444444444444444,
+              "outcome_n": 28,
+              "outcome_auc_aux": 0.5
+            },
+            "crustle": {
+              "quality_n": 52,
+              "quality_auc": 0.6393939393939394,
+              "policy_quality_auc": 0.5363636363636364,
+              "quality_sign_acc": 0.5192307692307693,
+              "outcome_n": 326,
+              "outcome_auc_aux": 0.5514029850746269
+            },
+            "lucario": {
+              "quality_n": 42,
+              "quality_auc": 0.45795454545454545,
+              "policy_quality_auc": 0.4079545454545454,
+              "quality_sign_acc": 0.5,
+              "outcome_n": 176,
+              "outcome_auc_aux": 0.46143892339544523
+            },
+            "grass": {},
+            "unknown": {
+              "quality_n": 24,
+              "quality_auc": 0.4740740740740741,
+              "policy_quality_auc": 0.4222222222222222,
+              "quality_sign_acc": 0.4166666666666667,
+              "outcome_n": 91,
+              "outcome_auc_aux": 0.5087719298245614
+            }
+          }
+        },
+        {
+          "epoch": 2,
+          "loss": 1.3361752965233542,
+          "sec": 1.895214557647705,
+          "objective": 0.7945931487369186,
+          "global": {
+            "quality_n": 205,
+            "quality_auc": 0.6335609849942285,
+            "policy_quality_auc": 0.5952770296267794,
+            "quality_sign_acc": 0.4926829268292683,
+            "outcome_n": 907,
+            "outcome_auc_aux": 0.5063840025664332
+          },
+          "focus": {
+            "dragapult": {
+              "quality_n": 78,
+              "quality_auc": 0.7493421052631579,
+              "policy_quality_auc": 0.7243421052631579,
+              "quality_sign_acc": 0.5256410256410257,
+              "outcome_n": 286,
+              "outcome_auc_aux": 0.4856904463913224
+            },
+            "marnie": {
+              "quality_n": 9,
+              "quality_auc": 0.888888888888889,
+              "policy_quality_auc": 0.888888888888889,
+              "quality_sign_acc": 0.3333333333333333,
+              "outcome_n": 28,
+              "outcome_auc_aux": 0.5
+            },
+            "crustle": {
+              "quality_n": 52,
+              "quality_auc": 0.6106060606060606,
+              "policy_quality_auc": 0.5227272727272727,
+              "quality_sign_acc": 0.4807692307692308,
+              "outcome_n": 326,
+              "outcome_auc_aux": 0.5484179104477612
+            },
+            "lucario": {
+              "quality_n": 42,
+              "quality_auc": 0.46704545454545454,
+              "policy_quality_auc": 0.44886363636363635,
+              "quality_sign_acc": 0.47619047619047616,
+              "outcome_n": 176,
+              "outcome_auc_aux": 0.47243788819875776
+            },
+            "grass": {},
+            "unknown": {
+              "quality_n": 24,
+              "quality_auc": 0.4962962962962963,
+              "policy_quality_auc": 0.43703703703703706,
+              "quality_sign_acc": 0.5,
+              "outcome_n": 91,
+              "outcome_auc_aux": 0.5098039215686275
+            }
+          }
+        }
+      ],
+      "accepted_objective": 0.7945931487369186
+    },
+    "games_actual": 132,
+    "loss_games_with_high_local_quality_total": 17,
+    "loss_games_total": 38,
+    "evaluation_note": "Terminal outcome is not used as blanket action quality. 17/38 loss games had sampled local quality >=0.75.",
+    "v170_mistake_elimination": {
+      "source_cf_states": 454,
+      "known_mistakes": 206,
+      "terminal_outcome_used_as_mistake_label": false,
+      "selected_alpha": 0.2,
+      "base_val": {
+        "states": 111,
+        "best_action_acc": 0.34234234234234234,
+        "mistakes": 39,
+        "mistake_rescue_acc": 0.23076923076923078,
+        "pairwise_acc": 0.5616093880972338,
+        "pair_n": 1193
+      },
+      "selected_val": {
+        "states": 111,
+        "best_action_acc": 0.36036036036036034,
+        "mistakes": 39,
+        "mistake_rescue_acc": 0.2564102564102564,
+        "pairwise_acc": 0.5683151718357083,
+        "pair_n": 1193
+      }
+    }
+  },
+  "role": "counterfactual_local_action_quality_cross_attention_critic",
+  "quality_calibration": {
+    "scale": 1.2876526445734158,
+    "bias": 1.2925525524882888,
+    "fit": "round2 heldout counterfactual branches"
+  },
+  "quality_support_card": {
+    "unknown|early|7:675": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 4,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "unknown|early|7:1152": {
+      "good_games": 6,
+      "bad_games": 5,
+      "games": 11,
+      "mean_quality": 0.583333,
+      "samples": 12
+    },
+    "unknown|early|14:0": {
+      "good_games": 17,
+      "bad_games": 11,
+      "games": 29,
+      "mean_quality": 0.601881,
+      "samples": 29
+    },
+    "unknown|mid|8:6": {
+      "good_games": 4,
+      "bad_games": 4,
+      "games": 11,
+      "mean_quality": 0.586756,
+      "samples": 22
+    },
+    "unknown|mid|8:1159": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "unknown|early|8:6": {
+      "good_games": 1,
+      "bad_games": 12,
+      "games": 13,
+      "mean_quality": 0.067857,
+      "samples": 14
+    },
+    "unknown|mid|9:678": {
+      "good_games": 2,
+      "bad_games": 5,
+      "games": 7,
+      "mean_quality": 0.3,
+      "samples": 10
+    },
+    "unknown|mid|13:0": {
+      "good_games": 5,
+      "bad_games": 9,
+      "games": 18,
+      "mean_quality": 0.326894,
+      "samples": 30
+    },
+    "unknown|mid|14:0": {
+      "good_games": 12,
+      "bad_games": 9,
+      "games": 22,
+      "mean_quality": 0.557392,
+      "samples": 33
+    },
+    "unknown|mid|8:20": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.666667,
+      "samples": 9
+    },
+    "unknown|early|8:20": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 5
+    },
+    "unknown|early|8:1174": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|7:1141": {
+      "good_games": 8,
+      "bad_games": 3,
+      "games": 11,
+      "mean_quality": 0.787848,
+      "samples": 15
+    },
+    "unknown|mid|7:676": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|early|7:305": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|early|7:1142": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "unknown|mid|7:1152": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|7:1142": {
+      "good_games": 5,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.857143,
+      "samples": 7
+    },
+    "unknown|mid|9:66": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 8,
+      "mean_quality": 0.486318,
+      "samples": 10
+    },
+    "unknown|early|7:1086": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "unknown|late|10:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|late|14:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|8:6": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|late|7:1141": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|13:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|early|7:333": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|7:333": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|7:1227": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.333333,
+      "samples": 9
+    },
+    "crustle|early|8:6": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.787273,
+      "samples": 15
+    },
+    "crustle|late|7:1227": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|late|7:1213": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "crustle|late|14:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|late|7:305": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|late|7:333": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|7:1142": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|early|7:1152": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "crustle|early|14:0": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "crustle|mid|7:1152": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "crustle|mid|7:1182": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|mid|13:0": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.466667,
+      "samples": 15
+    },
+    "crustle|mid|14:0": {
+      "good_games": 7,
+      "bad_games": 6,
+      "games": 13,
+      "mean_quality": 0.414141,
+      "samples": 18
+    },
+    "crustle|early|8:1159": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "crustle|mid|8:6": {
+      "good_games": 6,
+      "bad_games": 1,
+      "games": 7,
+      "mean_quality": 0.897348,
+      "samples": 12
+    },
+    "crustle|mid|9:66": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "crustle|mid|8:20": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "crustle|mid|7:675": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "crustle|mid|7:305": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "alakazam|early|7:1142": {
+      "good_games": 1,
+      "bad_games": 6,
+      "games": 7,
+      "mean_quality": 0.142857,
+      "samples": 7
+    },
+    "alakazam|early|14:0": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "alakazam|early|8:6": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 6
+    },
+    "alakazam|mid|7:1227": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "alakazam|mid|14:0": {
+      "good_games": 2,
+      "bad_games": 9,
+      "games": 11,
+      "mean_quality": 0.143357,
+      "samples": 13
+    },
+    "alakazam|mid|8:1174": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|9:306": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "alakazam|early|7:1086": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "alakazam|mid|9:678": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.555556,
+      "samples": 9
+    },
+    "alakazam|mid|9:66": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "alakazam|mid|8:20": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "alakazam|mid|13:0": {
+      "good_games": 1,
+      "bad_games": 5,
+      "games": 7,
+      "mean_quality": 0.127066,
+      "samples": 11
+    },
+    "alakazam|mid|7:677": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "archaludon|early|7:1152": {
+      "good_games": 3,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.571429,
+      "samples": 7
+    },
+    "archaludon|early|7:1142": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.666667,
+      "samples": 6
+    },
+    "archaludon|early|7:1086": {
+      "good_games": 4,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "archaludon|mid|13:0": {
+      "good_games": 6,
+      "bad_games": 1,
+      "games": 7,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "archaludon|mid|14:0": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 10,
+      "mean_quality": 0.581818,
+      "samples": 15
+    },
+    "archaludon|mid|12:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.2725,
+      "samples": 6
+    },
+    "archaludon|late|8:20": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "archaludon|late|8:6": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|early|8:20": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.865909,
+      "samples": 4
+    },
+    "archaludon|early|8:6": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.714286,
+      "samples": 7
+    },
+    "archaludon|mid|8:6": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 0.583333,
+      "samples": 12
+    },
+    "archaludon|late|7:1152": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|late|14:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.272727,
+      "samples": 2
+    },
+    "archaludon|late|12:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "archaludon|early|7:1141": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:1086": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "archaludon|mid|7:1141": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 4
+    },
+    "archaludon|late|7:1227": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|late|7:1141": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|early|14:0": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.428571,
+      "samples": 7
+    },
+    "grass|early|7:1142": {
+      "good_games": 3,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.571429,
+      "samples": 7
+    },
+    "grass|early|14:0": {
+      "good_games": 10,
+      "bad_games": 3,
+      "games": 13,
+      "mean_quality": 0.769231,
+      "samples": 13
+    },
+    "grass|early|8:6": {
+      "good_games": 1,
+      "bad_games": 5,
+      "games": 6,
+      "mean_quality": 0.285714,
+      "samples": 7
+    },
+    "grass|mid|8:6": {
+      "good_games": 3,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.586405,
+      "samples": 11
+    },
+    "grass|mid|13:0": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.416667,
+      "samples": 12
+    },
+    "grass|late|7:1227": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|late|7:675": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|7:1213": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|early|8:20": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.4,
+      "samples": 5
+    },
+    "grass|mid|14:0": {
+      "good_games": 6,
+      "bad_games": 7,
+      "games": 13,
+      "mean_quality": 0.403743,
+      "samples": 17
+    },
+    "grass|mid|9:66": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|8:1159": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "grass|mid|12:0": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.715795,
+      "samples": 4
+    },
+    "grass|mid|8:20": {
+      "good_games": 6,
+      "bad_games": 1,
+      "games": 8,
+      "mean_quality": 0.895989,
+      "samples": 17
+    },
+    "grass|early|8:1174": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|9:678": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 6,
+      "mean_quality": 0.7,
+      "samples": 10
+    },
+    "marnie|early|7:677": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:1152": {
+      "good_games": 4,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.575758,
+      "samples": 7
+    },
+    "marnie|early|14:0": {
+      "good_games": 5,
+      "bad_games": 6,
+      "games": 11,
+      "mean_quality": 0.454545,
+      "samples": 11
+    },
+    "marnie|mid|10:1259": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.714286,
+      "samples": 7
+    },
+    "marnie|mid|13:0": {
+      "good_games": 0,
+      "bad_games": 7,
+      "games": 8,
+      "mean_quality": 0.084517,
+      "samples": 16
+    },
+    "marnie|mid|7:1252": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:676": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|8:6": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 5,
+      "mean_quality": 0.401515,
+      "samples": 6
+    },
+    "marnie|mid|9:678": {
+      "good_games": 5,
+      "bad_games": 2,
+      "games": 7,
+      "mean_quality": 0.692308,
+      "samples": 13
+    },
+    "marnie|mid|9:66": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.285714,
+      "samples": 7
+    },
+    "marnie|mid|10:675": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "marnie|mid|14:0": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.651515,
+      "samples": 9
+    },
+    "marnie|mid|8:20": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "marnie|early|7:1086": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "marnie|early|7:1142": {
+      "good_games": 5,
+      "bad_games": 0,
+      "games": 5,
+      "mean_quality": 1.0,
+      "samples": 7
+    },
+    "marnie|mid|7:305": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:1141": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "marnie|early|7:1227": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:677": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:1086": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|mid|8:6": {
+      "good_games": 5,
+      "bad_games": 1,
+      "games": 7,
+      "mean_quality": 0.833333,
+      "samples": 18
+    },
+    "dragapult|early|7:1142": {
+      "good_games": 9,
+      "bad_games": 3,
+      "games": 12,
+      "mean_quality": 0.692308,
+      "samples": 13
+    },
+    "dragapult|early|14:0": {
+      "good_games": 10,
+      "bad_games": 22,
+      "games": 32,
+      "mean_quality": 0.308239,
+      "samples": 32
+    },
+    "dragapult|early|8:6": {
+      "good_games": 1,
+      "bad_games": 5,
+      "games": 12,
+      "mean_quality": 0.408117,
+      "samples": 14
+    },
+    "dragapult|mid|8:20": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.977159,
+      "samples": 8
+    },
+    "dragapult|late|7:305": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|late|7:1142": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|late|7:1182": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|13:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|early|12:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.621061,
+      "samples": 3
+    },
+    "dragapult|mid|7:1227": {
+      "good_games": 5,
+      "bad_games": 2,
+      "games": 7,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "dragapult|mid|7:1182": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.372636,
+      "samples": 5
+    },
+    "dragapult|mid|14:0": {
+      "good_games": 3,
+      "bad_games": 20,
+      "games": 27,
+      "mean_quality": 0.184416,
+      "samples": 35
+    },
+    "dragapult|mid|12:0": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.525844,
+      "samples": 7
+    },
+    "dragapult|mid|7:1141": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.333333,
+      "samples": 6
+    },
+    "dragapult|early|7:1086": {
+      "good_games": 11,
+      "bad_games": 2,
+      "games": 13,
+      "mean_quality": 0.785714,
+      "samples": 14
+    },
+    "dragapult|early|7:1152": {
+      "good_games": 12,
+      "bad_games": 3,
+      "games": 15,
+      "mean_quality": 0.833333,
+      "samples": 18
+    },
+    "dragapult|mid|10:66": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "dragapult|mid|13:0": {
+      "good_games": 5,
+      "bad_games": 5,
+      "games": 13,
+      "mean_quality": 0.5,
+      "samples": 22
+    },
+    "dragapult|mid|7:1197": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1225": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.333333,
+      "samples": 6
+    },
+    "dragapult|mid|9:306": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "dragapult|mid|9:66": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 8,
+      "mean_quality": 0.6,
+      "samples": 15
+    },
+    "lucario|early|8:1159": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.9875,
+      "samples": 4
+    },
+    "lucario|mid|13:0": {
+      "good_games": 3,
+      "bad_games": 9,
+      "games": 15,
+      "mean_quality": 0.350168,
+      "samples": 27
+    },
+    "lucario|mid|14:0": {
+      "good_games": 9,
+      "bad_games": 7,
+      "games": 16,
+      "mean_quality": 0.504785,
+      "samples": 19
+    },
+    "lucario|late|10:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|late|13:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|10:675": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|14:0": {
+      "good_games": 12,
+      "bad_games": 7,
+      "games": 19,
+      "mean_quality": 0.631579,
+      "samples": 19
+    },
+    "lucario|early|8:6": {
+      "good_games": 0,
+      "bad_games": 8,
+      "games": 11,
+      "mean_quality": 0.116942,
+      "samples": 11
+    },
+    "lucario|mid|8:6": {
+      "good_games": 5,
+      "bad_games": 0,
+      "games": 8,
+      "mean_quality": 0.8,
+      "samples": 20
+    },
+    "lucario|mid|7:305": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|12:0": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "lucario|early|8:1174": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|early|7:1252": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|7:1142": {
+      "good_games": 5,
+      "bad_games": 7,
+      "games": 12,
+      "mean_quality": 0.428571,
+      "samples": 14
+    },
+    "lucario|mid|9:678": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "lucario|mid|9:66": {
+      "good_games": 6,
+      "bad_games": 3,
+      "games": 9,
+      "mean_quality": 0.733333,
+      "samples": 15
+    },
+    "lucario|mid|10:66": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|7:305": {
+      "good_games": 6,
+      "bad_games": 0,
+      "games": 6,
+      "mean_quality": 1.0,
+      "samples": 7
+    },
+    "dragapult|early|8:1174": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "dragapult|mid|8:6": {
+      "good_games": 5,
+      "bad_games": 2,
+      "games": 10,
+      "mean_quality": 0.747934,
+      "samples": 22
+    },
+    "dragapult|mid|7:676": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|late|10:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|late|13:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.287879,
+      "samples": 3
+    },
+    "dragapult|late|14:0": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|early|7:1252": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|12:0": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 5,
+      "mean_quality": 0.143864,
+      "samples": 6
+    },
+    "unknown|mid|7:305": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "unknown|mid|7:1086": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|early|10:675": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|10:675": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.5,
+      "samples": 6
+    },
+    "unknown|early|7:1141": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 0.833333,
+      "samples": 6
+    },
+    "unknown|early|7:1225": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.556818,
+      "samples": 1
+    },
+    "unknown|mid|7:675": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|9:306": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "unknown|early|7:677": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "crustle|mid|9:678": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.833333,
+      "samples": 6
+    },
+    "crustle|late|9:678": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|late|7:1141": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "crustle|early|7:1141": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|7:1227": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|13:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|8:1174": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "crustle|early|7:305": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|9:306": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "crustle|early|7:1086": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "crustle|mid|12:0": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 5,
+      "mean_quality": 0.477197,
+      "samples": 6
+    },
+    "crustle|late|8:1159": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.969697,
+      "samples": 3
+    },
+    "crustle|early|8:1174": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|7:1225": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "crustle|late|7:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|7:333": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "alakazam|mid|7:305": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "alakazam|mid|7:1086": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "alakazam|mid|7:1152": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "alakazam|early|7:677": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|8:6": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.558418,
+      "samples": 9
+    },
+    "alakazam|mid|7:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|7:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|7:1141": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1225": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|early|8:20": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "alakazam|early|7:676": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "alakazam|mid|10:675": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "alakazam|early|7:1152": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "archaludon|mid|7:1227": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "archaludon|mid|9:66": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.75,
+      "samples": 4
+    },
+    "archaludon|mid|7:1142": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "archaludon|early|8:1174": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|9:678": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "archaludon|mid|7:1152": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "archaludon|early|7:333": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "archaludon|mid|7:1182": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|7:305": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|7:1141": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|early|7:1086": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "grass|mid|7:1086": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|7:1141": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 4
+    },
+    "grass|late|7:1252": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|14:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|7:1152": {
+      "good_games": 3,
+      "bad_games": 5,
+      "games": 8,
+      "mean_quality": 0.333333,
+      "samples": 9
+    },
+    "grass|mid|7:1182": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.8,
+      "samples": 5
+    },
+    "grass|mid|10:675": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "grass|mid|7:1142": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "grass|early|7:675": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "grass|mid|7:305": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "grass|mid|7:1225": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|7:1227": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "marnie|early|8:20": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "marnie|early|8:1174": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|mid|7:1225": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "marnie|early|10:1259": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|early|7:1225": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:333": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|10:1259": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|13:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|late|14:0": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.931818,
+      "samples": 2
+    },
+    "dragapult|early|7:1227": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "dragapult|late|9:66": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|9:678": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 6,
+      "mean_quality": 0.658402,
+      "samples": 11
+    },
+    "lucario|early|7:675": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|mid|7:1227": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "lucario|mid|7:1141": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "lucario|early|7:333": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|early|7:1152": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.555556,
+      "samples": 9
+    },
+    "lucario|early|7:1227": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|8:20": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 8
+    },
+    "lucario|early|8:20": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "lucario|mid|7:1142": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 5,
+      "mean_quality": 0.4,
+      "samples": 5
+    },
+    "lucario|mid|7:1152": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.571429,
+      "samples": 7
+    },
+    "lucario|mid|7:676": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|7:676": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|early|7:677": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|8:1174": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "dragapult|early|7:1141": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|7:333": {
+      "good_games": 1,
+      "bad_games": 3,
+      "games": 4,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "dragapult|mid|7:1213": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "dragapult|late|7:1227": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1142": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|10:675": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "dragapult|early|10:675": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|7:1225": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|10:66": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|7:676": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|late|7:677": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|early|8:1159": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "unknown|mid|7:1225": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.518939,
+      "samples": 3
+    },
+    "unknown|early|12:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|mid|8:1174": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "crustle|early|8:20": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.706818,
+      "samples": 2
+    },
+    "crustle|mid|7:1142": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|mid|7:1086": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "crustle|mid|7:1141": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "grass|mid|7:1152": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "grass|early|7:333": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "marnie|mid|7:1141": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "marnie|late|9:678": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|10:675": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|12:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.287727,
+      "samples": 3
+    },
+    "marnie|early|7:333": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|7:676": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|mid|7:1086": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 8
+    },
+    "dragapult|early|7:677": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|mid|7:675": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|early|9:678": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|early|7:675": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "lucario|mid|10:675": {
+      "good_games": 1,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "lucario|mid|7:1086": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "dragapult|mid|7:333": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|early|7:1197": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|8:1174": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 6
+    },
+    "crustle|mid|10:675": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "crustle|mid|7:1227": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "archaludon|mid|8:20": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.2,
+      "samples": 5
+    },
+    "archaludon|mid|7:677": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|mid|7:1211": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "archaludon|late|13:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|mid|7:1182": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.863182,
+      "samples": 2
+    },
+    "unknown|mid|7:1211": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1141": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|7:1227": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "dragapult|early|8:20": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.386364,
+      "samples": 2
+    },
+    "dragapult|mid|7:677": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "lucario|mid|7:1225": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "lucario|mid|7:1182": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.333333,
+      "samples": 3
+    },
+    "lucario|mid|7:333": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|early|9:678": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "unknown|early|7:1227": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1252": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|7:1182": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "alakazam|mid|12:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.863182,
+      "samples": 1
+    },
+    "grass|mid|7:677": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|7:1225": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|early|7:1227": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|10:66": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|12:0": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|early|7:675": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|8:1159": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1152": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "lucario|early|7:1086": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.5,
+      "samples": 4
+    },
+    "lucario|mid|7:675": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|mid|7:1211": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|7:333": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|late|7:1182": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|late|13:0": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|7:675": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|7:1197": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|7:1211": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|mid|8:1159": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|7:677": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "lucario|mid|9:306": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|7:1225": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    }
+  },
+  "quality_support_type": {
+    "unknown|early|7": {
+      "good_games": 10,
+      "bad_games": 13,
+      "games": 28,
+      "mean_quality": 0.501263,
+      "samples": 45
+    },
+    "unknown|early|14": {
+      "good_games": 17,
+      "bad_games": 11,
+      "games": 29,
+      "mean_quality": 0.601881,
+      "samples": 29
+    },
+    "unknown|mid|8": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 14,
+      "mean_quality": 0.629175,
+      "samples": 38
+    },
+    "unknown|early|8": {
+      "good_games": 2,
+      "bad_games": 13,
+      "games": 16,
+      "mean_quality": 0.302174,
+      "samples": 23
+    },
+    "unknown|mid|9": {
+      "good_games": 5,
+      "bad_games": 9,
+      "games": 15,
+      "mean_quality": 0.369299,
+      "samples": 24
+    },
+    "unknown|mid|13": {
+      "good_games": 5,
+      "bad_games": 9,
+      "games": 18,
+      "mean_quality": 0.326894,
+      "samples": 30
+    },
+    "unknown|mid|14": {
+      "good_games": 12,
+      "bad_games": 9,
+      "games": 22,
+      "mean_quality": 0.557392,
+      "samples": 33
+    },
+    "unknown|mid|7": {
+      "good_games": 10,
+      "bad_games": 5,
+      "games": 21,
+      "mean_quality": 0.647936,
+      "samples": 48
+    },
+    "unknown|late|10": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|late|14": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|late|8": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "unknown|late|7": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.25,
+      "samples": 4
+    },
+    "unknown|late|13": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "crustle|early|8": {
+      "good_games": 5,
+      "bad_games": 4,
+      "games": 11,
+      "mean_quality": 0.705336,
+      "samples": 23
+    },
+    "crustle|late|7": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 3,
+      "mean_quality": 0.125,
+      "samples": 8
+    },
+    "crustle|late|14": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "crustle|early|7": {
+      "good_games": 5,
+      "bad_games": 4,
+      "games": 9,
+      "mean_quality": 0.533333,
+      "samples": 15
+    },
+    "crustle|early|14": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "crustle|mid|7": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 11,
+      "mean_quality": 0.6,
+      "samples": 20
+    },
+    "crustle|mid|13": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.466667,
+      "samples": 15
+    },
+    "crustle|mid|14": {
+      "good_games": 7,
+      "bad_games": 6,
+      "games": 13,
+      "mean_quality": 0.414141,
+      "samples": 18
+    },
+    "crustle|mid|8": {
+      "good_games": 8,
+      "bad_games": 1,
+      "games": 9,
+      "mean_quality": 0.888409,
+      "samples": 20
+    },
+    "crustle|mid|9": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 7,
+      "mean_quality": 0.692308,
+      "samples": 13
+    },
+    "alakazam|early|7": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 11,
+      "mean_quality": 0.35,
+      "samples": 20
+    },
+    "alakazam|early|14": {
+      "good_games": 4,
+      "bad_games": 5,
+      "games": 9,
+      "mean_quality": 0.444444,
+      "samples": 9
+    },
+    "alakazam|early|8": {
+      "good_games": 2,
+      "bad_games": 4,
+      "games": 6,
+      "mean_quality": 0.555556,
+      "samples": 9
+    },
+    "alakazam|mid|7": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 7,
+      "mean_quality": 0.588235,
+      "samples": 17
+    },
+    "alakazam|mid|14": {
+      "good_games": 2,
+      "bad_games": 9,
+      "games": 11,
+      "mean_quality": 0.143357,
+      "samples": 13
+    },
+    "alakazam|mid|8": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.58548,
+      "samples": 12
+    },
+    "alakazam|mid|9": {
+      "good_games": 4,
+      "bad_games": 2,
+      "games": 8,
+      "mean_quality": 0.6,
+      "samples": 20
+    },
+    "alakazam|mid|13": {
+      "good_games": 1,
+      "bad_games": 5,
+      "games": 7,
+      "mean_quality": 0.127066,
+      "samples": 11
+    },
+    "archaludon|early|7": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 10,
+      "mean_quality": 0.65,
+      "samples": 20
+    },
+    "archaludon|mid|13": {
+      "good_games": 6,
+      "bad_games": 1,
+      "games": 7,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "archaludon|mid|14": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 10,
+      "mean_quality": 0.581818,
+      "samples": 15
+    },
+    "archaludon|mid|12": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.2725,
+      "samples": 6
+    },
+    "archaludon|late|8": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 3
+    },
+    "archaludon|early|8": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 6,
+      "mean_quality": 0.705303,
+      "samples": 12
+    },
+    "archaludon|mid|8": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 6,
+      "mean_quality": 0.470588,
+      "samples": 17
+    },
+    "archaludon|late|7": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.666667,
+      "samples": 3
+    },
+    "archaludon|late|14": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.272727,
+      "samples": 2
+    },
+    "archaludon|late|12": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "archaludon|mid|7": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 7,
+      "mean_quality": 0.55,
+      "samples": 20
+    },
+    "archaludon|early|14": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.428571,
+      "samples": 7
+    },
+    "grass|early|7": {
+      "good_games": 6,
+      "bad_games": 8,
+      "games": 17,
+      "mean_quality": 0.4375,
+      "samples": 32
+    },
+    "grass|early|14": {
+      "good_games": 10,
+      "bad_games": 3,
+      "games": 13,
+      "mean_quality": 0.769231,
+      "samples": 13
+    },
+    "grass|early|8": {
+      "good_games": 2,
+      "bad_games": 6,
+      "games": 10,
+      "mean_quality": 0.470588,
+      "samples": 17
+    },
+    "grass|mid|8": {
+      "good_games": 6,
+      "bad_games": 3,
+      "games": 12,
+      "mean_quality": 0.774367,
+      "samples": 28
+    },
+    "grass|mid|13": {
+      "good_games": 3,
+      "bad_games": 4,
+      "games": 7,
+      "mean_quality": 0.416667,
+      "samples": 12
+    },
+    "grass|late|7": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 0.428571,
+      "samples": 7
+    },
+    "grass|mid|14": {
+      "good_games": 6,
+      "bad_games": 7,
+      "games": 13,
+      "mean_quality": 0.403743,
+      "samples": 17
+    },
+    "grass|mid|9": {
+      "good_games": 4,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.636364,
+      "samples": 11
+    },
+    "grass|mid|12": {
+      "good_games": 3,
+      "bad_games": 1,
+      "games": 4,
+      "mean_quality": 0.715795,
+      "samples": 4
+    },
+    "marnie|early|7": {
+      "good_games": 7,
+      "bad_games": 3,
+      "games": 14,
+      "mean_quality": 0.630752,
+      "samples": 27
+    },
+    "marnie|early|14": {
+      "good_games": 5,
+      "bad_games": 6,
+      "games": 11,
+      "mean_quality": 0.454545,
+      "samples": 11
+    },
+    "marnie|mid|10": {
+      "good_games": 6,
+      "bad_games": 1,
+      "games": 8,
+      "mean_quality": 0.818182,
+      "samples": 11
+    },
+    "marnie|mid|13": {
+      "good_games": 0,
+      "bad_games": 7,
+      "games": 8,
+      "mean_quality": 0.084517,
+      "samples": 16
+    },
+    "marnie|mid|7": {
+      "good_games": 4,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.571429,
+      "samples": 14
+    },
+    "marnie|early|8": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 6,
+      "mean_quality": 0.640909,
+      "samples": 10
+    },
+    "marnie|mid|9": {
+      "good_games": 4,
+      "bad_games": 1,
+      "games": 7,
+      "mean_quality": 0.55,
+      "samples": 20
+    },
+    "marnie|mid|14": {
+      "good_games": 5,
+      "bad_games": 3,
+      "games": 8,
+      "mean_quality": 0.651515,
+      "samples": 9
+    },
+    "marnie|mid|8": {
+      "good_games": 6,
+      "bad_games": 2,
+      "games": 9,
+      "mean_quality": 0.826087,
+      "samples": 23
+    },
+    "dragapult|early|7": {
+      "good_games": 21,
+      "bad_games": 5,
+      "games": 33,
+      "mean_quality": 0.721311,
+      "samples": 61
+    },
+    "dragapult|early|14": {
+      "good_games": 10,
+      "bad_games": 22,
+      "games": 32,
+      "mean_quality": 0.308239,
+      "samples": 32
+    },
+    "dragapult|early|8": {
+      "good_games": 3,
+      "bad_games": 6,
+      "games": 17,
+      "mean_quality": 0.476653,
+      "samples": 22
+    },
+    "dragapult|mid|8": {
+      "good_games": 8,
+      "bad_games": 2,
+      "games": 13,
+      "mean_quality": 0.840884,
+      "samples": 36
+    },
+    "dragapult|late|7": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.4,
+      "samples": 5
+    },
+    "dragapult|early|13": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "dragapult|early|12": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 3,
+      "mean_quality": 0.621061,
+      "samples": 3
+    },
+    "dragapult|mid|7": {
+      "good_games": 10,
+      "bad_games": 1,
+      "games": 24,
+      "mean_quality": 0.6248,
+      "samples": 59
+    },
+    "dragapult|mid|14": {
+      "good_games": 3,
+      "bad_games": 20,
+      "games": 27,
+      "mean_quality": 0.184416,
+      "samples": 35
+    },
+    "dragapult|mid|12": {
+      "good_games": 2,
+      "bad_games": 1,
+      "games": 5,
+      "mean_quality": 0.525844,
+      "samples": 7
+    },
+    "dragapult|mid|10": {
+      "good_games": 6,
+      "bad_games": 2,
+      "games": 8,
+      "mean_quality": 0.75,
+      "samples": 8
+    },
+    "dragapult|mid|13": {
+      "good_games": 5,
+      "bad_games": 5,
+      "games": 13,
+      "mean_quality": 0.5,
+      "samples": 22
+    },
+    "dragapult|mid|9": {
+      "good_games": 8,
+      "bad_games": 3,
+      "games": 12,
+      "mean_quality": 0.674747,
+      "samples": 30
+    },
+    "lucario|early|8": {
+      "good_games": 3,
+      "bad_games": 9,
+      "games": 16,
+      "mean_quality": 0.465289,
+      "samples": 22
+    },
+    "lucario|mid|13": {
+      "good_games": 3,
+      "bad_games": 9,
+      "games": 15,
+      "mean_quality": 0.350168,
+      "samples": 27
+    },
+    "lucario|mid|14": {
+      "good_games": 9,
+      "bad_games": 7,
+      "games": 16,
+      "mean_quality": 0.504785,
+      "samples": 19
+    },
+    "lucario|late|10": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|late|13": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|10": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "lucario|early|14": {
+      "good_games": 12,
+      "bad_games": 7,
+      "games": 19,
+      "mean_quality": 0.631579,
+      "samples": 19
+    },
+    "lucario|mid|8": {
+      "good_games": 6,
+      "bad_games": 2,
+      "games": 14,
+      "mean_quality": 0.676471,
+      "samples": 34
+    },
+    "lucario|mid|7": {
+      "good_games": 3,
+      "bad_games": 6,
+      "games": 16,
+      "mean_quality": 0.475,
+      "samples": 40
+    },
+    "lucario|mid|12": {
+      "good_games": 0,
+      "bad_games": 3,
+      "games": 3,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "lucario|early|7": {
+      "good_games": 9,
+      "bad_games": 7,
+      "games": 21,
+      "mean_quality": 0.526316,
+      "samples": 38
+    },
+    "lucario|mid|9": {
+      "good_games": 6,
+      "bad_games": 4,
+      "games": 11,
+      "mean_quality": 0.681818,
+      "samples": 22
+    },
+    "lucario|mid|10": {
+      "good_games": 3,
+      "bad_games": 2,
+      "games": 5,
+      "mean_quality": 0.6,
+      "samples": 5
+    },
+    "dragapult|late|10": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "dragapult|late|13": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.287879,
+      "samples": 3
+    },
+    "dragapult|late|14": {
+      "good_games": 1,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "unknown|mid|12": {
+      "good_games": 0,
+      "bad_games": 4,
+      "games": 5,
+      "mean_quality": 0.143864,
+      "samples": 6
+    },
+    "unknown|early|10": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 1.0,
+      "samples": 2
+    },
+    "unknown|mid|10": {
+      "good_games": 4,
+      "bad_games": 3,
+      "games": 7,
+      "mean_quality": 0.5,
+      "samples": 8
+    },
+    "crustle|late|9": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|early|13": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|12": {
+      "good_games": 2,
+      "bad_games": 3,
+      "games": 5,
+      "mean_quality": 0.477197,
+      "samples": 6
+    },
+    "crustle|late|8": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.969697,
+      "samples": 3
+    },
+    "alakazam|mid|10": {
+      "good_games": 3,
+      "bad_games": 0,
+      "games": 3,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "archaludon|mid|9": {
+      "good_games": 2,
+      "bad_games": 2,
+      "games": 4,
+      "mean_quality": 0.5,
+      "samples": 6
+    },
+    "grass|mid|7": {
+      "good_games": 4,
+      "bad_games": 3,
+      "games": 13,
+      "mean_quality": 0.482759,
+      "samples": 29
+    },
+    "grass|late|14": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "grass|mid|10": {
+      "good_games": 4,
+      "bad_games": 0,
+      "games": 4,
+      "mean_quality": 1.0,
+      "samples": 4
+    },
+    "marnie|early|10": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|late|10": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 2
+    },
+    "marnie|late|13": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "marnie|late|14": {
+      "good_games": 2,
+      "bad_games": 0,
+      "games": 2,
+      "mean_quality": 0.931818,
+      "samples": 2
+    },
+    "dragapult|late|9": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "dragapult|early|10": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "unknown|early|12": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|late|9": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    },
+    "marnie|mid|12": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 2,
+      "mean_quality": 0.287727,
+      "samples": 3
+    },
+    "dragapult|early|9": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "crustle|mid|10": {
+      "good_games": 0,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.5,
+      "samples": 2
+    },
+    "archaludon|late|13": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "lucario|early|9": {
+      "good_games": 0,
+      "bad_games": 2,
+      "games": 2,
+      "mean_quality": 0.0,
+      "samples": 3
+    },
+    "alakazam|mid|12": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 0.863182,
+      "samples": 1
+    },
+    "marnie|early|12": {
+      "good_games": 1,
+      "bad_games": 0,
+      "games": 1,
+      "mean_quality": 1.0,
+      "samples": 1
+    },
+    "grass|late|13": {
+      "good_games": 0,
+      "bad_games": 1,
+      "games": 1,
+      "mean_quality": 0.0,
+      "samples": 1
+    }
+  },
+  "architecture": "action_token_cross_attention",
+  "training_games": 184,
+  "training_states": 6243,
+  "counterfactual_states": 535,
+  "weight_interpolation_new": 0.95
+}

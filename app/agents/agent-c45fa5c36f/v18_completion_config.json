@@ -1,0 +1,7 @@
+{
+  "drak_ability_before_attack": true,
+  "own_prize_gate": 2,
+  "opp_prize_gate": 3,
+  "typed_attack_guard": true,
+  "completed_board_guard": true
+}
